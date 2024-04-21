@@ -1,12 +1,18 @@
 ---
-title: "Paper Title Number 1"
+title: "Development and validation of a deep-broad ensemble model for early detection of Alzheimer's disease"
 collection: publications
-permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
+permalink: /publication/2023-07-11-paper-title-number-1
+excerpt: ''
+date: 2023-07-11
+venue: 'Frontiers in Neuroscience'
+paperurl: 'https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false'
 citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+**Introduction**: Alzheimer's disease (AD) is a chronic neurodegenerative disease of the brain that has attracted wide attention in the world. The diagnosis of Alzheimer's disease is faced with the difficulties of insufficient manpower and great difficulty. With the intervention of artificial intelligence, deep learning methods are widely used to assist clinicians in the early recognition of Alzheimer's disease. And a series of methods based on data input with different dimensions have been proposed. However, traditional deep learning models rely on expensive hardware resources and consume a lot of training time, and may fall into the dilemma of local optima.
+
+**Methods**: In recent years, broad learning system (BLS) has provided researchers with new research ideas. Based on the three-dimensional residual convolution module and BLS, a novel broad-deep ensemble model based on BLS is proposed for the early detection of Alzheimer's disease. The Alzheimer's Disease Neuroimaging Initiative (ADNI) MRI image dataset is used to train the model and then we compare the performance of proposed model with previous work and clinicians' diagnosis.
+
+**Results**: The result of experiments demonstrate that the broad-deep ensemble model is superior to previously proposed related works, including 3D-ResNet and VoxCNN, in accuracy, sensitivity, specificity and F1.
+
+**Discussion**: The proposed broad-deep ensemble model is effective for early detection of Alzheimer's disease. In addition, the proposed model does not need the pre-training process of its depth module, which greatly reduces the training time and hardware dependence.
