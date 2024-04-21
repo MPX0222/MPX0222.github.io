@@ -6,7 +6,7 @@ excerpt: ''
 date: 2023-07-11
 venue: 'Frontiers in Neuroscience'
 paperurl: 'https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+citation: 'Peixian, MA. (2023). &quot;Development and validation of a deep-broad ensemble model for early detection of Alzheimer's disease.&quot; <i>Frontiers in Neuroscience</i>. 1(1).'
 ---
 
 **Introduction**: Alzheimer's disease (AD) is a chronic neurodegenerative disease of the brain that has attracted wide attention in the world. The diagnosis of Alzheimer's disease is faced with the difficulties of insufficient manpower and great difficulty. With the intervention of artificial intelligence, deep learning methods are widely used to assist clinicians in the early recognition of Alzheimer's disease. And a series of methods based on data input with different dimensions have been proposed. However, traditional deep learning models rely on expensive hardware resources and consume a lot of training time, and may fall into the dilemma of local optima.
