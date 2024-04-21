@@ -21,7 +21,7 @@ repository               : "https://mpx0222.github.io/"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "images/mylogo.png"
   name             : "Peixian MA"
   pronouns         : # example: "she/her"  
   bio              : "MPhil in DSA, HKUSTGZ; B.Eng in AI, JNU"
