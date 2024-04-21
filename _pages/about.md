@@ -17,6 +17,8 @@ His undergraduate research direction is the Optimization and Application of Broa
 Currently, he is studying in Intelligent Data Science and Natural Language Process,
 including Large Language Models(LLMs), In-context Learning(ICL), Agents, QA-systems, etc.
 
+![Galaxy is our dream](images/Galaxy.png)
+
 Selected Awards
 ===
 * 2024 - **Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou)**
