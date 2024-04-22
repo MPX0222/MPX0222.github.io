@@ -22,7 +22,7 @@ Selected Awards
 * 2023 - Silver Award in "Medicine +X" Virtual Simulation Competition for College students
 * 2022 - Second-class Scholarship for Excellent Student of Jinan University
 * 2021 - Third-class Scholarship Excellent Studentof Jinan University
-* 2021 - Honorable Mention for Mathematical Contest In Modeling£¨MCM£©
+* 2021 - Honorable Mention for Mathematical Contest In Modeling
 
 * 2024 - Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM
 * 2023 - Third Place of 2022 (2nd) Jinan University Football Super League, Information Science and Technology
