@@ -1,11 +1,11 @@
 ---
-title: "Teaching experience 1"
+title: "DSAA 5002"
 collection: teaching
-type: "Undergraduate course"
-permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
+type: "Postgraduate course"
+permalink: /teaching/2024-fall-teaching-1
+venue: "HKUSTGZ, DSA"
 date: 2014-01-01
-location: "City, Country"
+location: "Guangzhou, China"
 ---
 
 This is a description of a teaching experience. You can use markdown like any other post.
