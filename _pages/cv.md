@@ -11,35 +11,31 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* M.Phil. in Data Science and Analytics, The Hong Kong University of Science and Technology, 2025 (Expected)
+* B.Eng. in Intelligence Science and Technology, JiNan University, 2023
+
+Selected Awards
+===
+* 2024 - Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou)
+* 2023 - Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou)
+* 2023 - Distinguished Graduate of College of Information Science and Technology, Jinan University
+* 2023 - Silver Award in "Medicine +X" Virtual Simulation Competition for College students
+* 2022 - Second-class Scholarship for Excellent Student of Jinan University
+* 2021 - Third-class Scholarship Excellent Studentof Jinan University
+* 2021 - Honorable Mention for Mathematical Contest In Modeling£¨MCM£©
+
+* 2024 - Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM
+* 2023 - Third Place of 2022 (2nd) Jinan University Football Super League, Information Science and Technology
+* 2021 - Champion of 2020 Jinan University Football College Cup, Information Science and Technology
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
+* Spring 2023: Big Data Center
+  * Jinan University 
   * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+  * Supervisor: Junjie HUA
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
   
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
 
 Publications
 ======
@@ -59,6 +55,3 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
