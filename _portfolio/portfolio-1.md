@@ -1,7 +1,7 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
-collection: portfolio
+title: "Brain Age Detection"
+excerpt: "<br/><img src='/images/BrainAge.png'>"
+collection: Machine Learning
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+Accurately predicting brain age is crucial for assessing the abnormal aging of individuals, as various neurological diseases are associated with deviations from normal brain agingpatterns. In this study, we leveraged diverse machine learning methodologies grounded in feature engineering to precisely forecast brain age. Our comparative analysis of these models revealed a salient positive influence of feature engineering on overall model performance. Although individual models demonstrated superior performance on the validation set, the occurrence of overfitting was noted. Contrary to anticipated outcomes, the efficacy of ensemble models fell short of expectations, while residual models exhibited superior performance in a multi-stage configuration.
