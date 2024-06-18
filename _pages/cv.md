@@ -30,9 +30,9 @@ Selected Awards
 
 Work experience
 ======
-* Spring 2023: Big Data Center
+* Spring 2023: Big Data Center of Jinan University
   * Jinan University 
-  * Duties includes: Updates and improvements to template
+  * Duties includes: Data Mining, Data Cleaning and Data visualization
   * Supervisor: Junjie HUA
 
   
