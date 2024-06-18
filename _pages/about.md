@@ -19,6 +19,6 @@ He got the Distinguished Graduate for the College of Information Science and Tec
 Currently, he is researching in Large Language Models(LLMs), Multi-Agents System and Text-to-SQL task. He is tring his best to get the chance of P.hD program.
 
 Here comes my CV File if you want to know more, or you can go to the cv page for details:
-[CV](images/AwesomeCV2024_Peixian_MA.pdf)
+![CV](images/AwesomeCV2024_Peixian_MA.pdf)
 
 ![Galaxy is our dream](images/Galaxy.png)
