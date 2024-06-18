@@ -43,8 +43,3 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Projects
-======
-  <ul>{% for post in site.portfolio reversed %}
-    {% include portfolio.html %}
-  {% endfor %}</ul>
