@@ -1,5 +1,5 @@
 ---
-title: "梦回那一个幻夏 | Summer Days in ZY"
+title: "梦回那一个幻夏(Summer Days in ZY)"
 collection: talks
 type: "Talk"
 permalink: /talks/ZhongYuan
@@ -50,7 +50,7 @@ location: "Guangzhou, China"
 
 “从此高中无闲时。
 
-<img src="images/zy1.png">
+![Galaxy is our dream](images/Galaxy.png)
 
 **一切，都开始改变了。**
 
