@@ -1,5 +1,5 @@
 ---
-title: "梦回那一个幻夏(Summer Days in ZY)"
+title: "梦回那一个幻夏 Summer Days in ZY"
 collection: talks
 type: "Talk"
 permalink: /talks/ZhongYuan
