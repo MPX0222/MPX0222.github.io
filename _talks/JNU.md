@@ -1,9 +1,9 @@
 ---
-title: "ÆôÃÉÊ±´ú Exploration Trip in JNU"
+title: "å¯è’™æ—¶ä»£ Exploration Trip in JNU"
 collection: talks
 type: "Talk"
-permalink: /talks/ZhongYuan
-venue: "ZhongYuan High School"
-date: 2019-06-08
+permalink: /talks/JNU
+venue: "JiNan University"
+date: 2023-06-30
 location: "Guangzhou, China"
 ---
