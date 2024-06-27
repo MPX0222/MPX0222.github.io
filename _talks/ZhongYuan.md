@@ -8,4 +8,4 @@ date: 2019-06-08
 location: "Guangzhou, China"
 ---
 
-![zy](images/summerdaysinzy.png)
+Å£±Æ
