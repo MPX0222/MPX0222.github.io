@@ -12,11 +12,11 @@ main:
   - title: "Projects"
     url: /portfolio/
         
-  - title: "Research Interest"
-    url: /year-archive/
+  # - title: "Research Interest"
+  #   url: /year-archive/
     
   - title: "CV"
     url: /cv/
     
-  - title: "Guide"
-    url: /markdown/
+  # - title: "Guide"
+  #   url: /markdown/
