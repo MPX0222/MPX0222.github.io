@@ -21,7 +21,8 @@ Currently, I am researching in Large Language Models(LLMs), Multi-Agents System 
 Here comes my CV File if you want to know more, or you can go to the cv page for details:
 [CV](images/AwesomeCV2024_Peixian_MA.pdf)
 
-## 📟 News
+📟 News
+=== 
 * `2023.08` 📌 Now my project [BroadLearningSystemTools-2.0](https://github.com/MPX0222/BroadLearningSystemTools-2.0) is available in my github responsibility.
 * `2023.07` 📌 First long research paper: [Development and validation of a deep-broad ensemble model for early detection of Alzheimer’s disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) is published on *Frontiers in Neuroscience*.
 
