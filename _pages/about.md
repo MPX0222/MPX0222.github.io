@@ -23,13 +23,15 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 
 📟 News
 === 
-* `2023.08` 📌 Now my project [BroadLearningSystemTools-2.0](https://github.com/MPX0222/BroadLearningSystemTools-2.0) is available in my github responsibility.
+* `2024.01` 📌 Successfuly pass the PQA of the Red Bird M.Phil Program.
+* `2023.08` 📌 New responsibility for the Broad Learning System(BLS) research: [BroadLearningSystemTools-2.0](https://github.com/MPX0222/BroadLearningSystemTools-2.0) is available on github.
 * `2023.07` 📌 First long research paper: [Development and validation of a deep-broad ensemble model for early detection of Alzheimer’s disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) is published on *Frontiers in Neuroscience*.
+* `2023.05` 📌 Successfully pass the undergraduate graduation defense in JiNan University.
 
 📘 Education
 ======
-* M.Phil. in Data Science and Analytics, The Hong Kong University of Science and Technology, 2025 (Expected)
-* B.Eng. in Intelligence Science and Technology, JiNan University, 2023
+* M.Phil. in Data Science and Analytics, The Hong Kong University of Science and Technology, *2023.09 - 2025.07 (Expected)*
+* B.Eng. in Intelligence Science and Technology, JiNan University, *2019.09 - 2023.07*
 
 📰 Publications
 ======
