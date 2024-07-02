@@ -48,7 +48,7 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 * `2023.06` 🏅 Distinguished Graduate of College of Information Science and Technology, Jinan University
 * `2023.04` 🏅 Silver Award in "Medicine +X" Virtual Simulation Competition for College students
 * `2022.12` 🏅 Second-class Scholarship for Excellent Student of Jinan University
-* `2021.12` 🏅 Third-class Scholarship Excellent Studentof Jinan University
+* `2021.12` 🏅 Third-class Scholarship Excellent Student of Jinan University
 * `2021.05` 🏅 Honorable Mention for Mathematical Contest In Modeling
 
 * `2024.04` 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM
