@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "MPX0222's Web"
+title                    : "Homepage"
 title_separator          : "-"
 name                     : &name "Peixian MA"
 description              : &description "personal description"
@@ -24,9 +24,9 @@ author:
   avatar           : "mylogo.png"
   name             : "Peixian MA"
   pronouns         : # example: "she/her"  
-  bio              : "MPhil in DSA, HKUSTGZ; B.Eng in AI, JNU"
+  bio              : "M.Phil in DSA, HKUSTGZ; B.Eng in AI, JNU"
   location         : "Guangzhou, CN"
-  employer         : "HKUSTGZ"
+  employer         : "The Hong Kong University of Science and Technology (Guangzhou)"
   uri              : # URL
   email            : "mpx0222@qq.com" 
 
