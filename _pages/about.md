@@ -51,9 +51,9 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 * `2021.12` 🏅 Third-class Scholarship Excellent Student of Jinan University
 * `2021.05` 🏅 Honorable Mention for Mathematical Contest In Modeling
 
-* `2024.04` 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM
-* `2023.06` 🥉 Third Place of 2022 Jinan University Football Super League, Information Science and Technology
-* `2021.06` 🥇 Champion of 2020 Jinan University Football College Cup, Information Science and Technology
+* `2024.04` 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM，*Central Defender, 4 Games,  2 Assist*.
+* `2023.06` 🥉 Third Place of 2022 Jinan University Football Super League, Information Science and Technology，*Defensive Midfielder, 5 Games, 1 Goal, 2 Assist*..
+* `2021.06` 🥇 Champion of 2020 Jinan University Football College Cup, Information Science and Technology，*Target Forward, 4 Games, 1 Goal, 1 Assist*.
 
 💻Internships
 ======
@@ -61,4 +61,10 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
   * Location: Guangzhou, China
   * Duties: Data Mining, Data Cleaning and Visualization
   * Supervisor: Junjie HUA
+
+⚽ Football Life
+===
+* **HKUST(GZ)**: *8 Games(5 Wins/ 1 Draws/ 2 Losses), 1 Goal, 2 Assist*.
+* **JNU**: *33 Games(20 Wins/ 3 Draws/ 10 Losses), 6 Goal, 4 Assist*.
+* **ZY**: *8 Games(4 Wins/ 0 Draws/ 4 Losses), 0 Goal, 1 Assist*.
   
