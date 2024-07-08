@@ -18,7 +18,7 @@ I got the Distinguished Graduate for the College of Information Science and Tech
 
 Currently, I am researching in Large Language Models(LLMs), Multi-Agents System and Text-to-SQL. And I tring my best to get the chance of HKUSTGZ P.hD program.
 
-Here comes my CV File if you want to know more, or you can go to the cv page for de
+Here comes my CV File if you want to know more, or you can go to the cv page for details:
 [CV](images/AwesomeCV2024_Peixian_MA.pdf)
 
 📟 News
