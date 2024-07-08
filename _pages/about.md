@@ -18,17 +18,17 @@ I got the Distinguished Graduate for the College of Information Science and Tech
 
 Currently, I am researching in Large Language Models(LLMs), Multi-Agents System and Text-to-SQL. And I tring my best to get the chance of HKUSTGZ P.hD program.
 
-Here comes my CV File if you want to know more, or you can go to the cv page for details:
+Here comes my CV File if you want to know more, or you can go to the cv page for de
 [CV](images/AwesomeCV2024_Peixian_MA.pdf)
 
 📟 News
 === 
 * `2024.01` 📌 Successfuly pass the PQA of the Red Bird M.Phil Program.
-* `2023.08` 📌 New responsibility for the Broad Learning System(BLS) research: [BroadLearningSystemTools-2.0](https://github.com/MPX0222/BroadLearningSystemTools-2.0) is available on github.
-* `2023.07` 📌 Received offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).
+* `2023.08` 📌 New toolkit responsibility for the Broad Learning System(BLS) research: [BroadLearningSystemTools-2.0](https://github.com/MPX0222/BroadLearningSystemTools-2.0) is available on github.
+* `2023.07` 📌 Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).
 * `2023.07` 📌 First long research paper: [Development and validation of a deep-broad ensemble model for early detection of Alzheimer’s disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) is published on *Frontiers in Neuroscience*.
 * `2023.05` 📌 Successfully pass the undergraduate graduation defense in JiNan University.
-* `2022.01` 📌 New responsibility for the Broad Learning System(BLS) research: [BroadLearningSystemTools-1.0](https://github.com/MPX0222/BroadLearningSystemTools-1.0) is available on github.
+* `2022.01` 📌 New toolkit responsibility for the Broad Learning System(BLS) research: [BroadLearningSystemTools-1.0](https://github.com/MPX0222/BroadLearningSystemTools-1.0) is available on github.
 
 📘 Education
 ======
@@ -64,7 +64,7 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 
 ⚽ Football Life
 ===
-* **HKUST(GZ)**: *8 Games(5 Wins/ 1 Draws/ 2 Losses), 1 Goal, 2 Assist*.
-* **JNU**: *33 Games(20 Wins/ 3 Draws/ 10 Losses), 6 Goal, 4 Assist*.
-* **ZY**: *8 Games(4 Wins/ 0 Draws/ 4 Losses), 0 Goal, 1 Assist*.
+* **The Hong Kong University of Science and Technology**: *8 Games (5 Wins/ 1 Draws/ 2 Losses), 1 Goal, 2 Assist*.
+* **JiNan University**: *33 Games (20 Wins/ 3 Draws/ 10 Losses), 6 Goal, 4 Assist*.
+* **ZhongYuan High School**: *8 Games (4 Wins/ 0 Draws/ 4 Losses), 0 Goal, 1 Assist*.
   
