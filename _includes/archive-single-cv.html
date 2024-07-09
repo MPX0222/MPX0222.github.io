@@ -38,7 +38,10 @@
     {% endif %}
     {% if post.venue %}
       <p class="archive__item-excerpt" itemprop="description">
-        {{ post.venue }} {{ post.excerpt }}
+        {{ post.venue }} 
+      </p>
+      <p class="archive__item-excerpt" itemprop="description">
+        {{ post.excerpt }} 
       </p> 
     {% endif %}
     </li>
