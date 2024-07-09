@@ -2,7 +2,7 @@
 title: "Development and validation of a deep-broad ensemble model for early detection of Alzheimer's disease"
 collection: publications
 permalink: /publication/2023-07-11-paper-title-number-1
-excerpt: 'Peixian MA, Junwei Duan'
+excerpt: 'Peixian MA, Jing Wang, Zhiguo Zhou, C.L. Philip Chen, Junwei Duan'
 date: 2023-07-11
 venue: 'Frontiers in Neuroscience'
 paperurl: 'https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false'
