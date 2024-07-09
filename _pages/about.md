@@ -37,9 +37,9 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 
 📰 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
+  <ol>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}</ol>
 
 🏆 Selected Awards
 ===
