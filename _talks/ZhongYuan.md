@@ -50,7 +50,7 @@ location: "Guangzhou, China"
 
 “从此高中无闲时。
 
-<img src="images/zy1.png" alt="">
+![ZY2](/images/zy1.png)
 
 **一切，都开始改变了。**
 
@@ -113,7 +113,7 @@ location: "Guangzhou, China"
 
 拍下了眼前的这番景象。
 
-![ZY2](images/zy2.png)
+![ZY2](/images/zy2.png)
 
 那是高二时代的最后一个晚上，
 
@@ -146,7 +146,7 @@ happy的眼罩摘下来的那一瞬间，
 
 一次最真挚的感谢。
 
-![ZY3](images/zy3.png)
+![ZY3](/images/zy3.png)
 
 渐渐地，五个月就这样不知不觉地过去了。
 
@@ -164,7 +164,7 @@ happy的眼罩摘下来的那一瞬间，
 
 实在是困乏到受不了了，便埋头趴在厚厚的笔记课本上，小憩个十五分钟，便又爬起来继续奋战。
 
-![ZY4](images/zy4.png)
+![ZY4](/images/zy4.png)
 
 中午还是有许多快递小哥等待在仲元门口，但他们带来的除了外卖，还有着一本本崭新的《五三》、《高考必刷题》、《42套》......
 
@@ -172,7 +172,7 @@ happy的眼罩摘下来的那一瞬间，
 
 毕竟，这可不是游戏。
 
-![ZY5](images/zy5.png)
+![ZY5](/images/zy5.png)
 
 也在这个时候，我开始感受到这种生活中所独有的快乐。
 
@@ -196,9 +196,9 @@ happy的眼罩摘下来的那一瞬间，
 
 ......
 
-![ZY6](images/zy6.png)
+![ZY6](/images/zy6.png)
 
-![ZY7](images/zy7.png)
+![ZY7](/images/zy7.png)
 
 也就十几天的光阴，却感觉过了一年。
 
@@ -231,7 +231,7 @@ happy的眼罩摘下来的那一瞬间，
 
 走到了滴水岩的顶峰。
 
-![ZY8](images/zy8.png)
+![ZY8](/images/zy8.png)
 
 躺在床上，没有什么困意。
 
@@ -350,7 +350,7 @@ happy的眼罩摘下来的那一瞬间，
 
 我找到了树荫底下的happy姐，拍了一张合照。
 
-![ZY9](images/zy9.png)
+![ZY9](/images/zy9.png)
 
 收拾好东西，门外喧闹的人们也渐渐散去，
 
@@ -366,7 +366,7 @@ happy的眼罩摘下来的那一瞬间，
 
 拍下了这一张照片。
 
-![ZY10](images/zy10.png)
+![ZY10](/images/zy10.png)
 
 我回过头，走向桥那边等待的汽车，
 
