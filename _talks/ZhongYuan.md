@@ -50,7 +50,7 @@ location: "Guangzhou, China"
 
 “从此高中无闲时。
 
-![Galaxy is our dream](images/Galaxy.png)
+<img src="images/zy1.png" alt="">
 
 **一切，都开始改变了。**
 
