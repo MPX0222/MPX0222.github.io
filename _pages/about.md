@@ -38,7 +38,7 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 📰 Publications
 ======
 1. [Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) 
-<br><em>Frontiers in Neuroscience.</em> <b>Peixian Ma</b>, Jing Wang, Zhiguo Zhou, C.L. Philip Chen, Alzheimer's Disease Neuroimaging Initiative, Junwei Duan</br>
+<br><em>Frontiers in Neuroscience.</em> <b>Peixian Ma</b>, Jing Wang, Zhiguo Zhou, C.L. Philip Chen, Alzheimer's Disease Neuroimaging Initiative, Junwei Duan
   
 
 
@@ -52,9 +52,9 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 * `2021.12` 🏅 Third-class Scholarship Excellent Student of Jinan University
 * `2021.05` 🏅 Honorable Mention for Mathematical Contest In Modeling
 
-* `2024.04` 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM，*Central Defender, 4 Games,  2 Assist*.
-* `2023.06` 🥉 Third Place of 2022 Jinan University Football Super League, Information Science and Technology，*Defensive Midfielder, 5 Games, 1 Goal, 2 Assist*..
-* `2021.06` 🥇 Champion of 2020 Jinan University Football College Cup, Information Science and Technology，*Target Forward, 4 Games, 1 Goal, 1 Assist*.
+* `2024.04` 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, *Central Defender, 4 Games,  2 Assist*.
+* `2023.06` 🥉 Third Place of 2022 Jinan University Football Super League, Information Science and Technology, *Defensive Midfielder, 5 Games, 1 Goal, 2 Assist*..
+* `2021.06` 🥇 Champion of 2020 Jinan University Football College Cup, Information Science and Technology, *Target Forward, 4 Games, 1 Goal, 1 Assist*.
 
 💻Internships
 ======
