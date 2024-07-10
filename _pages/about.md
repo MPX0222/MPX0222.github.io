@@ -37,9 +37,10 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 
 📰 Publications
 ======
-  <ol>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ol>
+1. [Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) 
+<br><em>Frontiers in Neuroscience.</em> <b>Peixian Ma</b>, Jing Wang, Zhiguo Zhou, C.L. Philip Chen, Alzheimer's Disease Neuroimaging Initiative, Junwei Duan</br>
+  
+
 
 🏆 Selected Awards
 ===
@@ -61,6 +62,11 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
   * Location: Guangzhou, China
   * Duties: Data Mining, Data Cleaning and Visualization
   * Supervisor: Junjie HUA
+
+🤖 Services
+===
+* Conference: 
+  * VLDB 2024 Volunteer
 
 ⚽ Football Life
 ===
