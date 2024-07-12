@@ -16,3 +16,7 @@ citation: ''
 **Results**: The result of experiments demonstrate that the broad-deep ensemble model is superior to previously proposed related works, including 3D-ResNet and VoxCNN, in accuracy, sensitivity, specificity and F1.
 
 **Discussion**: The proposed broad-deep ensemble model is effective for early detection of Alzheimer's disease. In addition, the proposed model does not need the pre-training process of its depth module, which greatly reduces the training time and hardware dependence.
+
+<iframe src="/files/deepbroad2023.pdf" width="800" height="1200">  
+    This browser does not support PDFs. Please download the PDF to view it: <a href="path/to/your/file.pdf">Download PDF</a>  
+</iframe>
