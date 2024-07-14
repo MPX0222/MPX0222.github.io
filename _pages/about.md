@@ -53,15 +53,25 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 * `2021.05` 🏅 Honorable Mention for Mathematical Contest In Modeling
 
 * `2024.04` 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, *Central Defender, 4 Games,  2 Assist*.
-* `2023.06` 🥉 Third Place of 2022 Jinan University Football Super League, Information Science and Technology, *Defensive Midfielder, 5 Games, 1 Goal, 2 Assist*..
+* `2023.06` 🥉 Third Place of 2022 Jinan University Football Super League, Information Science and Technology, *Defensive Midfielder, 5 Games, 1 Goal, 2 Assist*.
+* `2021.10` 🏆 Best Player of the Second Round in 2021 Jinan University Football Super League, Information Science and Technology.
 * `2021.06` 🥇 Champion of 2020 Jinan University Football College Cup, Information Science and Technology, *Target Forward, 4 Games, 1 Goal, 1 Assist*.
 
 💻Internships
 ======
-* *Spring 2023 - Summar 2023* : Research Assistant, Big Data Center of Jinan University
+* `2023.01` - `2023.06` : Research Assistant, Big Data Center of Jinan University
   * Location: Guangzhou, China
-  * Duties: Data Mining, Data Cleaning and Visualization
+  * Duties: Data Mining, Data Cleaning and Visualization 
   * Supervisor: Junjie HUA
+
+* `2020.09` - `2022.12` : Research Assistant,  Data-driven Intelligent Systems Laboratory of Jinan University
+  * Location: Guangzhou, China
+  * Duties: Conceptualization, Methodology, Validation, Data Visualization, Writing Draft, Review and Project Administration
+  * Projects:
+    * National Key Research and Development Program of China , No. 2018YFC2002500, Participant.
+    * Guangdong Basic and Applied Basic Research Foundation, No. 2021A1515011999, Participant.
+    * Guangdong Provincial Key Laboratory of Traditional Chinese Medicine Informatization, No. 2021B1212040007, Participant.
+  * Supervisor: Junwei Duan, Yujuan Quan
 
 🤖 Services
 ===
