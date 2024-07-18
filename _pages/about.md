@@ -8,15 +8,16 @@ redirect_from:
 ---
 
 Hello! I am Ma Peixian. I received B.Eng. degree in Intelligence Science and Technology from [Jinan University](https://english.jnu.edu.cn/) in 2023. 
-Now I am studying for a Master's degree of Philosophy(M.Phil) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/), 
+Now I am studying for a Master's degree of Philosophy (M.Phil.) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/), 
 at the [Data Science and Analytics Thrust (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/), [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/) of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/).
 
-During my undergraduate life, I have worked as the undergraduate member and research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University.
+During my undergraduate life, I have worked as the undergraduate member and research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University, under the supervision of Junwei Duan and Yujuan Quan.
 I have participated in several research projects, including a National Key Research and Development Plan project, a Guangdong Province Natural Science Foundation project.
-My undergraduate research direction is the Optimization and Application of Broad Learning System(BLS), and a long research paper have been published on the Frontier journals(2023 JCR Q2, IF=4.8).
-I got the Distinguished Graduate for the College of Information Science and Technology, Jinan University.
+My undergraduate research direction is the optimization and application of Broad Learning System (BLS), and a long research paper have been published on the Frontier journals(2023 JCR Q2, IF=4.8).
 
-Currently, I am researching in Large Language Models(LLMs), Multi-Agents System and Text-to-SQL. And I tring my best to get the chance of HKUSTGZ P.hD program.
+Currently, my research direction comprises Large Language Models, Multi-agent System and Text-to-SQL System. I am struggle for filling the gap between lay users and the LLMs-based task-specific models.
+
+And I tring my best to get the chance of HKUST(GZ) P.hD program.
 
 Here comes my CV File if you want to know more, or you can go to the cv page for details:
 [CV](files/AwesomeCV2024_Peixian_MA.pdf)
