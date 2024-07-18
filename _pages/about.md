@@ -7,9 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I am Ma Peixian. I received B.Eng. degree in Intelligence Science and Technology from Jinan University in 2023. 
+Hello! I am Ma Peixian. I received B.Eng. degree in Intelligence Science and Technology from [Jinan University](https://english.jnu.edu.cn/) in 2023. 
 Now I am studying for a Master's degree of Philosophy(M.Phil) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/), 
-at the Data Science and Analytics Thrust(DSA), Information Hub(INFH) of The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ).
+at the [Data Science and Analytics Thrust (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/), [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/) of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/).
 
 During my undergraduate life, I have worked as the undergraduate member and research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University.
 I have participated in several research projects, including a National Key Research and Development Plan project, a Guangdong Province Natural Science Foundation project.
@@ -48,8 +48,8 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 * `2023.09` 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou)
 * `2023.06` 🏅 Distinguished Graduate of College of Information Science and Technology, Jinan University
 * `2023.04` 🏅 Silver Award in "Medicine +X" Virtual Simulation Competition for College students
-* `2022.12` 🏅 Second-class Scholarship for Excellent Student of Jinan University
-* `2021.12` 🏅 Third-class Scholarship Excellent Student of Jinan University
+* `2022.12` 🏅 Second Class Scholarship for Excellent Student of Jinan University
+* `2021.12` 🏅 Third Class Scholarship Excellent Student of Jinan University
 * `2021.05` 🏅 Honorable Mention for Mathematical Contest In Modeling
 
 * `2024.04` 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, *Central Defender, 4 Games,  2 Assist*.
@@ -59,12 +59,12 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 
 💻Internships
 ======
-* `2023.01` - `2023.06` : Research Assistant, Big Data Center of Jinan University
+* `2023.01` - `2023.06` : Research Assistant, Big Data Center @[Jinan University](https://english.jnu.edu.cn/)
   * Location: Guangzhou, China
   * Duties: Data Mining, Data Cleaning and Visualization 
   * Supervisor: Junjie HUA
 
-* `2020.09` - `2022.12` : Research Assistant,  Data-driven Intelligent Systems Laboratory of Jinan University
+* `2020.09` - `2022.12` : Research Assistant,  Data-driven Intelligent Systems Laboratory @[Jinan University](https://english.jnu.edu.cn/)
   * Location: Guangzhou, China
   * Duties: Conceptualization, Methodology, Validation, Data Visualization, Writing Draft, Review and Project Administration
   * Projects:
