@@ -15,7 +15,8 @@ During my undergraduate life, I have worked as the undergraduate member and rese
 I have participated in several research projects, including a National Key Research and Development Plan project, a Guangdong Province Natural Science Foundation project.
 My undergraduate research direction is the optimization and application of Broad Learning System (BLS), and a long research paper have been published on the Frontier journals(2023 JCR Q2, IF=4.8).
 
-Currently, my research direction comprises Large Language Models, Multi-agent System and Text-to-SQL System. I am struggle for filling the gap between lay users and the LLMs-based task-specific models.
+Currently, I join in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL]() and HKUST(GZ) Red Bird AI Agent narrative Story Game Groups [@AASG]().
+My research direction comprises Large Language Models, Multi-agent System and Text-to-SQL System. I am struggle for filling the gap between lay users and the LLMs-based task-specific models.
 
 And I tring my best to get the chance of HKUST(GZ) P.hD program.
 
