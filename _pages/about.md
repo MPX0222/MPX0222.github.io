@@ -15,7 +15,7 @@ During my undergraduate life, I have worked as the undergraduate member and rese
 I have participated in several research projects, including a National Key Research and Development Plan project, a Guangdong Province Natural Science Foundation project.
 My undergraduate research direction is the optimization and application of Broad Learning System (BLS), and a long research paper have been published on the Frontier journals(2023 JCR Q2, IF=4.8).
 
-Currently, I join in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL]() and HKUST(GZ) Red Bird AI Agent narrative Story Game Groups [@AASG]().
+Currently, I join in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL](https://github.com/HKUSTDial) and HKUST(GZ) Red Bird AI Agent narrative Story Game Groups [@AASG]().
 My research direction comprises Large Language Models, Multi-agent System and Text-to-SQL System. I am struggle for filling the gap between lay users and the LLMs-based task-specific models.
 
 And I tring my best to get the chance of HKUST(GZ) P.hD program.
@@ -55,18 +55,18 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 * `2021.05` 🏅 Honorable Mention for Mathematical Contest In Modeling
 
 * `2024.04` 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, *Central Defender, 4 Games,  2 Assist*.
-* `2023.06` 🥉 Third Place of 2022 Jinan University Football Super League, Information Science and Technology, *Defensive Midfielder, 5 Games, 1 Goal, 2 Assist*.
+* `2023.06` 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, *Defensive Midfielder, 5 Games, 1 Goal, 2 Assist*.
 * `2021.10` 🏆 Best Player of the Second Round in 2021 Jinan University Football Super League, Information Science and Technology.
-* `2021.06` 🥇 Champion of 2020 Jinan University Football College Cup, Information Science and Technology, *Target Forward, 4 Games, 1 Goal, 1 Assist*.
+* `2021.06` 🥇 Champion of 2020 Jinan University Football College Cup, College of Information Science and Technology, *Target Forward, 4 Games, 1 Goal, 1 Assist*.
 
 💻Internships
 ======
-* `2023.01` - `2023.06` : Research Assistant, Big Data Center @[Jinan University](https://english.jnu.edu.cn/)
+* `2023.01` - `2023.06` : Research Assistant, Big Data Center [@Jinan University](https://english.jnu.edu.cn/)
   * Location: Guangzhou, China
   * Duties: Data Mining, Data Cleaning and Visualization 
   * Supervisor: Junjie HUA
 
-* `2020.09` - `2022.12` : Research Assistant,  Data-driven Intelligent Systems Laboratory @[Jinan University](https://english.jnu.edu.cn/)
+* `2020.09` - `2022.12` : Research Assistant,  Data-driven Intelligent Systems Laboratory [@Jinan University](https://english.jnu.edu.cn/)
   * Location: Guangzhou, China
   * Duties: Conceptualization, Methodology, Validation, Data Visualization, Writing Draft, Review and Project Administration
   * Projects:
@@ -82,7 +82,7 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 
 ⚽ Football Life
 ===
-* **The Hong Kong University of Science and Technology**: *8 Games (5 Wins/ 1 Draws/ 2 Losses), 1 Goal, 2 Assist*.
-* **JiNan University**: *33 Games (20 Wins/ 3 Draws/ 10 Losses), 6 Goal, 4 Assist*.
-* **ZhongYuan High School**: *8 Games (4 Wins/ 0 Draws/ 4 Losses), 0 Goal, 1 Assist*.
+* **School Team, The Hong Kong University of Science and Technology**: *8 Games (5 Wins/ 1 Draws/ 2 Losses), 1 Goal, 2 Assist*.
+* **College Team, College of Information Science of Technology, JiNan University**: *33 Games (20 Wins/ 3 Draws/ 10 Losses), 6 Goal, 4 Assist*.
+* **Class Team, Happy My Lover of Class 3, ZhongYuan High School**: *8 Games (4 Wins/ 0 Draws/ 4 Losses), 0 Goal, 1 Assist*.
   
