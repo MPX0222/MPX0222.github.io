@@ -52,12 +52,17 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 
 📟 News
 === 
+* `2024.07` 📌 New Milestone Incoming...... 
 * `2024.01` 📌 Successfuly pass the PQA of the Red Bird M.Phil Program.
-* `2023.08` 📌 New toolkit responsibility for the Broad Learning System(BLS) research: [BroadLearningSystemTools-2.0](https://github.com/MPX0222/BroadLearningSystemTools-2.0) is available on github.
+* `2023.08` 📌 New toolkit responsibility for the Broad Learning System (BLS) research: [BroadLearningSystemTools-2.0](https://github.com/MPX0222/BroadLearningSystemTools-2.0) is available on github.
+![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-2.0?style=social)
+
 * `2023.07` 📌 Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).
 * `2023.07` 📌 First long research paper: [Development and validation of a deep-broad ensemble model for early detection of Alzheimer’s disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) is published on *Frontiers in Neuroscience*.
+![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-2.0?style=social)
 * `2023.05` 📌 Successfully pass the undergraduate graduation defense in JiNan University.
-* `2022.01` 📌 New toolkit responsibility for the Broad Learning System(BLS) research: [BroadLearningSystemTools-1.0](https://github.com/MPX0222/BroadLearningSystemTools-1.0) is available on github.
+* `2022.01` 📌 New toolkit responsibility for the Broad Learning System (BLS) research: [BroadLearningSystemTools-1.0](https://github.com/MPX0222/BroadLearningSystemTools-1.0) is available on github.
+![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-1.0?style=social)
 
 🎓 Education
 ======
@@ -104,7 +109,7 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 🤖 Services
 ===
 * Conference: 
-  * VLDB 2024 Volunteer
+  * VLDB 2024 Volunteer [@VLDB2024]()
 
 ⚽ Football Life
 ===
