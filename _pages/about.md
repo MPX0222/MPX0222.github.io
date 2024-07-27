@@ -7,6 +7,18 @@ redirect_from:
   - /about.html
 ---
 
+ 
+
+ 
+<!-- https://github.com/badges/shields -->
+<p align="center">
+<a href="https://github.com/MPX0222">
+<img src="https://img.shields.io/badge/GitHub-MPX0222-blue?logo=github" />
+</a>
+<!-- https://github.com/antonkomarev/github-profile-views-counter -->
+<img src="https://komarev.com/ghpvc/?username=MPX0222&abbreviated=true&color=yellow" />
+</p>
+ 
 
 Hello! I am Ma Peixian. I received B.Eng. degree in Intelligence Science and Technology from [Jinan University](https://english.jnu.edu.cn/) in 2023. 
 Now I am studying for a Master's degree of Philosophy (M.Phil.) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/), 
