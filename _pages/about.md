@@ -7,9 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-<p align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&&section=header&text={HI THERE!}&fontSize=90&fontAlign=50&fontAlignY=30&desc={Welcome to my web!}&descAlign=50&descSize=30&descAlignY=60&animation=twinkling" />
-</p>
 
 Hello! I am Ma Peixian. I received B.Eng. degree in Intelligence Science and Technology from [Jinan University](https://english.jnu.edu.cn/) in 2023. 
 Now I am studying for a Master's degree of Philosophy (M.Phil.) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/), 
@@ -27,6 +24,32 @@ And I tring my best to get the chance of HKUST(GZ) P.hD program.
 Here comes my CV File if you want to know more, or you can go to the cv page for details:
 [CV](files/AwesomeCV2024_Peixian_MA.pdf)
 
+📘 Tech Stack
+===
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=c,python,matlab,mysql,java,html,markdown,css,latex" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,opencv,qt" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=visualstudio,vscode,pycharm,anaconda,vim,bash,git,github,unity" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=notion,figma" />
+  </a>
+</p>
+
 📟 News
 === 
 * `2024.01` 📌 Successfuly pass the PQA of the Red Bird M.Phil Program.
@@ -36,7 +59,7 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 * `2023.05` 📌 Successfully pass the undergraduate graduation defense in JiNan University.
 * `2022.01` 📌 New toolkit responsibility for the Broad Learning System(BLS) research: [BroadLearningSystemTools-1.0](https://github.com/MPX0222/BroadLearningSystemTools-1.0) is available on github.
 
-📘 Education
+🎓 Education
 ======
 * M.Phil. in Data Science and Analytics, The Hong Kong University of Science and Technology, *2023.09 - 2025.07 (Expected)*
 * B.Eng. in Intelligence Science and Technology, JiNan University, *2019.09 - 2023.07*
