@@ -15,8 +15,11 @@ redirect_from:
 <a href="https://github.com/MPX0222">
 <img src="https://img.shields.io/badge/GitHub-MPX0222-blue?logo=github" />
 </a>
-<a href="https://github.com/MPX0222">
-<img src="https://visitor-badge.laobi.icu/badge?page_id=MPX0222&left_color=grey&right_color=red" />
+<a href="">
+<img src="https://img.shields.io/badge/Steam-MPX0222-white?logo=Steam" />
+</a>
+<a href="">
+<img src="https://img.shields.io/badge/Mail-mpx0222%40qq.com-red?logo=Gmail" />
 </a>
 </p>
 
@@ -87,20 +90,25 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 ======
 1. [Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) 
 <br><em>Frontiers in Neuroscience.</em> <b>Peixian Ma</b>, Jing Wang, Zhiguo Zhou, C.L. Philip Chen, Alzheimer's Disease Neuroimaging Initiative, Junwei Duan 
+<br>[![Static Badge](https://img.shields.io/badge/PDF-Frontiers_in_neuroscience-brightgreen)](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false)
+![Static Badge](https://img.shields.io/badge/Github-BroadLearningSystemTools_2.0-blue?logo=Github)
+
+
+
 
 
 🏆 Selected Awards
 ===
-Academic Awards
+> Academic Awards
 * `2024.09` 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou)
 * `2023.09` 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou)
-* `2023.06` 🏅 Distinguished Graduate of College of Information Science and Technology, Jinan University
+* `2023.06` 🏅 Distinguished Graduate, College of Information Science and Technology, Jinan University
 * `2023.04` 🏅 Silver Award in "Medicine +X" Virtual Simulation Competition for College students, Jinan University & Guangzhou Medical University
 * `2022.12` 🏅 Second Class Scholarship for Excellent Student, Jinan University
 * `2021.12` 🏅 Third Class Scholarship Excellent Student, Jinan University
 * `2021.05` 🏅 Honorable Mention for Mathematical Contest In Modeling, Jinan University
 
-Sport Awards
+> Sport Awards
 * `2024.04` 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, *Central Defender, 4 Games,  2 Assist*.
 * `2023.06` 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, *Defensive Midfielder, 5 Games, 1 Goal, 2 Assist*.
 * `2021.10` 🏆 Best Player of the Second Round in 2021 Jinan University Football Super League, Information Science and Technology.
@@ -108,12 +116,12 @@ Sport Awards
 
 💻Internships
 ======
-* `2023.01` - `2023.06` : Research Assistant, Big Data Center [@Jinan University](https://english.jnu.edu.cn/)
+* `2023.01` - `2023.06` : Research Assistant, Big Data Center [@School of Journalism & Communication, Jinan University](https://xwxy.jnu.edu.cn/2018/1218/c12846a322831/page.psp)
   * Location: Guangzhou, China
   * Duties: Data Mining, Data Cleaning and Visualization 
   * Supervisor: Junjie HUA
 
-* `2020.09` - `2022.12` : Research Assistant,  Data-driven Intelligent Systems Laboratory [@Jinan University](https://english.jnu.edu.cn/)
+* `2020.09` - `2022.12` : Research Assistant,  Data-driven Intelligent Systems Laboratory [@College of Information Science of Technology, Jinan University](https://faculty.jnu.edu.cn/xxkxjsxy/djw/list.htm)
   * Location: Guangzhou, China
   * Duties: Conceptualization, Methodology, Validation, Data Visualization, Writing Draft, Review and Project Administration
   * Projects:
@@ -125,11 +133,14 @@ Sport Awards
 🤖 Services
 ===
 * Conference: 
-  * VLDB 2024 Volunteer [@VLDB2024]()
+  * VLDB 2024 Volunteer [@VLDB 2024](https://vldb.org/2024/)
 
 ⚽ Football Life
 ===
-* **School Team, The Hong Kong University of Science and Technology**: *8 Games (5 Wins/ 1 Draws/ 2 Losses), 1 Goal, 2 Assist*.
-* **College Team, College of Information Science of Technology, JiNan University**: *33 Games (20 Wins/ 3 Draws/ 10 Losses), 6 Goal, 4 Assist*.
-* **Class Team, Happy My Lover of Class 3, ZhongYuan High School**: *8 Games (4 Wins/ 0 Draws/ 4 Losses), 0 Goal, 1 Assist*.
-  
+
+
+| Team | Games | Win | Draw | Loss | Goal | Assist |
+|-------|-------|-------|-------|-------|-------|-------|
+| The Hong Kong University of Science and Technology (Guangzhou) | 8 | 5 | 1 | 2 | 1 | 2 |
+| College of Information Science of Technology, JiNan University | 33 | 20 | 3 | 10 | 6 | 4 |
+| Happy My Lover of Class 3, ZhongYuan High School | 8 | 4 | 0 | 4 | 0 | 1 |
