@@ -100,6 +100,7 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 🏆 Selected Awards
 ===
 > Academic Awards
+
 * `2024.09` 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou)
 * `2023.09` 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou)
 * `2023.06` 🏅 Distinguished Graduate, College of Information Science and Technology, Jinan University
@@ -109,6 +110,7 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 * `2021.05` 🏅 Honorable Mention for Mathematical Contest In Modeling, Jinan University
 
 > Sport Awards
+
 * `2024.04` 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, *Central Defender, 4 Games,  2 Assist*.
 * `2023.06` 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, *Defensive Midfielder, 5 Games, 1 Goal, 2 Assist*.
 * `2021.10` 🏆 Best Player of the Second Round in 2021 Jinan University Football Super League, Information Science and Technology.
