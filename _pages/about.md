@@ -15,10 +15,12 @@ redirect_from:
 <a href="https://github.com/MPX0222">
 <img src="https://img.shields.io/badge/GitHub-MPX0222-blue?logo=github" />
 </a>
-<!-- https://github.com/antonkomarev/github-profile-views-counter -->
-<img src="https://komarev.com/ghpvc/?username=MPX0222&abbreviated=true&color=yellow" />
+<a href="https://github.com/MPX0222">
+<img src="https://visitor-badge.laobi.icu/badge?page_id=MPX0222&left_color=grey&right_color=red" />
+</a>
 </p>
- 
+
+
 
 Hello! I am Ma Peixian. I received B.Eng. degree in Intelligence Science and Technology from [Jinan University](https://english.jnu.edu.cn/) in 2023. 
 Now I am studying for a Master's degree of Philosophy (M.Phil.) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/), 
@@ -67,14 +69,14 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 * `2024.07` 📌 New Milestone Incoming...... 
 * `2024.01` 📌 Successfuly pass the PQA of the Red Bird M.Phil Program.
 * `2023.08` 📌 New toolkit responsibility for the Broad Learning System (BLS) research: [BroadLearningSystemTools-2.0](https://github.com/MPX0222/BroadLearningSystemTools-2.0) is available on github.
-![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-2.0?style=social)
+[![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-2.0?style=social)](https://github.com/MPX0222/BroadLearningSystemTools-2.0)
 
 * `2023.07` 📌 Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).
 * `2023.07` 📌 First long research paper: [Development and validation of a deep-broad ensemble model for early detection of Alzheimer’s disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) is published on *Frontiers in Neuroscience*.
-![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-2.0?style=social)
+[![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-2.0?style=social)](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false)
 * `2023.05` 📌 Successfully pass the undergraduate graduation defense in JiNan University.
 * `2022.01` 📌 New toolkit responsibility for the Broad Learning System (BLS) research: [BroadLearningSystemTools-1.0](https://github.com/MPX0222/BroadLearningSystemTools-1.0) is available on github.
-![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-1.0?style=social)
+[![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-1.0?style=social)](https://github.com/MPX0222/BroadLearningSystemTools-1.0)
 
 🎓 Education
 ======
@@ -89,14 +91,16 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 
 🏆 Selected Awards
 ===
+Academic Awards
 * `2024.09` 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou)
 * `2023.09` 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou)
 * `2023.06` 🏅 Distinguished Graduate of College of Information Science and Technology, Jinan University
-* `2023.04` 🏅 Silver Award in "Medicine +X" Virtual Simulation Competition for College students
-* `2022.12` 🏅 Second Class Scholarship for Excellent Student of Jinan University
-* `2021.12` 🏅 Third Class Scholarship Excellent Student of Jinan University
-* `2021.05` 🏅 Honorable Mention for Mathematical Contest In Modeling
+* `2023.04` 🏅 Silver Award in "Medicine +X" Virtual Simulation Competition for College students, Jinan University & Guangzhou Medical University
+* `2022.12` 🏅 Second Class Scholarship for Excellent Student, Jinan University
+* `2021.12` 🏅 Third Class Scholarship Excellent Student, Jinan University
+* `2021.05` 🏅 Honorable Mention for Mathematical Contest In Modeling, Jinan University
 
+Sport Awards
 * `2024.04` 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, *Central Defender, 4 Games,  2 Assist*.
 * `2023.06` 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, *Defensive Midfielder, 5 Games, 1 Goal, 2 Assist*.
 * `2021.10` 🏆 Best Player of the Second Round in 2021 Jinan University Football Super League, Information Science and Technology.
