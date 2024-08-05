@@ -89,8 +89,8 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 📰 Publications
 ======
 1. [Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) 
-<br><em>Frontiers in Neuroscience.</em> <b>Peixian Ma</b>, Jing Wang, Zhiguo Zhou, C.L. Philip Chen, Alzheimer's Disease Neuroimaging Initiative, Junwei Duan 
-<br>[![Static Badge](https://img.shields.io/badge/PDF-Frontiers_in_neuroscience-brightgreen)](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false)
+<br><em>Frontiers in Neuroscience 2023.</em> <b>Peixian Ma</b>, Jing Wang, Zhiguo Zhou, C.L. Philip Chen, Alzheimer's Disease Neuroimaging Initiative, Junwei Duan 
+<br>[![Static Badge](https://img.shields.io/badge/PDF-Frontiers_in_neuroscience_2023-brightgreen?logo=Arxiv)](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false)
 ![Static Badge](https://img.shields.io/badge/Github-BroadLearningSystemTools_2.0-blue?logo=Github)
 
 
@@ -135,7 +135,7 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 🤖 Services
 ===
 * Conference: 
-  * VLDB 2024 Volunteer [@VLDB 2024](https://vldb.org/2024/)
+  * VLDB 2024 Volunteer, Guangzhou [@VLDB 2024](https://vldb.org/2024/)
 
 ⚽ Football Life
 ===
