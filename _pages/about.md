@@ -69,16 +69,16 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 
 📟 News
 === 
-* `2024.08` 📌 New Milestone Incoming...... 
+* `2024.08` 📌 First Survey of [@HKUST(GZ)-DIAL](https://github.com/HKUSTDial) NL2SQL Research Group: [A Survey of NL2SQL with Large Language Models: Where are we, and where are we going](https://arxiv.org/pdf/2408.05109) is published in *Arxiv*. Github link: [https://github.com/HKUSTDial/NL2SQL_Handbook](https://github.com/HKUSTDial/NL2SQL_Handbook).
 * `2024.01` 📌 Successfuly pass the PQA of the Red Bird M.Phil Program.
 * `2023.08` 📌 New toolkit responsibility for the Broad Learning System (BLS) research: [BroadLearningSystemTools-2.0](https://github.com/MPX0222/BroadLearningSystemTools-2.0) is available on github.
 [![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-2.0?style=social)](https://github.com/MPX0222/BroadLearningSystemTools-2.0)
 
 * `2023.07` 📌 Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).
-* `2023.07` 📌 First long research paper: [Development and validation of a deep-broad ensemble model for early detection of Alzheimer’s disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) is published on *Frontiers in Neuroscience*.
+* `2023.07` 📌 First long research paper: [Development and validation of a deep-broad ensemble model for early detection of Alzheimer’s disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) is published in *Frontiers in Neuroscience*.
 
 * `2023.05` 📌 Successfully pass the undergraduate graduation defense in JiNan University.
-* `2022.01` 📌 New toolkit responsibility for the Broad Learning System (BLS) research: [BroadLearningSystemTools-1.0](https://github.com/MPX0222/BroadLearningSystemTools-1.0) is available on github.
+* `2022.01` 📌 First toolkit responsibility for the Broad Learning System (BLS) research: [BroadLearningSystemTools-1.0](https://github.com/MPX0222/BroadLearningSystemTools-1.0) is available on github.
 [![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-1.0?style=social)](https://github.com/MPX0222/BroadLearningSystemTools-1.0)
 
 🎓 Education
@@ -88,10 +88,17 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 
 📰 Publications
 ======
-1. [Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) 
-<br><em>Frontiers in Neuroscience 2023.</em> <b>Peixian Ma</b>, Jing Wang, Zhiguo Zhou, C.L. Philip Chen, Alzheimer's Disease Neuroimaging Initiative, Junwei Duan 
+1. [A Survey of NL2SQL with Large Language Models: Where are we, and where are we going]()
+<br><em>Arxiv 2024.</em> Xinyu Liu, Shuyu Shen, Boyan Li, <b>Peixian Ma</b>, Runzhi Jiang, Yuxin Zhang, Ju Fan, Guoliang Li, Yuyu Luo, and Nan Tang
+<br>[![Static Badge](https://img.shields.io/badge/PDF-Arxiv_2024-brightgreen?logo=Arxiv)](https://arxiv.org/pdf/2408.05109)
+[![Static Badge](https://img.shields.io/badge/Github-NL2SQL_Handbook-blue?logo=Github)](https://github.com/HKUSTDial/NL2SQL_Handbook)
+[![Static Badge](https://img.shields.io/github/stars/HKUSTDial/NL2SQL_Handbook?style=social)](https://github.com/HKUSTDial/NL2SQL_Handbook)
+
+
+2. [Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) 
+<br><em>Frontiers in Neuroscience 2023.</em> <b>Peixian Ma</b>, Jing Wang, Zhiguo Zhou, C. L. Philip Chen, Alzheimer's Disease Neuroimaging Initiative, Junwei Duan 
 <br>[![Static Badge](https://img.shields.io/badge/PDF-Frontiers_in_Neuroscience_2023-brightgreen?logo=Arxiv)](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false)
-![Static Badge](https://img.shields.io/badge/Github-BroadLearningSystemTools_2.0-blue?logo=Github)
+[![Static Badge](https://img.shields.io/badge/Github-BroadLearningSystemTools_2.0-blue?logo=Github)](https://github.com/MPX0222/BroadLearningSystemTools-2.0)
 [![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-2.0?style=social)](https://github.com/MPX0222/BroadLearningSystemTools-2.0)
 
 
