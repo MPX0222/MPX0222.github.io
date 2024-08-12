@@ -69,7 +69,7 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 
 📟 News
 === 
-* `2024.08` 📌 First Survey of [@HKUST(GZ)-DIAL](https://github.com/HKUSTDial) NL2SQL Research Group: [A Survey of NL2SQL with Large Language Models: Where are we, and where are we going](https://arxiv.org/pdf/2408.05109) is published in *Arxiv*. Github link: [https://github.com/HKUSTDial/NL2SQL_Handbook](https://github.com/HKUSTDial/NL2SQL_Handbook).
+* `2024.08` 📌 First Survey of [@HKUST(GZ)-DIAL](https://github.com/HKUSTDial) NL2SQL Research Group: [A Survey of NL2SQL with Large Language Models: Where are we, and where are we going](https://arxiv.org/pdf/2408.05109) is available on *Arxiv*. Github link: [https://github.com/HKUSTDial/NL2SQL_Handbook](https://github.com/HKUSTDial/NL2SQL_Handbook).
 * `2024.01` 📌 Successfuly pass the PQA of the Red Bird M.Phil Program.
 * `2023.08` 📌 New toolkit responsibility for the Broad Learning System (BLS) research: [BroadLearningSystemTools-2.0](https://github.com/MPX0222/BroadLearningSystemTools-2.0) is available on github.
 [![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-2.0?style=social)](https://github.com/MPX0222/BroadLearningSystemTools-2.0)
