@@ -150,7 +150,7 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 🤖 Services
 ===
 * Conference: 
-  * VLDB 2024 Volunteer, Guangzhou [@VLDB 2024](https://vldb.org/2024/)
+  * Student Volunteer, 50th International Conference on Very Large Databases ([@VLDB 2024](https://vldb.org/2024/)), Guangzhou
 
 ⚽ Football Life
 ===
