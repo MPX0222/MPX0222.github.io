@@ -69,6 +69,7 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 
 📟 News
 === 
+* `2024.08` 📌 Long research paper completed and submitted.
 * `2024.08` 📌 First Survey of [@HKUST(GZ)-DIAL](https://github.com/HKUSTDial) NL2SQL Research Group: [A Survey of NL2SQL with Large Language Models: Where are we, and where are we going](https://arxiv.org/pdf/2408.05109) is available on *Arxiv*. *NL2SQL Handbook* link: [https://github.com/HKUSTDial/NL2SQL_Handbook](https://github.com/HKUSTDial/NL2SQL_Handbook). 
 [![Static Badge](https://img.shields.io/github/stars/HKUSTDial/NL2SQL_Handbook?style=social)](https://github.com/HKUSTDial/NL2SQL_Handbook)
 * `2024.01` 📌 Successfuly pass the PQA of the Red Bird M.Phil Program.
@@ -89,14 +90,19 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 
 📰 Publications
 ======
-1. [A Survey of NL2SQL with Large Language Models: Where are we, and where are we going]()
+1. [Imcoming Research Paper......]()
+<br><em>Arxiv 2024.</em> Imcoming Authors......
+<br>[![Static Badge](https://img.shields.io/badge/PDF-Arxiv_2024-brightgreen?logo=Arxiv)]()
+
+
+2. [A Survey of NL2SQL with Large Language Models: Where are we, and where are we going]()
 <br><em>Arxiv 2024.</em> Xinyu Liu, Shuyu Shen, Boyan Li, <b>Peixian Ma</b>, Runzhi Jiang, Yuxin Zhang, Ju Fan, Guoliang Li, Yuyu Luo, and Nan Tang
 <br>[![Static Badge](https://img.shields.io/badge/PDF-Arxiv_2024-brightgreen?logo=Arxiv)](https://arxiv.org/pdf/2408.05109)
 [![Static Badge](https://img.shields.io/badge/Github-NL2SQL_Handbook-blue?logo=Github)](https://github.com/HKUSTDial/NL2SQL_Handbook)
 [![Static Badge](https://img.shields.io/github/stars/HKUSTDial/NL2SQL_Handbook?style=social)](https://github.com/HKUSTDial/NL2SQL_Handbook)
 
 
-2. [Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) 
+3. [Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) 
 <br><em>Frontiers in Neuroscience 2023.</em> <b>Peixian Ma</b>, Jing Wang, Zhiguo Zhou, C. L. Philip Chen, Alzheimer's Disease Neuroimaging Initiative, Junwei Duan 
 <br>[![Static Badge](https://img.shields.io/badge/PDF-Frontiers_in_Neuroscience_2023-brightgreen?logo=Arxiv)](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false)
 [![Static Badge](https://img.shields.io/badge/Github-BroadLearningSystemTools_2.0-blue?logo=Github)](https://github.com/MPX0222/BroadLearningSystemTools-2.0)
