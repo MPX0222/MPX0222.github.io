@@ -1,7 +1,7 @@
 ---
 title: "Development and validation of a deep-broad ensemble model for early detection of Alzheimer's disease"
 collection: publications
-permalink: /publication/2023-07-11-paper-title-number-1
+permalink: /publication/deepbroad_frontiers
 excerpt: 'Peixian Ma, Jing Wang, Zhiguo Zhou, C.L. Philip Chen, Junwei Duan'
 date: 2023-07-11
 venue: 'Frontiers in Neuroscience'
