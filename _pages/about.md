@@ -23,23 +23,23 @@ redirect_from:
 </a>
 </p>
 
+<p align="center" style="font-family: Consolas">
+至于结果，只要你足够认真虔诚，总归不会错的。
+</p>
 
 
-Hello! I am Ma Peixian. I received B.Eng. degree in Intelligence Science and Technology from [Jinan University](https://english.jnu.edu.cn/) in 2023. 
-Now I am studying for a Master's degree of Philosophy (M.Phil.) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/), 
-at the [Data Science and Analytics Thrust (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/), [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/) of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/).
+Hello! I am Peixian MA, a second-year postgraduate student  of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying for a Master's degree of Philosophy (M.Phil.) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/), at the [Data Science and Analytics Thrust (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/), [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
 
-During my undergraduate life, I have worked as the undergraduate member and research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University, under the supervision of Junwei Duan and Yujuan Quan.
+I have received B.Eng. degree in Intelligence Science and Technology from [Jinan University](https://english.jnu.edu.cn/) in 2023.  During my undergraduate life, I have worked as the undergraduate member and research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University, under the supervision of Junwei Duan and Yujuan Quan.
 I have participated in several research projects, including a National Key Research and Development Plan project, a Guangdong Province Natural Science Foundation project.
-My undergraduate research direction is the optimization and application of Broad Learning System (BLS), and a long research paper have been published on the Frontiers in Neuroscience 2023 journal(JCR Q2, IF=4.8).
+My undergraduate research direction is the optimization and application of Broad Learning System (BLS), and a long research paper have been published on the Frontiers in Neuroscience 2023 journal.
 
-Currently, I join in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL](https://github.com/HKUSTDial) and HKUST(GZ) Red Bird AI Agent narrative Storytelling Game Groups [@AASG]().
-My research direction comprises Large Language Models, Multi-agent System and Text-to-SQL System. I am struggle for filling the gap between lay users and the LLMs-based task-specific models.
+Currently, I participated in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL](https://github.com/HKUSTDial) and HKUST(GZ) Red Bird AI Agent narrative Storytelling Game Groups [@AASG]().
+My research direction comprises Large Language Models, Multi-agent System, NL2SQL and BLS. 
 
-And I tring my best to get the chance of HKUST(GZ) P.hD program.
+📌 I tring my best to get the chance of HKUST(GZ) P.hD program.
 
-Here comes my CV File if you want to know more, or you can go to the cv page for details:
-[CV](files/AwesomeCV2024_Peixian_MA.pdf)
+📌 Here comes my CV File if you want to know more, or you can go to the cv page for details: [CV-PDF](files/AwesomeCV2024_Peixian_MA.pdf)
 
 📘 Tech Stack
 ===
@@ -95,10 +95,11 @@ Here comes my CV File if you want to know more, or you can go to the cv page for
 <br>[![Static Badge](https://img.shields.io/badge/PDF-Arxiv_2024-brightgreen?logo=Arxiv)]()
 
 
-2. [A Survey of NL2SQL with Large Language Models: Where are we, and where are we going]()
+2. [A Survey of NL2SQL with Large Language Models: Where are we, and where are we going](https://arxiv.org/pdf/2408.05109)
 <br><em>Arxiv 2024.</em> Xinyu Liu, Shuyu Shen, Boyan Li, <b>Peixian Ma</b>, Runzhi Jiang, Yuxin Zhang, Ju Fan, Guoliang Li, Yuyu Luo, and Nan Tang
 <br>[![Static Badge](https://img.shields.io/badge/PDF-Arxiv_2024-brightgreen?logo=Arxiv)](https://arxiv.org/pdf/2408.05109)
 [![Static Badge](https://img.shields.io/badge/Github-NL2SQL_Handbook-blue?logo=Github)](https://github.com/HKUSTDial/NL2SQL_Handbook)
+[![Static Badge](https://img.shields.io/badge/Tutorial-Open_Slides-red?logo=Googledrive)]()
 [![Static Badge](https://img.shields.io/github/stars/HKUSTDial/NL2SQL_Handbook?style=social)](https://github.com/HKUSTDial/NL2SQL_Handbook)
 
 
