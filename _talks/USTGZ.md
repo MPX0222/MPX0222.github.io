@@ -1,5 +1,5 @@
 ---
-title: "未来 Future in HKUSTGZ"
+title: "未来 HKUSTGZ"
 collection: talks
 type: "Talk"
 permalink: /talks/USTGZ

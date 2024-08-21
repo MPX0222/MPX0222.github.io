@@ -1,6 +1,6 @@
 ---
 title: "2023 iFLYTEK A.I. Developer Competition - Brain Age Detection"
-excerpt: "<br/><img src='/images/BrainAge.png'>"
+excerpt: "<br/><img src='/images/BrainAge.png' width='300' height='200'>"
 collection: Machine Learning
 ---
 

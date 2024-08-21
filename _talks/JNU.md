@@ -1,5 +1,5 @@
 ---
-title: "启蒙时代 Exploration Trip in JNU"
+title: "启蒙时代 JNU"
 collection: talks
 type: "Talk"
 permalink: /talks/JNU
