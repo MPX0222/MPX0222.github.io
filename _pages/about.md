@@ -28,20 +28,19 @@ redirect_from:
 </p>
 
 
-Hello! I am Peixian MA, a second-year postgraduate student  of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying for a Master's degree of Philosophy (M.Phil.) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/), at the [Data Science and Analytics Thrust (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/), [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
+Hello! I am Peixian MA, a second-year postgraduate student  of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying for a Master's degree of Philosophy (M.Phil.) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/) and [Prof. Nan Tang](https://nantang.github.io/), at the [Data Science and Analytics Thrust (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/), [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
 
-I have received B.Eng. degree in Intelligence Science and Technology from [Jinan University](https://english.jnu.edu.cn/) in 2023.  During my undergraduate life, I have worked as the undergraduate member and research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University, under the supervision of Junwei Duan and Yujuan Quan.
+I have received B.Eng. degree in Intelligence Science and Technology from [Jinan University](https://english.jnu.edu.cn/) in 2023.  
+Since 2020, I started working as the undergraduate member and research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University, under the supervision of Junwei Duan and Yujuan Quan.
 I have participated in several research projects, including a National Key Research and Development Plan project, a Guangdong Province Natural Science Foundation project.
-My undergraduate research direction is the optimization and application of Broad Learning System (BLS), and a long research paper have been published on the Frontiers in Neuroscience 2023 journal.
+My undergraduate research direction is the optimization and application of Broad Learning System (BLS) in medical diagnosis, and a long research paper have been published on the *Frontiers in Neuroscience 2023*.
 
-Currently, I participated in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL](https://github.com/HKUSTDial) and HKUST(GZ) Red Bird AI Agent narrative Storytelling Game Groups [@AASG]().
-My research direction comprises Large Language Models, Multi-agent System, NL2SQL and BLS. 
+Currently, I have participated in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL](https://github.com/HKUSTDial) and HKUST(GZ) Red Bird AI Agent narrative Storytelling Game Groups [@AASG]().
+My research direction comprises Multi-agent System, Natural Language to SQL and Open-Source BLS. 
 
-📌 I tring my best to get the chance of HKUST(GZ) P.hD program.
+📌 I am tring my best to get the chance of HKUST(GZ) P.hD program.
 
-📌 Here comes my CV File if you want to know more, or you can go to the cv page for details: [CV-PDF](files/AwesomeCV2024_Peixian_MA.pdf)
-
-📘 Tech Stack
+📘 Study Stack
 ===
 <p align="center">
   <a href="https://skillicons.dev">
@@ -90,8 +89,8 @@ My research direction comprises Large Language Models, Multi-agent System, NL2SQ
 
 📰 Publications
 ======
-1. [Imcoming Research Paper......]()
-<br><em>Arxiv 2024.</em> Imcoming Authors......
+1. [Imcoming Long Research Paper......]()
+<br><em>Arxiv 2024.</em> <b>Peixian Ma</b> and incoming authors......
 <br>[![Static Badge](https://img.shields.io/badge/PDF-Arxiv_2024-brightgreen?logo=Arxiv)]()
 
 
@@ -141,7 +140,7 @@ My research direction comprises Large Language Models, Multi-agent System, NL2SQ
 
 * `2020.09` - `2022.12` : Research Assistant,  Data-driven Intelligent Systems Laboratory. [@College of Information Science of Technology, Jinan University](https://faculty.jnu.edu.cn/xxkxjsxy/djw/list.htm)
   * Location: Guangzhou, China
-  * Duties: Conceptualization, Methodology, Validation, Data Visualization, Writing Draft, Review and Project Administration
+  * Duties: Conceptualization, Writing Draft, Validation, Data Visualization, Review and Project Administration
   * Projects:
     * National Key Research and Development Program of China , No. 2018YFC2002500, Participant.
     * Guangdong Basic and Applied Basic Research Foundation, No. 2021A1515011999, Participant.
@@ -152,6 +151,7 @@ My research direction comprises Large Language Models, Multi-agent System, NL2SQ
 ===
 * Conference: 
   * Student Volunteer, 50th International Conference on Very Large Databases ([@VLDB 2024](https://vldb.org/2024/)), Guangzhou
+
 
 ⚽ Football Life
 ===
