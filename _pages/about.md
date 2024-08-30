@@ -28,14 +28,13 @@ redirect_from:
 </p>
 
 
-Hello! I am Peixian MA, a second-year postgraduate student  of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying for a Master's degree of Philosophy (M.Phil.) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/) and [Prof. Nan Tang](https://nantang.github.io/), at the [Data Science and Analytics Thrust (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/), [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
+Hello! I am Peixian MA, a second-year master student  of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying for a Master's degree of Philosophy (M.Phil.) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/) and [Prof. Nan Tang](https://nantang.github.io/), at the [Data Science and Analytics Thrust (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/), [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
 
-I have received B.Eng. degree in Intelligence Science and Technology from [Jinan University](https://english.jnu.edu.cn/) in 2023.  
-Since 2020, I started working as the undergraduate member and research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University, under the supervision of Junwei Duan and Yujuan Quan.
+I have received B.Eng. degree in Intelligence Science and Technology from [Jinan University](https://english.jnu.edu.cn/) in 2023. Since 2020, I started working as the undergraduate member and research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University, under the supervision of Junwei Duan and Yujuan Quan.
 I have participated in several research projects, including a National Key Research and Development Plan project, a Guangdong Province Natural Science Foundation project.
 My undergraduate research direction is the optimization and application of Broad Learning System (BLS) in medical diagnosis, and a long research paper have been published on the *Frontiers in Neuroscience 2023*.
 
-Currently, I have participated in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL](https://github.com/HKUSTDial) and HKUST(GZ) Red Bird AI Agent narrative Storytelling Game Groups [@AASG]().
+Currently, I have participated in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL 呆鹅实验室](https://github.com/HKUSTDial) and HKUST(GZ) Red Bird AI Agent Narrative Storytelling Game Groups [@AASG]().
 My research direction comprises Multi-agent System, Natural Language to SQL and Open-Source BLS. 
 
 📌 I am tring my best to get the chance of HKUST(GZ) P.hD program.
@@ -68,7 +67,7 @@ My research direction comprises Multi-agent System, Natural Language to SQL and 
 
 📟 News
 === 
-* `2024.08` 📌 Long research paper completed and submitted.
+* `2024.08` 📌 Long research paper completed and submitted. 
 * `2024.08` 📌 First Survey of [@HKUST(GZ)-DIAL](https://github.com/HKUSTDial) NL2SQL Research Group: [A Survey of NL2SQL with Large Language Models: Where are we, and where are we going](https://arxiv.org/pdf/2408.05109) is available on *Arxiv*. *NL2SQL Handbook* link: [https://github.com/HKUSTDial/NL2SQL_Handbook](https://github.com/HKUSTDial/NL2SQL_Handbook). 
 [![Static Badge](https://img.shields.io/github/stars/HKUSTDial/NL2SQL_Handbook?style=social)](https://github.com/HKUSTDial/NL2SQL_Handbook)
 * `2024.01` 📌 Successfuly pass the PQA of the Red Bird M.Phil Program.
