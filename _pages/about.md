@@ -19,13 +19,13 @@ Hello! I am Peixian MA, a second-year M.Phil. student of [The Hong Kong Universi
 
 I received the B.Eng. degree in Intelligence Science and Technology from [Jinan University (JNU)](https://english.jnu.edu.cn/) in 2023. I have started my research and learning live by working as the undergraduate research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University. My undergraduate research direction is the optimization and application of the Broad Learning System (BLS). Before my graduation, I received the offer from HKUST(GZ) and successfully enrolled in it in the Fall 2023.
 
-Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL 呆鹅实验室](https://github.com/HKUSTDial) and HKUST(GZ) Red Bird AI Agent Narrative Storytelling Game Groups [@AASG](). My research interest comprises Database Management, Multi-agent System, Natural Language to SQL and Open-Source BLS. 
+Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL 呆鹅实验室](https://github.com/HKUSTDial) and HKUST(GZ) Red Bird AI Agent Narrative Storytelling Game Groups [@AASG](). My research interest comprises Database Management, Multi-agent System, Natural Language to SQL and Open-Source BLS. Here are the related links:
 
-<!-- <p align="center">
+<p align="center">
   <a href="ttps://github.com/HKUSTDial">Github</a>
   ·
   <a href="ttps://github.com/HKUSTDial">Homepage</a>
-</p> -->
+</p>
 
 
 📟 News
