@@ -7,6 +7,11 @@ redirect_from:
   - /about.html
 ---
 
+<style>
+  body {
+    font-family: "Open Sans"
+  }
+</style>
 
 
 <p align="center">
