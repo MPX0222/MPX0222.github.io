@@ -7,11 +7,10 @@ redirect_from:
   - /about.html
 ---
 
- 
 
 
 <p align="center">
-至于结果，只要你足够认真虔诚，总归不会错的。<br>2019.06.07
+至于结果，只要你足够认真虔诚，总归不会错的。<br> 2019.06.07
 </p>
 
 
@@ -37,7 +36,6 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 * `2023.07` 📌 Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).
 * `2023.07` 📌 First long research paper: [Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer’s Disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) is published in *Frontiers in Neuroscience*.
 [![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-2.0?style=social)](https://github.com/MPX0222/BroadLearningSystemTools-2.0)
-
 * `2023.05` 📌 Successfully pass the undergraduate graduation defense in Jinan University.
 
 🎓 Education
