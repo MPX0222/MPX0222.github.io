@@ -7,11 +7,16 @@ redirect_from:
   - /about.html
 ---
 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@100;400;600;700&display=swap" rel="stylesheet">
 
 <style>
   body {
-    font-family: "Open Sans"
+    font-family: "Open Sans";
+  }
+
+  h2, h3 {
+    font-family: "Oswald";
   }
 </style>
 
@@ -25,7 +30,7 @@ Hello! I am Peixian MA, a second-year M.Phil. student of [The Hong Kong Universi
 
 I received the B.Eng. degree in Intelligence Science and Technology from [Jinan University (JNU)](https://english.jnu.edu.cn/) in 2023. I have started my research and learning live by working as the undergraduate research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University. My undergraduate research direction is the optimization and application of the Broad Learning System (BLS). Before my graduation, I received the offer from HKUST(GZ) and successfully enrolled in it in the Fall 2023.
 
-Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL 呆鹅实验室](https://github.com/HKUSTDial) and HKUST(GZ) Red Bird AI Agent Narrative Storytelling Game Groups [@AASG](). My research interest comprises Database Management, Multi-agent System, Natural Language to SQL and Open-Source BLS. Here are the related links:
+Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL 呆鹅实验室](https://github.com/HKUSTDial) and HKUST(GZ) Red Bird AI Agent Narrative Storytelling Game Groups [@AASG](). My research interest comprises Database Management (DBMS), Multi-agent System (MAS), Natural Language to SQL (NL2SQL) and Open-Source BLS. Here are the related links:
 
 <p align="center">
   <a href="ttps://github.com/HKUSTDial">Github</a>
@@ -49,7 +54,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 ======
 <ul>
   <h3>
-    The Hong Kong University of Science and Technology
+    The Hong Kong University of Science and Technology (Guangzhou)
   </h3>
   <p>
     M.Phil. in Data Science and Analytics, 2023.09 - 2025.07 (Expected)
