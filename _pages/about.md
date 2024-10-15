@@ -106,10 +106,10 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
         <p>M.Phil. in Data Science and Analytics</p>
     </div>
     <div class="date-column">
-      <p class="date">Guangzhou<br>2023.09 - 2025.07<br>(Expected)</p>
+      <h3 class="date">Guangzhou<br>2023.09 - 2025.07<br>(Expected)</h3>
     </div>
   </div>
-  
+
   <div class="container">
     <div class="logo-column">
       <img src="../images/jnu-logo.png" alt="University Logo" class="logo">
@@ -119,7 +119,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
       <p>B.Eng. in Intelligence Science and Technology</p>
     </div>
     <div class="date-column">
-      <p class="date">Guangzhou<br>2019.09 - 2023.07</p>
+      <h3 class="date">Guangzhou<br>2019.09 - 2023.07</h3>
     </div>
   </div>
 </div>
