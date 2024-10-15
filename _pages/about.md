@@ -25,17 +25,11 @@ redirect_from:
     justify-content: space-between; /* 子元素之间的间距均匀分布 */
     align-items: center; /* 垂直居中 */
     /* background-color: #f7f7f7; */
-    padding: 20px; /* 内边距 */
-  }
-
-  .column {
-    float: left; /* 使列浮动到左侧 */
     padding: 10px; /* 内边距 */
-    box-sizing: border-box; /* 边框和内边距包含在宽度内 */
   }
 
   .logo-column {
-    width: 15%; /* 第一列宽度 */
+    width: 20%; /* 第一列宽度 */
     text-align: left; /* 文本居中 */
   }
 
@@ -44,13 +38,18 @@ redirect_from:
   }
 
   .date-column {
-    width: 15ß%; /* 第三列宽度 */
+    width: 10%; /* 第三列宽度 */
     text-align: left; /* 文本居中 */
   }
 
   .logo {
-    /* max-width: 150px; 
-    max-height: 150px;  */
+    width: 100%;
+    height: 100%;
+  }
+
+  .date {
+    font-size: 12px; /* 时间的字体大小 */
+    text-align: center; /* 文本居中 */
   }
 </style>
 
@@ -98,7 +97,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     </ul>
   </div>
   <div class="date-column">
-    <p>2023.09 - 2025.07 (Expected)</p>
+    <p class="date">2023.09<br>-<br>2025.07<br>(Expected)</p>
   </div>
 </div>
 
@@ -113,7 +112,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     </ul>
   </div>
   <div class="date-column">
-    <p>2019.09 - 2023.07</p>
+    <p class="date">2019.09<br>-<br>2023.07</p>
   </div>
 </div>
 
