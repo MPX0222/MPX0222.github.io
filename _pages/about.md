@@ -127,6 +127,29 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 
 📰 Publications
 ======
+
+<div class="education-container">
+  <div class="container">
+    <div class="logo-column">
+      <img src="../images/hkust-logo.png" alt="" class="logo">
+    </div>
+    <div class="details-column">
+        <h3>A Plug-and-Play Natural Language Rewriter for Natural Language to SQL</h3>
+        <p><br>Arxiv 2024. <b>Peixian Ma</b> Boyan Li, Runzhi Jiang, Yuyu Luo, Ju Fan and Nan Tang</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="logo-column">
+      <img src="../images/jnu-logo.png" alt="University Logo" class="logo">
+    </div>
+    <div class="details-column">
+      <h3>A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</h3>
+      <p>B.Eng. in Intelligence Science and Technology</p>
+    </div>
+  </div>
+</div>
+
 1. [A Plug-and-Play Natural Language Rewriter for Natural Language to SQL]()
 <br><em>Arxiv 2024.</em> <b>Peixian Ma</b> Boyan Li, Runzhi Jiang, Yuyu Luo, Ju Fan and Nan Tang
 <br>[![Static Badge](https://img.shields.io/badge/PDF-Arxiv_2024-brightgreen?logo=Arxiv)]()
