@@ -17,7 +17,7 @@ redirect_from:
 
   h3 {
     font-family: "Open Sans";
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .main-container {
@@ -72,7 +72,8 @@ redirect_from:
   }
 
   .date {
-    text-align: center; /* 文本居中 */
+    text-align: left;
+    font-size: 15px;
   }
 
   .floating-tag {
@@ -122,27 +123,21 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 
 <div class="main-container">
   <div class="container">
-    <div class="logo-column">
+    <div class="paper-logo-column">
       <img src="../images/hkust-logo.png" alt="University Logo" class="logo">
     </div>
-    <div class="details-column">
+    <div class="paper-title-column">
         <h3>The Hong Kong University of Science and Technology (Guangzhou)</h3>
-        <p>M.Phil. in Data Science and Analytics</p>
-    </div>
-    <div class="date-column">
-      <h3 class="date">Guangzhou<br>2023.09 - 2025.07<br>(Expected)</h3>
+        <p>M.Phil. in Data Science and Analytics<br>2023.09 - 2025.07 (Expected)</p>
     </div>
   </div>
   <div class="container">
-    <div class="logo-column">
+    <div class="paper-logo-column">
       <img src="../images/jnu-logo.png" alt="University Logo" class="logo">
     </div>
-    <div class="details-column">
+    <div class="paper-title-column">
       <h3>JiNan University</h3>
-      <p>B.Eng. in Intelligence Science and Technology</p>
-    </div>
-    <div class="date-column">
-      <h3 class="date">Guangzhou<br>2019.09 - 2023.07</h3>
+      <p>B.Eng. in Intelligence Science and Technology<br>2019.09 - 2023.07</p>
     </div>
   </div>
 </div>
