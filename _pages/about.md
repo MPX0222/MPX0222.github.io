@@ -109,6 +109,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
       <p class="date">Guangzhou<br>2023.09 - 2025.07<br>(Expected)</p>
     </div>
   </div>
+  
   <div class="container">
     <div class="logo-column">
       <img src="../images/jnu-logo.png" alt="University Logo" class="logo">
