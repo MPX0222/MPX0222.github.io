@@ -20,12 +20,14 @@ redirect_from:
   }
 
   .container {
-    display: flex; /* 使用Flexbox布局 */
+    display: flex;
     overflow: auto;
-    justify-content: space-between; /* 子元素之间的间距均匀分布 */
-    align-items: center; /* 垂直居中 */
-    /* background-color: #f7f7f7; */
-    padding: 10px; /* 内边距 */
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+    padding: 10px;
   }
 
   .logo-column {
