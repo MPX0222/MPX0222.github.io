@@ -19,15 +19,19 @@ redirect_from:
     font-family: "Open Sans";
   }
 
+  .eduaction-container {
+    margin-bottom: 30px;
+  }
+
   .container {
     display: flex;
     overflow: auto;
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    margin-top: 5px;
-    padding: 10px;
+    margin-bottom: 15px;
+    padding: 0px;
+    padding-left: 20px;
   }
 
   .logo-column {
@@ -92,30 +96,30 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 🎓 Education
 ======
 
-
-<div class="container">
-  <div class="logo-column">
-    <img src="../images/hkust-logo.png" alt="University Logo" class="logo">
+<div class="education-container">
+  <div class="container">
+    <div class="logo-column">
+      <img src="../images/hkust-logo.png" alt="University Logo" class="logo">
+    </div>
+    <div class="details-column">
+        <h3>The Hong Kong University of Science and Technology (Guangzhou)</h3>
+        <p>M.Phil. in Data Science and Analytics</p>
+    </div>
+    <div class="date-column">
+      <p class="date">Guangzhou<br>2023.09 - 2025.07<br>(Expected)</p>
+    </div>
   </div>
-  <div class="details-column">
-      <h2>The Hong Kong University of Science and Technology (Guangzhou)</h2>
-      <p>M.Phil. in Data Science and Analytics</p>
-  </div>
-  <div class="date-column">
-    <p class="date">Guangzhou<br>2023.09 - 2025.07<br>(Expected)</p>
-  </div>
-</div>
-
-<div class="container">
-  <div class="logo-column">
-    <img src="../images/jnu-logo.png" alt="University Logo" class="logo">
-  </div>
-  <div class="details-column">
-    <h2>JiNan University</h2>
-    <p>B.Eng. in Intelligence Science and Technology</p>
-  </div>
-  <div class="date-column">
-    <p class="date">Guangzhou<br>2019.09 - 2023.07</p>
+  <div class="container">
+    <div class="logo-column">
+      <img src="../images/jnu-logo.png" alt="University Logo" class="logo">
+    </div>
+    <div class="details-column">
+      <h3>JiNan University</h3>
+      <p>B.Eng. in Intelligence Science and Technology</p>
+    </div>
+    <div class="date-column">
+      <p class="date">Guangzhou<br>2019.09 - 2023.07</p>
+    </div>
   </div>
 </div>
 
