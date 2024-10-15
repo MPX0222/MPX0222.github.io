@@ -39,7 +39,7 @@ redirect_from:
 
   .date-column {
     width: 10%; /* 第三列宽度 */
-    text-align: left; /* 文本居中 */
+    font-size: 10px; /* 时间的字体大小 */
   }
 
   .logo {
@@ -165,7 +165,8 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 * `2021.06` 🥇 Champion of 2020 Jinan University Football College Cup, College of Information Science and Technology, *Target Forward, 4 Games, 1 Goal, 1 Assist*.
 
 💻Internships
-======
+===
+
 * `2023.01` - `2023.06` : Research Assistant, Big Data Center. [@School of Journalism & Communication, Jinan University](https://xwxy.jnu.edu.cn/2018/1218/c12846a322831/page.psp)
   * Location: Guangzhou, China
   * Duties: Data Mining, Data Cleaning and Visualization 
