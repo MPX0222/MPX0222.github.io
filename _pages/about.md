@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "Introduction"
+layout: archive
 author_profile: true
 redirect_from: 
   - /about/
@@ -15,19 +16,12 @@ redirect_from:
     font-family: "Open Sans";
   }
 
-  a {
-    text-decoration: none; /* 取消下划线 */
-  }
 
   h3 {
     font-family: "Open Sans";
     font-size: 20px;
   }
 
-  p {
-    font-family: "Open Sans";
-    font-size: 15px;
-  }
 
   .main-container {
     margin-bottom: 30px;
@@ -98,9 +92,7 @@ redirect_from:
 </style>
 
 
-<p align="center">
-至于结果，只要你足够认真虔诚，总归不会错的。<br> 2019.06.07
-</p>
+<p align="center">至于结果，只要你足够认真虔诚，总归不会错的。<br>2019.06.07</p>
 
 
 Hello! I am Peixian MA, a second-year M.Phil. student of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying for a Master's degree of Philosophy in Data Science and Analytics under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/) and [Prof. Nan Tang](https://nantang.github.io/), at the [Data Science and Analytics Thrust (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/), [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
@@ -172,8 +164,8 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     <div class="paper-title-column">
       <a href="https://arxiv.org/pdf/2408.05109">
         <h3>A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</h3>
-        <p class="info">Xinyu Liu, Shuyu Shen, Boyan Li, <b>Peixian Ma</b>, Runzhi Jiang, Yuxin Zhang, Ju Fan, Guoliang Li, Yuyu Luo and Nan Tang<br><b>Arxiv 2024</b></p>
       </a>
+      <p class="info">Xinyu Liu, Shuyu Shen, Boyan Li, <b>Peixian Ma</b>, Runzhi Jiang, Yuxin Zhang, Ju Fan, Guoliang Li, Yuyu Luo and Nan Tang<br><b>Arxiv</b></p>
       <a href="https://arxiv.org/pdf/2408.05109">
         <img alt="Static Badge" src="https://img.shields.io/badge/PDF-Arxiv_2024-brightgreen?logo=Arxiv">
       </a>
@@ -195,10 +187,10 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     <div class="paper-title-column">
       <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">
         <h3>Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease</h3>
-        <p class="info"><b>Peixian Ma</b>, Jing Wang, Zhiguo Zhou, C. L. Philip Chen, Alzheimer’s Disease Neuroimaging Initiative and Junwei Duan<br><b>Frontiers in Neuroscience 2023</b></p>
       </a>
+      <p class="info"><b>Peixian Ma</b>, Jing Wang, Zhiguo Zhou, C. L. Philip Chen  Alzheimer’s Disease Neuroimaging Initiative and Junwei Duan<br><b>Frontiers in Neuroscience 2023</b></p>
       <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">
-        <img alt="Static Badge" src="https://img.shields.io/badge/PDF-Frontiers_in_Neuroscience_2023-brightgreen?logo=Arxiv">
+        <img alt="Static Badge" src="https://img.shields.io/badge/PDF-Frontiers_2023-brightgreen?logo=Arxiv">
       </a>
       <a href="https://github.com/MPX0222/BroadLearningSystemTools-2.0">
         <img alt="Static Badge" src="https://img.shields.io/badge/Github-BroadLearningSystemTools_2.0-blue?logo=Github">
