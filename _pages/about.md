@@ -49,8 +49,8 @@ redirect_from:
   }
 
   .logo {
-    max-width: 150px; /* 校徽图片的最大宽度 */
-    max-height: 150px; /* 校徽图片的最大高度 */
+    /* max-width: 150px; 
+    max-height: 150px;  */
   }
 </style>
 
@@ -100,27 +100,22 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
   <div class="date-column">
     <p>2023.09 - 2025.07 (Expected)</p>
   </div>
-  </div>
-
 </div>
 
-<ul>
-  <h3>
-    The Hong Kong University of Science and Technology (Guangzhou)
-  </h3>
-  <p>
-    M.Phil. in Data Science and Analytics, 2023.09 - 2025.07 (Expected)
-  </p>
-</ul>
-
-<ul>
-  <h3>
-    JiNan University
-  </h3>
-  <p>
-    B.Eng. in Intelligence Science and Technology, 2019.09 - 2023.07
-  </p>
-</ul>
+<div class="container">
+  <div class="logo-column">
+    <img src="../images/hkust-logo.png" alt="University Logo" class="logo">
+  </div>
+  <div class="details-column">
+    <ul>
+      <h3>JiNan University</h3>
+      <p>B.Eng. in Intelligence Science and Technology</p>
+    </ul>
+  </div>
+  <div class="date-column">
+    <p>2019.09 - 2023.07</p>
+  </div>
+</div>
 
 
 📰 Publications
