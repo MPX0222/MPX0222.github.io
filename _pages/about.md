@@ -17,7 +17,7 @@ redirect_from:
 
   h3 {
     font-family: "Open Sans";
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .main-container {
@@ -71,7 +71,7 @@ redirect_from:
     font-size: 30px;
   }
 
-  .date {
+  .info {
     text-align: left;
     font-size: 15px;
   }
@@ -128,7 +128,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     </div>
     <div class="paper-title-column">
         <h3>The Hong Kong University of Science and Technology (Guangzhou)</h3>
-        <p>M.Phil. in Data Science and Analytics<br>2023.09 - 2025.07 (Expected)</p>
+        <p class="info">M.Phil. in Data Science and Analytics<br>2023.09 - 2025.07 (Expected)</p>
     </div>
   </div>
   <div class="container">
@@ -137,7 +137,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     </div>
     <div class="paper-title-column">
       <h3>JiNan University</h3>
-      <p>B.Eng. in Intelligence Science and Technology<br>2019.09 - 2023.07</p>
+      <p class="info">B.Eng. in Intelligence Science and Technology<br>2019.09 - 2023.07</p>
     </div>
   </div>
 </div>
@@ -153,7 +153,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     </div>
     <div class="paper-title-column">
         <h3>A Plug-and-Play Natural Language Rewriter for Natural Language to SQL</h3>
-        <p><b>Peixian Ma</b>, Boyan Li, Runzhi Jiang, Yuyu Luo, Ju Fan and Nan Tang</p>
+        <p class="info"><b>Peixian Ma</b>, Boyan Li, Runzhi Jiang, Yuyu Luo, Ju Fan and Nan Tang</p>
     </div>
   </div>
   <div class="container">
@@ -163,7 +163,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     <div class="paper-title-column">
       <a href="https://arxiv.org/pdf/2408.05109">
         <h3>A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</h3>
-        <p>Xinyu Liu, Shuyu Shen, Boyan Li, <b>Peixian Ma</b>, Runzhi Jiang, Yuxin Zhang, Ju Fan, Guoliang Li, Yuyu Luo and Nan Tang<br><b>Arxiv 2024</b></p>
+        <p class="info">Xinyu Liu, Shuyu Shen, Boyan Li, <b>Peixian Ma</b>, Runzhi Jiang, Yuxin Zhang, Ju Fan, Guoliang Li, Yuyu Luo and Nan Tang<br><b>Arxiv 2024</b></p>
       </a>
       <a href="https://arxiv.org/pdf/2408.05109">
         <img alt="Static Badge" src="https://img.shields.io/badge/PDF-Arxiv_2024-brightgreen?logo=Arxiv">
@@ -186,7 +186,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     <div class="paper-title-column">
       <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">
         <h3>Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease</h3>
-        <p><b>Peixian Ma</b>, Jing Wang, Zhiguo Zhou, C. L. Philip Chen, Alzheimer’s Disease Neuroimaging Initiative and Junwei Duan<br><b>Frontiers in Neuroscience 2023</b></p>
+        <p class="info"><b>Peixian Ma</b>, Jing Wang, Zhiguo Zhou, C. L. Philip Chen, Alzheimer’s Disease Neuroimaging Initiative and Junwei Duan<br><b>Frontiers in Neuroscience 2023</b></p>
       </a>
       <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">
         <img alt="Static Badge" src="https://img.shields.io/badge/PDF-Frontiers_in_Neuroscience_2023-brightgreen?logo=Arxiv">
