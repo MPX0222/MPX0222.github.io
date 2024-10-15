@@ -13,11 +13,11 @@ redirect_from:
 <style>
   body {
     font-family: "Open Sans";
-    width: 150%;
   }
 
-  h2, h3 {
+  h3 {
     font-family: "Open Sans";
+    font-size: 20px;
   }
 
   .main-container {
