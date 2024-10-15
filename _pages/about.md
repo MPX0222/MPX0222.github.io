@@ -15,9 +15,18 @@ redirect_from:
     font-family: "Open Sans";
   }
 
+  a {
+    text-decoration: none; /* 取消下划线 */
+  }
+
   h3 {
     font-family: "Open Sans";
     font-size: 20px;
+  }
+
+  p {
+    font-family: "Open Sans";
+    font-size: 15px;
   }
 
   .main-container {
