@@ -40,7 +40,7 @@ redirect_from:
   }
 
   .paper-logo-column {
-    width: 30%; /* 第一列宽度 */
+    width: 20%; /* 第一列宽度 */
     text-align: left; /* 文本居中 */
   }
 
@@ -48,7 +48,7 @@ redirect_from:
   .paper-title-column{
     margin-left: 20px;
     padding: 10px;
-    width: 70%; /* 第二列宽度 */
+    width: 80%; /* 第二列宽度 */
   }
 
   .details-column {
@@ -157,7 +157,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     </div>
     <div class="paper-title-column">
         <h3>A Plug-and-Play Natural Language Rewriter for Natural Language to SQL</h3>
-        <p><b>Peixian Ma</b> Boyan Li, Runzhi Jiang, Yuyu Luo, Ju Fan and Nan Tang</p>
+        <p><b>Peixian Ma</b>, Boyan Li, Runzhi Jiang, Yuyu Luo, Ju Fan and Nan Tang</p>
     </div>
   </div>
   <div class="container">
@@ -169,36 +169,36 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
         <h3>A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</h3>
         <p>Xinyu Liu, Shuyu Shen, Boyan Li, <b>Peixian Ma</b>, Runzhi Jiang, Yuxin Zhang, Ju Fan, Guoliang Li, Yuyu Luo and Nan Tang<br><b>Arxiv 2024</b></p>
       </a>
-      <a href=""href="https://arxiv.org/pdf/2408.05109">
+      <a href="https://arxiv.org/pdf/2408.05109">
         <img alt="Static Badge" src="https://img.shields.io/badge/PDF-Arxiv_2024-brightgreen?logo=Arxiv">
       </a>
-        <a href=""href="https://github.com/HKUSTDial/NL2SQL_Handbook">
+        <a href="https://github.com/HKUSTDial/NL2SQL_Handbook">
         <img alt="Static Badge" src="https://img.shields.io/badge/Github-NL2SQL_Handbook-blue?logo=Github">
       </a>
-      <a href=""href="https://github.com/HKUSTDial/NL2SQL_Handbook">
+      <a href="https://github.com/HKUSTDial/NL2SQL_Handbook">
         <img alt="Static Badge" src="https://img.shields.io/badge/Tutorial-Open_Slides-red?logo=Googledrive">
       </a>
-      <a href=""href="https://github.com/HKUSTDial/NL2SQL_Handbook">
+      <a href="https://github.com/HKUSTDial/NL2SQL_Handbook">
         <img alt="Static Badge" src="https://img.shields.io/github/stars/HKUSTDial/NL2SQL_Handbook?style=social">
       </a>
     </div>
   </div>
   <div class="container">
     <div class="paper-logo-column">
-      <img src="../images/survey.png" alt="University Logo" class="logo">
+      <img src="../images/bls.png" alt="University Logo" class="logo">
     </div>
     <div class="paper-title-column">
       <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">
         <h3>Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease</h3>
         <p><b>Peixian Ma</b>, Jing Wang, Zhiguo Zhou, C. L. Philip Chen, Alzheimer’s Disease Neuroimaging Initiative and Junwei Duan<br><b>Frontiers in Neuroscience 2023</b></p>
       </a>
-      <a href=""href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">
+      <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">
         <img alt="Static Badge" src="https://img.shields.io/badge/PDF-Frontiers_in_Neuroscience_2023-brightgreen?logo=Arxiv">
       </a>
-        <a href=""href="https://github.com/MPX0222/BroadLearningSystemTools-2.0">
+      <a href="https://github.com/MPX0222/BroadLearningSystemTools-2.0">
         <img alt="Static Badge" src="https://img.shields.io/badge/Github-BroadLearningSystemTools_2.0-blue?logo=Github">
       </a>
-      <a href=""href="https://github.com/MPX0222/BroadLearningSystemTools-2.0">
+      <a href="https://github.com/MPX0222/BroadLearningSystemTools-2.0">
         <img alt="Static Badge" src="https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-2.0?style=social">
       </a>
     </div>
