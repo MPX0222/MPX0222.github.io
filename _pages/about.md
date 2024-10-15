@@ -48,7 +48,7 @@ redirect_from:
   }
 
   .date {
-    font-size: 12px; /* 时间的字体大小 */
+    font-size: 10px; /* 时间的字体大小 */
     text-align: center; /* 文本居中 */
   }
 </style>
@@ -103,7 +103,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 
 <div class="container">
   <div class="logo-column">
-    <img src="../images/hkust-logo.png" alt="University Logo" class="logo">
+    <img src="../images/jnu-logo.png" alt="University Logo" class="logo">
   </div>
   <div class="details-column">
     <ul>
