@@ -36,12 +36,13 @@ redirect_from:
   }
 
   .details-column {
-    width: 70%; /* 第二列宽度 */
+    margin-left: 20px;
+    width: 60%; /* 第二列宽度 */
   }
 
   .date-column {
-    width: 10%; /* 第三列宽度 */
-    font-size: 10px; /* 时间的字体大小 */
+    width: 20%; /* 第三列宽度 */
+    font-size: 13px; /* 时间的字体大小 */
   }
 
   .logo {
@@ -49,8 +50,11 @@ redirect_from:
     height: 100%;
   }
 
+  .title {
+    font-size: 30px;
+  }
+
   .date {
-    font-size: 10px; /* 时间的字体大小 */
     text-align: center; /* 文本居中 */
   }
 </style>
@@ -94,13 +98,11 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     <img src="../images/hkust-logo.png" alt="University Logo" class="logo">
   </div>
   <div class="details-column">
-    <ul>
-      <h3>The Hong Kong University of Science and Technology (Guangzhou)</h3>
+      <h2>The Hong Kong University of Science and Technology (Guangzhou)</h2>
       <p>M.Phil. in Data Science and Analytics</p>
-    </ul>
   </div>
   <div class="date-column">
-    <p class="date">2023.09<br>-<br>2025.07<br>(Expected)</p>
+    <p class="date">Guangzhou<br>2023.09 - 2025.07<br>(Expected)</p>
   </div>
 </div>
 
@@ -109,13 +111,11 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     <img src="../images/jnu-logo.png" alt="University Logo" class="logo">
   </div>
   <div class="details-column">
-    <ul>
-      <h3>JiNan University</h3>
-      <p>B.Eng. in Intelligence Science and Technology</p>
-    </ul>
+    <h2>JiNan University</h2>
+    <p>B.Eng. in Intelligence Science and Technology</p>
   </div>
   <div class="date-column">
-    <p class="date">2019.09<br>-<br>2023.07</p>
+    <p class="date">Guangzhou<br>2019.09 - 2023.07</p>
   </div>
 </div>
 
