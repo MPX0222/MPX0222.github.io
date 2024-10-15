@@ -16,7 +16,41 @@ redirect_from:
   }
 
   h2, h3 {
-    font-family: "Oswald";
+    font-family: "Open Sans";
+  }
+
+  .container {
+    display: flex; /* 使用Flexbox布局 */
+    overflow: auto;
+    justify-content: space-between; /* 子元素之间的间距均匀分布 */
+    align-items: center; /* 垂直居中 */
+    /* background-color: #f7f7f7; */
+    padding: 20px; /* 内边距 */
+  }
+
+  .column {
+    float: left; /* 使列浮动到左侧 */
+    padding: 10px; /* 内边距 */
+    box-sizing: border-box; /* 边框和内边距包含在宽度内 */
+  }
+
+  .logo-column {
+    width: 15%; /* 第一列宽度 */
+    text-align: left; /* 文本居中 */
+  }
+
+  .details-column {
+    width: 70%; /* 第二列宽度 */
+  }
+
+  .date-column {
+    width: 15ß%; /* 第三列宽度 */
+    text-align: left; /* 文本居中 */
+  }
+
+  .logo {
+    max-width: 150px; /* 校徽图片的最大宽度 */
+    max-height: 150px; /* 校徽图片的最大高度 */
   }
 </style>
 
@@ -52,6 +86,24 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 
 🎓 Education
 ======
+
+<div class="container">
+  <div class="logo-column">
+    <img src="../images/hkust-logo.png" alt="University Logo" class="logo">
+  </div>
+  <div class="details-column">
+    <ul>
+      <h3>The Hong Kong University of Science and Technology (Guangzhou)</h3>
+      <p>M.Phil. in Data Science and Analytics</p>
+    </ul>
+  </div>
+  <div class="date-column">
+    <p>2023.09 - 2025.07 (Expected)</p>
+  </div>
+  </div>
+
+</div>
+
 <ul>
   <h3>
     The Hong Kong University of Science and Technology (Guangzhou)
