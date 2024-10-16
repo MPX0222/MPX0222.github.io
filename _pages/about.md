@@ -16,6 +16,11 @@ redirect_from:
     font-family: "Open Sans";
   }
 
+  td {
+    border: 1px solid #000;
+    text-align: center; 
+    vertical-align: middle; 
+  }
 
   h3 {
     font-family: "Open Sans";
@@ -272,9 +277,42 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 ⚽ Football Life
 ===
 
+<table>
+  <tr>
+    <td><b>Team</b></td>
+    <td><b>Games</b></td>
+    <td><b>Win</b></td>
+    <td><b>Draw</b></td>
+    <td><b>Loss</b></td>
+    <td><b>Goal</b></td>
+    <td><b>Assist</b></td>
+  </tr>
+  <tr>
+    <td>The Hong Kong University of Science and Technology (Guangzhou) </td>
+    <td>9</td>
+    <td>6</td>
+    <td>1</td>
+    <td>2</td>
+    <td><b>1</b></td>
+    <td><b>3</b></td>
+  </tr>
+  <tr>
+    <td>College of Information Science of Technology, JiNan University </td>
+    <td>33</td>
+    <td>20</td>
+    <td>3</td>
+    <td>10</td>
+    <td><b>6</b></td>
+    <td><b>4</b></td>
+  </tr>
+  <tr>
+    <td>Happy My Lover of Class 3, ZhongYuan High School</td>
+    <td>8</td>
+    <td>4</td>
+    <td>0</td>
+    <td>4</td>
+    <td><b>0</b></td>
+    <td><b>1</b></td>
+  </tr>
+</table>
 
-| Team | Games | Win | Draw | Loss | Goal | Assist |
-|-------|-------|-------|-------|-------|-------|-------|
-| The Hong Kong University of Science and Technology (Guangzhou) | 9 | 6 | 1 | 2 | **1** | **3** |
-| College of Information Science of Technology, JiNan University | 33 | 20 | 3 | 10 | **6** | **4** |
-| Happy My Lover of Class 3, ZhongYuan High School | 8 | 4 | 0 | 4 | **0** | **1** |
