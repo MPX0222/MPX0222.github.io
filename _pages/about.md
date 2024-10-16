@@ -107,6 +107,8 @@ I received the B.Eng. degree in Intelligence Science and Technology from [Jinan 
 Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL 呆鹅实验室](https://github.com/HKUSTDial) and Red Bird AI Agent Narrative Storytelling Game Groups [@AASG](). My research interest comprises Database Management (DBMS), Multi-agent System (MAS), Natural Language to SQL (NL2SQL) and Open-Source BLS. Here are the related links:
 
 <p align="center">
+  HKUST(GZ)-DIAL 呆鹅实验室
+  ·
   <a href="ttps://github.com/HKUSTDial">Github</a>
   ·
   <a href="ttps://github.com/HKUSTDial">Homepage</a>
@@ -115,7 +117,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 
 📟 News
 === 
-* `2024.08` 📌 Long research paper [A Plug-and-Play Natural Language Rewriter for Natural Language to SQL]() completed and submitted to AAAI 2025. 
+<!-- * `2024.08` 📌 Long research paper [A Plug-and-Play Natural Language Rewriter for Natural Language to SQL]() completed and submitted to AAAI 2025.  -->
 * `2024.08` 📌 First Survey of [@HKUST(GZ)-DIAL](https://github.com/HKUSTDial) NL2SQL Research Group: [A Survey of NL2SQL with Large Language Models: Where are we, and where are we going](https://arxiv.org/pdf/2408.05109) is available on *Arxiv*. *NL2SQL Handbook* link: [https://github.com/HKUSTDial/NL2SQL_Handbook](https://github.com/HKUSTDial/NL2SQL_Handbook). 
 [![Static Badge](https://img.shields.io/github/stars/HKUSTDial/NL2SQL_Handbook?style=social)](https://github.com/HKUSTDial/NL2SQL_Handbook)
 * `2024.01` 📌 Successfuly pass the PQA of the Red Bird M.Phil Program.
@@ -289,8 +291,8 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
   </tr>
   <tr>
     <td>The Hong Kong University of Science and Technology (Guangzhou) </td>
-    <td>9</td>
-    <td>6</td>
+    <td>10</td>
+    <td>7</td>
     <td>1</td>
     <td>2</td>
     <td><b>1</b></td>
