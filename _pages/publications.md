@@ -103,6 +103,7 @@ author_profile: true
         <p class="info"><b>Peixian Ma</b>, Boyan Li, Runzhi Jiang, Yuyu Luo, Ju Fan and Nan Tang<br><b>Arxiv</b></p>
     </div>
   </div>
+  <hr>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/survey.png" alt="University Logo" class="logo">
@@ -126,6 +127,7 @@ author_profile: true
       </a>
     </div>
   </div>
+  <hr>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/bls.png" alt="University Logo" class="logo">

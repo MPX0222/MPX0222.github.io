@@ -12,8 +12,98 @@ author_profile: true
   body {
     font-family: "Open Sans";
   }
+
+  td {
+    border: 1px solid #000;
+    text-align: center; 
+    vertical-align: middle; 
+  }
+
+  h3 {
+    font-family: "Open Sans";
+    font-size: 20px;
+  }
+
+
+  .main-container {
+    margin-bottom: 30px;
+    margin-bottom: 15px;
+  }
+
+  .container {
+    display: flex;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 0px;
+    padding-left: 20px;
+  }
+
+  .logo-column {
+    width: 20%; /* 第一列宽度 */
+    text-align: left; /* 文本居中 */
+  }
+
+  .paper-logo-column {
+    width: 20%; /* 第一列宽度 */
+    text-align: left; /* 文本居中 */
+  }
+
+
+  .paper-title-column{
+    margin-left: 20px;
+    padding: 10px;
+    width: 100%; /* 第二列宽度 */
+  }
+
+  .details-column {
+    margin-left: 20px;
+    width: 60%; /* 第二列宽度 */
+  }
+
+  .date-column {
+    width: 20%; /* 第三列宽度 */
+    font-size: 13px; /* 时间的字体大小 */
+  }
+
+  .logo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .info {
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .floating-tag {
+    text-align: center; /* 文本居中 */
+    transform: translate(10%, 120%);
+    width: 100px;
+    height: 22px;
+    box-shadow: 0 4px 8px rgba(0, 0, 10, 10); /* 添加阴影效果 */
+    padding: 1px;
+    background-color: #007fff; 
+    color: #f9f7ed;
+  }
 </style>
 
+
+
 {% for post in site.lives reversed %}
-  {% include archive-single-talk.html %}
+  <div class="main-container">
+    <div class="container">
+      <div class="paper-title-column">
+          <a href="{{ base_path }}{{ post.url }}" rel="permalink"><h3>{{ title }}</h3></a>
+          <p class="info">{{ post.venue }},  {{ post.location }}</p>
+          <p class="info">{{ post.date | date: '%B %d, %Y' }}</p>
+      </div>
+    </div>
+    <hr>
+  </div>
 {% endfor %}
