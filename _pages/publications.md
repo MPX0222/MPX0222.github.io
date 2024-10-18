@@ -5,6 +5,9 @@ permalink: /publications/
 author_profile: true
 ---
 
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@100;400;600;700&display=swap" rel="stylesheet">
+
 <style>
   body {
     font-family: "Open Sans";
@@ -89,8 +92,6 @@ author_profile: true
     color: #f9f7ed;
   }
 </style>
-
-<h1>Publications</h1>
 
 <div class="main-container">
   <div class="container">
