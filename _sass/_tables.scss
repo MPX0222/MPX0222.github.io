@@ -2,10 +2,15 @@
    TABLES
    ========================================================================== */
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;400;600;700&display=swap') format('Open Sans');
+}
+
 table {
   margin-bottom: 1em;
   width: 100%;
-  font-family: $global-font-family;
+  font-family: "Open Sans";
   font-size: $type-size-6;
   border-collapse: collapse;
   border: 1px solid $light-gray;

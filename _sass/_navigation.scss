@@ -6,6 +6,11 @@
    Breadcrumb navigation links
    ========================================================================== */
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;400;600;700&display=swap') format('Open Sans');
+}
+
 .breadcrumbs {
   @include container;
   @include clearfix;
@@ -13,7 +18,7 @@
   margin-bottom: 0;
   padding-left: 2em;
   padding-right: 2em;
-  font-family: $sans-serif;
+  font-family: "Open Sans";
   -webkit-animation: intro 0.3s both;
           animation: intro 0.3s both;
   -webkit-animation-delay: 0.30s;
@@ -66,7 +71,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    font-family: $sans-serif;
+    font-family: "Open Sans";
   }
 
   li {
@@ -77,7 +82,7 @@
     a {
       margin-bottom: 0.25em;
       padding: 0.5em 1em;
-      font-family: $sans-serif;
+      font-family: "Open Sans";
       font-size: 14px;
       font-weight: bold;
       line-height: 1.5;
@@ -126,7 +131,7 @@
     padding: 1em 2em;
     float: left;
     width: 50%;
-    font-family: $sans-serif;
+    font-family: "Open Sans";
     font-size: $type-size-5;
     font-weight: bold;
     text-align: center;
@@ -348,7 +353,7 @@
 .nav__title {
   margin: 0;
   padding: 0.5rem 1rem;
-  font-family: $sans-serif-narrow;
+  font-family: "Open Sans"-narrow;
   font-size: $type-size-5;
   font-weight: bold;
 }
@@ -357,7 +362,7 @@
   display: block;
   margin: 0.5rem 0;
   padding: 0.5rem 0;
-  font-family: $sans-serif-narrow;
+  font-family: "Open Sans"-narrow;
   font-size: $type-size-6;
   font-weight: bold;
   text-transform: uppercase;
@@ -370,7 +375,7 @@
    ========================================================================== */
 
 .toc {
-  font-family: $sans-serif-narrow;
+  font-family: "Open Sans"-narrow;
   color: $gray;
   text-transform: uppercase;
   letter-spacing: 1px;

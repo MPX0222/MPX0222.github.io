@@ -6,13 +6,18 @@
    Default button
    ========================================================================== */
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;400;600;700&display=swap') format('Open Sans');
+}
+
 .btn {
   /* default button */
   display: inline-block;
   margin-bottom: 0.25em;
   padding: 0.5em 1em;
   color: #fff !important;
-  font-family: $sans-serif;
+  font-family: "Open Sans";
   font-size: $type-size-6;
   font-weight: bold;
   text-align: center;
