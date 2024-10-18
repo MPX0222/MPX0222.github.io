@@ -260,7 +260,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=qt,vue,html,markdown,css,javascript" />
+    <img src="https://skillicons.dev/icons?i=qt,vue,html,markdown,css,scss,javascript" />
   </a>
 </p>
 
