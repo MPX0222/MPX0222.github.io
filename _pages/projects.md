@@ -18,6 +18,22 @@ author_profile: true
 
 
 {% for post in site.projects %}
-  {% include projects-single.html %}
+<div class="main-container">
+  <div class="container">
+    <div class="paper-logo-column">
+      <img src={{ post.excerpt }} alt="" class="logo">
+    </div>
+    <div class="paper-title-column">
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink">
+        <h2 class="title">{{ post.title }}</h2>
+      </a>
+      <p class="info">
+        {{ post.venue }},  {{ post.location }}
+        <br>
+        {{ post.date | date: '%B %d, %Y' }}<
+      </p>
+    </div>
+  </div>
+  <hr>
 {% endfor %}
 

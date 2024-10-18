@@ -73,37 +73,29 @@ author_profile: true
   }
 
   .title {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .info {
     text-align: left;
-    font-size: 18px;
-  }
-
-  .floating-tag {
-    text-align: center; /* 文本居中 */
-    transform: translate(10%, 120%);
-    width: 100px;
-    height: 22px;
-    box-shadow: 0 4px 8px rgba(0, 0, 10, 10); /* 添加阴影效果 */
-    padding: 1px;
-    background-color: #007fff; 
-    color: #f9f7ed;
+    font-size: 13px;
   }
 </style>
-
 
 
 {% for post in site.lives reversed %}
   <div class="main-container">
     <div class="container">
       <div class="paper-title-column">
-          <a href="{{ base_path }}{{ post.url }}" rel="permalink"><h3>{{ post.title }}</h3></a>
-          <p class="info">{{ post.venue }},  {{ post.location }}</p>
-          <p class="info">{{ post.date | date: '%B %d, %Y' }}</p>
+          <a href="{{ base_path }}{{ post.url }}" rel="permalink">
+            <h2 class="title">{{ post.title }}</h2>
+          </a>
+          <p class="info">
+            {{ post.venue }},  {{ post.location }}
+            <br>
+            {{ post.date | date: '%B %d, %Y' }}<
+          </p>
       </div>
     </div>
-    <hr>
   </div>
 {% endfor %}

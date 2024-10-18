@@ -1,6 +1,6 @@
 ---
 title: "Application of Ensemble Machine Learning for Brain Age Detection"
-excerpt: "<br/><img src='/images/BrainAge.png' width='600' height='400' style='border: 2px solid black;'>"
+excerpt: "/images/BrainAge.png"
 collection: Machine Learning
 citation: "2023 iFLYTEK A.I. Developer Contest"
 ---
