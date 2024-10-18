@@ -99,7 +99,7 @@ author_profile: true
   <div class="main-container">
     <div class="container">
       <div class="paper-title-column">
-          <a href="{{ base_path }}{{ post.url }}" rel="permalink"><h3>{{ title }}</h3></a>
+          <a href="{{ base_path }}{{ post.url }}" rel="permalink"><h3>{{ post.title }}</h3></a>
           <p class="info">{{ post.venue }},  {{ post.location }}</p>
           <p class="info">{{ post.date | date: '%B %d, %Y' }}</p>
       </div>
