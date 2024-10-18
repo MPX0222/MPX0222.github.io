@@ -19,6 +19,11 @@ repository               : "https://mpx0222.github.io/"
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
+favicon:
+  small: mylogo.png
+  medium: mylogo.png
+  apple_touch_icon: mylogo.png
+  safari_pinned_tab: mylogo.png
 author:
   # Biographic information
   avatar           : "mylogo.png"
@@ -236,7 +241,7 @@ defaults:
   # _teaching
   - scope:
       path: ""
-      type: teaching
+      type: courses
     values:
       layout: single
       author_profile: true
@@ -254,7 +259,7 @@ defaults:
   # _portfolio
   - scope:
       path: ""
-      type: portfolio
+      type: projects
     values:
       layout: single
       author_profile: true
@@ -263,7 +268,7 @@ defaults:
   # _talks
   - scope:
       path: ""
-      type: talks
+      type: lives
     values:
       layout: talk
       author_profile: true

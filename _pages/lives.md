@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Logs"
+title: "Lives"
 permalink: /lives/
 author_profile: true
 ---
