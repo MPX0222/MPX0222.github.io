@@ -1,8 +1,8 @@
 ---
 title: "JNU-EXPERTSYSTEM"
-collection: teaching
-type: "Postgraduate course"
-permalink: /teaching/JNU-EXPERTSYSTEM
+collection: courses
+type: "Courses"
+permalink: /courses/JNU-EXPERTSYSTEM
 venue: "JNU, IST"
 date: 2022-01-31
 location: "Guangzhou, China"

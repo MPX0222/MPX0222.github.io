@@ -1,8 +1,8 @@
 ---
 title: "启蒙时代 JNU"
-collection: talks
-type: "Talk"
-permalink: /talks/JNU
+collection: lives
+type: "Lives"
+permalink: /lives/JNU
 venue: "JiNan University"
 date: 2023-06-30
 location: "Guangzhou, China"

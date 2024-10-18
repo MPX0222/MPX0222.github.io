@@ -1,8 +1,8 @@
 ---
 title: "梦回那一个幻夏 Summer Days in ZY"
-collection: talks
-type: "Talk"
-permalink: /talks/ZhongYuan
+collection: lives
+type: "Lives"
+permalink: /lives/ZhongYuan
 venue: "ZhongYuan High School"
 date: 2019-06-08
 location: "Guangzhou, China"
