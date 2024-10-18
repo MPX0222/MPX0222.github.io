@@ -93,7 +93,7 @@ author_profile: true
           <p class="info">
             {{ post.venue }},  {{ post.location }}
             <br>
-            {{ post.date | date: '%B %d, %Y' }}<
+            {{ post.date | date: '%B %d, %Y' }}W
           </p>
       </div>
     </div>

@@ -88,7 +88,7 @@ author_profile: true
 <div class="main-container">
   <div class="container">
     <div class="paper-logo-column">
-      <img src="{{ post.excerpt }}"" alt="" class="logo">
+      <img src="{{ post.excerpt }}" alt="" class="logo">
     </div>
     <div class="paper-title-column">
       <a href="{{ base_path }}{{ post.url }}" rel="permalink">
