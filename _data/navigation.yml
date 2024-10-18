@@ -4,13 +4,13 @@ main:
     url: /publications/
 
   - title: "Lives"
-    url: /publications/    
+    url: /lives/    
 
   - title: "Courses"
-    url: /publications/    
+    url: /courses/    
     
   - title: "Projects"
-    url: /publications/
+    url: /projects/
         
   # - title: "Research Interest"
   #   url: /year-archive/

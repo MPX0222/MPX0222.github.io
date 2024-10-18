@@ -14,6 +14,6 @@ author_profile: true
   }
 </style>
 
-{% for post in site.lives reversed %}
+{% for post in site.publications reversed %}
   {% include archive-single-talk.html %}
 {% endfor %}
