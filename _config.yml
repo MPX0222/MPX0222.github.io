@@ -20,10 +20,10 @@ repository               : "https://mpx0222.github.io/"
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 favicon:
-  small: mylogo.png
-  medium: mylogo.png
-  apple_touch_icon: mylogo.png
-  safari_pinned_tab: mylogo.png
+  small: "mylogo.png"
+  medium: "mylogo.png"
+  apple_touch_icon: "mylogo.png"
+  safari_pinned_tab: "mylogo.png"
 author:
   # Biographic information
   avatar           : "mylogo.png"
