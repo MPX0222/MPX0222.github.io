@@ -16,6 +16,10 @@ redirect_from:
     font-family: "Open Sans";
   }
 
+  a {
+    text-decoration: none;
+  }
+
   td {
     border: 1px solid #000;
     text-align: center; 
@@ -227,10 +231,10 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 
 > Sport Awards
 
-* `2024.04` 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, *Central Defender, 4 Games,  2 Assist*.
-* `2023.06` 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, *Defensive Midfielder, 5 Games, 1 Goal, 2 Assist*.
+* `2024.04` 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, *CB, 4 Games,  2 Assist*.
+* `2023.06` 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, *CDM, 5 Games, 1 Goal, 2 Assist*.
 * `2021.10` 🏆 Best Player of the Second Round in 2021 Jinan University Football Super League, Information Science and Technology.
-* `2021.06` 🥇 Champion of 2020 Jinan University Football College Cup, College of Information Science and Technology, *Target Forward, 4 Games, 1 Goal, 1 Assist*.
+* `2021.06` 🥇 Champion of 2020 Jinan University Football College Cup, College of Information Science and Technology, *ST, 4 Games, 1 Goal, 1 Assist*.
 
 💻Internships
 ===

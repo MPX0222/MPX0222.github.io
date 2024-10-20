@@ -95,9 +95,7 @@ author_profile: true
         <h2 class="title">{{ post.title }}</h2>
       </a>
       <p class="info">
-        {{ post.venue }},  {{ post.location }}
-        <br>
-        {{ post.date | date: '%B %d, %Y' }}
+        {{ post.citation }}
       </p>
     </div>
   </div>

@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Peixian MA"
+title                    : "Introduction"
 title_separator          : "-"
 name                     : &name "Peixian MA"
 description              : &description "personal description"
