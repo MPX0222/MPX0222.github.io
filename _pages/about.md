@@ -16,10 +16,6 @@ redirect_from:
     font-family: "Open Sans";
   }
 
-  a {
-    text-decoration: none;
-  }
-
   td {
     border: 1px solid #000;
     text-align: center; 
@@ -45,6 +41,10 @@ redirect_from:
     background-color: white;
     padding: 0px;
     padding-left: 20px;
+  }
+
+  .link {
+    text-decoration: none;
   }
 
   .logo-column {
@@ -113,9 +113,9 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 <p align="center">
   HKUST(GZ)-DIAL 呆鹅实验室
   ·
-  <a href="ttps://github.com/HKUSTDial">Github</a>
+  <a href="ttps://github.com/HKUSTDial" class="link">Github</a>
   ·
-  <a href="ttps://github.com/HKUSTDial">Homepage</a>
+  <a href="ttps://github.com/HKUSTDial" class="link">Homepage</a>
 </p>
 
 
@@ -173,20 +173,20 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
       <img src="../images/survey.png" alt="University Logo" class="logo">
     </div>
     <div class="paper-title-column">
-      <a href="https://arxiv.org/pdf/2408.05109">
+      <a href="https://arxiv.org/pdf/2408.05109" class="link">
         <h3>A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</h3>
       </a>
       <p class="info">Xinyu Liu, Shuyu Shen, Boyan Li, <b>Peixian Ma</b>, Runzhi Jiang, Yuxin Zhang, Ju Fan, Guoliang Li, Yuyu Luo and Nan Tang<br><b>Arxiv</b></p>
-      <a href="https://arxiv.org/pdf/2408.05109">
+      <a href="https://arxiv.org/pdf/2408.05109" class="link">
         <img alt="Static Badge" src="https://img.shields.io/badge/PDF-Arxiv_2024-brightgreen?logo=Arxiv">
       </a>
-        <a href="https://github.com/HKUSTDial/NL2SQL_Handbook">
+        <a href="https://github.com/HKUSTDial/NL2SQL_Handbook" class="link">
         <img alt="Static Badge" src="https://img.shields.io/badge/Github-NL2SQL_Handbook-blue?logo=Github">
       </a>
-      <a href="https://github.com/HKUSTDial/NL2SQL_Handbook">
+      <a href="https://github.com/HKUSTDial/NL2SQL_Handbook" class="link">
         <img alt="Static Badge" src="https://img.shields.io/badge/Tutorial-Open_Slides-red?logo=Googledrive">
       </a>
-      <a href="https://github.com/HKUSTDial/NL2SQL_Handbook">
+      <a href="https://github.com/HKUSTDial/NL2SQL_Handbook" class="link">
         <img alt="Static Badge" src="https://img.shields.io/github/stars/HKUSTDial/NL2SQL_Handbook?style=social">
       </a>
     </div>
@@ -196,18 +196,18 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
       <img src="../images/bls.png" alt="University Logo" class="logo">
     </div>
     <div class="paper-title-column">
-      <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">
+      <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false" class="link">
         <h3>Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease</h3>
       </a>
       <p class="info"><b>Peixian Ma</b>, Jing Wang, Zhiguo Zhou, C. L. Philip Chen  Alzheimer’s Disease Neuroimaging Initiative and Junwei Duan<br><b>Frontiers in Neuroscience 2023</b></p>
-      <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">
+      <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false" class="link">
         <img alt="Static Badge" src="https://img.shields.io/badge/PDF-Frontiers_2023-brightgreen?logo=Arxiv">
       </a>
       <a href="https://github.com/MPX0222/BroadLearningSystemTools-2.0">
-        <img alt="Static Badge" src="https://img.shields.io/badge/Github-BroadLearningSystemTools_2.0-blue?logo=Github">
+        <img alt="Static Badge" src="https://img.shields.io/badge/Github-BroadLearningSystemTools_2.0-blue?logo=Github" class="link">
       </a>
       <a href="https://github.com/MPX0222/BroadLearningSystemTools-2.0">
-        <img alt="Static Badge" src="https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-2.0?style=social">
+        <img alt="Static Badge" src="https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-2.0?style=social" class="link">
       </a>
     </div>
   </div>
