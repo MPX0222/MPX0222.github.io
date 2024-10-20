@@ -51,7 +51,7 @@ author_profile: true
   }
 
 
-  .paper-title-column{
+  .paper-title-column {
     margin-left: 20px;
     padding: 10px;
     width: 80%; /* 第二列宽度 */
@@ -62,38 +62,25 @@ author_profile: true
     width: 60%; /* 第二列宽度 */
   }
 
-  .date-column {
-    width: 20%; /* 第三列宽度 */
-    font-size: 13px; /* 时间的字体大小 */
-  }
-
   .logo {
     width: 100%;
     height: 100%;
   }
 
-  .title {
+  .year {
+    text-align: left;
     font-size: 30px;
   }
 
   .info {
     text-align: left;
-    font-size: 18px;
+    font-size: 15px;
   }
 
-  .floating-tag {
-    text-align: center; /* 文本居中 */
-    transform: translate(10%, 120%);
-    width: 100px;
-    height: 22px;
-    box-shadow: 0 4px 8px rgba(0, 0, 10, 10); /* 添加阴影效果 */
-    padding: 1px;
-    background-color: #007fff; 
-    color: #f9f7ed;
-  }
 </style>
 
 <div class="main-container">
+  <h3><em>2024</em></h3>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/rewriter.png" alt="" class="logo">
@@ -127,7 +114,7 @@ author_profile: true
       </a>
     </div>
   </div>
-  <hr>
+  <h3><em>2023</em></h3>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/bls.png" alt="University Logo" class="logo">

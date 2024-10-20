@@ -81,7 +81,7 @@ redirect_from:
 
   .info {
     text-align: left;
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .floating-tag {
