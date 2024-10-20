@@ -69,7 +69,7 @@ author_profile: true
 
   .year {
     text-align: left;
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .info {
@@ -80,7 +80,7 @@ author_profile: true
 </style>
 
 <div class="main-container">
-  <h3><em>2024</em></h3>
+  <h3>2024</h3>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/rewriter.png" alt="" class="logo">
@@ -114,7 +114,7 @@ author_profile: true
       </a>
     </div>
   </div>
-  <h3><em>2023</em></h3>
+  <h3>2023</h3>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/bls.png" alt="University Logo" class="logo">
