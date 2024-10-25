@@ -108,13 +108,20 @@ I received the B.Eng. degree in Intelligence Science and Technology from [Jinan 
 Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL 呆鹅实验室](https://github.com/HKUSTDial) and Red Bird AI Agent Narrative Storytelling Game Groups [@AASG](). My research interest comprises Database Management (DBMS), Multi-agent System (MAS), Natural Language to SQL (NL2SQL) and Open-Source BLS. Here are the related links:
 
 <p align="center">
-  HKUST(GZ)-DIAL 呆鹅实验室
+  HKUST(GZ)-DIAL | 呆鹅实验室
   ·
   <a href="ttps://github.com/HKUSTDial">Github</a>
   ·
   <a href="ttps://github.com/HKUSTDial">Homepage</a>
 </p>
 
+<p align="center">
+  Personal CV | 个人简历
+  ·
+  <a href="https://mpx0222.github.io/">zh</a>
+  ·
+  <a href="https://mpx0222.github.io/">en</a>
+</p>
 
 📟 News
 === 
