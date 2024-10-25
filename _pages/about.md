@@ -27,18 +27,10 @@ redirect_from:
     font-size: 20px;
   }
 
-  h1 {
-    color: #000000;
-    font-weight: bold;
-  }
-
 
   .main-container {
     margin-bottom: 30px;
     margin-bottom: 15px;
-    background-color: #f9f7ed;
-    padding: 15px;
-    border-radius:5px
   }
 
   .container {
@@ -46,6 +38,7 @@ redirect_from:
     overflow: auto;
     justify-content: center;
     align-items: center;
+    background-color: white;
     padding: 0px;
     padding-left: 20px;
   }
@@ -104,32 +97,31 @@ redirect_from:
   }
 </style>
 
-<div class="main-container">
-  <p align="center">至于结果，只要你足够认真虔诚，总归不会错的。<br>2019.06.07</p>
-  
-  Hello! I am Peixian MA, a second-year M.Phil. student of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying for a Master's degree of Philosophy in Data Science and Analytics under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/) and [Prof. Nan Tang](https://nantang.github.io/), at the [Data Science and Analytics Thrust (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/), [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
 
-  I received the B.Eng. degree in Intelligence Science and Technology from [Jinan University (JNU)](https://english.jnu.edu.cn/) in 2023. I have started my research and learning live by working as the undergraduate research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University. My undergraduate research direction is the optimization and application of the Broad Learning System (BLS). Before my graduation, I received the offer from HKUST(GZ) and successfully enrolled in it in the Fall 2023.
+<p align="center">至于结果，只要你足够认真虔诚，总归不会错的。<br>2019.06.07</p>
 
-  Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL 呆鹅实验室](https://github.com/HKUSTDial) and Red Bird AI Agent Narrative Storytelling Game Groups [@AASG](). My research interest comprises Database Management (DBMS), Multi-agent System (MAS), Natural Language to SQL (NL2SQL) and Open-Source BLS. Here are the related links:
 
-  <p align="center">
-    HKUST(GZ)-DIAL | 呆鹅实验室
-    ·
-    <a href="ttps://github.com/HKUSTDial">Github</a>
-    ·
-    <a href="ttps://github.com/HKUSTDial">Homepage</a>
-  </p>
+Hello! I am Peixian MA, a second-year M.Phil. student of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying for a Master's degree of Philosophy in Data Science and Analytics under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/) and [Prof. Nan Tang](https://nantang.github.io/), at the [Data Science and Analytics Thrust (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/), [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
 
-  <p align="center">
-    Personal CV | 个人简历
-    ·
-    <a href="https://mpx0222.github.io/">zh</a>
-    ·
-    <a href="https://mpx0222.github.io/">en</a>
-  </p>
+I received the B.Eng. degree in Intelligence Science and Technology from [Jinan University (JNU)](https://english.jnu.edu.cn/) in 2023. I have started my research and learning live by working as the undergraduate research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University. My undergraduate research direction is the optimization and application of the Broad Learning System (BLS). Before my graduation, I received the offer from HKUST(GZ) and successfully enrolled in it in the Fall 2023.
 
-</div>
+Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL 呆鹅实验室](https://github.com/HKUSTDial) and Red Bird AI Agent Narrative Storytelling Game Groups [@AASG](). My research interest comprises Database Management (DBMS), Multi-agent System (MAS), Natural Language to SQL (NL2SQL) and Open-Source BLS. Here are the related links:
+
+<p align="center">
+  HKUST(GZ)-DIAL | 呆鹅实验室
+  ·
+  <a href="ttps://github.com/HKUSTDial">Github</a>
+  ·
+  <a href="ttps://github.com/HKUSTDial">Homepage</a>
+</p>
+
+<p align="center">
+  Personal CV | 个人简历
+  ·
+  <a href="https://mpx0222.github.io/">zh</a>
+  ·
+  <a href="https://mpx0222.github.io/">en</a>
+</p>
 
 📟 News
 === 
@@ -142,9 +134,10 @@ redirect_from:
 [![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-2.0?style=social)](https://github.com/MPX0222/BroadLearningSystemTools-2.0)
 * `2023.05` 📌 Successfully pass the undergraduate graduation defense in Jinan University.
 
+🎓 Education
+======
 
 <div class="main-container">
-  <h1>🎓 Education</h1>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/hkust-logo.png" alt="University Logo" class="logo">
@@ -166,8 +159,10 @@ redirect_from:
 </div>
 
 
+📰 Publications
+======
+
 <div class="main-container">
-  <h1>📰 Publications</h1>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/rewriter.png" alt="" class="logo">
