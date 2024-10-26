@@ -43,8 +43,9 @@ redirect_from:
 
   .li-container {
     background-color: white;
-    padding: 0px;
+    padding: 10px;
     padding-left: 20px;
+    border-radius: 5px;
   }
 
   .container {
@@ -55,6 +56,7 @@ redirect_from:
     background-color: white;
     padding: 0px;
     padding-left: 20px;
+    border-radius: 5px;
   }
   
 
