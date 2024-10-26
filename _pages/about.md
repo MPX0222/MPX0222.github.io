@@ -14,6 +14,7 @@ redirect_from:
 <style>
   body {
     font-family: "Open Sans";
+    background-color: #f8f9fa;
   }
 
   td {
@@ -27,10 +28,23 @@ redirect_from:
     font-size: 20px;
   }
 
+  h1 {
+    font-family: "Open Sans";
+    font-size: 30px;
+  }
 
   .main-container {
     margin-bottom: 30px;
     margin-bottom: 15px;
+    box-shadow: 0 0 1px rgba(1, 1, 1, 1); 
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .li-container {
+    background-color: white;
+    padding: 0px;
+    padding-left: 20px;
   }
 
   .container {
@@ -85,16 +99,6 @@ redirect_from:
     font-size: 15px;
   }
 
-  .floating-tag {
-    text-align: center; /* 文本居中 */
-    transform: translate(10%, 120%);
-    width: 100px;
-    height: 22px;
-    box-shadow: 0 4px 8px rgba(0, 0, 10, 10); /* 添加阴影效果 */
-    padding: 1px;
-    background-color: #007fff; 
-    color: #f9f7ed;
-  }
 </style>
 
 
@@ -123,26 +127,25 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
   <a href="https://mpx0222.github.io/">en</a>
 </p>
 
-📟 News
-=== 
 
 <div class="main-container">
-  <ul>
+  <h1>📟 News</h1>
+  <div class="li-container">
+    <h3>2024</h3>
+    <ul> <em>Jan 15</em>. 📌 The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: <a href="https://arxiv.org/pdf/2408.05109">A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</a> is available on Arxiv.</ul>
+    <ul> <em>Jan 15</em>. Successfuly pass the PQA of the Red Bird M.Phil Program.</ul>
+    <h3>2023</h3>
+    <ul> <em>Jul 15</em>. 📌 Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen)..</ul>
+    <ul> <em>Jul 08</em>. 📌 My first long research paper: <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer’s Disease</a> has been accepted and published by Frontiers in Neuroscience</ul>
+    <ul> <em>May 05</em>. 📌 Successfully pass the undergraduate graduation defense in Jinan University.</ul>
+  </div>
 </div>
 
 <!-- * `2024.08` 📌 Long research paper [A Plug-and-Play Natural Language Rewriter for Natural Language to SQL]() completed and submitted to AAAI 2025.  -->
-* `2024.08` 📌 First Survey of [@HKUST(GZ)-DIAL](https://github.com/HKUSTDial) NL2SQL Research Group: [A Survey of NL2SQL with Large Language Models: Where are we, and where are we going](https://arxiv.org/pdf/2408.05109) is available on *Arxiv*. *NL2SQL Handbook* link: [https://github.com/HKUSTDial/NL2SQL_Handbook](https://github.com/HKUSTDial/NL2SQL_Handbook). 
-[![Static Badge](https://img.shields.io/github/stars/HKUSTDial/NL2SQL_Handbook?style=social)](https://github.com/HKUSTDial/NL2SQL_Handbook)
-* `2024.01` 📌 Successfuly pass the PQA of the Red Bird M.Phil Program.
-* `2023.07` 📌 Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).
-* `2023.07` 📌 First long research paper: [Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer’s Disease](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false) is published in *Frontiers in Neuroscience*.
-[![Static Badge](https://img.shields.io/github/stars/MPX0222/BroadLearningSystemTools-2.0?style=social)](https://github.com/MPX0222/BroadLearningSystemTools-2.0)
-* `2023.05` 📌 Successfully pass the undergraduate graduation defense in Jinan University.
 
-🎓 Education
-======
 
 <div class="main-container">
+  <h1>🎓 Education</h1>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/hkust-logo.png" alt="University Logo" class="logo">
@@ -164,10 +167,8 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 </div>
 
 
-📰 Publications
-======
-
 <div class="main-container">
+  <h1>📰 Publications</h1>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/rewriter.png" alt="" class="logo">
