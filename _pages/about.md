@@ -37,13 +37,14 @@ redirect_from:
     margin-bottom: 30px;
     margin-bottom: 15px;
     /* box-shadow: 0 0 1px rgba(1, 1, 1, 1);  */
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 10px;
+    background-color: white;
   }
 
   .li-container {
     background-color: white;
-    padding: 10px;
+    /* padding: 5px; */
     padding-left: 20px;
     border-radius: 5px;
   }
@@ -226,45 +227,57 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 </div>
 
 
+<div class="main-container">
+  <h1>🏆 Selected Awards</h1>
+  <div class="li-container">
+    <h3>Academic Awards</h3>
+    <ul> <em>Sept. 2024</em>. 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</ul>
+    <ul> <em>Sept. 2023</em>. 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</ul>
+    <ul> <em>Jun. 2023</em>. 🏅 Distinguished Graduate, College of Information Science and Technology, Jinan University.</ul>
+    <ul> <em>Apr. 2023</em>. 🏅 Silver Award in "Medicine +X" Virtual Simulation Competition for College students, Jinan University & Guangzhou Medical University.</ul>
+    <ul> <em>Dec. 2022</em>. 🏅 Second Class Scholarship for Excellent Student, Jinan University.</ul>
+    <ul> <em>Dec. 2021</em>. 🏅 Third Class Scholarship Excellent Student, Jinan University.</ul>
+    <ul> <em>May. 2021</em>. 🏅 Honorable Mention for Mathematical Contest In Modeling, Jinan University.</ul>    
+    <h3>Sport Awards</h3>
+    <ul> <em>Apr. 2024</em>. 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, <em>CB, 4 Games,  2 Assist.</em></ul>
+    <ul> <em>Jun. 2023</em>. 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, <em>CDM, 5 Games, 1 Goal, 2 Assist</em>.</ul>    
+    <ul> <em>Oct. 2021</em>. 🏆 Best Player of the Second Round in 2021 Jinan University Football Super League, Information Science and Technology.</ul>
+    <ul> <em>Jun. 2021</em>. 🥇 Champion of 2020 Jinan University Football College Cup, College of Information Science and Technology, <em>ST, 4 Games, 1 Goal, 1 Assist</em>.</ul>     
+  </div>
+</div>
 
 
+<div class="main-container">
+  <h1>💻Internships</h1>
+  <div class="li-container">
+    <ul> 
+      <em>Jan. 2023 - Jun. 2023</em>. Research Assistant, Big Data Center.
+      <a href="https://xwxy.jnu.edu.cn/2018/1218/c12846a322831/page.psp">School of Journalism & Communication, Jinan University</a>
+      <li>Location: Guangzhou, China</li>
+      <li>Duties: Data Mining, Data Cleaning and Visualization </li>
+      <li>Supervisor: Junjie HUA</li>
+    </ul> 
+    <ul> 
+      <em>Sept. 2020 - Dec. 2022</em>. Research Assistant, Data-driven Intelligent Systems Laboratory.
+      <a href="https://faculty.jnu.edu.cn/xxkxjsxy/djw/list.htm">College of Information Science of Technology, Jinan University</a>
+      <li>Location: Guangzhou, China</li>
+      <li>Duties: Conceptualization, Writing Draft, Validation, Data Visualization, Review and Project Administration</li>
+      <li>Supervisor: Junwei Duan, Yujuan Quan</li>
+    </ul> 
+  </div>
+</div>
 
-🏆 Selected Awards
-===
-> Academic Awards
+<div class="main-container">
+  <h1>🤖 Services</h1>
+  <div class="li-container">
+    <h3>Conference</h3>
+    <ul> 
+      <em>Aug. 2024. Guangzhou</em>. Student Volunteer
+      <a href="https://vldb.org/2024/"> 50th International Conference on Very Large Databases (VLDB 2024)</a>
+    </ul>    
+  </div>
+</div>
 
-* `2024.09` 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).
-* `2023.09` 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).
-* `2023.06` 🏅 Distinguished Graduate, College of Information Science and Technology, Jinan University.
-* `2023.04` 🏅 Silver Award in "Medicine +X" Virtual Simulation Competition for College students, Jinan University & Guangzhou Medical University.
-* `2022.12` 🏅 Second Class Scholarship for Excellent Student, Jinan University.
-* `2021.12` 🏅 Third Class Scholarship Excellent Student, Jinan University.
-* `2021.05` 🏅 Honorable Mention for Mathematical Contest In Modeling, Jinan University.
-
-> Sport Awards
-
-* `2024.04` 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, *CB, 4 Games,  2 Assist*.
-* `2023.06` 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, *CDM, 5 Games, 1 Goal, 2 Assist*.
-* `2021.10` 🏆 Best Player of the Second Round in 2021 Jinan University Football Super League, Information Science and Technology.
-* `2021.06` 🥇 Champion of 2020 Jinan University Football College Cup, College of Information Science and Technology, *ST, 4 Games, 1 Goal, 1 Assist*.
-
-💻Internships
-===
-
-* `2023.01` - `2023.06` : Research Assistant, Big Data Center. [@School of Journalism & Communication, Jinan University](https://xwxy.jnu.edu.cn/2018/1218/c12846a322831/page.psp)
-  * Location: Guangzhou, China
-  * Duties: Data Mining, Data Cleaning and Visualization 
-  * Supervisor: Junjie HUA
-
-* `2020.09` - `2022.12` : Research Assistant,  Data-driven Intelligent Systems Laboratory. [@College of Information Science of Technology, Jinan University](https://faculty.jnu.edu.cn/xxkxjsxy/djw/list.htm)
-  * Location: Guangzhou, China
-  * Duties: Conceptualization, Writing Draft, Validation, Data Visualization, Review and Project Administration
-  * Supervisor: Junwei Duan, Yujuan Quan
-
-🤖 Services
-===
-* Conference: 
-  * Student Volunteer, 50th International Conference on Very Large Databases ([@VLDB 2024](https://vldb.org/2024/)), Guangzhou
 
 📘 Study Stack
 ===
