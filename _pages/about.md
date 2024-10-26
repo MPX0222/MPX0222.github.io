@@ -36,7 +36,7 @@ redirect_from:
   .main-container {
     margin-bottom: 30px;
     margin-bottom: 15px;
-    box-shadow: 0 0 1px rgba(1, 1, 1, 1); 
+    /* box-shadow: 0 0 1px rgba(1, 1, 1, 1);  */
     border-radius: 5px;
     padding: 10px;
   }
