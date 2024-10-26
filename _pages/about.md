@@ -101,9 +101,9 @@ redirect_from:
 <p align="center">至于结果，只要你足够认真虔诚，总归不会错的。<br>2019.06.07</p>
 
 
-Hello! I am Peixian MA, a second-year M.Phil. student of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying for a Master's degree of Philosophy in Data Science and Analytics under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/) and [Prof. Nan Tang](https://nantang.github.io/), at the [Data Science and Analytics Thrust (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/), [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
+Hello! I am a second-year M.Phil. student of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying in [Data Science and Analytics (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/) and [Prof. Nan Tang](https://nantang.github.io/), at the [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
 
-I received the B.Eng. degree in Intelligence Science and Technology from [Jinan University (JNU)](https://english.jnu.edu.cn/) in 2023. I have started my research and learning live by working as the undergraduate research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University. My undergraduate research direction is the optimization and application of the Broad Learning System (BLS). Before my graduation, I received the offer from HKUST(GZ) and successfully enrolled in it in the Fall 2023.
+I have received the B.Eng. degree in Intelligence Science and Technology from [Jinan University (JNU)](https://english.jnu.edu.cn/) in 2023. During my undergraduate live, I started my research by working as the undergraduate research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University. My undergraduate research direction is the optimization and application of the Broad Learning System (BLS). Before my graduation, I received the offer from HKUST(GZ) and successfully enrolled in it in the Fall 2023.
 
 Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL 呆鹅实验室](https://github.com/HKUSTDial) and Red Bird AI Agent Narrative Storytelling Game Groups [@AASG](). My research interest comprises Database Management (DBMS), Multi-agent System (MAS), Natural Language to SQL (NL2SQL) and Open-Source BLS. Here are the related links:
 
@@ -125,6 +125,11 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 
 📟 News
 === 
+
+<div class="main-container">
+  <ul>
+</div>
+
 <!-- * `2024.08` 📌 Long research paper [A Plug-and-Play Natural Language Rewriter for Natural Language to SQL]() completed and submitted to AAAI 2025.  -->
 * `2024.08` 📌 First Survey of [@HKUST(GZ)-DIAL](https://github.com/HKUSTDial) NL2SQL Research Group: [A Survey of NL2SQL with Large Language Models: Where are we, and where are we going](https://arxiv.org/pdf/2408.05109) is available on *Arxiv*. *NL2SQL Handbook* link: [https://github.com/HKUSTDial/NL2SQL_Handbook](https://github.com/HKUSTDial/NL2SQL_Handbook). 
 [![Static Badge](https://img.shields.io/github/stars/HKUSTDial/NL2SQL_Handbook?style=social)](https://github.com/HKUSTDial/NL2SQL_Handbook)
