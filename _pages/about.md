@@ -31,15 +31,17 @@ redirect_from:
   h1 {
     font-family: "Open Sans";
     font-size: 30px;
+    padding-left: 20px;
   }
 
   .main-container {
     margin-bottom: 30px;
     margin-bottom: 15px;
-    /* box-shadow: 0 0 1px rgba(1, 1, 1, 1);  */
+    box-shadow: 0 0 1px #f8f9fc; 
     border-radius: 8px;
     padding: 10px;
     background-color: white;
+    margin-bottom: 30px;
   }
 
   .li-container {
@@ -108,7 +110,7 @@ redirect_from:
 <p align="center">至于结果，只要你足够认真虔诚，总归不会错的。<br>2019.06.07</p>
 
 
-Hello! I am a second-year M.Phil. student of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying in [Data Science and Analytics (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/) and [Prof. Nan Tang](https://nantang.github.io/), at the [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
+Hello! I am a M.Phil. student of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying in [Data Science and Analytics (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/) and [Prof. Nan Tang](https://nantang.github.io/), at the [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
 
 I have received the B.Eng. degree in Intelligence Science and Technology from [Jinan University (JNU)](https://english.jnu.edu.cn/) in 2023. During my undergraduate live, I started my research by working as the undergraduate research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University. My undergraduate research direction is the optimization and application of the Broad Learning System (BLS). Before my graduation, I received the offer from HKUST(GZ) and successfully enrolled in it in the Fall 2023.
 
@@ -117,9 +119,9 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 <p align="center">
   HKUST(GZ)-DIAL | 呆鹅实验室
   ·
-  <a href="ttps://github.com/HKUSTDial">Github</a>
+  <a href="https://github.com/HKUSTDial">Github</a>
   ·
-  <a href="ttps://github.com/HKUSTDial">Homepage</a>
+  <a href="https://github.com/HKUSTDial">Homepage</a>
 </p>
 
 <p align="center">
@@ -137,6 +139,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     <h3>2024</h3>
     <ul> <em>Jan 15</em>. 📌 The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: <a href="https://arxiv.org/pdf/2408.05109">A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</a> is available on Arxiv.</ul>
     <ul> <em>Jan 15</em>. Successfuly pass the PQA of the Red Bird M.Phil Program.</ul>
+    <hr>
     <h3>2023</h3>
     <ul> <em>Jul 15</em>. 📌 Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen)..</ul>
     <ul> <em>Jul 08</em>. 📌 My first long research paper: <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer’s Disease</a> has been accepted and published by Frontiers in Neuroscience</ul>
@@ -158,6 +161,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
         <p class="info">M.Phil. in Data Science and Analytics<br>2023.09 - 2025.07 (Expected)</p>
     </div>
   </div>
+  <hr>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/jnu-logo.png" alt="University Logo" class="logo">
@@ -181,6 +185,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
         <p class="info"><b>Peixian Ma</b>, Boyan Li, Runzhi Jiang, Yuyu Luo, Ju Fan and Nan Tang<br><b>Arxiv</b></p>
     </div>
   </div>
+  <hr>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/survey.png" alt="University Logo" class="logo">
@@ -204,6 +209,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
       </a>
     </div>
   </div>
+  <hr>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/bls.png" alt="University Logo" class="logo">
@@ -238,6 +244,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     <ul> <em>Dec. 2022</em>. 🏅 Second Class Scholarship for Excellent Student, Jinan University.</ul>
     <ul> <em>Dec. 2021</em>. 🏅 Third Class Scholarship Excellent Student, Jinan University.</ul>
     <ul> <em>May. 2021</em>. 🏅 Honorable Mention for Mathematical Contest In Modeling, Jinan University.</ul>    
+    <hr>
     <h3>Sport Awards</h3>
     <ul> <em>Apr. 2024</em>. 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, <em>CB, 4 Games,  2 Assist.</em></ul>
     <ul> <em>Jun. 2023</em>. 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, <em>CDM, 5 Games, 1 Goal, 2 Assist</em>.</ul>    
@@ -257,6 +264,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
       <li>Duties: Data Mining, Data Cleaning and Visualization </li>
       <li>Supervisor: Junjie HUA</li>
     </ul> 
+    <hr>
     <ul> 
       <em>Sept. 2020 - Dec. 2022</em>. Research Assistant, Data-driven Intelligent Systems Laboratory.
       <a href="https://faculty.jnu.edu.cn/xxkxjsxy/djw/list.htm">College of Information Science of Technology, Jinan University</a>
