@@ -32,12 +32,13 @@ redirect_from:
     font-family: "Open Sans";
     font-size: 30px;
     padding-left: 20px;
+    padding-top: 10px;
   }
 
   .main-container {
     margin-bottom: 30px;
     margin-bottom: 15px;
-    box-shadow: 0 0 1px #f8f9fc; 
+    box-shadow: 5px 5px 5px #dddddd; 
     border-radius: 8px;
     padding: 10px;
     background-color: white;
@@ -137,11 +138,11 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
   <h1>📟 News</h1>
   <div class="li-container">
     <h3>2024</h3>
-    <ul> <em>Jan 15</em>. 📌 The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: <a href="https://arxiv.org/pdf/2408.05109">A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</a> is available on Arxiv.</ul>
+    <ul> <em>Aug 15</em>. 📌 The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: <a href="https://arxiv.org/pdf/2408.05109">A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</a> is available on Arxiv.</ul>
     <ul> <em>Jan 15</em>. Successfuly pass the PQA of the Red Bird M.Phil Program.</ul>
     <hr>
     <h3>2023</h3>
-    <ul> <em>Jul 15</em>. 📌 Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen)..</ul>
+    <ul> <em>Jul 15</em>. 📌 Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).</ul>
     <ul> <em>Jul 08</em>. 📌 My first long research paper: <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer’s Disease</a> has been accepted and published by Frontiers in Neuroscience</ul>
     <ul> <em>May 05</em>. 📌 Successfully pass the undergraduate graduation defense in Jinan University.</ul>
   </div>
