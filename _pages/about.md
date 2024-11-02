@@ -36,18 +36,18 @@ redirect_from:
   }
 
   .main-container {
-    box-shadow: 5px 5px 5px #dddddd; 
-    border-radius: 8px;
+    /* box-shadow: 5px 5px 5px #dddddd;  */
+    border-radius: 5px;
     padding: 10px;
-    background-color: white;
+    /* background-color: white; */
     margin-bottom: 30px;
   }
 
   .li-container {
-    background-color: white;
+    /* background-color: white; */
     /* padding: 5px; */
     padding-left: 20px;
-    padding-right: 15px;
+    /* padding-right: 15px; */
     padding-bottom: 15px;  
     border-radius: 5px;
   }
@@ -57,7 +57,7 @@ redirect_from:
     overflow: auto;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    /* background-color: white; */
     padding: 0px;
     padding-left: 20px;
     border-radius: 5px;
