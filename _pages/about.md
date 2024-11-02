@@ -8,12 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@100;400;600;700&display=swap" rel="stylesheet">
 
 <style>
   body {
-    font-family: "Open Sans";
+    font-family: "Lato";
     background-color: #f8f9fa;
   }
 
@@ -24,12 +24,12 @@ redirect_from:
   }
 
   h3 {
-    font-family: "Open Sans";
+    font-family: "Lato";
     font-size: 20px;
   }
 
   h1 {
-    font-family: "Open Sans";
+    font-family: "Lato";
     font-size: 30px;
     padding-left: 20px;
     padding-top: 10px;

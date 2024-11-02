@@ -7,8 +7,8 @@
    ========================================================================== */
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url('/https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;400;600;700&display=swap') format('Open Sans');
+  font-family: 'Lato';
+  src: url('/https://fonts.googleapis.com/css2?family=Lato:wght@100;400;600;700&display=swap') format('Lato');
 }
 
 .breadcrumbs {
@@ -18,7 +18,7 @@
   margin-bottom: 0;
   padding-left: 2em;
   padding-right: 2em;
-  font-family: "Open Sans";
+  font-family: "Lato";
   -webkit-animation: intro 0.3s both;
           animation: intro 0.3s both;
   -webkit-animation-delay: 0.30s;
@@ -71,7 +71,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    font-family: "Open Sans";
+    font-family: "Lato";
   }
 
   li {
@@ -82,7 +82,7 @@
     a {
       margin-bottom: 0.25em;
       padding: 0.5em 1em;
-      font-family: "Open Sans";
+      font-family: "Lato";
       font-size: 14px;
       font-weight: bold;
       line-height: 1.5;
@@ -131,7 +131,7 @@
     padding: 1em 2em;
     float: left;
     width: 50%;
-    font-family: "Open Sans";
+    font-family: "Lato";
     font-size: $type-size-5;
     font-weight: bold;
     text-align: center;
@@ -353,7 +353,7 @@
 .nav__title {
   margin: 0;
   padding: 0.5rem 1rem;
-  font-family: "Open Sans";
+  font-family: "Lato";
   font-size: $type-size-5;
   font-weight: bold;
 }
@@ -362,7 +362,7 @@
   display: block;
   margin: 0.5rem 0;
   padding: 0.5rem 0;
-  font-family: "Open Sans";
+  font-family: "Lato";
   font-size: $type-size-6;
   font-weight: bold;
   text-transform: uppercase;
@@ -375,7 +375,7 @@
    ========================================================================== */
 
 .toc {
-  font-family: "Open Sans";
+  font-family: "Lato";
   color: $gray;
   text-transform: uppercase;
   letter-spacing: 1px;
