@@ -36,8 +36,6 @@ redirect_from:
   }
 
   .main-container {
-    margin-bottom: 30px;
-    margin-bottom: 15px;
     box-shadow: 5px 5px 5px #dddddd; 
     border-radius: 8px;
     padding: 10px;
@@ -49,6 +47,8 @@ redirect_from:
     background-color: white;
     /* padding: 5px; */
     padding-left: 20px;
+    padding-right: 15px;
+    padding-bottom: 15px;  
     border-radius: 5px;
   }
 
