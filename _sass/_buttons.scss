@@ -7,8 +7,8 @@
    ========================================================================== */
 
 @font-face {
-  font-family: 'Lato';
-  src: url('/https://fonts.googleapis.com/css2?family=Lato:wght@100;400;600;700&display=swap') format('Lato');
+  font-family: 'Open Sans';
+  src: url('/https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;400;600;700&display=swap') format('Open Sans');
 }
 
 .btn {
@@ -17,7 +17,7 @@
   margin-bottom: 0.25em;
   padding: 0.5em 1em;
   color: #fff !important;
-  font-family: "Lato";
+  font-family: "Open Sans";
   font-size: $type-size-6;
   font-weight: bold;
   text-align: center;

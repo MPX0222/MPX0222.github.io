@@ -8,12 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@100;400;600;700&display=swap" rel="stylesheet">
 
 <style>
   body {
-    font-family: "Lato";
+    font-family: "Open Sans";
     background-color: #f8f9fa;
   }
 
@@ -24,12 +24,12 @@ redirect_from:
   }
 
   h3 {
-    font-family: "Lato";
+    font-family: "Open Sans";
     font-size: 20px;
   }
 
   h1 {
-    font-family: "Lato";
+    font-family: "Open Sans";
     font-size: 30px;
     padding-left: 20px;
     padding-top: 10px;
@@ -138,13 +138,13 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
   <h1>📟 News</h1>
   <div class="li-container">
     <h3>2024</h3>
-    <ul> <em>Aug 15</em>. 📌 The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: <a href="https://arxiv.org/pdf/2408.05109">A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</a> is available on Arxiv.</ul>
-    <ul> <em>Jan 15</em>. Successfuly pass the PQA of the Red Bird M.Phil Program.</ul>
+    <ul class="info"> <em>Aug 09</em>. 📌 The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: <a href="https://arxiv.org/pdf/2408.05109">A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</a> is available on Arxiv.</ul>
+    <ul class="info"> <em>Jan 10</em>. Successfuly pass the PQA of the Red Bird M.Phil Program.</ul>
     <hr>
     <h3>2023</h3>
-    <ul> <em>Jul 15</em>. 📌 Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).</ul>
-    <ul> <em>Jul 08</em>. 📌 My first long research paper: <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer’s Disease</a> has been accepted and published by Frontiers in Neuroscience</ul>
-    <ul> <em>May 05</em>. 📌 Successfully pass the undergraduate graduation defense in Jinan University.</ul>
+    <ul class="info"> <em>Jul 15</em>. 📌 Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).</ul>
+    <ul class="info"> <em>Jul 08</em>. 📌 My first long research paper: <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer’s Disease</a> has been accepted and published by Frontiers in Neuroscience</ul>
+    <ul class="info"> <em>May 05</em>. 📌 Successfully pass the undergraduate graduation defense in Jinan University.</ul>
   </div>
 </div>
 
@@ -238,19 +238,19 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
   <h1>🏆 Selected Awards</h1>
   <div class="li-container">
     <h3>Academic Awards</h3>
-    <ul> <em>Sept. 2024</em>. 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</ul>
-    <ul> <em>Sept. 2023</em>. 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</ul>
-    <ul> <em>Jun. 2023</em>. 🏅 Distinguished Graduate, College of Information Science and Technology, Jinan University.</ul>
-    <ul> <em>Apr. 2023</em>. 🏅 Silver Award in "Medicine +X" Virtual Simulation Competition for College students, Jinan University & Guangzhou Medical University.</ul>
-    <ul> <em>Dec. 2022</em>. 🏅 Second Class Scholarship for Excellent Student, Jinan University.</ul>
-    <ul> <em>Dec. 2021</em>. 🏅 Third Class Scholarship Excellent Student, Jinan University.</ul>
-    <ul> <em>May. 2021</em>. 🏅 Honorable Mention for Mathematical Contest In Modeling, Jinan University.</ul>    
+    <ul class="info"> <em>Sept. 2024</em>. 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</ul>
+    <ul class="info"> <em>Sept. 2023</em>. 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</ul>
+    <ul class="info"> <em>Jun. 2023</em>. 🏅 Distinguished Graduate, College of Information Science and Technology, Jinan University.</ul>
+    <ul class="info"> <em>Apr. 2023</em>. 🏅 Silver Award in "Medicine +X" Virtual Simulation Competition for College students, Jinan University & Guangzhou Medical University.</ul>
+    <ul class="info"> <em>Dec. 2022</em>. 🏅 Second Class Scholarship for Excellent Student, Jinan University.</ul>
+    <ul class="info"> <em>Dec. 2021</em>. 🏅 Third Class Scholarship Excellent Student, Jinan University.</ul>
+    <ul class="info"> <em>May. 2021</em>. 🏅 Honorable Mention for Mathematical Contest In Modeling, Jinan University.</ul>    
     <hr>
     <h3>Sport Awards</h3>
-    <ul> <em>Apr. 2024</em>. 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, <em>CB, 4 Games,  2 Assist.</em></ul>
-    <ul> <em>Jun. 2023</em>. 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, <em>CDM, 5 Games, 1 Goal, 2 Assist</em>.</ul>    
-    <ul> <em>Oct. 2021</em>. 🏆 Best Player of the Second Round in 2021 Jinan University Football Super League, Information Science and Technology.</ul>
-    <ul> <em>Jun. 2021</em>. 🥇 Champion of 2020 Jinan University Football College Cup, College of Information Science and Technology, <em>ST, 4 Games, 1 Goal, 1 Assist</em>.</ul>     
+    <ul class="info"> <em>Apr. 2024</em>. 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, <em>CB, 4 Games,  2 Assist.</em></ul>
+    <ul class="info"> <em>Jun. 2023</em>. 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, <em>CDM, 5 Games, 1 Goal, 2 Assist</em>.</ul>    
+    <ul class="info"> <em>Oct. 2021</em>. 🏆 Best Player of the Second Round in 2021 Jinan University Football Super League, Information Science and Technology.</ul>
+    <ul class="info"> <em>Jun. 2021</em>. 🥇 Champion of 2020 Jinan University Football College Cup, College of Information Science and Technology, <em>ST, 4 Games, 1 Goal, 1 Assist</em>.</ul>     
   </div>
 </div>
 
@@ -261,17 +261,17 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     <ul> 
       <em>Jan. 2023 - Jun. 2023</em>. Research Assistant, Big Data Center.
       <a href="https://xwxy.jnu.edu.cn/2018/1218/c12846a322831/page.psp">School of Journalism & Communication, Jinan University</a>
-      <li>Location: Guangzhou, China</li>
-      <li>Duties: Data Mining, Data Cleaning and Visualization </li>
-      <li>Supervisor: Junjie HUA</li>
+      <li class="info">Location: Guangzhou, China</li>
+      <li class="info">Duties: Data Mining, Data Cleaning and Visualization </li>
+      <li class="info">Supervisor: Junjie HUA</li>
     </ul> 
     <hr>
     <ul> 
       <em>Sept. 2020 - Dec. 2022</em>. Research Assistant, Data-driven Intelligent Systems Laboratory.
       <a href="https://faculty.jnu.edu.cn/xxkxjsxy/djw/list.htm">College of Information Science of Technology, Jinan University</a>
-      <li>Location: Guangzhou, China</li>
-      <li>Duties: Conceptualization, Writing Draft, Validation, Data Visualization, Review and Project Administration</li>
-      <li>Supervisor: Junwei Duan, Yujuan Quan</li>
+      <li class="info">Location: Guangzhou, China</li>
+      <li class="info">Duties: Conceptualization, Writing Draft, Validation, Data Visualization, Review and Project Administration</li>
+      <li class="info">Supervisor: Junwei Duan, Yujuan Quan</li>
     </ul> 
   </div>
 </div>

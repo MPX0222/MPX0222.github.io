@@ -7,8 +7,8 @@
    ========================================================================== */
 
 @font-face {
-  font-family: 'Lato';
-  src: url('/https://fonts.googleapis.com/css2?family=Lato:wght@100;400;600;700&display=swap') format('Lato');
+  font-family: 'Open Sans';
+  src: url('/https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;400;600;700&display=swap') format('Open Sans');
 }
 
 .sidebar {
@@ -43,7 +43,7 @@
 
   h2, h3, h4, h5, h6 {
     margin-bottom: 0;
-    font-family: "Lato";
+    font-family: "Open Sans";
   }
 
   h3, h4 {
@@ -51,7 +51,7 @@
   }
 
   p, li {
-    font-family: "Lato";
+    font-family: "Open Sans";
     font-size: $type-size-6;
     line-height: 1.5;
   }
@@ -129,7 +129,7 @@
   }
 }
 .sidebar .author__name {
-  font-family: "Lato";
+  font-family: "Open Sans";
   font-size: $type-size-5;
 }
 
@@ -162,7 +162,7 @@
   position: relative;
   display: table-cell;
   vertical-align: middle;
-  font-family: "Lato";
+  font-family: "Open Sans";
   z-index: 10;
   position: relative;
   cursor: pointer;
