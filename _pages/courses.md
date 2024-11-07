@@ -5,99 +5,146 @@ permalink: /courses/
 author_profile: true
 ---
 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;400;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@100;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 
 <style>
+  /* Base styles */
   body {
-    font-family: "Open Sans";
+    font-family: 'Lato', sans-serif;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+    color: #2c3e50;
+    font-size: 15px;
   }
 
-  td {
-    border: 1px solid #000;
-    text-align: center; 
-    vertical-align: middle; 
+  /* Academic Typography Hierarchy */
+  h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #1a365d;
+    margin: 0 0 1.5rem 0;
+    padding: 1rem 0;
+    border-bottom: 3px solid #2c5282;
+    letter-spacing: -0.5px;
   }
 
   h3 {
-    font-family: "Open Sans";
-    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 1.5rem 0 0.75rem 0;
+    letter-spacing: -0.3px;
   }
 
-
-  .main-container {
-    margin-bottom: 30px;
-    margin-bottom: 15px;
-  }
-
-  .container {
-    display: flex;
-    overflow: auto;
-    justify-content: center;
-    align-items: center;
+  /* Course Container */
+  .course-container {
     background-color: white;
-    padding: 0px;
-    padding-left: 20px;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
   }
 
-  .logo-column {
-    width: 20%; /* 第一列宽度 */
-    text-align: left; /* 文本居中 */
+  /* Course Item */
+  .course-item {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1.25rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: white;
   }
 
+  /* Image Container */
   .paper-logo-column {
-    width: 20%; /* 第一列宽度 */
-    text-align: left; /* 文本居中 */
-  }
-
-
-  .paper-title-column{
-    margin-left: 20px;
-    padding: 10px;
-    width: 80%; /* 第二列宽度 */
-  }
-
-  .details-column {
-    margin-left: 20px;
-    width: 60%; /* 第二列宽度 */
-  }
-
-  .date-column {
-    width: 20%; /* 第三列宽度 */
-    font-size: 13px; /* 时间的字体大小 */
+    flex: 0 0 120px;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
   }
 
   .logo {
-    width: 100%;
-    height: 100%;
+    max-width: 120px;
+    max-height: 120px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
   }
 
-  .title {
-    font-size: 25px;
+  /* Content Column */
+  .paper-title-column {
+    flex: 1;
   }
 
+  /* Course Info */
   .info {
-    text-align: left;
-    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin: 0.5rem 0;
+  }
+
+  /* Links */
+  a {
+    color: #2c5282;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: #4299e1;
+  }
+
+  /* PDF Container */
+  .pdf-container {
+    width: 100%;
+    height: 800px;
+    margin: 1rem 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .course-item {
+      flex-direction: column;
+    }
+
+    .paper-logo-column {
+      margin-bottom: 1.5rem;
+      margin-right: 0;
+    }
   }
 </style>
 
-{% include base_path %}
-
-
-{% for post in site.courses %}
-<div class="main-container">
-  <div class="container">
-    <div class="paper-title-column">
-      <a href="{{ base_path }}{{ post.url }}" rel="permalink">
-        <h2 class="title">{{ post.title }}</h2>
-      </a>
-      <p class="info">
-        {{ post.venue }},  {{ post.location }}
-        <br>
-        {{ post.date | date: '%B %d, %Y' }}
-      </p>
+{% for post in site.courses reversed %}
+  <div class="course-container">
+    <div class="course-item">
+      <div class="paper-logo-column">
+        <img src="{{ post.header.teaser }}" alt="Course Logo" class="logo">
+      </div>
+      <div class="paper-title-column">
+        <h3>{{ post.title }}</h3>
+        <p class="info">{{ post.venue }}</p>
+        <p class="info">{{ post.date | date: "%B %Y" }}</p>
+        <p class="info">{{ post.location }}</p>
+      </div>
     </div>
+    {% if post.pdf %}
+      <div class="pdf-container">
+        <iframe src="{{ post.pdf }}" width="100%" height="100%" frameborder="0">
+          This browser does not support PDFs. Please download the PDF to view it: 
+          <a href="{{ post.pdf }}">Download PDF</a>
+        </iframe>
+      </div>
+    {% endif %}
   </div>
-  <hr>
 {% endfor %}
