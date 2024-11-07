@@ -65,7 +65,7 @@ redirect_from:
   /* Content Container */
   .container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     margin: 1rem 0;
     padding: 1.25rem;
     border: 1px solid #e2e8f0;
@@ -74,15 +74,22 @@ redirect_from:
   }
 
   /* Image Containers */
-  .logo-column, .paper-logo-column {
+  .paper-logo-column {
     flex: 0 0 120px;
     margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
   }
 
   .logo {
-    width: 120px;
+    max-width: 120px;
+    max-height: 120px;
+    width: auto;
     height: auto;
     object-fit: contain;
+    display: block;
   }
 
   /* Content Column */
@@ -162,7 +169,7 @@ redirect_from:
       flex-direction: column;
     }
 
-    .logo-column, .paper-logo-column {
+    .paper-logo-column {
       margin-bottom: 1.5rem;
       margin-right: 0;
     }
@@ -179,6 +186,7 @@ redirect_from:
     max-width: 800px;
     margin: 1rem auto;
   }
+
 </style>
 
 Hello! I am a M.Phil. student of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying in [Data Science and Analytics (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/) and [Prof. Nan Tang](https://nantang.github.io/), at the [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
@@ -208,13 +216,12 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
   <h1>📟 News</h1>
   <div class="li-container">
     <h3>2024</h3>
-    <li class="info"> Aug 09</em>. 📌 The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: <a href="https://arxiv.org/pdf/2408.05109">A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</a> is available on Arxiv.</li>
-    <li class="info"> Jan 10</em>. Successfliy pass the PQA of the Red Bird M.Phil Program.</li>
-    <hr>
+    <li class="info"> Aug 09. 📌 The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: <a href="https://arxiv.org/pdf/2408.05109">A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</a> is available on Arxiv.</li>
+    <li class="info"> Jan 10. Successfliy pass the PQA of the Red Bird M.Phil Program.</li>
     <h3>2023</h3>
-    <li class="info"> Jul 15</em>. 📌 Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).</li>
-    <li class="info"> Jul 08</em>. 📌 My first long research paper: <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer’s Disease</a> has been accepted and published by Frontiers in Neuroscience</li>
-    <li class="info"> May 05</em>. 📌 Successflily pass the undergraduate graduation defense in Jinan University.</li>
+    <li class="info"> Jul 15. 📌 Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).</li>
+    <li class="info"> Jul 08. 📌 My first long research paper: <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer’s Disease</a> has been accepted and published by Frontiers in Neuroscience</li>
+    <li class="info"> May 05. 📌 Successflily pass the undergraduate graduation defense in Jinan University.</li>
   </div>
 </div>
 
@@ -229,7 +236,6 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
         <p class="info">M.Phil. in Data Science and Analytics<br>2023.09 - 2025.07 (Expected)</p>
     </div>
   </div>
-  <hr>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/jnu-logo.png" alt="University Logo" class="logo">
@@ -253,7 +259,6 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
         <p class="info"><b>Peixian Ma</b>, Boyan Li, Runzhi Jiang, Yuyu Luo, Ju Fan and Nan Tang<br><b>Arxiv</b></p>
     </div>
   </div>
-  <hr>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/survey.png" alt="University Logo" class="logo">
@@ -277,7 +282,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
       </a>
     </div>
   </div>
-  <hr>
+  
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/bls.png" alt="University Logo" class="logo">
@@ -305,19 +310,19 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
   <h1>🏆 Selected Awards</h1>
   <div class="li-container">
     <h3>Academic Awards</h3>
-    <li class="info"> Sept. 2024</em>. 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</li>
-    <li class="info"> Sept. 2023</em>. 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</li>
-    <li class="info"> Jun. 2023</em>. 🏅 Distinguished Graduate, College of Information Science and Technology, Jinan University.</li>
-    <li class="info"> Apr. 2023</em>. 🏅 Silver Award in "Medicine +X" Virtual Simliation Competition for College students, Jinan University & Guangzhou Medical University.</li>
-    <li class="info"> Dec. 2022</em>. 🏅 Second Class Scholarship for Excellent Student, Jinan University.</li>
-    <li class="info"> Dec. 2021</em>. 🏅 Third Class Scholarship Excellent Student, Jinan University.</li>
-    <li class="info"> May. 2021</em>. 🏅 Honorable Mention for Mathematical Contest In Modeling, Jinan University.</li>    
-    <hr>
+    <li class="info"> Sept. 2024. 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</li>
+    <li class="info"> Sept. 2023. 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</li>
+    <li class="info"> Jun. 2023. 🏅 Distinguished Graduate, College of Information Science and Technology, Jinan University.</li>
+    <li class="info"> Apr. 2023. 🏅 Silver Award in "Medicine +X" Virtual Simliation Competition for College students, Jinan University & Guangzhou Medical University.</li>
+    <li class="info"> Dec. 2022. 🏅 Second Class Scholarship for Excellent Student, Jinan University.</li>
+    <li class="info"> Dec. 2021. 🏅 Third Class Scholarship Excellent Student, Jinan University.</li>
+    <li class="info"> May. 2021. 🏅 Honorable Mention for Mathematical Contest In Modeling, Jinan University.</li>    
+    
     <h3>Sport Awards</h3>
-    <li class="info"> Apr. 2024</em>. 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, CB, 4 Games,  2 Assist.</em></li>
-    <li class="info"> Jun. 2023</em>. 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, CDM, 5 Games, 1 Goal, 2 Assist</em>.</li>    
-    <li class="info"> Oct. 2021</em>. 🏆 Best Player of the Second Round in 2021 Jinan University Football Super League, Information Science and Technology.</li>
-    <li class="info"> Jun. 2021</em>. 🥇 Champion of 2020 Jinan University Football College Cup, College of Information Science and Technology, ST, 4 Games, 1 Goal, 1 Assist</em>.</li>     
+    <li class="info"> Apr. 2024. 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, CB, 4 Games,  2 Assist.</li>
+    <li class="info"> Jun. 2023. 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, CDM, 5 Games, 1 Goal, 2 Assist.</li>    
+    <li class="info"> Oct. 2021. 🏆 Best Player of the Second Round in 2021 Jinan University Football Super League, Information Science and Technology.</li>
+    <li class="info"> Jun. 2021. 🥇 Champion of 2020 Jinan University Football College Cup, College of Information Science and Technology, ST, 4 Games, 1 Goal, 1 Assist.</li>     
   </div>
 </div>
 
@@ -325,13 +330,13 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 <div class="main-container">
   <h1>💻Internships</h1>
   <div class="li-container">
-    Jan. 2023 - Jun. 2023</em>. Research Assistant, Big Data Center.
+    Jan. 2023 - Jun. 2023. Research Assistant, Big Data Center.
     <a href="https://xwxy.jnu.edu.cn/2018/1218/c12846a322831/page.psp">School of Journalism & Communication, Jinan University</a>
     <li class="info">Location: Guangzhou, China</li>
     <li class="info">Duties: Data Mining, Data Cleaning and Visualization </li>
     <li class="info">Supervisor: Junjie HUA</li> 
-    <hr>
-    Sept. 2020 - Dec. 2022</em>. Research Assistant, Data-driven Intelligent Systems Laboratory.
+    
+    Sept. 2020 - Dec. 2022. Research Assistant, Data-driven Intelligent Systems Laboratory.
     <a href="https://faclity.jnu.edu.cn/xxkxjsxy/djw/list.htm">College of Information Science of Technology, Jinan University</a>
     <li class="info">Location: Guangzhou, China</li>
     <li class="info">Duties: Conceptualization, Writing Draft, Validation, Data Visualization, Review and Project Administration</li>
@@ -344,7 +349,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
   <div class="li-container">
     <h3>Conference</h3>
     <li> 
-      Aug. 2024. Guangzhou</em>. Student Volunteer
+      Aug. 2024. Guangzhou. Student Volunteer
       <a href="https://vldb.org/2024/"> 50th International Conference on Very Large Databases (VLDB 2024)</a>
     </li>    
   </div>
