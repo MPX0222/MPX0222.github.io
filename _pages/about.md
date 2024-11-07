@@ -8,58 +8,67 @@ redirect_from:
   - /about.html
 ---
 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;400;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@100;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+  /* Base styles */
   body {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color: #f8f9fa;
     line-height: 1.6;
   }
 
-  td {
-    border: 1px solid #000;
-    text-align: center; 
-    vertical-align: middle; 
+  /* Typography */
+  h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-bottom: 2px solid #3498db;
   }
 
   h3 {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 22px;
     font-weight: 500;
     color: #34495e;
     margin: 1.5rem 0 1rem 0;
   }
 
-  h1 {
-    font-family: "Open Sans", sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    padding: 15px 0 10px 20px;
-    border-bottom: 2px solid #3498db;
+  /* Links */
+  a {
+    color: #3498db;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
   }
 
+  a:hover {
+    color: #2980b9;
+  }
+
+  /* Section containers */
   .main-container {
     background-color: white;
     border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 35px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   }
 
   .li-container {
-    padding: 0 20px 15px 20px;
+    padding: 0 1.5rem 1rem 1.5rem;
   }
 
+  /* Content boxes */
   .container {
     display: flex;
+    align-items: flex-start;
     background-color: #ffffff;
-    padding: 15px 20px;
+    padding: 1.5rem;
     border-radius: 8px;
-    margin: 15px 0;
+    margin: 1rem 0;
     border: 1px solid #e1e4e8;
     transition: transform 0.2s ease;
   }
@@ -69,90 +78,95 @@ redirect_from:
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   }
 
-  .logo-column {
-    width: 20%; /* 第一列宽度 */
-    text-align: left; /* 文本居中 */
-  }
-
-  .paper-logo-column {
-    width: 20%; /* 第一列宽度 */
-    text-align: left; /* 文本居中 */
-  }
-
-
-  .paper-title-column{
-    margin-left: 20px;
-    padding: 10px;
-    width: 80%; /* 第二列宽度 */
-  }
-
-  .details-column {
-    margin-left: 20px;
-    width: 60%; /* 第二列宽度 */
-  }
-
-  .date-column {
-    width: 20%; /* 第三列宽度 */
-    font-size: 13px; /* 时间的字体大小 */
+  /* Image containers */
+  .logo-column, .paper-logo-column {
+    width: 20%;
+    min-width: 120px;
+    margin-right: 1.5rem;
   }
 
   .logo {
     width: 100%;
-    height: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 120px;
   }
 
-  .title {
-    font-size: 30px;
+  /* Content columns */
+  .paper-title-column {
+    flex: 1;
+    padding: 0 1rem;
   }
 
+  /* List styles */
   .info {
-    text-align: left;
     font-size: 15px;
     color: #4a4a4a;
     line-height: 1.6;
-    margin: 8px 0;
+    margin: 0.5rem 0;
+    list-style-type: none;
+    padding-left: 0;
   }
 
-  .paper-title-column h3 {
-    color: #2c3e50;
-    transition: color 0.2s ease;
+  li.info {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.2rem;
   }
 
-  .paper-title-column h3:hover {
+  li.info:before {
+    content: "•";
+    position: absolute;
+    left: 0;
     color: #3498db;
   }
 
+  /* Table styles */
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 1.5rem 0;
     font-size: 15px;
   }
 
-  td {
-    padding: 12px;
+  th, td {
+    padding: 1rem;
     border: 1px solid #e1e4e8;
     text-align: center;
     vertical-align: middle;
   }
 
+  th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+  }
+
+  /* Skills section */
   .skills-container {
     text-align: center;
-    padding: 20px 0;
+    padding: 1.5rem 0;
   }
 
   .skills-container img {
-    margin: 10px 5px;
+    height: 40px;
+    width: auto;
+    margin: 0.5rem;
     transition: transform 0.2s ease;
   }
 
   .skills-container img:hover {
     transform: translateY(-3px);
   }
-</style>
 
 <p align="center">至于结果，只要你足够认真虔诚，总归不会错的。</p>
 
+  /* Dividers */
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #e1e4e8;
+    margin: 1.5rem 0;
+  }
 
 Hello! I am a M.Phil. student of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying in [Data Science and Analytics (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/) and [Prof. Nan Tang](https://nantang.github.io/), at the [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
 
@@ -190,9 +204,6 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     <li class="info"> <em>May 05</em>. 📌 Successflily pass the undergraduate graduation defense in Jinan University.</li>
   </div>
 </div>
-
-<!-- * `2024.08` 📌 Long research paper [A Plug-and-Play Natural Language Rewriter for Natural Language to SQL]() completed and submitted to AAAI 2025.  -->
-
 
 <div class="main-container">
   <h1>🎓 Education</h1>

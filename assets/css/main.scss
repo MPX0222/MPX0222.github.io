@@ -10,59 +10,61 @@
  *
 */
 
-@import "vendor/breakpoint/breakpoint"; // media query mixins
-@import "variables";
-@import "mixins";
-@import "vendor/susy/susy";
+{
+  @import "vendor/breakpoint/breakpoint"; // media query mixins
+  @import "variables";
+  @import "mixins";
+  @import "vendor/susy/susy";
 
-@import "reset";
-@import "base";
+  @import "reset";
+  @import "base";
 
-@import "utilities";
-@import "animations";
-@import "tables";
-@import "buttons";
-@import "notices";
-@import "masthead";
-@import "navigation";
-@import "footer";
-@import "syntax";
+  @import "utilities";
+  @import "animations";
+  @import "tables";
+  @import "buttons";
+  @import "notices";
+  @import "masthead";
+  @import "navigation";
+  @import "footer";
+  @import "syntax";
 
-@import "forms";
+  @import "forms";
 
-@import "page";
-@import "archive";
-@import "sidebar";
+  @import "page";
+  @import "archive";
+  @import "sidebar";
 
-@import "vendor/font-awesome/fontawesome";
-@import "vendor/font-awesome/solid";
-@import "vendor/font-awesome/brands";
-@import "vendor/magnific-popup/magnific-popup";
-@import "print";
+  @import "vendor/font-awesome/fontawesome";
+  @import "vendor/font-awesome/solid";
+  @import "vendor/font-awesome/brands";
+  @import "vendor/magnific-popup/magnific-popup";
+  @import "print";
 
-// Custom styles
-body {
-  font-family: "Open Sans", sans-serif;
-}
-
-.page__content {
-  p, li {
-    font-family: "Open Sans", sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
+  // Custom styles
+  body {
+    font-family: 'Lato', sans-serif;
   }
-}
 
-.sidebar {
-  font-family: "Open Sans", sans-serif;
-  
-  .author__name {
-    font-size: 20px;
-    font-weight: 600;
+  .page__content {
+    p, li {
+      font-family: 'Lato', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
   }
-  
-  .author__bio {
-    font-size: 15px;
-    line-height: 1.4;
+
+  .sidebar {
+    font-family: 'Lato', sans-serif;
+    
+    .author__name {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    
+    .author__bio {
+      font-size: 15px;
+      line-height: 1.4;
+    }
   }
 }
