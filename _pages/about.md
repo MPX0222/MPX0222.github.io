@@ -13,8 +13,9 @@ redirect_from:
 
 <style>
   body {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     background-color: #f8f9fa;
+    line-height: 1.6;
   }
 
   td {
@@ -24,45 +25,49 @@ redirect_from:
   }
 
   h3 {
-    font-family: "Open Sans";
-    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #34495e;
+    margin: 1.5rem 0 1rem 0;
   }
 
   h1 {
-    font-family: "Open Sans";
-    font-size: 30px;
-    padding-left: 20px;
-    padding-top: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    padding: 15px 0 10px 20px;
+    border-bottom: 2px solid #3498db;
   }
 
   .main-container {
-    /* box-shadow: 5px 5px 5px #dddddd;  */
-    border-radius: 5px;
-    padding: 10px;
-    /* background-color: white; */
-    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 35px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   }
 
   .li-container {
-    /* background-color: white; */
-    /* padding: 5px; */
-    padding-left: 20px;
-    /* padding-right: 15px; */
-    padding-bottom: 15px;  
-    border-radius: 5px;
+    padding: 0 20px 15px 20px;
   }
 
   .container {
     display: flex;
-    overflow: auto;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 0px;
-    padding-left: 20px;
-    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 1px solid #e1e4e8;
+    transition: transform 0.2s ease;
   }
-  
+
+  .container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
 
   .logo-column {
     width: 20%; /* 第一列宽度 */
@@ -103,10 +108,48 @@ redirect_from:
   .info {
     text-align: left;
     font-size: 15px;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin: 8px 0;
   }
 
-</style>
+  .paper-title-column h3 {
+    color: #2c3e50;
+    transition: color 0.2s ease;
+  }
 
+  .paper-title-column h3:hover {
+    color: #3498db;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 15px;
+  }
+
+  td {
+    padding: 12px;
+    border: 1px solid #e1e4e8;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .skills-container {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .skills-container img {
+    margin: 10px 5px;
+    transition: transform 0.2s ease;
+  }
+
+  .skills-container img:hover {
+    transform: translateY(-3px);
+  }
+</style>
 
 <p align="center">至于结果，只要你足够认真虔诚，总归不会错的。</p>
 
@@ -286,29 +329,31 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
 
 📘 Study Stack
 ===
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=c,python,matlab,mysql,java,latex" />
-  </a>
-</p>
+<div class="skills-container">
+  <p align="center">
+    <a href="https://skillicons.dev">
+      <img src="https://skillicons.dev/icons?i=c,python,matlab,mysql,java,latex" />
+    </a>
+  </p>
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=qt,vue,html,markdown,css,scss,javascript" />
-  </a>
-</p>
+  <p align="center">
+    <a href="https://skillicons.dev">
+      <img src="https://skillicons.dev/icons?i=qt,vue,html,markdown,css,scss,javascript" />
+    </a>
+  </p>
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=visualstudio,vscode,pycharm,anaconda,vim,bash,git,github,unity" />
-  </a>
-</p>
+  <p align="center">
+    <a href="https://skillicons.dev">
+      <img src="https://skillicons.dev/icons?i=visualstudio,vscode,pycharm,anaconda,vim,bash,git,github,unity" />
+    </a>
+  </p>
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=notion,figma" />
-  </a>
-</p>
+  <p align="center">
+    <a href="https://skillicons.dev">
+      <img src="https://skillicons.dev/icons?i=notion,figma" />
+    </a>
+  </p>
+</div>
 
 ⚽ Football Life
 ===
@@ -351,4 +396,5 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     <td><b>1</b></td>
   </tr>
 </table>
+
 

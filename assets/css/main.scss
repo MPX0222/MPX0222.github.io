@@ -39,3 +39,30 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+// Custom styles
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.page__content {
+  p, li {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+.sidebar {
+  font-family: "Open Sans", sans-serif;
+  
+  .author__name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .author__bio {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+}
