@@ -10,7 +10,7 @@
  *
 */
 
-@import "vendor/breakpoint/breakpoint"; // media query mixins
+@import "vendor/breakpoint/breakpoint";
 @import "variables";
 @import "mixins";
 @import "vendor/susy/susy";
@@ -42,7 +42,7 @@
 
 // Custom styles
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif ;
 }
 
 .page__content {

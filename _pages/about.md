@@ -8,42 +8,52 @@ redirect_from:
   - /about.html
 ---
 
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 
 <style>
   /* Base styles */
   body {
     font-family: 'Lato', sans-serif;
     background-color: #f8f9fa;
-    line-height: 1.6;
+    line-height: 1.8;
+    color: #2c3e50;
   }
 
-  /* Typography */
+  /* Academic Typography Hierarchy */
   h1 {
     font-family: 'Lato', sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    color: #2c3e50;
-    margin: 0 0 1.5rem 0;
-    padding: 1rem 1.5rem;
-    border-bottom: 2px solid #3498db;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #1a365d;
+    margin: 0 0 2rem 0;
+    padding: 1.5rem 0;
+    border-bottom: 3px solid #2c5282;
+    letter-spacing: -0.5px;
   }
 
   h3 {
     font-family: 'Lato', sans-serif;
-    font-size: 22px;
-    font-weight: 500;
-    color: #34495e;
-    margin: 1.5rem 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 2rem 0 1rem 0;
+    letter-spacing: -0.3px;
   }
 
-  /* Links */
-  a {
-    color: #3498db;
-    text-decoration: none !important;
-    transition: color 0.2s ease;
+  /* Academic Section Container */
+  .main-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
   }
 
+  /* Content Container */
+  .container {
+    display: flex;
+    align-items: flex-start;
   a:hover {
     color: #2980b9;
   }
