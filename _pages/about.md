@@ -40,6 +40,17 @@ redirect_from:
     letter-spacing: -0.3px;
   }
 
+  /* Links */
+  a {
+    color: #2c5282;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: #4299e1;
+  }
+
   /* Academic Section Container */
   .main-container {
     background-color: white;
@@ -54,107 +65,83 @@ redirect_from:
   .container {
     display: flex;
     align-items: flex-start;
-  a:hover {
-    color: #2980b9;
-  }
-
-  /* Section containers */
-  .main-container {
-    background-color: white;
-    border-radius: 8px;
-    padding: 2rem;
-    margin-bottom: 2.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
-
-  .li-container {
-    padding: 0 1.5rem 1rem 1.5rem;
-  }
-
-  /* Content boxes */
-  .container {
-    display: flex;
-    align-items: flex-start;
-    background-color: #ffffff;
+    margin: 1.5rem 0;
     padding: 1.5rem;
+    border: 1px solid #e2e8f0;
     border-radius: 8px;
-    margin: 1rem 0;
-    border: 1px solid #e1e4e8;
-    transition: transform 0.2s ease;
+    background-color: white;
   }
 
-  .container:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  }
-
-  /* Image containers */
+  /* Image Containers */
   .logo-column, .paper-logo-column {
-    width: 20%;
-    min-width: 120px;
-    margin-right: 1.5rem;
+    flex: 0 0 120px;
+    margin-right: 2rem;
   }
 
   .logo {
-    width: 100%;
+    width: 120px;
     height: auto;
     object-fit: contain;
-    max-height: 120px;
   }
 
-  /* Content columns */
+  /* Content Column */
   .paper-title-column {
     flex: 1;
+  }
+
+  /* List Styles */
+  .li-container {
     padding: 0 1rem;
   }
 
-  /* List styles */
   .info {
-    font-size: 15px;
-    color: #4a4a4a;
-    line-height: 1.6;
-    margin: 0.5rem 0;
-    list-style-type: none;
-    padding-left: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #4a5568;
+    margin: 0.75rem 0;
   }
 
   li.info {
-    padding: 0.5rem 0;
+    list-style-type: none;
     position: relative;
-    padding-left: 1.2rem;
+    padding-left: 1.5rem;
+    margin: 0.75rem 0;
   }
 
   li.info:before {
     content: "•";
     position: absolute;
     left: 0;
-    color: #3498db;
+    color: #4299e1;
+    font-weight: bold;
   }
 
-  /* Table styles */
+  /* Table Styles */
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.5rem 0;
-    font-size: 15px;
+    margin: 2rem 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
   }
 
   th, td {
     padding: 1rem;
-    border: 1px solid #e1e4e8;
+    border: 1px solid #e2e8f0;
     text-align: center;
-    vertical-align: middle;
   }
 
   th {
     background-color: #f8f9fa;
     font-weight: 600;
+    color: #2d3748;
   }
 
-  /* Skills section */
+  /* Skills Section */
   .skills-container {
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
   }
 
   .skills-container img {
@@ -164,16 +151,29 @@ redirect_from:
     transition: transform 0.2s ease;
   }
 
-  .skills-container img:hover {
-    transform: translateY(-3px);
-  }
-
   /* Dividers */
   hr {
     border: 0;
     height: 1px;
-    background-color: #e1e4e8;
-    margin: 1.5rem 0;
+    background-color: #e2e8f0;
+    margin: 2rem 0;
+  }
+
+  /* Badges and Icons */
+  img[alt="Static Badge"] {
+    margin-right: 0.5rem;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .logo-column, .paper-logo-column {
+      margin-bottom: 1.5rem;
+      margin-right: 0;
+    }
   }
 </style>
 
