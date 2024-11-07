@@ -435,3 +435,20 @@
     }
   }
 }
+
+.masthead {
+  font-family: 'Lato', sans-serif !important;
+  
+  &__inner-wrap {
+    nav {
+      font-family: 'Lato', sans-serif;
+      
+      .greedy-nav {
+        a {
+          font-size: 1rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

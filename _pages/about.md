@@ -15,28 +15,29 @@ redirect_from:
   body {
     font-family: 'Lato', sans-serif;
     background-color: #f8f9fa;
-    line-height: 1.8;
+    line-height: 1.6;
     color: #2c3e50;
+    font-size: 15px;
   }
 
   /* Academic Typography Hierarchy */
   h1 {
     font-family: 'Lato', sans-serif;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 900;
     color: #1a365d;
-    margin: 0 0 2rem 0;
-    padding: 1.5rem 0;
+    margin: 0 0 1.5rem 0;
+    padding: 1rem 0;
     border-bottom: 3px solid #2c5282;
     letter-spacing: -0.5px;
   }
 
   h3 {
     font-family: 'Lato', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #2d3748;
-    margin: 2rem 0 1rem 0;
+    margin: 1.5rem 0 0.75rem 0;
     letter-spacing: -0.3px;
   }
 
@@ -54,10 +55,10 @@ redirect_from:
   /* Academic Section Container */
   .main-container {
     background-color: white;
-    border-radius: 12px;
-    padding: 2.5rem;
-    margin-bottom: 3rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     border: 1px solid #e2e8f0;
   }
 
@@ -65,8 +66,8 @@ redirect_from:
   .container {
     display: flex;
     align-items: flex-start;
-    margin: 1.5rem 0;
-    padding: 1.5rem;
+    margin: 1rem 0;
+    padding: 1.25rem;
     border: 1px solid #e2e8f0;
     border-radius: 8px;
     background-color: white;
@@ -91,30 +92,20 @@ redirect_from:
 
   /* List Styles */
   .li-container {
-    padding: 0 1rem;
+    padding: 0 0.75rem;
   }
 
   .info {
     font-family: 'Lato', sans-serif;
-    font-size: 0.95rem;
-    line-height: 1.7;
+    font-size: 0.9rem;
+    line-height: 1.6;
     color: #4a5568;
-    margin: 0.75rem 0;
+    margin: 0.5rem 0;
   }
 
   li.info {
-    list-style-type: none;
-    position: relative;
-    padding-left: 1.5rem;
-    margin: 0.75rem 0;
-  }
-
-  li.info:before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #4299e1;
-    font-weight: bold;
+    padding-left: 1.25rem;
+    margin: 0.5rem 0;
   }
 
   /* Table Styles */
@@ -161,7 +152,8 @@ redirect_from:
 
   /* Badges and Icons */
   img[alt="Static Badge"] {
-    margin-right: 0.5rem;
+    margin-right: 0.25rem;
+    height: 20px;
   }
 
   /* Responsive Design */
@@ -174,6 +166,18 @@ redirect_from:
       margin-bottom: 1.5rem;
       margin-right: 0;
     }
+  }
+
+  /* Center align introduction content */
+  .intro-content {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .intro-content p {
+    text-align: left;
+    max-width: 800px;
+    margin: 1rem auto;
   }
 </style>
 

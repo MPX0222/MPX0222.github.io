@@ -59,6 +59,32 @@
   img {
     width: 100%;
   }
+
+  font-family: 'Lato', sans-serif !important;
+
+  .author__name {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .author__bio {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .author__urls-wrapper {
+    font-family: 'Lato', sans-serif;
+
+    .author__urls {
+      font-size: 0.9rem;
+
+      li {
+        padding: 0.5rem 0;
+      }
+    }
+  }
 }
 
 .sidebar__right {
