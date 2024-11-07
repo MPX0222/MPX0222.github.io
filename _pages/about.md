@@ -158,8 +158,6 @@ redirect_from:
     transform: translateY(-3px);
   }
 
-<p align="center">至于结果，只要你足够认真虔诚，总归不会错的。</p>
-
   /* Dividers */
   hr {
     border: 0;
@@ -167,6 +165,7 @@ redirect_from:
     background-color: #e1e4e8;
     margin: 1.5rem 0;
   }
+</style>
 
 Hello! I am a M.Phil. student of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying in [Data Science and Analytics (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/) and [Prof. Nan Tang](https://nantang.github.io/), at the [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
 
