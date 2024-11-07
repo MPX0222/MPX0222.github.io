@@ -6,10 +6,11 @@
    Default
    ========================================================================== */
 
-   @font-face {
-    font-family: 'Lato';
-    src: url('/https://fonts.googleapis.com/css2?family=Lato:wght@100;400;600;700&display=swap') format('Lato');
-  }
+@font-face {
+  font-family: 'Lato';
+  src: url('/https://fonts.googleapis.com/css2?family=Lato:wght@100;400;600;700&display=swap') format('Lato');
+}
+  
 
 .sidebar {
   -webkit-transform: translate3d(0, 0 , 0);
@@ -78,8 +79,8 @@
 }
 
 /*
-   Author profile and links
-   ========================================================================== */
+    Author profile and links
+    ========================================================================== */
 
 .author__avatar {
   display: table-cell;
