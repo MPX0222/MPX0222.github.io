@@ -53,8 +53,8 @@
 
   p, li {
     font-family: "Lato";
-    font-size: $type-size-6;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   img {
@@ -131,7 +131,7 @@
 }
 .sidebar .author__name {
   font-family: "Lato";
-  font-size: $type-size-5;
+  font-size: 1.2rem;
 }
 
 .sidebar .author__desktop {
@@ -256,7 +256,7 @@
     padding-top: 2px;
     padding-bottom: 2px;
     color: inherit;
-    font-size: $type-size-5;
+    font-size: 1rem;
     text-decoration: none;
 
     &:hover {

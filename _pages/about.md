@@ -187,6 +187,101 @@ redirect_from:
     margin: 1rem auto;
   }
 
+  /* Dark mode styles */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #1a202c;
+      color: #e2e8f0;
+    }
+
+    .main-container, 
+    .container,
+    .project-container,
+    .publication-container,
+    .course-container,
+    .life-container {
+      background-color: #2d3748;
+      border-color: #4a5568;
+    }
+
+    h1 {
+      color: #90cdf4;
+      border-bottom-color: #4299e1;
+    }
+
+    h3 {
+      color: #e2e8f0;
+    }
+
+    .info,
+    .publication-info {
+      color: #cbd5e0;
+    }
+
+    a {
+      color: #63b3ed;
+    }
+
+    a:hover {
+      color: #90cdf4;
+    }
+
+    .tech-tag {
+      background-color: #4a5568;
+      color: #e2e8f0;
+    }
+
+    /* Table dark mode */
+    table {
+      background-color: #2d3748;
+    }
+
+    th {
+      background-color: #4a5568;
+      color: #e2e8f0;
+    }
+
+    td {
+      border-color: #4a5568;
+      color: #e2e8f0;
+    }
+
+    /* Navigation dark mode */
+    .greedy-nav {
+      background-color: #2d3748;
+      
+      a {
+        color: #e2e8f0;
+      }
+      
+      a:hover {
+        color: #90cdf4;
+      }
+    }
+
+    /* Sidebar dark mode */
+    .sidebar {
+      background-color: #2d3748;
+      
+      .author__name {
+        color: #e2e8f0;
+      }
+      
+      .author__bio {
+        color: #cbd5e0;
+      }
+      
+      .author__urls-wrapper {
+        a {
+          color: #e2e8f0;
+        }
+        
+        a:hover {
+          color: #90cdf4;
+        }
+      }
+    }
+  }
 </style>
 
 Hello! I am a M.Phil. student of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying in [Data Science and Analytics (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/) and [Prof. Nan Tang](https://nantang.github.io/), at the [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
