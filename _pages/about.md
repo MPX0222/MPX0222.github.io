@@ -23,42 +23,43 @@ redirect_from:
   /* Academic Typography Hierarchy */
   h1 {
     font-family: 'Lato', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: #1a365d;
-    margin: 0 0 1.5rem 0;
-    padding: 1rem 0;
-    border-bottom: 3px solid #2c5282;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 2.5rem 0 1.5rem 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #4a5568;
     letter-spacing: -0.5px;
   }
 
   h3 {
     font-family: 'Lato', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #2d3748;
-    margin: 1.5rem 0 0.75rem 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin: 2rem 0 1rem 0;
     letter-spacing: -0.3px;
   }
 
   /* Links */
   a {
-    color: #2c5282;
+    color: #3182ce;
     text-decoration: none;
     transition: color 0.2s ease;
-  }
-
-  a:hover {
-    color: #4299e1;
+    
+    &:hover {
+      color: #2c5282;
+      text-decoration: underline;
+    }
   }
 
   /* Academic Section Container */
   .main-container {
     background-color: white;
-    border-radius: 8px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     border: 1px solid #e2e8f0;
   }
 
@@ -66,26 +67,32 @@ redirect_from:
   .container {
     display: flex;
     align-items: center;
-    margin: 1rem 0;
-    padding: 1.25rem;
+    margin: 1.5rem 0;
+    padding: 1.8rem;
     border: 1px solid #e2e8f0;
-    border-radius: 8px;
+    border-radius: 12px;
     background-color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
   }
 
   /* Image Containers */
   .paper-logo-column {
-    flex: 0 0 120px;
-    margin-right: 2rem;
+    flex: 0 0 140px;
+    margin-right: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
+    height: 140px;
   }
 
   .logo {
-    max-width: 120px;
-    max-height: 120px;
+    max-width: 140px;
+    max-height: 140px;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -99,15 +106,15 @@ redirect_from:
 
   /* List Styles */
   .li-container {
-    padding: 0 0.75rem;
+    padding: 0.5rem 1rem;
   }
 
   .info {
     font-family: 'Lato', sans-serif;
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.8;
     color: #4a5568;
-    margin: 0.5rem 0;
+    margin: 0.8rem 0;
   }
 
   li.info {
@@ -119,21 +126,25 @@ redirect_from:
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     font-family: 'Lato', sans-serif;
     font-size: 0.95rem;
-  }
-
-  th, td {
-    padding: 1rem;
-    border: 1px solid #e2e8f0;
-    text-align: center;
-  }
-
-  th {
-    background-color: #f8f9fa;
-    font-weight: 600;
-    color: #2d3748;
+    
+    th, td {
+      padding: 1.2rem;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    
+    th {
+      background-color: #f7fafc;
+      font-weight: 600;
+      color: #2d3748;
+    }
+    
+    tr:hover {
+      background-color: #f7fafc;
+    }
   }
 
   /* Skills Section */
@@ -159,8 +170,13 @@ redirect_from:
 
   /* Badges and Icons */
   img[alt="Static Badge"] {
-    margin-right: 0.25rem;
-    height: 20px;
+    margin-right: 0.5rem;
+    height: 22px;
+    transition: transform 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-1px);
+    }
   }
 
   /* Responsive Design */
@@ -213,37 +229,31 @@ redirect_from:
       color: #e2e8f0;
     }
 
-    .info,
-    .publication-info {
+    p, .info {
       color: #cbd5e0;
     }
 
     a {
       color: #63b3ed;
+      
+      &:hover {
+        color: #90cdf4;
+      }
     }
 
-    a:hover {
-      color: #90cdf4;
-    }
-
-    .tech-tag {
-      background-color: #4a5568;
-      color: #e2e8f0;
-    }
-
-    /* Table dark mode */
     table {
-      background-color: #2d3748;
-    }
-
-    th {
-      background-color: #4a5568;
-      color: #e2e8f0;
-    }
-
-    td {
-      border-color: #4a5568;
-      color: #e2e8f0;
+      th {
+        background-color: #2d3748;
+        color: #e2e8f0;
+      }
+      
+      tr:hover {
+        background-color: #2d3748;
+      }
+      
+      td {
+        border-color: #4a5568;
+      }
     }
 
     /* Navigation dark mode */
@@ -284,11 +294,19 @@ redirect_from:
   }
 </style>
 
-Hello! I am a M.Phil. student of [The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)](https://www.hkust-gz.edu.cn/). Now I am studying in [Data Science and Analytics (DSA)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/) under the supervision of [Prof. Yuyu Luo](https://luoyuyu.vip/) and [Prof. Nan Tang](https://nantang.github.io/), at the [Information Hub (INFH)](https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/).
+<div class="main-container">
+  <p>
+    Hello! I am a M.Phil. student of <a href="https://www.hkust-gz.edu.cn/">The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)</a>. Now I am studying in <a href="https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/">Data Science and Analytics (DSA)</a> under the supervision of <a href="https://luoyuyu.vip/">Prof. Yuyu Luo</a> and <a href="https://nantang.github.io/">Prof. Nan Tang</a>, at the <a href="https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/">Information Hub (INFH)</a>.
+  </p>
 
-I have received the B.Eng. degree in Intelligence Science and Technology from [Jinan University (JNU)](https://english.jnu.edu.cn/) in 2023. During my undergraduate live, I started my research by working as the undergraduate research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University. My undergraduate research direction is the optimization and application of the Broad Learning System (BLS). Before my graduation, I received the offer from HKUST(GZ) and successflily enrolled in it in the Fall 2023.
+  <p>
+    I have received the B.Eng. degree in Intelligence Science and Technology from <a href="https://english.jnu.edu.cn/">Jinan University (JNU)</a> in 2023. During my undergraduate live, I started my research by working as the undergraduate research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University. My undergraduate research direction is the optimization and application of the Broad Learning System (BLS). Before my graduation, I received the offer from HKUST(GZ) and successflily enrolled in it in the Fall 2023.
+  </p>
 
-Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUST(GZ)-DIAL 呆鹅实验室](https://github.com/HKUSTDial) and Red Bird AI Agent Narrative Storytelling Game Groups [@AASG](). My research interest comprises Database Management (DBMS), Mliti-agent System (MAS), Natural Language to SQL (NL2SQL) and Open-Source BLS. Here are the related links:
+  <p>
+    Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab <a href="https://github.com/HKUSTDial">@HKUST(GZ)-DIAL 呆鹅实验室</a> and Red Bird AI Agent Narrative Storytelling Game Groups <a href="">@AASG</a>. My research interest comprises Database Management (DBMS), Mliti-agent System (MAS), Natural Language to SQL (NL2SQL) and Open-Source BLS. Here are the related links:
+  </p>
+</div>
 
 <p align="center">
   HKUST(GZ)-DIAL | 呆鹅实验室
@@ -412,7 +430,6 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     <li class="info"> Dec. 2022. 🏅 Second Class Scholarship for Excellent Student, Jinan University.</li>
     <li class="info"> Dec. 2021. 🏅 Third Class Scholarship Excellent Student, Jinan University.</li>
     <li class="info"> May. 2021. 🏅 Honorable Mention for Mathematical Contest In Modeling, Jinan University.</li>    
-    
     <h3>Sport Awards</h3>
     <li class="info"> Apr. 2024. 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, CB, 4 Games,  2 Assist.</li>
     <li class="info"> Jun. 2023. 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, CDM, 5 Games, 1 Goal, 2 Assist.</li>    
@@ -430,7 +447,6 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     <li class="info">Location: Guangzhou, China</li>
     <li class="info">Duties: Data Mining, Data Cleaning and Visualization </li>
     <li class="info">Supervisor: Junjie HUA</li> 
-    
     Sept. 2020 - Dec. 2022. Research Assistant, Data-driven Intelligent Systems Laboratory.
     <a href="https://faclity.jnu.edu.cn/xxkxjsxy/djw/list.htm">College of Information Science of Technology, Jinan University</a>
     <li class="info">Location: Guangzhou, China</li>
@@ -450,35 +466,6 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
   </div>
 </div>
 
-
-📘 Study Stack
-===
-<div class="skills-container">
-  <p align="center">
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=c,python,matlab,mysql,java,latex" />
-    </a>
-  </p>
-
-  <p align="center">
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=qt,vue,html,markdown,css,scss,javascript" />
-    </a>
-  </p>
-
-  <p align="center">
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=visualstudio,vscode,pycharm,anaconda,vim,bash,git,github,unity" />
-    </a>
-  </p>
-
-  <p align="center">
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=notion,figma" />
-    </a>
-  </p>
-</div>
-
 ⚽ Football Life
 ===
 
@@ -494,8 +481,8 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
   </tr>
   <tr>
     <td>The Hong Kong University of Science and Technology (Guangzhou) </td>
-    <td>10</td>
-    <td>7</td>
+    <td>11</td>
+    <td>8</td>
     <td>1</td>
     <td>2</td>
     <td><b>1</b></td>
@@ -511,7 +498,7 @@ Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab [@HKUS
     <td><b>4</b></td>
   </tr>
   <tr>
-    <td>Happy My Lover of Class 3, ZhongYuan High School</td>
+    <td>Happy My Lover, ZhongYuan High School</td>
     <td>8</td>
     <td>4</td>
     <td>0</td>
