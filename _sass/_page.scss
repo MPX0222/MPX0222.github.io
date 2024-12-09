@@ -5,7 +5,7 @@
 #main {
   @include container;
   @include clearfix;
-  margin-top: 2em;
+  margin-top: 1em;
   padding-left: 1em;
   padding-right: 1em;
   animation: intro 0.3s both;
@@ -36,27 +36,36 @@
 
 .page__title {
   margin-top: 0;
-  line-height: 1;
+  line-height: 1.2;
+  font-size: 1.8em;
+  margin-bottom: 0.8em;
 
   & + .page__meta {
-    margin-top: -0.5em;
+    margin-top: -0.3em;
   }
 }
 
 .page__lead {
   font-family: $global-font-family;
-  font-size: $type-size-4;
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 1em;
 }
 
 .page__content {
 
   h2 {
-    padding-bottom: 0.5em;
+    padding-bottom: 0.3em;
     border-bottom: 1px solid $border-color;
+    font-size: 1.5em;
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
   }
 
   p, li, dl {
     font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 0.8em;
   }
 
   /* paragraph indents */
