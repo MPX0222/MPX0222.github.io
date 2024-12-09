@@ -14,124 +14,109 @@ redirect_from:
   /* Base styles */
   body {
     font-family: 'Lato', sans-serif;
-    background-color: #f8f9fa;
-    line-height: 1.6;
-    color: #2c3e50;
-    font-size: 15px;
+    background-color: #fafafa;
+    line-height: 1.7;
+    color: #2d3748;
+    font-size: 16px;
   }
 
-  /* Academic Typography Hierarchy */
+  /* Academic Section Container */
+  .main-container {
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 2.8rem 3.2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid #edf2f7;
+  }
+
+  /* Section Headers */
   h1 {
     font-family: 'Lato', sans-serif;
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: 700;
-    color: #2d3748;
-    margin: 2.5rem 0 1.5rem 0;
-    padding: 0.5rem 0;
-    border-bottom: 2px solid #4a5568;
-    letter-spacing: -0.5px;
+    color: #1a365d;
+    margin: 2rem 0 1.8rem 0;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid #e2e8f0;
+    letter-spacing: -0.02em;
   }
 
   h3 {
     font-family: 'Lato', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     font-weight: 600;
+    color: #2d3748;
+    margin: 1.8rem 0 1rem 0;
+    letter-spacing: -0.01em;
+  }
+
+  /* Content Container */
+  .container {
+    display: flex;
+    align-items: flex-start;
+    margin: 1.8rem 0;
+    padding: 2rem;
+    border: 1px solid #edf2f7;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+  }
+
+  /* Content Text */
+  p, .info {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
     color: #4a5568;
-    margin: 2rem 0 1rem 0;
-    letter-spacing: -0.3px;
+    margin: 1rem 0;
   }
 
   /* Links */
   a {
     color: #3182ce;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.15s ease;
+    border-bottom: 1px solid transparent;
     
     &:hover {
       color: #2c5282;
-      text-decoration: underline;
+      border-bottom-color: #2c5282;
     }
   }
 
-  /* Academic Section Container */
-  .main-container {
-    background-color: white;
-    border-radius: 12px;
-    padding: 2.5rem;
-    margin-bottom: 2.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border: 1px solid #e2e8f0;
-  }
-
-  /* Content Container */
-  .container {
-    display: flex;
-    align-items: center;
-    margin: 1.5rem 0;
-    padding: 1.8rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    background-color: white;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-  }
-
-  /* Image Containers */
-  .paper-logo-column {
-    flex: 0 0 140px;
-    margin-right: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 140px;
-  }
-
-  .logo {
-    max-width: 140px;
-    max-height: 140px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-  }
-
-  /* Content Column */
-  .paper-title-column {
-    flex: 1;
-  }
-
-  /* List Styles */
+  /* List Items */
   .li-container {
-    padding: 0.5rem 1rem;
-  }
-
-  .info {
-    font-family: 'Lato', sans-serif;
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #4a5568;
-    margin: 0.8rem 0;
+    padding: 0.5rem 1.5rem;
   }
 
   li.info {
-    padding-left: 1.25rem;
-    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    margin: 0.8rem 0;
+    position: relative;
+    
+    &:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #718096;
+    }
   }
 
   /* Table Styles */
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 2.5rem 0;
-    font-family: 'Lato', sans-serif;
+    margin: 2rem 0;
     font-size: 0.95rem;
     
     th, td {
-      padding: 1.2rem;
+      padding: 1rem;
       border: 1px solid #e2e8f0;
       text-align: center;
     }
@@ -147,82 +132,22 @@ redirect_from:
     }
   }
 
-  /* Skills Section */
-  .skills-container {
-    text-align: center;
-    padding: 2rem 0;
-  }
-
-  .skills-container img {
-    height: 40px;
-    width: auto;
-    margin: 0.5rem;
-    transition: transform 0.2s ease;
-  }
-
-  /* Dividers */
-  hr {
-    border: 0;
-    height: 1px;
-    background-color: #e2e8f0;
-    margin: 2rem 0;
-  }
-
-  /* Badges and Icons */
-  img[alt="Static Badge"] {
-    margin-right: 0.5rem;
-    height: 22px;
-    transition: transform 0.2s ease;
-    
-    &:hover {
-      transform: translateY(-1px);
-    }
-  }
-
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-
-    .paper-logo-column {
-      margin-bottom: 1.5rem;
-      margin-right: 0;
-    }
-  }
-
-  /* Center align introduction content */
-  .intro-content {
-    text-align: center;
-    margin: 2rem 0;
-  }
-
-  .intro-content p {
-    text-align: left;
-    max-width: 800px;
-    margin: 1rem auto;
-  }
-
-  /* Dark mode styles */
+  /* Dark mode adjustments */
   @media (prefers-color-scheme: dark) {
     body {
       background-color: #1a202c;
       color: #e2e8f0;
     }
 
-    .main-container, 
-    .container,
-    .project-container,
-    .publication-container,
-    .course-container,
-    .life-container {
+    .main-container,
+    .container {
       background-color: #2d3748;
       border-color: #4a5568;
     }
 
     h1 {
       color: #90cdf4;
-      border-bottom-color: #4299e1;
+      border-bottom-color: #4a5568;
     }
 
     h3 {
@@ -238,57 +163,7 @@ redirect_from:
       
       &:hover {
         color: #90cdf4;
-      }
-    }
-
-    table {
-      th {
-        background-color: #2d3748;
-        color: #e2e8f0;
-      }
-      
-      tr:hover {
-        background-color: #2d3748;
-      }
-      
-      td {
-        border-color: #4a5568;
-      }
-    }
-
-    /* Navigation dark mode */
-    .greedy-nav {
-      background-color: #2d3748;
-      
-      a {
-        color: #e2e8f0;
-      }
-      
-      a:hover {
-        color: #90cdf4;
-      }
-    }
-
-    /* Sidebar dark mode */
-    .sidebar {
-      background-color: #2d3748;
-      
-      .author__name {
-        color: #e2e8f0;
-      }
-      
-      .author__bio {
-        color: #cbd5e0;
-      }
-      
-      .author__urls-wrapper {
-        a {
-          color: #e2e8f0;
-        }
-        
-        a:hover {
-          color: #90cdf4;
-        }
+        border-bottom-color: #90cdf4;
       }
     }
   }
@@ -362,7 +237,7 @@ redirect_from:
 
 
 <div class="main-container">
-  <h1>📰 Publications</h1>
+  <h1>��� Publications</h1>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/rewriter.png" alt="" class="logo">
