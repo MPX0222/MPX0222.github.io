@@ -358,8 +358,14 @@ redirect_from:
       <img src="../images/rewriter.png" alt="" class="logo">
     </div>
     <div class="paper-title-column">
-        <h3>A Plug-and-Play Natural Language Rewriter for Natural Language to SQL</h3>
-        <p class="info"><b>Peixian Ma</b>, Boyan Li, Runzhi Jiang, Yuyu Luo, Ju Fan and Nan Tang<br><b>Arxiv</b></p>
+      <h3>A Plug-and-Play Natural Language Rewriter for Natural Language to SQL</h3>
+      <p class="info"><b>Peixian Ma</b>, Boyan Li, Runzhi Jiang, Yuyu Luo, Ju Fan and Nan Tang<br><b>Arxiv</b></p>
+      <a href="https://arxiv.org/pdf/2408.05109">
+        <img alt="Static Badge" src="https://img.shields.io/badge/PDF-Arxiv_2024-brightgreen?logo=Arxiv">
+      </a>
+        <a href="https://github.com/HKUSTDial/NL2SQL_Handbook">
+        <img alt="Static Badge" src="https://img.shields.io/badge/Github-RewriterV1-blue?logo=Github">
+      </a>
     </div>
   </div>
   <div class="container">
@@ -428,16 +434,10 @@ redirect_from:
 <div class="main-container">
   <h1>💻Internships</h1>
   <div class="li-container">
-    Jan. 2023 - Jun. 2023. Research Assistant, Big Data Center.
-    <a href="https://xwxy.jnu.edu.cn/2018/1218/c12846a322831/page.psp">School of Journalism & Communication, Jinan University</a>
+    <h3>Jan. 2023 - Jun. 2023. Research Assistant, Big Data Center.</h3>
     <li class="info">Location: Guangzhou, China</li>
     <li class="info">Duties: Data Mining, Data Cleaning and Visualization </li>
     <li class="info">Supervisor: Junjie HUA</li> 
-    Sept. 2020 - Dec. 2022. Research Assistant, Data-driven Intelligent Systems Laboratory.
-    <a href="https://faclity.jnu.edu.cn/xxkxjsxy/djw/list.htm">College of Information Science of Technology, Jinan University</a>
-    <li class="info">Location: Guangzhou, China</li>
-    <li class="info">Duties: Conceptualization, Writing Draft, Validation, Data Visualization, Review and Project Administration</li>
-    <li class="info">Supervisor: Junwei Duan, Yujuan Quan</li>
   </div>
 </div>
 
@@ -452,12 +452,12 @@ redirect_from:
   </div>
 </div>
 
-⚽ Football Life
-===
 
-<table>
-  <tr>
-    <td><b>Team</b></td>
+<div class="main-container">
+  <h1>⚽ Football Life</h1>
+  <table>
+    <tr>
+      <td><b>Team</b></td>
     <td><b>Games</b></td>
     <td><b>Win</b></td>
     <td><b>Draw</b></td>
@@ -490,8 +490,9 @@ redirect_from:
     <td>0</td>
     <td>4</td>
     <td><b>0</b></td>
-    <td><b>1</b></td>
-  </tr>
-</table>
+      <td><b>1</b></td>
+    </tr>
+  </table>
+</div>
 
 
