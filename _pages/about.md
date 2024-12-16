@@ -68,7 +68,10 @@ redirect_from:
     display: flex;
     align-items: center;
     margin: 1.5rem 0;
-    padding: 1.8rem;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
     border: 1px solid #e2e8f0;
     border-radius: 12px;
     background-color: white;
@@ -430,7 +433,7 @@ redirect_from:
   </div>
 </div>
 
-
+<!-- 
 <div class="main-container">
   <h1>💻Internships</h1>
   <div class="li-container">
@@ -439,7 +442,7 @@ redirect_from:
     <li class="info">Duties: Data Mining, Data Cleaning and Visualization </li>
     <li class="info">Supervisor: Junjie HUA</li> 
   </div>
-</div>
+</div> -->
 
 <div class="main-container">
   <h1>🤖 Services</h1>
