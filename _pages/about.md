@@ -26,7 +26,7 @@ redirect_from:
     font-size: 2rem;
     font-weight: 700;
     color: #2d3748;
-    margin: 2.5rem 0 1.5rem 0;
+    margin: 0rem 0 0.5rem 0;
     padding: 0.5rem 0;
     border-bottom: 2px solid #4a5568;
     letter-spacing: -0.5px;
@@ -306,24 +306,14 @@ redirect_from:
   <p>
     Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab <a href="https://github.com/HKUSTDial">@HKUST(GZ)-DIAL 呆鹅实验室</a> and Red Bird AI Agent Narrative Storytelling Game Groups <a href="">@AASG</a>. My research interest comprises Database Management (DBMS), Mliti-agent System (MAS), Natural Language to SQL (NL2SQL) and Open-Source BLS. Here are the related links:
   </p>
+  <p align="center">
+    Personal CV
+    ·
+    <a href="../files/CV2025_PeixianMA_CN-241210.pdf">zh</a>
+    ·
+    <a href="../files/AwesomeCV2024_Peixian_MA.pdf">en</a>
+  </p>
 </div>
-
-<p align="center">
-  HKUST(GZ)-DIAL | 呆鹅实验室
-  ·
-  <a href="https://github.com/HKUSTDial">Github</a>
-  ·
-  <a href="https://github.com/HKUSTDial">Homepage</a>
-</p>
-
-<p align="center">
-  Personal CV | 个人简历
-  ·
-  <a href="https://mpx0222.github.io/">zh</a>
-  ·
-  <a href="https://mpx0222.github.io/">en</a>
-</p>
-
 
 <div class="main-container">
   <h1>📟 News</h1>
