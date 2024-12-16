@@ -112,7 +112,7 @@ redirect_from:
   .info {
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
-    line-height: 1.8;
+    line-height: 1.2;
     color: #4a5568;
     margin: 0.8rem 0;
   }
@@ -295,18 +295,18 @@ redirect_from:
 </style>
 
 <div class="main-container">
-  <p>
+  <p class="info">
     Hello! I am a M.Phil. student of <a href="https://www.hkust-gz.edu.cn/">The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ)</a>. Now I am studying in <a href="https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/data-science-and-analytics/">Data Science and Analytics (DSA)</a> under the supervision of <a href="https://luoyuyu.vip/">Prof. Yuyu Luo</a> and <a href="https://nantang.github.io/">Prof. Nan Tang</a>, at the <a href="https://www.hkust-gz.edu.cn/zh/academics/hubs-and-thrust-areas/information-hub/">Information Hub (INFH)</a>.
   </p>
 
-  <p>
+  <p class="info">
     I have received the B.Eng. degree in Intelligence Science and Technology from <a href="https://english.jnu.edu.cn/">Jinan University (JNU)</a> in 2023. During my undergraduate live, I started my research by working as the undergraduate research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University. My undergraduate research direction is the optimization and application of the Broad Learning System (BLS). Before my graduation, I received the offer from HKUST(GZ) and successflily enrolled in it in the Fall 2023.
   </p>
 
-  <p>
+  <p class="info">
     Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab <a href="https://github.com/HKUSTDial">@HKUST(GZ)-DIAL 呆鹅实验室</a> and Red Bird AI Agent Narrative Storytelling Game Groups <a href="">@AASG</a>. My research interest comprises Database Management (DBMS), Mliti-agent System (MAS), Natural Language to SQL (NL2SQL) and Open-Source BLS. Here are the related links:
   </p>
-  <p align="center">
+  <p class="info" align="center">
     Personal CV
     ·
     <a href="../files/CV2025_PeixianMA_CN-241210.pdf">zh</a>
