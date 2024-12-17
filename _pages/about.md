@@ -37,7 +37,7 @@ redirect_from:
     font-size: 1.4rem;
     font-weight: 600;
     color: #4a5568;
-    margin: 2rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
     letter-spacing: -0.3px;
   }
 
