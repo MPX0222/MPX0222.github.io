@@ -295,6 +295,34 @@ redirect_from:
       }
     }
   }
+
+  /* Keyword Tag Style */
+  .keyword-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin: 0.25rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background-color: #f7fafc;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .keyword-tag {
+      background-color: #2d3748;
+      color: #e2e8f0;
+      border-color: #4a5568;
+    }
+  }
 </style>
 
 <div class="main-container">
@@ -421,13 +449,15 @@ redirect_from:
     </div>
     <div class="paper-title-column">
       <h3>Sharp School: A Narrative Storytelling Game with Large Language Models</h3>
+      <span class="keyword-tag">HCI</span>
+      <span class="keyword-tag">LLM</span>
+      <span class="keyword-tag">Storytelling</span>
       <a href="https://github.com/MPX0222/StorytellingAgent">
         <img alt="Static Badge" src="https://img.shields.io/badge/Github-StorytellingAgent-blue?logo=Github">
       </a>
       <a href="https://github.com/MPX0222/StorytellingAgent">
         <img alt="Static Badge" src="https://img.shields.io/github/stars/MPX0222/StorytellingAgent?style=social">
       </a>
-      
     </div>
   </div>
 </div>
