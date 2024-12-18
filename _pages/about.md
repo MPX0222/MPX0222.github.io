@@ -450,9 +450,8 @@ redirect_from:
     <div class="paper-title-column">
       <h3>Sharp School: A Narrative Storytelling Game with Large Language Models</h3>
       <span class="keyword-tag">HCI</span>
-      <span class="keyword-tag">LLM-based Agent</span>
+      <span class="keyword-tag">Agent</span>
       <span class="keyword-tag">Storytelling</span>
-      <br>
       <a href="https://github.com/MPX0222/StorytellingAgent">
         <img alt="Static Badge" src="https://img.shields.io/badge/Github-StorytellingAgent-blue?logo=Github">
       </a>
