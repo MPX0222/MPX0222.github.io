@@ -413,6 +413,24 @@ redirect_from:
   </div>
 </div>
 
+<div class="main-container">
+  <h1>🔥 Pinned Projects</h1>
+  <div class="container">
+    <div class="paper-logo-column">
+      <img src="../images/Storytelling.png" alt="" class="logo">
+    </div>
+    <div class="paper-title-column">
+      <h3>Sharp School: A Narrative Storytelling Game with Large Language Models</h3>
+      <a href="https://github.com/MPX0222/StorytellingAgent">
+        <img alt="Static Badge" src="https://img.shields.io/badge/Github-StorytellingAgent-blue?logo=Github">
+      </a>
+      <a href="https://github.com/MPX0222/StorytellingAgent">
+        <img alt="Static Badge" src="https://img.shields.io/github/stars/MPX0222/StorytellingAgent?style=social">
+      </a>
+      
+    </div>
+  </div>
+</div>
 
 <div class="main-container">
   <h1>🏆 Selected Awards</h1>
@@ -450,7 +468,7 @@ redirect_from:
     <h3>Conference</h3>
     <li> 
       Aug. 2024. Guangzhou. Student Volunteer
-      <a href="https://vldb.org/2024/"> 50th International Conference on Very Large Databases (VLDB 2024)</a>
+      <a href="https://vldb.org/2024/" class="info"> 50th International Conference on Very Large Databases (VLDB 2024)</a>
     </li>    
   </div>
 </div>
