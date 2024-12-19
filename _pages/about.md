@@ -315,6 +315,24 @@ redirect_from:
     }
   }
 
+  .time-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin: 0.25rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #f7fafc;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  }
+
   /* Dark mode support */
   @media (prefers-color-scheme: dark) {
     .keyword-tag {
@@ -347,15 +365,23 @@ redirect_from:
 </div>
 
 <div class="main-container">
-  <h1>📟 News</h1>
+  <h1>🔥 News</h1>
   <div class="li-container">
     <h3>2024</h3>
-    <li class="info"> Aug 09. 📌 The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: <a href="https://arxiv.org/pdf/2408.05109">A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</a> is available on Arxiv.</li>
-    <li class="info"> Jan 10. Successfliy pass the PQA of the Red Bird M.Phil Program.</li>
+    <div>
+      <span class="time-tag">Aug 09</span> The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: <a href="https://arxiv.org/pdf/2408.05109">A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</a> is available on Arxiv.
+    </div>
+    <div>
+      <span class="time-tag">Jan 10</span> Successfliy pass the PQA of the Red Bird M.Phil Program.
+    </div>
     <h3>2023</h3>
-    <li class="info"> Jul 15. 📌 Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).</li>
-    <li class="info"> Jul 08. 📌 My first long research paper: <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer’s Disease</a> has been accepted and published by Frontiers in Neuroscience</li>
-    <li class="info"> May 05. 📌 Successflily pass the undergraduate graduation defense in Jinan University.</li>
+    <div>
+      <span class="time-tag">Jul 15</span> Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).
+    </div>
+    <div>
+      <span class="time-tag">Jul 08</span> My first long research paper: <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer’s Disease</a> has been accepted and published by Frontiers in Neuroscience
+    </div>
+    <li class="info"> May 05. Successflily pass the undergraduate graduation defense in Jinan University.</li>
   </div>
 </div>
 
@@ -442,7 +468,7 @@ redirect_from:
 </div>
 
 <div class="main-container">
-  <h1>🔥 Pinned Projects</h1>
+  <h1>📌 Pinned Projects</h1>
   <div class="container">
     <div class="paper-logo-column">
       <img src="../images/Storytelling.png" alt="" class="logo">
@@ -466,8 +492,8 @@ redirect_from:
   <h1>🏆 Selected Awards</h1>
   <div class="li-container">
     <h3>Academic Awards</h3>
-    <li class="info"> Sept. 2024. 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</li>
-    <li class="info"> Sept. 2023. 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</li>
+    <li class="info"> Sep. 2024. 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</li>
+    <li class="info"> Sep. 2023. 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</li>
     <li class="info"> Jun. 2023. 🏅 Distinguished Graduate, College of Information Science and Technology, Jinan University.</li>
     <li class="info"> Apr. 2023. 🏅 Silver Award in "Medicine +X" Virtual Simliation Competition for College students, Jinan University & Guangzhou Medical University.</li>
     <li class="info"> Dec. 2022. 🏅 Second Class Scholarship for Excellent Student, Jinan University.</li>
@@ -496,9 +522,9 @@ redirect_from:
   <h1>🤖 Services</h1>
   <div class="li-container">
     <h3>Conference</h3>
-    <li> 
+    <li class="info"> 
       Aug. 2024. Guangzhou. Student Volunteer
-      <a href="https://vldb.org/2024/" class="info"> 50th International Conference on Very Large Databases (VLDB 2024)</a>
+      <a href="https://vldb.org/2024/"> 50th International Conference on Very Large Databases (VLDB 2024)</a>
     </li>    
   </div>
 </div>
