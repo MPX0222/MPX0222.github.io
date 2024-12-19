@@ -368,21 +368,21 @@ redirect_from:
   <h1>🔥 News</h1>
   <div class="li-container">
     <h3>2024</h3>
-    <div>
-      <span class="time-tag">Aug. 09</span> <p class="info">The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: <a href="https://arxiv.org/pdf/2408.05109">A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</a> is available on Arxiv.</p>
+    <div class="info">
+      <span class="time-tag">Aug. 09</span> The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: <a href="https://arxiv.org/pdf/2408.05109">A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</a> is available on Arxiv.
     </div>
-    <div>
-      <span class="time-tag">Jan. 10</span> <p class="info">Successfliy pass the PQA of the Red Bird M.Phil Program.</p>
+    <div class="info">
+      <span class="time-tag">Jan. 10</span> Successfliy pass the PQA of the Red Bird M.Phil Program.
     </div>
     <h3>2023</h3>
-    <div>
-      <span class="time-tag">Jul. 15</span> <p class="info">Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).</p>
+    <div class="info">
+      <span class="time-tag">Jul. 15</span> Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).
     </div>
-    <div>
-      <span class="time-tag">Jul. 08</span> <p class="info">My first long research paper: <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer’s Disease</a> has been accepted and published by Frontiers in Neuroscience</p>
+    <div class="info">
+      <span class="time-tag">Jul. 08</span> My first long research paper: <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false">Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer’s Disease</a> has been accepted and published by Frontiers in Neuroscience
     </div>
-    <div>
-      <span class="time-tag">May. 05</span> <p class="info">Successflily pass the undergraduate graduation defense in Jinan University.</p>
+    <div class="info">
+      <span class="time-tag">May. 05</span> Successflily pass the undergraduate graduation defense in Jinan University.
     </div>
   </div>
 </div>
@@ -494,39 +494,39 @@ redirect_from:
   <h1>🏆 Selected Awards</h1>
   <div class="li-container">
     <h3>Academic Awards</h3>
-    <div>
-      <span class="time-tag">Sep. 01, 2024</span> <p class="info"> 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</p>
+    <div class="info">
+      <span class="time-tag">Sep. 01, 2024</span> 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).
     </div>
-    <div>
-      <span class="time-tag">Sep. 01, 2023</span> <p class="info"> 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).</p>
+    <div class="info">
+      <span class="time-tag">Sep. 01, 2023</span> 🏅 Red Bird Postgraduate Scholarship of The Hong Kong University of Science and Technology (GuangZhou).
     </div>
-    <div>
-      <span class="time-tag">Jun. 30, 2023</span> <p class="info"> 🏅 Distinguished Graduate, College of Information Science and Technology, Jinan University.</p>
+    <div class="info" >
+      <span class="time-tag">Jun. 30, 2023</span> 🏅 Distinguished Graduate, College of Information Science and Technology, Jinan University.
     </div>
-    <div>
-      <span class="time-tag">Apr. 25, 2023</span> <p class="info"> 🏅 Silver Award in "Medicine +X" Virtual Simliation Competition for College students, Jinan University & Guangzhou Medical University.</p>
+    <div class="info">
+      <span class="time-tag">Apr. 25, 2023</span> 🏅 Silver Award in "Medicine +X" Virtual Simliation Competition for College students, Jinan University & Guangzhou Medical University.
     </div>
-    <div>
-      <span class="time-tag">Dec. 01, 2022</span> <p class="info"> 🏅 Second Class Scholarship for Excellent Student, Jinan University.</p>
+    <div class="info">
+      <span class="time-tag">Dec. 01, 2022</span> 🏅 Second Class Scholarship for Excellent Student, Jinan University.
     </div>
-    <div>
-      <span class="time-tag">Dec. 01, 2021</span> <p class="info"> 🏅 Third Class Scholarship Excellent Student, Jinan University.</p>
+    <div class="info">
+      <span class="time-tag">Dec. 01, 2021</span> 🏅 Third Class Scholarship Excellent Student, Jinan University.
     </div>
-    <div>
-      <span class="time-tag">May. 05, 2021</span> <p class="info"> 🏅 Honorable Mention for Mathematical Contest In Modeling, Jinan University.</p>
+    <div class="info">
+      <span class="time-tag">May. 05, 2021</span> 🏅 Honorable Mention for Mathematical Contest In Modeling, Jinan University.
     </div>    
     <h3>Sport Awards</h3>
-    <div>
-      <span class="time-tag">Apr. 06, 2024</span> <p class="info"> 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, CB, 4 Games,  2 Assist.</p>
+    <div class="info">
+      <span class="time-tag">Apr. 06, 2024</span> 🥇 Champion of 2024 The Hong Kong University of Science and Technology (Guangzhou) Football Super League, RBM, CB, 4 Games,  2 Assist.
     </div>
-    <div>
-      <span class="time-tag">Jun. 01, 2022</span> <p class="info"> 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, CDM, 5 Games, 1 Goal, 2 Assist.</p>
+    <div class="info">
+      <span class="time-tag">Jun. 01, 2022</span> 🥉 Third Place of 2022 Jinan University Football Super League, College of Information Science and Technology, CDM, 5 Games, 1 Goal, 2 Assist.
     </div>    
-    <div>
-      <span class="time-tag">Oct. 08, 2021</span> <p class="info"> 🏆 Best Player of the Second Round in 2021 Jinan University Football Super League, Information Science and Technology.</p>
+    <div class="info">
+      <span class="time-tag">Oct. 08, 2021</span> 🏆 Best Player of the Second Round in 2021 Jinan University Football Super League, Information Science and Technology.
     </div>
-    <div>
-      <span class="time-tag">Jun. 27, 2021</span> <p class="info"> 🥇 Champion of 2020 Jinan University Football College Cup, College of Information Science and Technology, ST, 4 Games, 1 Goal, 1 Assist.</p>
+    <div class="info">
+      <span class="time-tag">Jun. 27, 2021</span> 🥇 Champion of 2020 Jinan University Football College Cup, College of Information Science and Technology, ST, 4 Games, 1 Goal, 1 Assist.
     </div>     
   </div>
 </div>
