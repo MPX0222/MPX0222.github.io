@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 添加导航栏 -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-left">
+                <a href="#" class="nav-brand">Academic Profile</a>
+            </div>
+            <div class="nav-right">
+                <a href="#about">About</a>
+                <a href="#news">News</a>
+                <a href="#education">Education</a>
+                <a href="#publications">Publications</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="https://mpx0222.github.io/" class="nav-contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容容器 -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Left sidebar -->
+            <div class="sidebar">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="images/avatar.jpg" alt="Profile Photo">
+                    </div>
+                    <h1 class="profile-name">Peixian MA</h1>
+                    <p class="profile-title">M.Phil Student, HKUSTGZ</p>
+                    <p class="profile-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Guangzhou, China
+                    </p>
+                    <div class="links">
+                        <a href="https://github.com/MPX0222" class="link-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=93URqlsAAAAJ" class="link-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Google Scholar</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/paixian-ma-0222/" class="link-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://steamcommunity.com/id/MPX0222" class="link-item">
+                            <i class="fab fa-steam"></i>
+                            <span>Steam</span>
+                        </a>
+                        <a href="mpx0222@qq.com" class="link-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right content area -->
+            <div class="content">
+                <div class="card-stack">
+                    <!-- About Me card -->
+                    <div id="about" class="card">
+                        <div class="card-header" style="background: #FF7675;">
+                            <i class="fas fa-user"></i>
+                            <h2>About Me</h2>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <div class="card-content">
+                            <p> Hello! I am a M.Phil. student of The Hong Kong University of Science and Technology GuangZhou (HKUSTGZ). 
+                                Now I am studying in Data Science and Analytics (DSA) under the supervision of Prof. Yuyu Luo and Prof. Nan Tang, at the Information Hub (INFH).
+                                <br><br>
+                                I have received the B.Eng. degree in Intelligence Science and Technology from Jinan University (JNU) in 2023. 
+                                During my undergraduate live, I started my research by working as the undergraduate research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University. 
+                                My undergraduate research direction is the optimization and application of the Broad Learning System (BLS). 
+                                Before my graduation, I received the offer from HKUST(GZ) and successflily enrolled in it in the Fall 2023.
+                                <br><br>
+                                Currently, I participate in HKUST(GZ) Data Intelligence and Analytics Lab @HKUST(GZ)-DIAL 呆鹅实验室 and Red Bird AI Agent Narrative Storytelling Game Groups @AASG. 
+                                My research interest comprises Database Management (DBMS), Mliti-agent System (MAS), Natural Language to SQL (NL2SQL) and Open-Source BLS. </p>
+                        </div>
+                    </div>
+
+                    <!-- News card (原 Research card) -->
+                    <div id="news" class="card">
+                        <div class="card-header" style="background: #74B9FF;">
+                            <i class="fas fa-newspaper"></i>
+                            <h2>News</h2>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="news-list">
+                                <div class="news-item">
+                                    <div class="news-date">Dec 2024</div>
+                                    <div class="news-content">
+                                        <p>Successfully pass the Mid-term Group Project Defense of the Red Bird M.Phil Program.</p>
+                                        <p>Long Research Paper: <a href="https://arxiv.org/pdf/2412.17068">
+                                            A Plug-and-Play Natural Language Rewriter for Natural Language to SQL</a> 
+                                            is available on Arxiv.</p>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <div class="news-date">Aug 2024</div>
+                                    <div class="news-content">
+                                        <p>The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: 
+                                            <a href="https://arxiv.org/pdf/2408.05109">
+                                            A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</a> 
+                                            is available on Arxiv.</p>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <div class="news-date">Jan 2024</div>
+                                    <div class="news-content">
+                                        Successfliy pass the PQA of the Red Bird M.Phil Program.
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <div class="news-date">Jul 2023</div>
+                                    <div class="news-content">
+                                        <p>Receive offers from The Hong Kong University of Science and Technology (GuangZhou) and The Chinese University of Hong Kong (ShenZhen).</p>
+                                        <p>First Long Research Paper: 
+                                            <a href="https://www.frontiersin.org/articles/10.3389/fnins.2023.1137557/full">
+                                                Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer’s Disease</a> 
+                                            has been accepted and published by Frontiers in Neuroscience.</p>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <div class="news-date">May 2023</div>
+                                    <div class="news-content">
+                                        Successflily pass the undergraduate graduation defense in Jinan University.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education card -->
+                    <div id="education" class="card">
+                        <div class="card-header" style="background: #A8E6CF;">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h2>Education</h2>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="education-list">
+                                <!-- Education Item -->
+                                <div class="education-item">
+                                    <div class="school-logo">
+                                        <img src="images/hkust-logo.png" alt="HKUST Logo">
+                                    </div>
+                                    <div class="education-info">
+                                        <h3 class="school-name">The Hong Kong University of Science and Technology (Guangzhou)</h3>
+                                        <p class="degree">Master of Philosophy (M.Phil.) in Data Science and Analytics</p>
+                                        <div class="education-meta">
+                                            <p class="education-period">
+                                                <i class="far fa-calendar-alt"></i>
+                                                <span>2023.09 - 2025.08 (Expected)</span>
+                                            </p>
+                                            <p class="education-period">
+                                                <span>Guangzhou Campus, Information Hub (INFH)</span>
+                                            </p>
+                                            <p class="education-period">
+                                                <span>Research Focus: AI4DB, Multi-agent System (MAS), Natural Language to SQL (NL2SQL)</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Another Education Item -->
+                                <div class="education-item">
+                                    <div class="school-logo">
+                                        <img src="images/jnu-logo.jpg" alt="JNU Logo">
+                                    </div>
+                                    <div class="education-info">
+                                        <p class="school-name">Jinan University</p>
+                                        <h3 class="degree">Bachelor of Engineering (B.Eng.) in Intelligence Science and Technology</h3>
+                                        <div class="education-meta">
+                                            <p class="education-period">
+                                                <i class="far fa-calendar-alt"></i>
+                                                <span>2019.09 - 2023.06</span>
+                                            </p>
+                                            <p class="education-period">
+                                                <span>South Campus, School of Information Science and Engineering (IST)</span>
+                                            </p>
+                                            <p class="education-period">
+                                                <span>Research Focus: Optimization and Application of the Broad Learning System (BLS)</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publications card -->
+                    <div id="publications" class="card">
+                        <div class="card-header" style="background: #FFB6C1;">
+                            <i class="fas fa-book"></i>
+                            <h2>Publications</h2>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="publications-list">
+                                <!-- Publication Item -->
+                                <div class="publication-item">
+                                    <div class="publication-thumbnail">
+                                        <img src="images/rewriter.png" alt="Paper 1 thumbnail">
+                                    </div>
+                                    <div class="publication-info">
+                                        <h3 class="publication-title">
+                                            A Plug-and-Play Natural Language Rewriter for Natural Language to SQL
+                                            <span class="publication-year">(2024)</span>
+                                        </h3>
+                                        <p class="publication-authors">
+                                            <span class="author">Peixian Ma</span>,
+                                            <span class="author">Boyan Li</span>,
+                                            <span class="author">Runzhi Jiang</span>,
+                                            <span class="author">Nan Tang</span>,
+                                            <span class="author">Yuyu Luo</span>
+                                        </p>
+                                        <p class="publication-venue">
+                                            <span class="venue-name">Arxiv</span> |
+                                            <span class="venue-type">Preprint</span>
+                                        </p>
+                                        <div class="publication-footer">
+                                            <div class="publication-links">
+                                                <a href="https://arxiv.org/pdf/2412.17068" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                                <a href="https://arxiv.org/pdf/2412.17068" class="pub-link"><i class="fas fa-code"></i> Code (Coming Soon)</a>
+                                                <a href="https://arxiv.org/abs/2412.17068" class="pub-link"><i class="fas fa-quote-right"></i> Cite</a>
+                                                <a href="https://arxiv.org/abs/2412.17068" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                            </div>
+                                            <div class="publication-stats">
+                                                <span class="stat-item">
+                                                    <i class="fas fa-quote-left"></i>
+                                                    <span>0 citations</span>
+                                                </span>
+                                                <span class="stat-item">
+                                                    <i class="fas fa-star"></i>
+                                                    <span>0 stars</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="publication-item">
+                                    <div class="publication-thumbnail">
+                                        <img src="images/survey.png" alt="Paper 2 thumbnail">
+                                    </div>
+                                    <div class="publication-info">
+                                        <h3 class="publication-title">
+                                            A Survey of NL2SQL with Large Language Models: Where are we, and where are we going
+                                            <span class="publication-year">(2024)</span>
+                                        </h3>
+                                        <p class="publication-authors">
+                                            <span class="author">Xinyu Liu</span>,
+                                            <span class="author">Shuyu Shen</span>,
+                                            <span class="author">Boyan Li</span>,
+                                            <span class="author">Peixian Ma</span>
+                                            <span class="author">Runzhi Jiang</span>,
+                                            <span class="author">Nan Tang</span>,
+                                            <span class="author">Yuyu Luo</span>
+                                        </p>
+                                        <p class="publication-venue">
+                                            <span class="venue-name">Arxiv</span> |
+                                            <span class="venue-type">Preprint (Under Review of TKDE)</span>
+                                        </p>
+                                        <div class="publication-footer">
+                                            <div class="publication-links">
+                                                <a href="https://arxiv.org/pdf/2408.05109" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                                <a href="https://github.com/HKUSTDial/NL2SQL_Handbook" class="pub-link"><i class="fas fa-code"></i> Code</a>
+                                                <a href="https://arxiv.org/pdf/2408.05109" class="pub-link"><i class="fas fa-quote-right"></i> Cite</a>
+                                                <a href="https://arxiv.org/pdf/2408.05109" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                            </div>
+                                            <div class="publication-stats">
+                                                <span class="stat-item">
+                                                    <i class="fas fa-quote-left"></i>
+                                                    <span>12 citations</span>
+                                                </span>
+                                                <span class="stat-item">
+                                                    <i class="fas fa-star"></i>
+                                                    <span>268 stars</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="publication-item">
+                                    <div class="publication-thumbnail">
+                                        <img src="images/bls.jpg" alt="Paper 2 thumbnail">
+                                    </div>
+                                    <div class="publication-info">
+                                        <h3 class="publication-title">
+                                            Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease
+                                            <span class="publication-year">(2023)</span>
+                                        </h3>
+                                        <p class="publication-authors">
+                                            <span class="author">Peixian Ma</span>,
+                                            <span class="author">Jing Wang</span>,
+                                            <span class="author">Zhiguo Zhou</span>,
+                                            <span class="author">C. L. Philip Chen</span>,
+                                            <span class="author">Junwei Duan</span>
+                                        </p>
+                                        <p class="publication-venue">
+                                            <span class="venue-name">Frontiers in Neuroscience 2023</span> |
+                                            <span class="venue-type">Journal (JCR Q2, IF: 5.8)</span>
+                                        </p>
+                                        <div class="publication-footer">
+                                            <div class="publication-links">
+                                                <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                                <a href="https://github.com/MPX0222/BroadLearningSystemTools-2.0" class="pub-link"><i class="fas fa-code"></i> Code</a>
+                                                <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false" class="pub-link"><i class="fas fa-quote-right"></i> Cite</a>
+                                                <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false" class="pub-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                            </div>
+                                            <div class="publication-stats">
+                                                <span class="stat-item">
+                                                    <i class="fas fa-quote-left"></i>
+                                                    <span>5 citations</span>
+                                                </span>
+                                                <span class="stat-item">
+                                                    <i class="fas fa-star"></i>
+                                                    <span>24 stars</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Awards card -->
+                    <div class="card">
+                        <div class="card-header" style="background: #B2EBF2;">
+                            <i class="fas fa-award"></i>
+                            <h2>Awards</h2>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="awards-list">
+                                <div class="award-year-group">
+                                    <div class="year-label">2024</div>
+                                    <div class="year-awards">
+                                        <div class="award-item">
+                                            <div class="award-info">
+                                                <div class="award-header">
+                                                    <h4 class="award-name">Red Bird Postgraduate Scholarship</h4>
+                                                    <span class="award-tag scholarship">Scholarship</span>
+                                                </div>
+                                                <p class="award-org">The Hong Kong University of Science and Technology (GuangZhou)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="award-year-group">
+                                    <div class="year-label">2023</div>
+                                    <div class="year-awards">
+                                        <div class="award-item">
+                                            <div class="award-info">
+                                                <div class="award-header">
+                                                    <h4 class="award-name">Red Bird Postgraduate Scholarship</h4>
+                                                    <span class="award-tag scholarship">Scholarship</span>
+                                                </div>
+                                                <p class="award-org">The Hong Kong University of Science and Technology (GuangZhou)</p>
+                                            </div>
+                                            <div class="award-info">
+                                                <div class="award-header">
+                                                    <h4 class="award-name">Distinguished Graduate</h4>
+                                                    <span class="award-tag honor">Honor</span>
+                                                </div>
+                                                <p class="award-org">College of Information Science and Technology, Jinan University</p>
+                                            </div>
+                                            <div class="award-info">
+                                                <div class="award-header">
+                                                    <h4 class="award-name">Silver Award in "Medicine +X" Virtual Simliation Competition</h4>
+                                                    <span class="award-tag competition">Competition</span>
+                                                </div>
+                                                <p class="award-org">Jinan University & Guangzhou Medical University</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="award-year-group">
+                                    <div class="year-label">2022</div>
+                                    <div class="year-awards">
+                                        <div class="award-item">
+                                            <div class="award-info">
+                                                <div class="award-header">
+                                                    <h4 class="award-name">Second Class Scholarship for Excellent Student</h4>
+                                                    <span class="award-tag scholarship">Scholarship</span>
+                                                </div>
+                                                <p class="award-org">Jinan University</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="award-year-group">
+                                    <div class="year-label">2021</div>
+                                    <div class="year-awards">
+                                        <div class="award-item">
+                                            <div class="award-info">
+                                                <div class="award-header">
+                                                    <h4 class="award-name">Third Class Scholarship Excellent Student</h4>
+                                                    <span class="award-tag scholarship">Scholarship</span>
+                                                </div>
+                                                <p class="award-org">Jinan University</p>
+                                            </div>
+                                            <div class="award-info">
+                                                <div class="award-header">
+                                                    <h4 class="award-name">Honorable Mention for Mathematical Contest In Modeling</h4>
+                                                    <span class="award-tag competition">Competition</span>
+                                                </div>
+                                                <p class="award-org">Jinan University</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projects card -->
+                    <div id="projects" class="card">
+                        <div class="card-header" style="background: #81ECEC;">
+                            <i class="fas fa-project-diagram"></i>
+                            <h2>Projects</h2>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="projects-list">
+                                <div class="project-item">
+                                    <div class="project-header">
+                                        <h4 class="project-name">Sharp School: A Narrative Storytelling Game with Large Language Models</h4>
+                                        <div class="project-links">
+                                            <a href="https://github.com/MPX0222/BroadLearningSystemTools-2.0" class="project-link">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <p class="project-description">
+                                        An interactive text adventure game based on a time loop mechanism. Players must solve puzzles, engage in conversations, and save their fellow student within a limited time frame.
+                                    </p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">HCI</span>
+                                        <span class="tech-tag">LLM-base Agent</span>
+                                        <span class="tech-tag">Game</span>
+                                    </div>
+                                </div>
+
+                                <div class="project-item">
+                                    <div class="project-header">
+                                        <h4 class="project-name">BroadLearningSystemTools-2.0</h4>
+                                        <div class="project-links">
+                                            <a href="https://github.com/MPX0222/BroadLearningSystemTools-2.0" class="project-link">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <p class="project-description">
+                                        A Python-based implementation of Broad Learning System (BLS) with visualization tools and model analysis features.
+                                    </p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">PyTorch</span>
+                                        <span class="tech-tag">Scikit-learn</span>
+                                    </div>
+                                </div>
+
+                                <div class="project-item">
+                                    <div class="project-header">
+                                        <h4 class="project-name">NL2SQL_Handbook</h4>
+                                        <div class="project-links">
+                                            <a href="https://github.com/HKUSTDial/NL2SQL_Handbook" class="project-link">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <p class="project-description">
+                                        A comprehensive handbook for Natural Language to SQL (NL2SQL) research, including papers, datasets, and benchmarks.
+                                    </p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">LLM</span>
+                                        <span class="tech-tag">NL2SQL</span>
+                                        <span class="tech-tag">Survey</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services card -->
+                    <div id="services" class="card">
+                        <div class="card-header" style="background: #74B9FF;">
+                            <i class="fas fa-hands-helping"></i>
+                            <h2>Services</h2>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="services-list">
+                                <div class="service-category">
+                                    <h3 class="category-title">Conference</h3>
+                                    <ul class="service-items">
+                                        <li>
+                                            <span class="service-tag reviewer">Volunteer</span>
+                                            Guangzhou, International Conference on Very Large Databases (VLDB 2024)
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Football Career card -->
+                    <div class="card">
+                        <div class="card-header" style="background: #E1BEE7;">
+                            <i class="fas fa-futbol"></i>
+                            <h2>Football Career</h2>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="football-stats">
+                                <div class="career-overview">
+                                    <div class="stat-box">
+                                        <span class="stat-value">52</span>
+                                        <span class="stat-label">Appearances</span>
+                                    </div>
+                                    <div class="stat-box">
+                                        <span class="stat-value">7</span>
+                                        <span class="stat-label">Goals</span>
+                                    </div>
+                                    <div class="stat-box">
+                                        <span class="stat-value">8</span>
+                                        <span class="stat-label">Assists</span>
+                                    </div>
+                                    <div class="stat-box">
+                                        <span class="stat-value">32</span>
+                                        <span class="stat-label">Wins</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="team-history">
+                                    <div class="team-season">
+                                        <div class="season-header">
+                                            <span class="season-year">2024-25</span>
+                                            <span class="team-name">(Alumni Team) College of Information Science of Technology, JiNan University</span>
+                                            <span class="competition-tag">College League</span>
+                                        </div>
+                                        <div class="season-stats">
+                                            <div class="stat-item">
+                                                <i class="fas fa-running"></i>
+                                                <span>0 Apps</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <i class="fas fa-futbol"></i>
+                                                <span>0 Goals</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <i class="fas fa-hands-helping"></i>
+                                                <span>0 Assists</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <i class="fas fa-trophy"></i>
+                                                <span>0W 0D 0L</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="team-season">
+                                        <div class="season-header">
+                                            <span class="season-year">2023-25</span>
+                                            <span class="team-name">The Hong Kong University of Science and Technology (Guangzhou)</span>
+                                            <span class="competition-tag">University League</span>
+                                        </div>
+                                        <div class="season-stats">
+                                            <div class="stat-item">
+                                                <i class="fas fa-running"></i>
+                                                <span>11 Apps</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <i class="fas fa-futbol"></i>
+                                                <span>1 Goals</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <i class="fas fa-hands-helping"></i>
+                                                <span>3 Assists</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <i class="fas fa-trophy"></i>
+                                                <span>8W 1D 2L</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="team-season">
+                                        <div class="season-header">
+                                            <span class="season-year">2019-23</span>
+                                            <span class="team-name">(Campus Team) College of Information Science of Technology, JiNan University</span>
+                                            <span class="competition-tag">College League</span>
+                                        </div>
+                                        <div class="season-stats">
+                                            <div class="stat-item">
+                                                <i class="fas fa-running"></i>
+                                                <span>33 Apps</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <i class="fas fa-futbol"></i>
+                                                <span>6 Goals</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <i class="fas fa-hands-helping"></i>
+                                                <span>4 Assists</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <i class="fas fa-trophy"></i>
+                                                <span>20W 3D 10L</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="team-season">
+                                        <div class="season-header">
+                                            <span class="season-year">2016-19</span>
+                                            <span class="team-name">Happy My Lover, ZhongYuan High School</span>
+                                            <span class="competition-tag">Campus League</span>
+                                        </div>
+                                        <div class="season-stats">
+                                            <div class="stat-item">
+                                                <i class="fas fa-running"></i>
+                                                <span>8 Apps</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <i class="fas fa-futbol"></i>
+                                                <span>0 Goals</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <i class="fas fa-hands-helping"></i>
+                                                <span>1 Assists</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <i class="fas fa-trophy"></i>
+                                                <span>4W 0D 4L</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
