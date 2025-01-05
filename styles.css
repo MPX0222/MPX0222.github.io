@@ -26,6 +26,15 @@ h1, h2, h3, p, a {
     font-family: var(--font-family);
 }
 
+
+.version {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #636e72;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+}
+
 .profile-name {
     font-size: 2rem;
     font-weight: 600;
@@ -1165,4 +1174,487 @@ html {
     width: 100%;
     height: 2px;
     background: var(--primary-color);
+} 
+
+/* Internship 样式 */
+.internship-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.internship-item {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    align-items: center;
+}
+
+.company-logo {
+    flex: 0 0 260px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.company-logo img {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    display: block;
+}
+
+.internship-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.company-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3436;
+    margin: 0;
+    line-height: 1.25;
+}
+
+.position {
+    font-size: 1rem;
+    color: #9B59B6;
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.internship-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.25rem;
+}
+
+.internship-period,
+.internship-location {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    color: #636e72;
+}
+
+.internship-period i,
+.internship-location i {
+    color: #9B59B6;
+    font-size: 0.9rem;
+}
+
+.internship-description {
+    font-size: 0.95rem;
+    color: #636e72;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .internship-item {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .company-logo {
+        width: 100%;
+        height: 140px;
+        padding: 0.75rem;
+    }
+
+    .company-logo img {
+        max-width: 85%;
+        max-height: 85%;
+    }
+
+    .company-name {
+        font-size: 1.15rem;
+    }
+
+    .position {
+        font-size: 0.95rem;
+    }
+} 
+
+/* 添加右侧导航进度条 */
+.section-nav {
+    position: fixed;
+    right: 2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    z-index: 100;
+}
+
+.nav-dot {
+    width: 6px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(226, 232, 240, 0.6);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 添加内部发光效果 */
+.nav-dot::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-dot:hover::after {
+    opacity: 1;
+}
+
+.nav-dot:hover {
+    height: 48px;
+    width: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    transform: translateX(-2px);
+}
+
+.nav-dot.active {
+    height: 64px;
+    width: 8px;
+    transform: translateX(-2px);
+}
+
+/* 提示文字样式优化 */
+.nav-dot::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.6rem 1.2rem;
+    background: rgba(45, 52, 54, 0.95);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(4px);
+}
+
+.nav-dot:hover::before {
+    opacity: 1;
+    visibility: visible;
+    right: 28px;
+    transform: translateY(-50%) scale(1);
+}
+
+/* 为每个部分设置渐变色背景 */
+.nav-dot[data-section="about"] { 
+    background: linear-gradient(180deg, #FF7675 0%, #ff9a98 100%);
+}
+.nav-dot[data-section="news"] { 
+    background: linear-gradient(180deg, #74B9FF 0%, #99ccff 100%);
+}
+.nav-dot[data-section="education"] { 
+    background: linear-gradient(180deg, #A8E6CF 0%, #c4ffe3 100%);
+}
+.nav-dot[data-section="publications"] { 
+    background: linear-gradient(180deg, #FFB6C1 0%, #ffd1d7 100%);
+}
+.nav-dot[data-section="internship"] { 
+    background: linear-gradient(180deg, #9B59B6 0%, #b07cc6 100%);
+}
+.nav-dot[data-section="projects"] { 
+    background: linear-gradient(180deg, #81ECEC 0%, #a5f3f3 100%);
+}
+.nav-dot[data-section="services"] { 
+    background: linear-gradient(180deg, #74B9FF 0%, #99ccff 100%);
+}
+
+/* 激活状态特效 */
+.nav-dot.active {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+    }
+    70% {
+        box-shadow: 0 0 0 6px rgba(0, 0, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+    .section-nav {
+        display: none;
+    }
+} 
+
+/* CV 下载卡片样式 */
+.cv-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 1.5rem;
+}
+
+.cv-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.cv-downloads {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cv-download-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #2d3436;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.cv-download-btn:hover {
+    background: #fff;
+    border-color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cv-download-btn i {
+    font-size: 1.5rem;
+    color: #6c5ce7;
+}
+
+.cv-download-btn .fa-file-pdf {
+    color: #e74c3c;
+}
+
+.btn-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.btn-label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.btn-updated {
+    font-size: 0.8rem;
+    color: #636e72;
+}
+
+/* 深色主题适配 */
+[data-theme="dark"] .cv-card {
+    background: var(--dark-card);
+}
+
+[data-theme="dark"] .cv-title {
+    color: var(--dark-text);
+}
+
+[data-theme="dark"] .cv-download-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--dark-text);
+}
+
+[data-theme="dark"] .cv-download-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--dark-border);
+}
+
+[data-theme="dark"] .btn-updated {
+    color: var(--dark-text-secondary);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .cv-downloads {
+        gap: 0.75rem;
+    }
+
+    .cv-download-btn {
+        padding: 0.875rem;
+    }
+
+    .btn-label {
+        font-size: 0.95rem;
+    }
+} 
+
+/* CV 链接样式 */
+.cv-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.cv-link {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #2d3436;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.cv-link i {
+    font-size: 1.1rem;
+    color: #e74c3c;
+}
+
+.cv-link:hover {
+    background: #fff;
+    border-color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 深色主题适配 */
+[data-theme="dark"] .cv-links {
+    border-top-color: var(--dark-border);
+}
+
+[data-theme="dark"] .cv-link {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--dark-text);
+}
+
+[data-theme="dark"] .cv-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--dark-border);
+} 
+
+/* 格言部分样式优化 */
+.quote-footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    background: linear-gradient(to right, rgba(108, 92, 231, 0.05), rgba(108, 92, 231, 0.02));
+    text-align: center;
+}
+
+.quote-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.quote-icon {
+    font-size: 1rem;
+    color: var(--primary-color);
+    opacity: 0.4;
+}
+
+blockquote {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.quote-text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #636e72;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.quote-author {
+    font-size: 0.8rem;
+    color: #8395a7;
+    font-weight: 400;
+}
+
+/* 深色主题适配 */
+[data-theme="dark"] .quote-footer {
+    background: linear-gradient(to right, rgba(108, 92, 231, 0.08), rgba(108, 92, 231, 0.03));
+}
+
+[data-theme="dark"] .quote-text {
+    color: #a0aec0;
+}
+
+[data-theme="dark"] .quote-author {
+    color: #718096;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .quote-footer {
+        margin-top: 2.5rem;
+        padding: 1.5rem 0;
+    }
+
+    .quote-container {
+        gap: 0.8rem;
+    }
+
+    .quote-text {
+        font-size: 0.95rem;
+    }
+
+    .quote-icon {
+        font-size: 0.95rem;
+    }
 } 
