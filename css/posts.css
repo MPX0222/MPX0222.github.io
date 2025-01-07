@@ -1,0 +1,255 @@
+/* 文章容器样式 */
+.post-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* 文章头部样式 */
+.post-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.post-meta {
+    margin-bottom: 1rem;
+}
+
+.post-date {
+    color: #636e72;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+}
+
+.post-tag {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.post-tag.reading {
+    background: rgba(108, 92, 231, 0.1);
+    color: #6c5ce7;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    color: #2d3436;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.post-subtitle {
+    font-size: 1.2rem;
+    color: #636e72;
+}
+
+/* 文章导航样式 */
+.post-nav {
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    margin-bottom: 3rem;
+}
+
+.post-nav .nav-content {
+    position: relative;
+    display: flex;
+    gap: 4rem;
+}
+
+.post-nav h3 {
+    font-size: 1rem;
+    min-width: 120px;
+    color: #94a3b8;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.post-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    flex: 1;
+}
+
+/* 修改左侧进度条 */
+.post-nav ul::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #e2e8f0;
+}
+
+.post-nav li {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+/* 修改圆点指示器 */
+.post-nav li::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0.5rem;
+    width: 9px;
+    height: 9px;
+    background: #e2e8f0;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.post-nav li.active::before {
+    background: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.1);
+}
+
+.post-nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 0.2rem 0;
+}
+
+.post-nav a:hover {
+    color: #64748b;
+}
+
+.post-nav li.active a {
+    color: #1e293b;
+    font-weight: 500;
+}
+
+/* 深色主题适配 */
+[data-theme="dark"] .post-nav {
+    background: var(--dark-card);
+}
+
+[data-theme="dark"] .post-nav ul::before {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .post-nav li::before {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .post-nav li.active::before {
+    background: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.2);
+}
+
+[data-theme="dark"] .post-nav a {
+    color: #64748b;
+}
+
+[data-theme="dark"] .post-nav a:hover {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .post-nav li.active a {
+    color: #e2e8f0;
+}
+
+/* 文章内容样式 */
+.post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2d3436;
+}
+
+.post-content h2 {
+    font-size: 1.8rem;
+    margin: 2.5rem 0 1.5rem;
+    color: #2d3436;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+/* 文章底部样式 */
+.post-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.post-tags {
+    margin-bottom: 2rem;
+}
+
+.post-tags .tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin-right: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #636e72;
+}
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prev-post,
+.next-post {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+    .post-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .post-container {
+        padding: 0 1rem;
+    }
+
+    .post-title {
+        font-size: 2rem;
+    }
+
+    .post-content {
+        font-size: 1rem;
+    }
+}
+
+/* 添加阅读进度条 */
+.reading-progress {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: #e2e8f0;
+}
+
+.reading-progress-bar {
+    width: 100%;
+    height: 0;
+    background: var(--primary-color);
+    transition: height 0.1s;
+} 

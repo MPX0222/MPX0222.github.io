@@ -1658,3 +1658,29 @@ blockquote {
         font-size: 0.95rem;
     }
 } 
+
+/* Records 入口按钮样式 */
+.nav-records {
+    color: #9B59B6 !important;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-left: 0.5rem;
+    border: 1px solid #9B59B6;
+    transition: all 0.3s ease;
+}
+
+.nav-records:hover {
+    background: rgba(155, 89, 182, 0.1);
+}
+
+/* 深色主题适配 */
+[data-theme="dark"] .nav-records {
+    color: #a67ac4 !important;
+    border-color: #a67ac4;
+    opacity: 0.9;
+}
+
+[data-theme="dark"] .nav-records:hover {
+    background: rgba(155, 89, 182, 0.15);
+    opacity: 1;
+} 

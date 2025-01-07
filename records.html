@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Records - Peixian MA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-left">
+                <a href="index.html" class="nav-brand">Academic Profile</a>
+                <span class="version">Version 3.1</span>
+            </div>
+            <div class="nav-right">
+                <a href="index.html">Home</a>
+                <a href="records.html" class="active">Records</a>
+                <a href="https://mpx0222.github.io/" class="nav-contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <div class="records-container">
+            <!-- 记录类别选择器 -->
+            <div class="records-sidebar">
+                <div class="records-categories">
+                    <h2>Categories</h2>
+                    <div class="category-list">
+                        <button class="category-btn active" data-category="all">
+                            <i class="fas fa-layer-group"></i>
+                            All Records
+                        </button>
+                        <button class="category-btn" data-category="reading">
+                            <i class="fas fa-book-reader"></i>
+                            Reading Notes
+                        </button>
+                        <button class="category-btn" data-category="research">
+                            <i class="fas fa-flask"></i>
+                            Research Notes
+                        </button>
+                        <button class="category-btn" data-category="life">
+                            <i class="fas fa-coffee"></i>
+                            Life Stories
+                        </button>
+                        <button class="category-btn" data-category="thoughts">
+                            <i class="fas fa-lightbulb"></i>
+                            Random Thoughts
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 记录列表 -->
+            <div class="records-content">
+                <div class="records-header">
+                    <h1>Personal Records</h1>
+                    <div class="records-search">
+                        <input type="text" placeholder="Search records...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                
+                <div class="records-list">
+                    <!-- 示例记录项 -->
+                    <a href="posts/summer-days.html" class="record-link-wrapper">
+                        <article class="record-item" data-categories="life">
+                            <div class="record-date">2024-03-15</div>
+                            <div class="record-content">
+                                <h3>梦回那一个幻夏 | Summer Days</h3>
+                                <p>Summer Days in Zhongyuan, 2016.09 - 2019.06...</p>
+                                <div class="record-meta">
+                                    <span class="record-tag life">Life Stories</span>
+                                    <span class="record-link">Read more</span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                    
+                    <!-- 添加更多记录... -->
+                </div>
+                <div class="no-results">
+                    <i class="fas fa-search" style="font-size: 2rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+                    <p>No matching records found</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const recordItems = document.querySelectorAll('.record-item');
+        const noResults = document.querySelector('.no-results');
+        const searchInput = document.querySelector('.records-search input');
+        let searchTimeout;
+
+        // 更新分类计数
+        function updateCategoryCounts() {
+            const counts = {
+                all: recordItems.length,
+                reading: 0,
+                research: 0,
+                life: 0,
+                thoughts: 0
+            };
+
+            recordItems.forEach(item => {
+                const categories = item.getAttribute('data-categories').split(' ');
+                categories.forEach(category => {
+                    if (counts.hasOwnProperty(category)) {
+                        counts[category]++;
+                    }
+                });
+            });
+
+            // 更新显示
+            categoryButtons.forEach(button => {
+                const category = button.getAttribute('data-category');
+                const count = counts[category] || 0;
+                
+                // 如果不存在计数元素则创建
+                let countSpan = button.querySelector('.count');
+                if (!countSpan) {
+                    countSpan = document.createElement('span');
+                    countSpan.className = 'count';
+                    button.appendChild(countSpan);
+                }
+                countSpan.textContent = count;
+            });
+        }
+
+        // 过滤记录
+        function filterRecords(category, searchTerm = '') {
+            let hasResults = false;
+            
+            recordItems.forEach(item => {
+                const itemCategories = item.getAttribute('data-categories').split(' ');
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                const content = item.querySelector('p').textContent.toLowerCase();
+                const wrapper = item.closest('.record-link-wrapper');
+                
+                const matchesCategory = category === 'all' || itemCategories.includes(category);
+                const matchesSearch = !searchTerm || 
+                    title.includes(searchTerm) || 
+                    content.includes(searchTerm);
+
+                if (matchesCategory && matchesSearch) {
+                    wrapper.style.display = 'block';
+                    wrapper.style.opacity = '0';
+                    setTimeout(() => {
+                        wrapper.style.opacity = '1';
+                    }, 50);
+                    hasResults = true;
+                } else {
+                    wrapper.style.display = 'none';
+                }
+            });
+
+            noResults.style.display = hasResults ? 'none' : 'flex';
+        }
+
+        // 分类按钮点击事件
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const selectedCategory = button.getAttribute('data-category');
+                filterRecords(selectedCategory, searchInput.value.toLowerCase());
+            });
+        });
+
+        // 搜索功能
+        searchInput.addEventListener('input', () => {
+            clearTimeout(searchTimeout);
+            
+            searchTimeout = setTimeout(() => {
+                const searchTerm = searchInput.value.toLowerCase();
+                const activeCategory = document.querySelector('.category-btn.active')
+                    .getAttribute('data-category');
+
+                filterRecords(activeCategory, searchTerm);
+            }, 300);
+        });
+
+        // 搜索框清空功能
+        searchInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Escape') {
+                searchInput.value = '';
+                searchInput.blur();
+                const activeCategory = document.querySelector('.category-btn.active')
+                    .getAttribute('data-category');
+                filterRecords(activeCategory);
+            }
+        });
+
+        // 初始化分类计数
+        updateCategoryCounts();
+    });
+    </script>
+</body>
+</html> 

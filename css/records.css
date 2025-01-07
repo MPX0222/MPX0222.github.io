@@ -1,0 +1,348 @@
+/* 记录页面布局 */
+.records-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* 侧边栏样式 */
+.records-sidebar {
+    flex: 0 0 280px;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.records-categories {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.records-categories h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #2d3436;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.category-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border: none;
+    background: transparent;
+    border-radius: 10px;
+    color: #636e72;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    text-align: left;
+}
+
+.category-btn:hover {
+    background: #f8f9fa;
+    color: #2d3436;
+}
+
+.category-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* 记录内容区域 */
+.records-content {
+    flex: 1;
+}
+
+.records-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.records-search {
+    position: relative;
+    width: 300px;
+}
+
+.records-search input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    padding-right: 2.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.records-search input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: white;
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.1);
+}
+
+.records-search i {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #636e72;
+    transition: color 0.3s ease;
+}
+
+.records-search input:focus + i {
+    color: var(--primary-color);
+}
+
+/* 记录列表样式 */
+.records-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.record-item {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 1.5rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.record-date {
+    font-size: 0.9rem;
+    color: #636e72;
+    min-width: 100px;
+}
+
+.record-content {
+    flex: 1;
+}
+
+.record-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #2d3436;
+}
+
+.record-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.record-tag {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.record-tag.reading {
+    background: rgba(108, 92, 231, 0.1);
+    color: #6c5ce7;
+}
+
+.record-tag.research {
+    background: rgba(46, 204, 113, 0.1);
+    color: #27ae60;
+}
+
+.record-tag.life {
+    background: rgba(255, 118, 117, 0.1);
+    color: #ff7675;
+}
+
+.record-tag.thoughts {
+    background: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+}
+
+.record-link {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* 深色主题适配 */
+[data-theme="dark"] .records-categories,
+[data-theme="dark"] .record-item {
+    background: var(--dark-card);
+}
+
+[data-theme="dark"] .category-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--dark-text);
+}
+
+/* 记录项链接包装器 */
+.record-link-wrapper {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s ease;
+    transition: opacity 0.3s ease;
+}
+
+.record-link-wrapper:hover {
+    transform: translateY(-2px);
+}
+
+.record-link-wrapper:hover .record-item {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Read more 文字样式 */
+.record-link {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* 分类图标样式 */
+.category-btn i {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    width: 20px;
+    text-align: center;
+}
+
+/* 记录计数 */
+.category-btn .count {
+    margin-left: auto;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+.category-btn.active .count {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 搜索结果为空时的提示 */
+.no-results {
+    text-align: center;
+    padding: 2rem;
+    color: #636e72;
+    font-size: 1rem;
+    display: none;
+}
+
+/* 深色主题适配 */
+[data-theme="dark"] .records-search input {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--dark-border);
+    color: var(--dark-text);
+}
+
+[data-theme="dark"] .records-search input:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .records-search i {
+    color: #718096;
+}
+
+[data-theme="dark"] .records-search input:focus + i {
+    color: var(--primary-color);
+}
+
+/* 分类按钮图标颜色 */
+.category-btn[data-category="reading"] i {
+    color: #6c5ce7;
+}
+
+.category-btn[data-category="research"] i {
+    color: #27ae60;
+}
+
+.category-btn[data-category="life"] i {
+    color: #ff7675;
+}
+
+.category-btn[data-category="thoughts"] i {
+    color: #3498db;
+}
+
+/* 分类按钮激活状态 */
+.category-btn.active[data-category="reading"] {
+    background: #6c5ce7;
+    color: white;
+}
+
+.category-btn.active[data-category="reading"] i {
+    color: white;
+}
+
+.category-btn.active[data-category="research"] {
+    background: #27ae60;
+    color: white;
+}
+
+.category-btn.active[data-category="research"] i {
+    color: white;
+}
+
+.category-btn.active[data-category="life"] {
+    background: #ff7675;
+    color: white;
+}
+
+.category-btn.active[data-category="life"] i {
+    color: white;
+}
+
+.category-btn.active[data-category="thoughts"] {
+    background: #3498db;
+    color: white;
+}
+
+.category-btn.active[data-category="thoughts"] i {
+    color: white;
+}
+
+/* All Records 按钮的激活状态 */
+.category-btn.active[data-category="all"] {
+    background: #2d3436;
+    color: white;
+}
+
+.category-btn.active[data-category="all"] i {
+    color: white;
+}
+
+/* 深色主题适配 */
+[data-theme="dark"] .record-tag.reading {
+    background: rgba(108, 92, 231, 0.2);
+}
+
+[data-theme="dark"] .record-tag.research {
+    background: rgba(46, 204, 113, 0.2);
+}
+
+[data-theme="dark"] .record-tag.life {
+    background: rgba(255, 118, 117, 0.2);
+}
+
+[data-theme="dark"] .record-tag.thoughts {
+    background: rgba(52, 152, 219, 0.2);
+} 

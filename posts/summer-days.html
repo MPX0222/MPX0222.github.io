@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梦回那一个幻夏 | Summer Days</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/posts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 阅读进度条 -->
+    <div class="reading-progress">
+        <div class="reading-progress-bar"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-left">
+                <a href="../index.html" class="nav-brand">Academic Profile</a>
+                <span class="version">Version 3.1</span>
+            </div>
+            <div class="nav-right">
+                <a href="../index.html">Home</a>
+                <a href="../records.html">Records</a>
+                <a href="https://mpx0222.github.io/" class="nav-contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 文章内容 -->
+    <main class="main-content">
+        <article class="post-container">
+            <!-- 文章头部 -->
+            <header class="post-header">
+                <div class="post-meta">
+                    <span class="post-date">March 15, 2024</span>
+                    <span class="post-tag reading">Reading Notes</span>
+                </div>
+                <h1 class="post-title">梦回那一个幻夏</h1>
+                <div class="post-subtitle">Summer Days in Zhongyuan, 2016.09 - 2019.06</div>
+            </header>
+
+            <!-- 文章导航 -->
+            <nav class="post-nav">
+                <div class="nav-content">
+                    <h3>Contents</h3>
+                    <ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#key-concepts">Key Concepts</a></li>
+                        <li><a href="#practical-applications">Practical Applications</a></li>
+                        <li><a href="#conclusion">Conclusion</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- 文章主体 -->
+            <div class="post-content">
+                <section id="introduction">
+                    <h2>Introduction</h2>
+                    <p>Your article content here...</p>
+                </section>
+
+                <section id="key-concepts">
+                    <h2>Key Concepts</h2>
+                    <p>Your article content here...</p>
+                </section>
+
+                <section id="practical-applications">
+                    <h2>Practical Applications</h2>
+                    <p>Your article content here...</p>
+                </section>
+
+                <section id="conclusion">
+                    <h2>Conclusion</h2>
+                    <p>Your article content here...</p>
+                </section>
+            </div>
+
+            <!-- 文章底部 -->
+            <footer class="post-footer">
+                <div class="post-tags">
+                    <span class="tag">Learning</span>
+                    <span class="tag">Reading Notes</span>
+                    <span class="tag">Self Improvement</span>
+                </div>
+                <div class="post-navigation">
+                    <a href="#" class="prev-post">
+                        <i class="fas fa-arrow-left"></i>
+                        Previous Post
+                    </a>
+                    <a href="#" class="next-post">
+                        Next Post
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.post-content section');
+        const navItems = document.querySelectorAll('.post-nav li');
+        const progressBar = document.querySelector('.reading-progress-bar');
+        
+        // 监听滚动事件
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            // 计算阅读进度
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (window.pageYOffset / totalHeight) * 100;
+            progressBar.style.height = `${progress}%`;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.querySelector('a').getAttribute('href').slice(1) === current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // 平滑滚动到对应章节
+        document.querySelectorAll('.post-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').slice(1);
+                const targetSection = document.getElementById(targetId);
+                
+                window.scrollTo({
+                    top: targetSection.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    });
+    </script>
+</body>
+</html> 
