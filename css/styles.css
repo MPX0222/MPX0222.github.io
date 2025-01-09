@@ -19,6 +19,8 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in forwards;
 }
 
 /* 更新标题和文本样式 */
@@ -122,6 +124,8 @@ h1, h2, h3, p, a {
     position: sticky;
     top: 2rem;
     height: fit-content;
+    opacity: 0;
+    animation: fadeInRight 0.4s ease-out 0.1s forwards;
 }
 
 .profile-card {
@@ -247,6 +251,9 @@ h1, h2, h3, p, a {
     box-shadow: 0 4px 6px var(--shadow-color);
     width: 100%;
     scroll-margin-top: 80px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.4s ease-out forwards;
 }
 
 .card-header {
@@ -357,6 +364,8 @@ h1, h2, h3, p, a {
     left: 0;
     right: 0;
     z-index: 1000;
+    opacity: 0;
+    animation: fadeInDown 0.3s ease-out forwards;
 }
 
 .nav-content {
@@ -1588,6 +1597,8 @@ html {
     padding: 2rem 0;
     background: linear-gradient(to right, rgba(108, 92, 231, 0.05), rgba(108, 92, 231, 0.02));
     text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.4s ease-out 0.45s forwards;
 }
 
 .quote-container {
@@ -1683,4 +1694,114 @@ blockquote {
 [data-theme="dark"] .nav-records:hover {
     background: rgba(155, 89, 182, 0.15);
     opacity: 1;
+} 
+
+/* 添加页面淡入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 内容块淡入上浮动画 */
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.4s ease-out forwards;
+}
+
+/* 定义淡入上浮动画 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 为不同卡片设置延迟，创造错落感 */
+.card:nth-child(1) { animation-delay: 0.05s; }
+.card:nth-child(2) { animation-delay: 0.1s; }
+.card:nth-child(3) { animation-delay: 0.15s; }
+.card:nth-child(4) { animation-delay: 0.2s; }
+.card:nth-child(5) { animation-delay: 0.25s; }
+.card:nth-child(6) { animation-delay: 0.3s; }
+.card:nth-child(7) { animation-delay: 0.35s; }
+.card:nth-child(8) { animation-delay: 0.4s; }
+
+/* 侧边栏淡入动画 */
+.sidebar {
+    opacity: 0;
+    animation: fadeInRight 0.4s ease-out 0.1s forwards;
+}
+
+/* 定义从右侧淡入动画 */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 导航栏淡入动画 */
+.navbar {
+    opacity: 0;
+    animation: fadeInDown 0.3s ease-out forwards;
+}
+
+/* 定义从上方淡入动画 */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 页脚淡入动画 */
+.quote-footer {
+    opacity: 0;
+    animation: fadeIn 0.4s ease-out 0.45s forwards;
+} 
+
+/* Records 页面动画 */
+.records-sidebar {
+    opacity: 0;
+    animation: fadeInLeft 0.4s ease-out 0.1s forwards;
+}
+
+.record-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.4s ease-out forwards;
+}
+
+.record-item:nth-child(1) { animation-delay: 0.1s; }
+.record-item:nth-child(2) { animation-delay: 0.15s; }
+.record-item:nth-child(3) { animation-delay: 0.2s; }
+.record-item:nth-child(4) { animation-delay: 0.25s; }
+.record-item:nth-child(5) { animation-delay: 0.3s; }
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 } 
