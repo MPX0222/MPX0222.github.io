@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>梦回那一个幻夏 | Summer Days</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/posts.css">
+    <link rel="stylesheet" href="../css/summer-days.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -14,6 +14,12 @@
     <div class="reading-progress">
         <div class="reading-progress-bar"></div>
     </div>
+
+    <!-- 缩略图容器 -->
+    <div class="thumbnail-container"></div>
+
+    <!-- 连线画布 -->
+    <canvas class="connection-canvas"></canvas>
 
     <!-- 导航栏 -->
     <nav class="navbar">
@@ -24,7 +30,7 @@
             </div>
             <div class="nav-right">
                 <a href="../index.html">Home</a>
-                <a href="../records.html">Records</a>
+                <a href="../pages/records.html">Records</a>
                 <a href="https://mpx0222.github.io/" class="nav-contact">Contact</a>
             </div>
         </div>
@@ -37,7 +43,7 @@
             <header class="post-header">
                 <div class="post-meta">
                     <span class="post-date">March 15, 2024</span>
-                    <span class="post-tag reading">Reading Notes</span>
+                    <span class="post-tag life">Life Stories</span>
                 </div>
                 <h1 class="post-title">梦回那一个幻夏</h1>
                 <div class="post-subtitle">Summer Days in Zhongyuan, 2016.09 - 2019.06</div>
@@ -48,10 +54,9 @@
                 <div class="nav-content">
                     <h3>Contents</h3>
                     <ul>
-                        <li><a href="#introduction">Introduction</a></li>
-                        <li><a href="#key-concepts">Key Concepts</a></li>
-                        <li><a href="#practical-applications">Practical Applications</a></li>
-                        <li><a href="#conclusion">Conclusion</a></li>
+                        <li><a href="#introduction">幻夏伊始 | Beginning</a></li>
+                        <li><a href="#key-concepts">夏日旅途 | Travelling </a></li>
+                        <li><a href="#practical-applications">盛夏落幕 | Ending</a></li>
                     </ul>
                 </div>
             </nav>
@@ -59,23 +64,197 @@
             <!-- 文章主体 -->
             <div class="post-content">
                 <section id="introduction">
-                    <h2>Introduction</h2>
-                    <p>Your article content here...</p>
+                    <p>很久之前，看过卢永浩书上的一句话：“梦一整个幻夏”。</p>
+                    <p>偶尔整理书架上的书本，不曾想几个月未曾摆动，竟已落下一层薄薄的灰。拿起一本天蓝色的相册，两张照片悄然飘落。</p>
+                    <p>照片里伫立着同一个手扶宝剑的军人雕像。只不过，它们身后的景象略有不同：</p>
+                    <p>那张老旧褶皱的照片中，渐没的黄昏还在点缀着深蓝的天空，像金色的鱼群在深邃的海洋里逐渐远去。</p>
+                    <p>而那张还带有显影气息的照片里，耀眼的光芒的透过散漫的云团，自由自在地洒向大地，如欢快的孩子在无际的草原上奔腾，无拘无束，充满希望。</p>
+                    <p>那是一个时代的开始，那是一个时代的落幕。</p>
+                    <p>走上天台，凝望着河对岸那座古老校园上的天空。不知不觉中，视线慢慢地模糊。</p>
+                    <p>思绪在时光的长河里溯流而上，</p>
+                    <p>回到了那一个幻夏。</p>
+                    <h2>幻夏伊始 | Beginning</h2>
+                    <p>时间虫洞的出口，是去年高考开始的时候。因为腾出课室场地作为考场，全级都得到了三天的假期。</p>
+                    <p>然而，身边少了很多出去吃喝玩乐的身影，朋友圈也失去了往常假期时轻松与愉快的气氛。</p>
+                    <p>高考开始的时候，我守在电脑和电视前面，关注着高考进行的全过程。</p>
+                    <p>每当考场考试开始的铃声从直播现场传来时，我的心总是不由自主的收紧一下。</p>
+                    <p>一种从下而上的紧迫感迅速传递到脑海里。</p>
+                    <p>仿佛，我就是在现场开始动笔的高考考生一般。</p>
+                    <p>虽然离真正的高考还有一年，但心里有种感觉已经越发明显：</p>
+                    <p>自己已经走上了一条无可逆转的轨道，成为了一次真真正正的考验的参与者。</p>
+                    <p>那天，我在iPad的备忘录里写下一行字：</p>
+                    <p>“从此高中无闲时。”</p>
+                    <img src="../images/zy1.png">
+                    <p>一切，都开始改变了。</p>
+                    <p>高三的毕业晚会，数十条光束以仲元为中心点，向茫茫的夜空散发出去。</p>
+                    <p>我第一次拿起相机参加这般盛大的活动。</p>
+                    <p>在镜头里，</p>
+                    <p>我看到了师兄师姐们各奔东西之前的相拥而泣，看到了老师们临别时真挚而感人的句句箴言，看到了我们这一届六角楼新主人对未来的无限憧憬。</p>
+                    <p>晚会上唱了一首的歌——《搬到六角楼》：</p>
+                    <p>“不知道/那里的校道/有什么花苞”</p>
+                    <p>“何处居知了鸣叫”</p>
+                    <p>“十六岁我陌生/不知道/初来到”</p>
+                    <p>“那分明的绿荫鸭子里的夕照”</p>
+                    <p>“于是乎/结下的当初/一日一朵熟”</p>
+                    <p>“走廊上是否还有我/还有我/还有我曾踏的脚步”</p>
+                    <p>......</p>
+                    <p>每一句歌词里，都包含着一个关于仲元的故事，一段专属于仲元的回忆。</p>
+                    <p>突然间，我感觉自己就像是即将离开仲元的毕业生一样，</p>
+                    <p>不舍与难过在心底里充盈、回转、迸发。</p>
+                    <p>明月当空，霓虹闪烁，</p>
+                    <p>仲元的土地在这一场华丽而又庄重的仪式里，完成了又一年新老交替。</p>
+                    <p>末了，我背起相机，走过灯火通明的六角楼。</p>
+                    <p>里面人头涌动，无数的欢歌笑语回响在楼道里。那可能是他们最后一次一起回到这些教室了。</p>
+                    <p>或许，明年的这个时候，也会是这样子吧。</p>
+                    <p>亚热带春季带来的温暖很快便会消失殆尽，从赤道赶过来的直射阳光将逐渐接管这一片北回归线上天空。</p>
+                    <p>我从牛奶店的冰箱里拿出一罐苏打水，和老板娘悠闲地聊着学校的近况。</p>
+                    <p>惠州一模的揭幕战刚刚过去，整个年级还沉浸在对新考试的回味之中。</p>
+                    <p>快步走过缓缓关上校门口，却发现头顶的天空已经隐隐闪现点点的星光，</p>
+                    <p>远方的夕阳似乎还眷恋着这片土地，竭力地在远方的天际晕染上最后一抹黄昏。</p>
+                    <p>我走到雕塑喷泉前的那片空地，拿起手机，</p>
+                    <p>拍下了眼前的这番景象。</p>
+                    <img src="../images/zy2.png">
+                    <p>那是高二时代的最后一个晚上，</p>
+                    <p>那是一个永不忘却的夏天的开始。</p>
                 </section>
 
                 <section id="key-concepts">
-                    <h2>Key Concepts</h2>
-                    <p>Your article content here...</p>
+                    <h2>夏日旅途 | Travelling </h2>
+                    <p>九月下旬的时候，全班一起给我们最亲爱的Happy姐策划了一次生日庆祝。</p>
+                    <p>大家趁着晚修和大课间，准备好了蛋糕和教室的布置，</p>
+                    <p>在黑板上写下了“Happy Birthday”，</p>
+                    <p>在课室里挂上了彩带和气球，</p>
+                    <p>请来了Lily姐和阮大师。</p>
+                    <p>大家一起藏在课室里，等待着这一个惊喜。</p>
+                    <p>虚掩的门被推开了。</p>
+                    <p>happy的眼罩摘下来的那一瞬间，</p>
+                    <p>大家捧上了点起了蜡烛的蛋糕。</p>
+                    <p>透过微弱的烛光，我们似乎第一次看见了happy湿润的眼眶......</p>
+                    <img src="../images/zy3.png">
+                    <p>其实，这一天并不是happy真正的生日。</p>
+                    <p>但大家都希望能在这最后一年的机会，</p>
+                    <p>给予这位陪伴了我们三年的，人生历程里极为重要的老师，</p>
+                    <p>一次最真挚的感谢。</p>
+                    <p>渐渐地，五个月就这样不知不觉地过去了。</p>
+                    <p>一月的寒风暂时掩盖了夏日的炎热，天上的太阳也收起了耀眼的锋芒。</p>
+                    <p>结束了十二月的广州调研考试后，我们幸运地获得了二十多天的长假。</p>
+                    <p>当然，没有人敢在这个假期里有任何一丝的懈怠。图书馆的座位比金子还要珍贵，</p>
+                    <p>偌大的桌子上堆满了无数的书本。从早晨六点半写到晚上六点半，</p>
+                    <p>倘若觉得累了，便拿起水杯，走到门外的阶梯上，</p>
+                    <p>望着面前的凤凰树，心里默念着还没熟悉的诗词。</p>
+                    <p>实在是困乏到受不了了，便埋头趴在厚厚的笔记课本上，小憩个十五分钟，便又爬起来继续奋战。</p>
+                    <img src="../images/zy4.png">
+                    <p>中午还是有许多快递小哥等待在仲元门口，但他们带来的除了外卖，还有着一本本崭新的《五三》、《高考必刷题》、《42套》......</p>
+                    <p>听闻重点班一直上课考试直到年廿八，但大家也丝毫没有落下一步，直到除夕晚上，甚至大年初一，还有人在继续学习</p>
+                    <p>毕竟，这可不是游戏。</p>
+                    <img src="../images/zy5.png">
+                    <p>也在这个时候，我开始感受到这种生活中所独有的快乐。</p>
+                    <p>中午吃完饭，午后的困意还不是特别足的时，我常常坐在明德湖边的绿荫里，身旁放上一杯绿茶，</p>
+                    <p>塞上耳机，歌单里的音乐自动循环，看着明德湖里的鸭子无忧无虑地游动着。</p>
+                    <p>有时气候刚好的时候，我便靠在长椅的边上，就着悠扬的旋律，闭上眼睛，</p>
+                    <p>感受着时间从身边慢慢地、慢慢地流逝：</p>
+                    <p>......</p>
+                    <p>“时间它于哪里悄悄偷走”</p>
+                    <p>“昂贵的心愿逐渐被铁锈”</p>
+                    <p>“何日发觉望透”</p>
+                    <p>“世上从没独角兽”</p>
+                    <p>......</p>
+                    <img src="../images/zy6.png">
+                    <img src="../images/zy7.png">
+                    <p>也就十几天的光阴，却感觉过了一年。</p>
+                    <p>旅途从来没有一路平坦，起起落落才是。</p>
+                    <p>非常高兴能在18岁的这一天，收到大家的礼物与祝福，</p>
+                    <p>还有阿鲁巴</p>
+                    <p>第一次,这种感觉，难以用简短的言语所能描述。</p>
+                    <p>也曾掉进了低迷区许久。连续两次大考都离预想差了许多。</p>
+                    <p>离高考还剩下不到一百天，我看着面前一堆堆写满了的练习册，心里的落差无比巨大。</p>
+                    <p>有那么一瞬间，我感觉自己好像做的一切毫无意义，我快要放弃了。</p>
+                    <p>值得庆幸的是，在这个无比艰难的时候，happy看到了我的异常，特地约我到办公室，和我谈了许久。</p>
+                    <p>渐渐地，我从这片黑暗阴影里找到了方向，</p>
+                    <p>慢慢地、慢慢地回到了原来的轨道。</p>
+                    <p>天气又开始温暖起来了。冲锋的口号在六角楼四处喊起：</p>
+                    <p>“登顶双一流”</p>
+                    <p>我专门找了一节晚修，设计了这面高考的“战旗”插在书包后面，</p>
+                    <p>走到了滴水岩的顶峰。</p>
+                    <img src="../images/zy8.png">
+                    <p>躺在床上，没有什么困意。</p>
+                    <p>我爬起身来，拉开窗帘。窗外的世界一片寂静，</p>
+                    <p>不远处曾经热闹繁华的夜市好像也失去了它的嘈杂与喧嚣，只留下一轮清澈的明月和几颗隐隐闪烁的形象高挂在天空之上。</p>
+                    <p>低头看着旁边的时钟，闪着白色荧光的秒针还在时间平面上慢慢地运行着，</p>
+                    <p>终于，回到了它的的原点：</p>
+                    <p>“2019年6月7日，23时50分。”</p>
+                    <p>点亮床头的小夜灯，打开做了一年的高三时间记录盒，里面满满当当地塞满了许多这一年里重要的纪念品。</p>
+                    <p>我拿起其中厚厚一叠的备忘日程，恰好一共有九十九张，加上还在速写板里的一张，</p>
+                    <p>刚好一百张。</p>
+                    <p>我快速的翻阅着，往事随着翻动的文字从记忆中涌来。就像一年前的毕业晚会上那样，我突然意识到：</p>
+                    <p>“这场旅途，真的要到终点了。”</p>
+                    <p>在我的桌面上，一直写着这么一段话：</p>
+                    <p>“正如我仍感恩这段经历，也感恩这个结果，</p>
+                    <p>因为我相信一切都是最好的安排。</p>
+                    <p>你只需要在自己的跑道上挥汗如雨，</p>
+                    <p>认认真真踏踏实实一步一步向前跑就好。</p>
+                    <p>至于结果，只要你足够认真虔诚，一定不会错的。”</p>
                 </section>
 
                 <section id="practical-applications">
-                    <h2>Practical Applications</h2>
-                    <p>Your article content here...</p>
-                </section>
-
-                <section id="conclusion">
-                    <h2>Conclusion</h2>
-                    <p>Your article content here...</p>
+                    <h2>盛夏落幕 | Ending</h2>
+                    <p>走上仲元桥的桥头，放眼望去是一片红色的汪洋：</p>
+                    <p>追梦、牛奶店的门前挂满了一条条的红底黄字的助威横幅；老板娘穿着一袭红裙，在柜台前不断地忙碌着，一边把面前的矿泉水递给即将进入考场的同学，一边还不忘面带笑容地说一声“高考加油”；</p>
+                    <p>严肃的父亲们穿上了喜庆的红装，而妈妈们更有的穿上了华丽的旗袍，他们簇拥着孩子一路走到大门前，不断重复叮嘱着考试里各种应试技巧；</p>
+                    <p>平日里不善欢笑的数学老师康师傅以滑稽的笑容站立在门口，用他那浓重的口音来了一句“还阔以的吧这个”，引得大家哈哈大笑，合不拢嘴。</p>
+                    <p>绿荫广场的凤凰树下，稀稀落落地铺着五月最后一批盛开的凤凰花。</p>
+                    <p>老师们排成两列红色的长队，从六角楼前一直通向考场楼下。</p>
+                    <p>我们走进其中，和每一位老师击掌，拥抱，</p>
+                    <p>他们有的陪伴了我们整个高中时代，有的为我们解答过许多问题，有的可能只有见面之缘。</p>
+                    <p>但无论认识与否，我们收到了一份份来自他们心中最真挚的祝福。</p>
+                    <p>尔后，我们走上阶梯，各自奔向考场，走向了这段夏日旅程的最后一站。</p>
+                    <p>夏天伴随着这隆重而神圣的景象，奏起了它最高昂和欢腾的乐章。</p>
+                    <p>看到监考老师是我们熟悉的地理老师“兵爷”，我原先感觉紧张的心慢慢地放松下来。</p>
+                    <p>高考，也还是见过了无数次的、白底黑字的试卷。当看到那个熟悉的作文题目，</p>
+                    <p>看到那个后来称为“天坑”的维纳斯雕像，看到那一份还是不太能完全做好的理综题，</p>
+                    <p>脑海里这一年来为此曾充满的紧张与激动却在慢慢地褪去，似曾相识的熟悉感。</p>
+                    <p>和对这一年点点滴滴的回忆在心头渐渐涌起。</p>
+                    <p>只感觉手中的笔在自动地运转，眼前的答题卡逐渐填满了一个个熟悉的文字，</p>
+                    <p>手表上的秒针滴答滴答，拨动着身边慢慢流逝的时间。</p>
+                    <p>一切就像曾经所曾想象过无数遍的情节，</p>
+                    <p>如慢动作般在眼前上演。</p>
+                    <p>终于，收卷的铃声响彻了这片考场的每一个角落。</p>
+                    <p>“呼——”</p>
+                    <p>合上笔盖，看着监考老师在我身边走过，拿起面前摆放整齐的试卷。</p>
+                    <p>我朝着天花板长舒了一口气，心中一片释然。</p>
+                    <p>走出门口，整个考场爆发出了响彻天际的掌声与欢呼声。我随着涌动的人流，回到那熟悉的绿茵广场，</p>
+                    <p>随处可见欢呼雀跃的同学和老师。</p>
+                    <p>“我们终于考完了！我们毕业了！”</p>
+                    <p>这里如同沸腾的海洋，压抑了大家许久的枷锁被砸个粉碎，</p>
+                    <p>对未来的憧憬，</p>
+                    <p>对远方的期待，</p>
+                    <p>在此刻碰撞、激荡，升华。</p>
+                    <p>我找到了树荫底下的happy姐，拍了一张合照。</p>
+                    <img src="../images/zy9.png">
+                    <p>收拾好东西，门外喧闹的人们也渐渐散去，</p>
+                    <p>是时候该走了。</p>
+                    <p>再走到仲元像前的那片广场，忽然想起了一年前的夏天，曾在这个位置拍下的那张照片。</p>
+                    <p>回头望去，</p>
+                    <p>午后的阳光已经逐渐褪去它的热度，但依然耀眼的光芒仍然穿透了天空的云层，把它黄昏前最后的余热洒向这一方土地。</p>
+                    <p>我放下手中的行李，拿起手机，</p>
+                    <p>拍下了这一张照片。</p>
+                    <img src="../images/zy10.png">
+                    <p>我回过头，走向桥那边等待的汽车，</p>
+                    <p>许多熟悉的事物逐渐地向身后远去。</p>
+                    <p>心里五味杂陈，</p>
+                    <p>三年来积聚的无数情感与记忆在此刻交汇，迸发。</p>
+                    <p>我拉了拉了肩上的背带，</p>
+                    <p>最后一次，作为一名仲元的高三学生，</p>
+                    <p>大步流星地，</p>
+                    <p>走过了仲元桥头的斑马线。</p>
+                    <div class="ending-text">
+                        <p>或许，这就是一直所说的，</p>
+                        <p class="end-mark">战士在收刀入鞘时的，会有的那一份骄傲吧。</p>
+                        <p class="end-mark">或许，这一个漫长的夏天，</p>
+                        <p class="end-mark">结束了。</p>
+                        <p class="end-mark">像梦一样。</p>
+                        <p class="end-mark">End</p>
+                    </div>
                 </section>
             </div>
 
@@ -105,20 +284,125 @@
         const sections = document.querySelectorAll('.post-content section');
         const navItems = document.querySelectorAll('.post-nav li');
         const progressBar = document.querySelector('.reading-progress-bar');
+        const thumbnailContainer = document.querySelector('.thumbnail-container');
+        const canvas = document.querySelector('.connection-canvas');
+        const ctx = canvas.getContext('2d');
         
+        // 设置Canvas尺寸
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        
+        // 初始化Canvas尺寸
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        
+        // 获取所有文章图片
+        const articleImages = document.querySelectorAll('.post-content img');
+        
+        // 为每个图片创建缩略图
+        articleImages.forEach((img, index) => {
+            const thumbnail = document.createElement('img');
+            thumbnail.src = img.src;
+            thumbnail.classList.add('thumbnail');
+            thumbnail.dataset.index = index;
+            thumbnailContainer.appendChild(thumbnail);
+
+            // 点击缩略图滚动到对应位置
+            thumbnail.addEventListener('click', () => {
+                img.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        });
+
+        // 绘制连线
+        function drawConnections() {
+            // 清除画布
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            articleImages.forEach((img, index) => {
+                const thumbnail = thumbnailContainer.children[index];
+                const imgRect = img.getBoundingClientRect();
+                const thumbRect = thumbnail.getBoundingClientRect();
+
+                // 只有当缩略图可见时才绘制连线
+                if (thumbnail.classList.contains('show') && 
+                    imgRect.top < window.innerHeight && 
+                    imgRect.bottom > 0) {
+                    
+                    // 设置线条样式
+                    ctx.beginPath();
+                    ctx.strokeStyle = '#ff7e67';
+                    ctx.lineWidth = 2; // 增加线条宽度
+                    ctx.setLineDash([8, 4]); // 调整虚线间距
+                    
+                    // 计算连线起点和终点
+                    const startX = imgRect.left + imgRect.width / 2;
+                    const startY = imgRect.top + imgRect.height / 2;
+                    const endX = thumbRect.left;
+                    const endY = thumbRect.top + thumbRect.height / 2;
+                    
+                    // 绘制贝塞尔曲线
+                    ctx.beginPath();
+                    ctx.moveTo(startX, startY);
+                    ctx.bezierCurveTo(
+                        startX + (endX - startX) * 0.5, startY,
+                        startX + (endX - startX) * 0.5, endY,
+                        endX, endY
+                    );
+                    
+                    // 添加渐变效果，增加透明度
+                    const gradient = ctx.createLinearGradient(startX, startY, endX, endY);
+                    gradient.addColorStop(0, 'rgba(255, 126, 103, 0.3)');
+                    gradient.addColorStop(0.5, 'rgba(255, 126, 103, 0.6)');
+                    gradient.addColorStop(1, 'rgba(255, 126, 103, 0.3)');
+                    ctx.strokeStyle = gradient;
+                    
+                    ctx.stroke();
+                }
+            });
+        }
+
         // 监听滚动事件
+        let lastScrollTop = 0;
         window.addEventListener('scroll', () => {
             let current = '';
+            const scrollTop = window.pageYOffset;
             
             // 计算阅读进度
             const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = (window.pageYOffset / totalHeight) * 100;
+            const progress = (scrollTop / totalHeight) * 100;
             progressBar.style.height = `${progress}%`;
             
+            // 处理图片滚动效果
+            articleImages.forEach((img, index) => {
+                const rect = img.getBoundingClientRect();
+                const thumbnail = thumbnailContainer.children[index];
+                
+                // 当图片进入视口
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    img.classList.add('scrolled');
+                    thumbnail.classList.add('show');
+                } else {
+                    img.classList.remove('scrolled');
+                }
+            });
+
+            // 显示/隐藏缩略图容器
+            if (scrollTop > window.innerHeight) {
+                thumbnailContainer.classList.add('show');
+            } else {
+                thumbnailContainer.classList.remove('show');
+            }
+
+            // 绘制连线
+            drawConnections();
+
+            // 更新导航高亮
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                if (scrollTop >= (sectionTop - sectionHeight / 3)) {
                     current = section.getAttribute('id');
                 }
             });
@@ -129,7 +413,16 @@
                     item.classList.add('active');
                 }
             });
+
+            lastScrollTop = scrollTop;
         });
+
+        // 添加动画循环
+        function animate() {
+            drawConnections();
+            requestAnimationFrame(animate);
+        }
+        animate();
 
         // 平滑滚动到对应章节
         document.querySelectorAll('.post-nav a').forEach(anchor => {

@@ -1,0 +1,360 @@
+/* 继承基础文章样式 */
+@import url('posts.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+/* 夏日主题色彩 */
+:root {
+    --summer-primary: #ff7e67;
+    --summer-secondary: #ffd460;
+    --summer-text: #2d334a;
+    --summer-bg: #fff9f4;
+    --summer-accent: #4ecdc4;
+    --font-serif: 'Noto Serif SC', '宋体', SimSun, serif;
+    --font-sans: 'Noto Sans SC', '微软雅黑', 'Microsoft YaHei', sans-serif;
+}
+
+/* 页面背景 */
+body {
+    background-color: var(--summer-bg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 文章容器特殊样式 */
+.post-container {
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 3rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 101;
+}
+
+/* 文章标题样式 */
+.post-title {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: var(--summer-text);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.05em;
+}
+
+.post-subtitle {
+    font-family: var(--font-serif);
+    color: var(--summer-primary);
+    font-size: 1.4rem;
+    font-weight: 500;
+    opacity: 0.9;
+    letter-spacing: 0.03em;
+}
+
+/* 文章标签样式 */
+.post-tag.life {
+    background: rgba(255, 126, 103, 0.1);
+    color: var(--summer-primary);
+}
+
+/* 文章内容样式优化 */
+.post-content {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    line-height: 2;
+    color: var(--summer-text);
+    letter-spacing: 0.02em;
+}
+
+.post-content p {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    line-height: 2;
+    margin-bottom: 1.8rem;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    letter-spacing: 0.02em;
+    font-weight: normal;
+    color: var(--summer-text);
+}
+
+/* 图片样式优化 */
+.post-content img {
+    width: 100%;
+    border-radius: 20px;
+    margin: 2rem 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.post-content img:hover {
+    transform: scale(1.02);
+}
+
+/* 章节标题样式 */
+.post-content h2 {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    color: var(--summer-text);
+    margin: 4rem 0 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--summer-secondary);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.05em;
+}
+
+/* 导航样式优化 */
+.post-nav {
+    background: white;
+    border-left: 4px solid var(--summer-primary);
+    font-family: var(--font-sans);
+}
+
+.post-nav li.active::before {
+    background: var(--summer-primary);
+    box-shadow: 0 0 0 4px rgba(255, 126, 103, 0.1);
+}
+
+.post-nav h3 {
+    font-family: var(--font-serif);
+    letter-spacing: 0.05em;
+}
+
+/* 阅读进度条样式 */
+.reading-progress-bar {
+    background: var(--summer-primary);
+    box-shadow: 0 0 10px rgba(255, 126, 103, 0.3);
+}
+
+/* 引用样式 */
+.post-content blockquote {
+    font-family: var(--font-serif);
+    border-left: 4px solid var(--summer-secondary);
+    padding-left: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #666;
+}
+
+/* 移除特殊段落样式 */
+.post-content p:first-of-type {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--summer-text);
+    font-weight: normal;
+    line-height: 2;
+    letter-spacing: 0.02em;
+}
+
+/* 底部导航样式 */
+.post-navigation a {
+    color: var(--summer-primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.post-navigation a:hover {
+    color: var(--summer-text);
+    transform: translateX(5px);
+}
+
+.post-navigation .prev-post:hover {
+    transform: translateX(-5px);
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .post-container {
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+
+    .post-title {
+        font-size: 2.2rem;
+        letter-spacing: 0.03em;
+    }
+
+    .post-subtitle {
+        font-size: 1.2rem;
+        letter-spacing: 0.02em;
+    }
+
+    .post-content {
+        font-size: 1.05rem;
+        letter-spacing: 0.01em;
+    }
+
+    .post-content h2 {
+        font-size: 1.8rem;
+        letter-spacing: 0.03em;
+    }
+
+    .post-content p {
+        font-size: 1.05rem;
+        letter-spacing: 0.01em;
+    }
+}
+
+/* 动画效果 */
+.post-content section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 文章段落间距优化 */
+.post-content section {
+    margin-bottom: 4rem;
+}
+
+/* 图片描述文本 */
+.post-content img + p {
+    font-family: var(--font-sans);
+    text-align: center;
+    color: #666;
+    font-size: 0.95rem;
+    margin-top: -1rem;
+    font-style: italic;
+}
+
+/* 结尾段落特殊样式 */
+.post-content .ending-text {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    line-height: 2;
+    color: var(--summer-text);
+    margin: 2rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.post-content .ending-text p {
+    margin-bottom: 1.8rem;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    letter-spacing: 0.02em;
+    font-weight: normal;
+    position: relative;
+}
+
+/* 移除之前的装饰线条 */
+.post-content .ending-text p::before,
+.post-content .ending-text p::after {
+    display: none;
+}
+
+.post-content .ending-text .end-mark {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--summer-text);
+    margin-top: 2rem;
+    letter-spacing: 0.02em;
+    font-style: normal;
+}
+
+/* 移除渐变背景效果 */
+.post-content .ending-text {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .post-content .ending-text {
+        font-size: 1.05rem;
+        margin: 2rem 0;
+    }
+
+    .post-content .ending-text p {
+        margin-bottom: 1.8rem;
+        letter-spacing: 0.01em;
+    }
+
+    .post-content .ending-text .end-mark {
+        font-size: 1.05rem;
+        margin-top: 2rem;
+    }
+}
+
+/* 图片缩略图容器 */
+.thumbnail-container {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 101;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail-container.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* 缩略图样式 */
+.thumbnail {
+    width: 120px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.7;
+    transform: translateX(150px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* 图片过渡效果 */
+.post-content img.scrolled {
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+/* 连线画布样式 */
+.connection-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 99;
+}
+
+/* 调整缩略图容器的z-index确保在画布上层 */
+.thumbnail-container {
+    z-index: 101;
+}
+
+/* 调整文章内容的z-index确保在画布上层 */
+.post-container {
+    position: relative;
+    z-index: 101;
+} 
