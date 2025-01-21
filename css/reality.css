@@ -1,0 +1,269 @@
+/* 继承基础文章样式 */
+@import url('posts.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+/* 主题色彩 */
+:root {
+    --reality-primary: #6c5ce7;
+    --reality-secondary: #a8a5ff;
+    --reality-text: #2d3436;
+    --reality-bg: #f8f9ff;
+    --reality-accent: #00cec9;
+    --font-serif: 'Noto Serif SC', '宋体', SimSun, serif;
+    --font-sans: 'Noto Sans SC', '微软雅黑', 'Microsoft YaHei', sans-serif;
+}
+
+/* 页面背景 */
+body {
+    background-color: var(--reality-bg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 文章容器特殊样式 */
+.post-container {
+    max-width: 1200px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(108, 92, 231, 0.05);
+    padding: 3rem 5rem;
+    margin: 3rem auto;
+    position: relative;
+    z-index: 101;
+}
+
+/* 文章内容布局优化 */
+.post-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* 图文组合容器 */
+.image-text-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.image-text-group.image-left {
+    grid-template-columns: 1.2fr 0.8fr;
+}
+
+.image-text-group.image-right {
+    grid-template-columns: 0.8fr 1.2fr;
+}
+
+.image-text-group img {
+    width: 100%;
+    margin: 0;
+}
+
+.image-text-group .text-content {
+    padding: 1rem;
+}
+
+/* 全宽图片容器 */
+.full-width-image {
+    margin: 3rem -5rem;
+    position: relative;
+}
+
+.full-width-image img {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+}
+
+/* 文章标题样式 */
+.post-header {
+    text-align: left;
+    max-width: 800px;
+    margin-bottom: 4rem;
+}
+
+.post-title {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    color: var(--reality-text);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+}
+
+/* 章节标题样式 */
+.post-content h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--reality-text);
+    margin: 6rem 0 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--reality-secondary);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.05em;
+    grid-column: 1 / -1;
+}
+
+/* 导航样式优化 */
+.post-nav {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+    background: white;
+    border-left: 4px solid var(--reality-primary);
+    font-family: var(--font-sans);
+    margin-top: 0;
+}
+
+.post-nav li.active::before {
+    background: var(--reality-primary);
+    box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.1);
+}
+
+.post-nav h3 {
+    font-family: var(--font-serif);
+    letter-spacing: 0.05em;
+}
+
+/* 阅读进度条样式 */
+.reading-progress-bar {
+    background: var(--reality-primary);
+    box-shadow: 0 0 10px rgba(108, 92, 231, 0.3);
+}
+
+/* 引用样式 */
+.post-content blockquote {
+    font-family: var(--font-serif);
+    border-left: 4px solid var(--reality-secondary);
+    padding-left: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #666;
+}
+
+/* 图片描述文本 */
+.post-content img + p {
+    font-family: var(--font-sans);
+    text-align: center;
+    color: #666;
+    font-size: 0.95rem;
+    margin-top: -1rem;
+    font-style: italic;
+}
+
+/* 缩略图容器 */
+.thumbnail-container {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 101;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail-container.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* 缩略图样式 */
+.thumbnail {
+    width: 120px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.7;
+    transform: translateX(150px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(108, 92, 231, 0.1);
+}
+
+.thumbnail.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* 图片过渡效果 */
+.post-content img.scrolled {
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+/* 连线画布样式 */
+.connection-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 99;
+}
+
+/* 响应式优化 */
+@media (max-width: 1200px) {
+    .post-container {
+        max-width: 95%;
+        padding: 3rem;
+    }
+
+    .full-width-image {
+        margin: 3rem -3rem;
+    }
+
+    .image-text-group {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .post-container {
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+
+    .post-title {
+        font-size: 2.2rem;
+    }
+
+    .post-content h2 {
+        font-size: 1.8rem;
+        margin: 4rem 0 2rem;
+    }
+
+    .full-width-image {
+        margin: 2rem -2rem;
+    }
+}
+
+/* 动画效果 */
+.post-content section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

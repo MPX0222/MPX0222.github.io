@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Records - Peixian MA</title>
+    <title>Personal Records - List</title>
     <link rel="icon" type="image/png" href="/assets/img/web-app-manifest-192x192.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/assets/img/web-app-manifest-512x512.png" sizes="16x16">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
@@ -12,14 +12,16 @@
     <link rel="stylesheet" href="../css/records.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../js/components/Navbar.js"></script>
 </head>
 <body>
     <!-- 导航栏 -->
-    <nav class="navbar">
+    <nav-bar></nav-bar>
+    <!-- <nav class="navbar">
         <div class="nav-content">
             <div class="nav-left">
                 <a href="../index.html" class="nav-brand">Academic Profile</a>
-                <span class="version">Version 3.1</span>
+                <span class="version">Version 3.2</span>
             </div>
             <div class="nav-right">
                 <a href="../index.html">Home</a>
@@ -27,7 +29,7 @@
                 <a href="https://mpx0222.github.io/" class="nav-contact">Contact</a>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
     <!-- 主要内容 -->
     <main class="main-content">
@@ -73,20 +75,104 @@
                 
                 <div class="records-list">
                     <!-- 示例记录项 -->
-                    <a href="../posts/summer-days.html" class="record-link-wrapper">
+                    <a href="../posts/music2024.html" class="record-link-wrapper">
                         <article class="record-item" data-categories="life">
-                            <div class="record-date">2024-03-15</div>
+                            <div class="record-date">
+                                <span class="created-date">2025-01-20</span>
+                            </div>
                             <div class="record-content">
-                                <h3>梦回那一个幻夏 | Summer Days</h3>
-                                <p>Summer Days in Zhongyuan, 2016.09 - 2019.06...</p>
+                                <h3>时光乐章 2024</h3>
+                                <p>Music List for the Year 2024</p>
                                 <div class="record-meta">
                                     <span class="record-tag life">Life Stories</span>
                                     <span class="record-link">Read more</span>
+                                    <span class="last-modified">
+                                        <i class="fas fa-history"></i>
+                                        <span class="modified-time"></span>
+                                    </span>
                                 </div>
                             </div>
                         </article>
                     </a>
+                    <!-- <a href="../posts/cursor-notes.html" class="record-link-wrapper">
+                        <article class="record-item" data-categories="research">
+                            <div class="record-date">
+                                <span class="created-date">2025-01-15</span>
+                            </div>
+                            <div class="record-content">
+                                <h3>Cursor 在代码开发中的应用记录与个人看法</h3>
+                                <p>Some thoughts about Cursor in code development</p>
+                                <div class="record-meta">
+                                    <span class="record-tag research">Research Notes</span>
+                                    <span class="record-link">Read more</span>
+                                    <span class="last-modified">
+                                        <i class="fas fa-history"></i>
+                                        <span class="modified-time"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+                    </a> -->
                     
+                    <!-- <a href="../posts/friday-agent.html" class="record-link-wrapper">
+                        <article class="record-item" data-categories="thoughts">
+                            <div class="record-date">
+                                <span class="created-date">2025-01-11</span>
+                            </div>
+                            <div class="record-content">
+                                <h3>Friday Agent</h3>
+                                <p>A Plug-and-Play Customized AI Agent Assistant for the Full Scene of Personal Life</p>
+                                <div class="record-meta">
+                                    <span class="record-tag thoughts">Random Thoughts</span>
+                                    <span class="record-link">Read more</span>
+                                    <span class="last-modified">
+                                        <i class="fas fa-history"></i>
+                                        <span class="modified-time"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+                    </a> -->
+
+                    <!-- <a href="../posts/reality.html" class="record-link-wrapper">
+                        <article class="record-item" data-categories="life">
+                            <div class="record-date">
+                                <span class="created-date">2025-01-10</span>
+                            </div>
+                            <div class="record-content">
+                                <h3>现实与真实</h3>
+                                <p>Life Stories from Undergraduate to Postgraduate, 2022.01 ~ 2025.07 ...</p>
+                                <div class="record-meta">
+                                    <span class="record-tag life">Life Stories</span>
+                                    <span class="record-link">Read more</span>
+                                    <span class="last-modified">
+                                        <i class="fas fa-history"></i>
+                                        <span class="modified-time"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+                    </a> -->
+
+                    <a href="../posts/summer-days.html" class="record-link-wrapper">
+                        <article class="record-item" data-categories="life">
+                            <div class="record-date">
+                                <span class="created-date">2021-02-01</span>
+                            </div>
+                            <div class="record-content">
+                                <h3>梦回那一个幻夏</h3>
+                                <p>Summer Days in Zhongyuan, 2016.09 - 2019.06 ...</p>
+                                <div class="record-meta">
+                                    <span class="record-tag life">Life Stories</span>
+                                    <span class="record-link">Read more</span>
+                                    <span class="last-modified">
+                                        <i class="fas fa-history"></i>
+                                        <span class="modified-time"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
                     <!-- 添加更多记录... -->
                 </div>
                 <div class="no-results">
@@ -103,7 +189,60 @@
         const recordItems = document.querySelectorAll('.record-item');
         const noResults = document.querySelector('.no-results');
         const searchInput = document.querySelector('.records-search input');
+        const recordsList = document.querySelector('.records-list');
         let searchTimeout;
+
+        // 获取文件最后修改时间
+        async function getLastModified(url) {
+            try {
+                const response = await fetch(url, { method: 'HEAD' });
+                return new Date(response.headers.get('last-modified'));
+            } catch (error) {
+                console.error('Error fetching last modified date:', error);
+                return new Date(0); // 返回一个很早的日期作为后备
+            }
+        }
+
+        // 格式化时间函数
+        function formatDateTime(date) {
+            return date.toLocaleString('zh-CN', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit'
+            }).replace(/\//g, '-');
+        }
+
+        // 排序记录
+        async function sortRecords() {
+            const records = Array.from(recordsList.children);
+            const recordDates = await Promise.all(records.map(async record => {
+                const link = record.getAttribute('href');
+                const lastModified = await getLastModified(link);
+                return { element: record, date: lastModified };
+            }));
+
+            // 按修改时间降序排序
+            recordDates.sort((a, b) => b.date - a.date);
+
+            // 重新排列DOM元素
+            recordDates.forEach(record => {
+                recordsList.appendChild(record.element);
+            });
+
+            // 更新显示的日期
+            recordDates.forEach(record => {
+                const dateElement = record.element.querySelector('.modified-time');
+                if (dateElement) {
+                    const date = record.date;
+                    dateElement.textContent = formatDateTime(date);
+                    
+                    // 添加提示
+                    dateElement.parentElement.setAttribute('title', '最后修改时间');
+                }
+            });
+        }
 
         // 更新分类计数
         function updateCategoryCounts() {
@@ -124,12 +263,10 @@
                 });
             });
 
-            // 更新显示
             categoryButtons.forEach(button => {
                 const category = button.getAttribute('data-category');
                 const count = counts[category] || 0;
                 
-                // 如果不存在计数元素则创建
                 let countSpan = button.querySelector('.count');
                 if (!countSpan) {
                     countSpan = document.createElement('span');
@@ -205,8 +342,9 @@
             }
         });
 
-        // 初始化分类计数
+        // 初始化
         updateCategoryCounts();
+        sortRecords(); // 初始化时进行排序
     });
     </script>
 </body>

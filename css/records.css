@@ -127,8 +127,23 @@
 
 .record-date {
     font-size: 0.9rem;
-    color: #636e72;
-    min-width: 100px;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.record-date .last-modified {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.record-date .last-modified i {
+    font-size: 0.8rem;
 }
 
 .record-content {
@@ -141,10 +156,11 @@
     color: #2d3436;
 }
 
+/* 记录元数据样式 */
 .record-meta {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-top: 1rem;
 }
 
@@ -176,9 +192,27 @@
 }
 
 .record-link {
-    font-size: 0.9rem;
     color: var(--primary-color);
-    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-right: auto;
+}
+
+.last-modified {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.2s ease;
+}
+
+.last-modified i {
+    font-size: 0.8rem;
+}
+
+.record-link-wrapper:hover .last-modified {
+    color: var(--primary-color);
 }
 
 /* 深色主题适配 */
@@ -207,13 +241,6 @@
 
 .record-link-wrapper:hover .record-item {
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
-}
-
-/* Read more 文字样式 */
-.record-link {
-    color: var(--primary-color);
-    font-size: 0.9rem;
-    font-weight: 500;
 }
 
 /* 分类图标样式 */

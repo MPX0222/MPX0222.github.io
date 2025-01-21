@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/img/web-app-manifest-192x192.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/img/web-app-manifest-512x512.png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/img/site.webmanifest">
+    <title>Personal Records | 现实与真实</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/reality.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../js/components/Navbar.js"></script>
+</head>
+<body>
+    <!-- 阅读进度条 -->
+    <div class="reading-progress">
+        <div class="reading-progress-bar"></div>
+    </div>
+
+    <!-- 缩略图容器 -->
+    <div class="thumbnail-container"></div>
+
+    <!-- 连线画布 -->
+    <canvas class="connection-canvas"></canvas>
+
+    <!-- 导航栏 -->
+    <nav-bar></nav-bar>
+    <!-- <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-left">
+                <a href="../index.html" class="nav-brand">Academic Profile</a>
+                <span class="version">Version 3.2</span>
+            </div>
+            <div class="nav-right">
+                <a href="../index.html">Home</a>
+                <a href="../pages/records.html">Records</a>
+                <a href="https://mpx0222.github.io/" class="nav-contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 文章内容 -->
+    <main class="main-content">
+        <article class="post-container">
+            <!-- 文章头部 -->
+            <header class="post-header">
+                <div class="post-meta">
+                    <span class="post-date">January 10, 2025</span>
+                    <span class="post-tag life">Life Stories</span>
+                </div>
+                <h1 class="post-title">现实与真实</h1>
+                <div class="post-subtitle">Life Stories from Undergraduate to Postgraduate, 2022.01 ~ 2025.07</div>
+            </header>
+
+            <!-- 文章导航 -->
+            <!-- <nav class="post-nav">
+                <div class="nav-content">
+                    <h3>Contents</h3>
+                    <ul>
+                        <li><a href="#introduction">序 | Preface</a></li>
+                        <li><a href="#reality">现实 | Reality</a></li>
+                        <li><a href="#truth">真实 | Truth</a></li>
+                        <li><a href="#epilogue">跋 | Epilogue</a></li>
+                    </ul>
+                </div>
+            </nav> -->
+
+            <!-- 文章主体 -->
+            <div class="post-content">
+                Under Construction ......
+            </div>
+
+            <!-- 文章底部 -->
+            <footer class="post-footer">
+                <div class="post-tags">
+                    <span class="tag">Thoughts</span>
+                    <span class="tag">Life</span>
+                    <span class="tag">Philosophy</span>
+                </div>
+                <div class="post-navigation">
+                    <a href="summer-days.html" class="prev-post">
+                        <i class="fas fa-arrow-left"></i>
+                        Previous Post
+                    </a>
+                    <a href="#" class="next-post">
+                        Next Post
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.post-content section');
+        const navItems = document.querySelectorAll('.post-nav li');
+        const progressBar = document.querySelector('.reading-progress-bar');
+        const thumbnailContainer = document.querySelector('.thumbnail-container');
+        const canvas = document.querySelector('.connection-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // 设置Canvas尺寸
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        
+        // 初始化Canvas尺寸
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        
+        // 获取所有文章图片
+        const articleImages = document.querySelectorAll('.post-content img');
+        
+        // 为每个图片创建缩略图
+        articleImages.forEach((img, index) => {
+            const thumbnail = document.createElement('img');
+            thumbnail.src = img.src;
+            thumbnail.classList.add('thumbnail');
+            thumbnail.dataset.index = index;
+            thumbnailContainer.appendChild(thumbnail);
+
+            // 点击缩略图滚动到对应位置
+            thumbnail.addEventListener('click', () => {
+                img.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+
+            // 添加鼠标悬停事件
+            thumbnail.addEventListener('mouseenter', () => {
+                drawConnection(img, thumbnail);
+            });
+
+            // 添加鼠标离开事件
+            thumbnail.addEventListener('mouseleave', () => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            });
+        });
+
+        // 绘制单个连线
+        function drawConnection(img, thumbnail) {
+            // 清除画布
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const imgRect = img.getBoundingClientRect();
+            const thumbRect = thumbnail.getBoundingClientRect();
+
+            // 只有当缩略图可见且图片在视口内时才绘制连线
+            if (thumbnail.classList.contains('show') && 
+                imgRect.top < window.innerHeight && 
+                imgRect.bottom > 0) {
+                
+                // 设置线条样式
+                ctx.beginPath();
+                ctx.strokeStyle = '#6c5ce7';
+                ctx.lineWidth = 2;
+                ctx.setLineDash([8, 4]);
+                
+                // 计算连线起点和终点
+                const startX = imgRect.left + imgRect.width / 2;
+                const startY = imgRect.top + imgRect.height / 2;
+                const endX = thumbRect.left;
+                const endY = thumbRect.top + thumbRect.height / 2;
+                
+                // 绘制贝塞尔曲线
+                ctx.beginPath();
+                ctx.moveTo(startX, startY);
+                ctx.bezierCurveTo(
+                    startX + (endX - startX) * 0.5, startY,
+                    startX + (endX - startX) * 0.5, endY,
+                    endX, endY
+                );
+                
+                // 添加渐变效果
+                const gradient = ctx.createLinearGradient(startX, startY, endX, endY);
+                gradient.addColorStop(0, 'rgba(108, 92, 231, 0.3)');
+                gradient.addColorStop(0.5, 'rgba(108, 92, 231, 0.6)');
+                gradient.addColorStop(1, 'rgba(108, 92, 231, 0.3)');
+                ctx.strokeStyle = gradient;
+                
+                ctx.stroke();
+            }
+        }
+
+        // 监听滚动事件
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const scrollTop = window.pageYOffset;
+            
+            // 计算阅读进度
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / totalHeight) * 100;
+            progressBar.style.height = `${progress}%`;
+            
+            // 处理图片滚动效果
+            articleImages.forEach((img, index) => {
+                const rect = img.getBoundingClientRect();
+                const thumbnail = thumbnailContainer.children[index];
+                
+                // 当图片进入视口
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    img.classList.add('scrolled');
+                    thumbnail.classList.add('show');
+                } else {
+                    img.classList.remove('scrolled');
+                }
+            });
+
+            // 显示/隐藏缩略图容器
+            if (scrollTop > window.innerHeight) {
+                thumbnailContainer.classList.add('show');
+            } else {
+                thumbnailContainer.classList.remove('show');
+            }
+
+            // 更新导航高亮
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollTop >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.querySelector('a').getAttribute('href').slice(1) === current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // 平滑滚动到对应章节
+        document.querySelectorAll('.post-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').slice(1);
+                const targetSection = document.getElementById(targetId);
+                
+                window.scrollTo({
+                    top: targetSection.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    });
+    </script>
+</body>
+</html> 

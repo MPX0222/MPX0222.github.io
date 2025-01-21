@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/img/web-app-manifest-192x192.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/img/web-app-manifest-512x512.png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/img/site.webmanifest">
+    <title>Personal Records | Friday Agent</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/friday-agent.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/components/Navbar.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav-bar></nav-bar>
+    <!-- <nav class="nav-container">
+        <div class="nav-content">
+            <div class="nav-left">
+                <a href="../index.html" class="nav-logo">Academic Profile</a>
+                <span class="version">Version 3.2</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../pages/records.html" class="active">Records</a>
+            </div>
+        </div>
+    </nav> -->
+
+    <main class="post-container">
+        <!-- 文章头部信息 -->
+        <header class="post-header">
+            <div class="header-content">
+                <h1>Friday Agent</h1>
+                <p class="subtitle">A Plug-and-Play Customized AI Agent Assistant for the Full Scene of Personal Life</p>
+                <div class="post-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>2025-01-20</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-tag"></i>
+                        <span>Random Thoughts</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Reading Time: 5 min</span>
+                    </div>
+                    <div class="meta-item">
+                        <a href="https://github.com/MPX0222/Friday-Agent" class="meta-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 文章导航 -->
+        <nav class="post-nav">
+            <div class="nav-wrapper">
+                <h2>Contents</h2>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#background">Background & Motivation</a></li>
+                    <li><a href="#architecture">System Architecture</a></li>
+                    <li><a href="#implementation">Implementation Details</a></li>
+                    <li><a href="#evaluation">Evaluation & Results</a></li>
+                    <li><a href="#conclusion">Conclusion & Future Work</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 主要内容区域 -->
+        <article class="post-content">
+            <!-- 数据概览面板 -->
+            <section class="metrics-panel">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Agent version</h3>
+                        <p class="metric-value">v1.0.1</p>
+                        <p class="metric-trend positive">Released on 2025-01-20</p>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Current Modes</h3>
+                        <p class="metric-value">5 Modes</p>
+                        <p class="metric-trend positive">Dialogue, Code Generation, Writing</p>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Supported Tasks</h3>
+                        <p class="metric-value">2 Tasks</p>
+                        <p class="metric-trend positive">Dialogue, RAG Augmentation</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 文章各节内容 -->
+            <section id="introduction" class="content-section">
+                <h2>Introduction</h2>
+                <div class="section-content">
+                    <p>在人工智能快速发展的今天，个性化AI助手已经成为提升个人生产力的重要工具。Friday Agent 项目旨在打造一个可以完全定制化的AI助手系统，它能够理解用户的个性化需求，适应不同场景，提供精准的帮助。</p>
+                </div>
+            </section>
+
+            <section id="background" class="content-section">
+                <h2>Background & Motivation</h2>
+                <div class="section-content">
+                    <div class="visualization-card">
+                        <h3>AI Assistant Market Growth</h3>
+                        <div class="chart-placeholder">
+                            <!-- 这里后续可以添加实际的图表 -->
+                            <div class="chart-demo"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="architecture" class="content-section">
+                <h2>System Architecture</h2>
+                <div class="section-content">
+                    <div class="architecture-diagram">
+                        <!-- 系统架构图占位 -->
+                        <div class="diagram-placeholder"></div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.nav-container');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // 目录导航高亮
+        const sections = document.querySelectorAll('.content-section');
+        const navLinks = document.querySelectorAll('.post-nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

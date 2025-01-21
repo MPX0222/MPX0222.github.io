@@ -1,0 +1,391 @@
+/* 全局变量 */
+:root {
+    --primary-blue: #1a237e;
+    --secondary-blue: #283593;
+    --accent-blue: #3949ab;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --bg-primary: #f8fafc;
+    --bg-secondary: #f1f5f9;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 页面容器 */
+.post-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-primary);
+    padding-top: 70px;
+}
+
+/* 文章头部 */
+.post-header {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue), var(--accent-blue));
+    color: white;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.post-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.post-header .subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.9rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.meta-item i {
+    opacity: 0.8;
+}
+
+/* 文章导航 */
+.post-nav {
+    position: sticky;
+    top: 90px;
+    width: 280px;
+    float: left;
+    padding: 2rem;
+}
+
+.nav-wrapper {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+.post-nav h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.post-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post-nav li {
+    margin-bottom: 0.5rem;
+}
+
+.post-nav a {
+    display: block;
+    padding: 0.5rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.post-nav a:hover,
+.post-nav a.active {
+    background: var(--bg-secondary);
+    color: var(--primary-blue);
+}
+
+/* 主要内容区域 */
+.post-content {
+    margin-left: 280px;
+    padding: 2rem 4rem;
+    max-width: 1400px;
+}
+
+/* 数据概览面板 */
+.metrics-panel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.metric-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.metric-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-blue);
+}
+
+.metric-icon i {
+    font-size: 1.5rem;
+}
+
+.metric-content h3 {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.metric-trend {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.metric-trend.positive {
+    color: #10b981;
+}
+
+.metric-trend.negative {
+    color: #ef4444;
+}
+
+/* 内容区块 */
+.content-section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.content-section h2 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* 可视化卡片 */
+.visualization-card {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.visualization-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.chart-placeholder,
+.diagram-placeholder {
+    width: 100%;
+    height: 300px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    border: 2px dashed var(--border-color);
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --card-bg: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .post-nav {
+        display: none;
+    }
+    
+    .post-content {
+        margin-left: 0;
+        padding: 2rem;
+    }
+    
+    .metrics-panel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .metrics-panel {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-header {
+        padding: 3rem 1rem;
+    }
+    
+    .post-header h1 {
+        font-size: 2rem;
+    }
+    
+    .post-content {
+        padding: 1rem;
+    }
+}
+
+/* 导航栏样式 */
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.nav-container.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-logo:hover {
+    color: var(--primary-blue);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+.nav-links a.active {
+    color: var(--primary-blue);
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-blue);
+    border-radius: 2px;
+}
+
+/* 深色模式导航栏适配 */
+[data-theme="dark"] .nav-container {
+    background: rgba(15, 23, 42, 0.8);
+}
+
+[data-theme="dark"] .nav-container.scrolled {
+    background: rgba(15, 23, 42, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .nav-logo {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .nav-links a {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .nav-links a:hover,
+[data-theme="dark"] .nav-links a.active {
+    color: var(--accent-blue);
+}
+
+[data-theme="dark"] .nav-links a.active::after {
+    background: var(--accent-blue);
+}
+
+/* 导航栏左侧样式 */
+.nav-left {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.8rem;
+}
+
+.version {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    opacity: 0.8;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 0.9em;
+    transform: translateY(0.2rem);
+}
+
+[data-theme="dark"] .version {
+    color: var(--text-secondary);
+} 

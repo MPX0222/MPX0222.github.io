@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>梦回那一个幻夏 | Summer Days</title>
+    <title>Personal Records | 梦回那一个幻夏</title>
+    <link rel="icon" type="image/png" href="/assets/img/web-app-manifest-192x192.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/img/web-app-manifest-512x512.png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/img/site.webmanifest">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/summer-days.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../js/components/Navbar.js"></script>
 </head>
 <body>
     <!-- 阅读进度条 -->
@@ -22,11 +27,12 @@
     <canvas class="connection-canvas"></canvas>
 
     <!-- 导航栏 -->
-    <nav class="navbar">
+    <nav-bar></nav-bar>
+    <!-- <nav class="navbar">
         <div class="nav-content">
             <div class="nav-left">
                 <a href="../index.html" class="nav-brand">Academic Profile</a>
-                <span class="version">Version 3.1</span>
+                <span class="version">Version 3.2</span>
             </div>
             <div class="nav-right">
                 <a href="../index.html">Home</a>
@@ -46,7 +52,7 @@
                     <span class="post-tag life">Life Stories</span>
                 </div>
                 <h1 class="post-title">梦回那一个幻夏</h1>
-                <div class="post-subtitle">Summer Days in Zhongyuan, 2016.09 - 2019.06</div>
+                <div class="post-subtitle">Summer Days in Zhongyuan, 2016.09 ~ 2019.06</div>
             </header>
 
             <!-- 文章导航 -->
