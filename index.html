@@ -11,6 +11,93 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Modal styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+        }
+
+        .modal-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.7);
+            max-width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            z-index: 1001;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: center center;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+
+        .modal-content .card {
+            margin: 0;
+            background: white;
+            transform-origin: top center;
+        }
+
+        .modal-close {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: rotate(-180deg);
+        }
+
+        .modal-overlay.active .modal-close {
+            opacity: 1;
+            transform: rotate(0);
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        /* 确保模态框中的链接颜色正确 */
+        .modal-content a {
+            color: #74B9FF;
+        }
+
+        .modal-content a:hover {
+            color: #0984e3;
+        }
+    </style>
 </head>
 <body>
     <!-- 添加导航栏 -->
@@ -162,7 +249,7 @@
                                         <p>Receive offers from The Hong Kong University of Science and Technology (Guangzhou) and The Chinese University of Hong Kong (ShenZhen).</p>
                                         <p>First Long Research Paper: 
                                             <a href="https://www.frontiersin.org/articles/10.3389/fnins.2023.1137557/full">
-                                                Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer’s Disease</a> 
+                                                Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease</a> 
                                             has been accepted and published by Frontiers in Neuroscience.</p>
                                     </div>
                                 </div>
@@ -778,10 +865,72 @@
         <div class="nav-dot" data-section="services" data-tooltip="Services"></div>
     </div>
 
+    <!-- Modal structure -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
     <script>
     // 获取所有部分和导航点
     const sections = document.querySelectorAll('.card');
     const navDots = document.querySelectorAll('.nav-dot');
+    
+    // Modal functionality
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalContent = document.querySelector('.modal-content');
+    const modalClose = document.querySelector('.modal-close');
+    const modalBody = document.getElementById('modal-body');
+
+    // 为所有卡片头部的三点图标添加点击事件
+    document.querySelectorAll('.card-header .fa-ellipsis-h').forEach(icon => {
+        icon.style.cursor = 'pointer';
+        icon.addEventListener('click', function() {
+            const card = this.closest('.card');
+            const cardContent = card.cloneNode(true);
+            
+            // 移除克隆的卡片中的三点图标
+            cardContent.querySelector('.fa-ellipsis-h').remove();
+            
+            // 清空并设置模态框内容
+            modalBody.innerHTML = '';
+            modalBody.appendChild(cardContent);
+            
+            // 显示模态框
+            modalOverlay.style.display = 'block';
+            // 触发重排以启动动画
+            modalOverlay.offsetHeight;
+            modalOverlay.classList.add('active');
+            document.body.classList.add('modal-open');
+        });
+    });
+
+    // 关闭模态框
+    function closeModal() {
+        modalOverlay.classList.remove('active');
+        setTimeout(() => {
+            modalOverlay.style.display = 'none';
+            document.body.classList.remove('modal-open');
+        }, 300);
+    }
+
+    modalClose.addEventListener('click', closeModal);
+
+    // 点击模态框外部关闭
+    modalOverlay.addEventListener('click', function(e) {
+        if (e.target === modalOverlay) {
+            closeModal();
+        }
+    });
+
+    // ESC键关闭模态框
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+            closeModal();
+        }
+    });
 
     // 监听滚动事件
     window.addEventListener('scroll', () => {
