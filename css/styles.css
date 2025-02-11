@@ -134,6 +134,7 @@ h1, h2, h3, p, a {
     padding: 1.75rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .profile-image {
@@ -1803,5 +1804,45 @@ blockquote {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+} 
+
+/* 访问统计地图样式 */
+.visitor-map {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 0.7rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.visitor-map a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.visitor-map img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 8px;
+    transition: transform 0.1s ease;
+}
+
+.visitor-map img:hover {
+    transform: scale(1.00);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .visitor-map {
+        padding: 0.5rem;
+    }
+    
+    .visitor-map img {
+        max-width: 250px;
     }
 } 
