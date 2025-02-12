@@ -116,16 +116,35 @@ h1, h2, h3, p, a {
     margin: 0 auto;
     padding: 2rem;
     gap: 2rem;
+    position: relative;
 }
 
 /* Sidebar styles */
 .sidebar {
     flex: 0 0 300px;
-    position: sticky;
-    top: 2rem;
-    height: fit-content;
+    position: fixed;
+    top: 80px; /* 导航栏高度 + 一些间距 */
+    width: 300px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    padding-right: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
     opacity: 0;
     animation: fadeInRight 0.4s ease-out 0.1s forwards;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
 }
 
 .profile-card {
@@ -237,6 +256,7 @@ h1, h2, h3, p, a {
 /* Content area styles */
 .content {
     flex: 1;
+    margin-left: 320px; /* sidebar宽度 + gap */
 }
 
 .card-stack {
@@ -345,13 +365,19 @@ h1, h2, h3, p, a {
 
 /* Responsive design */
 @media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding-right: 0;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
     .container {
         flex-direction: column;
-    }
-    
-    .sidebar {
-        flex: 0 0 auto;
-        position: static;
     }
 } 
 
