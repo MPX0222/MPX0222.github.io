@@ -250,7 +250,7 @@ h1, h2, h3, p, a {
 .link-item:hover i.fa-github { color: #333; }
 .link-item:hover i.fa-graduation-cap { color: #4285f4; }
 .link-item:hover i.fa-linkedin { color: #0077b5; }
-.link-item:hover i.fa-steam { color: #171a21; }
+.link-item:hover i.fa-gitlab { color: #fc6d26; }
 .link-item:hover i.fa-envelope { color: #ea4335; }
 
 /* Content area styles */
