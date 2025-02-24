@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Map - My Journey</title>
+    <link rel="icon" type="image/png" href="/assets/img/web-app-manifest-192x192.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/img/web-app-manifest-512x512.png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/img/site.webmanifest">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/road.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="../js/components/Navbar.js"></script>
+</head>
+<body>
+    <nav-bar></nav-bar>
+
+    <main class="main-content">
+        <div class="map-container">
+            <div class="map-header">
+                <h1>我的行走轨迹</h1>
+                <p>记录在粤港澳大湾区的足迹</p>
+            </div>
+            
+            <div class="map-controls">
+                <div class="city-filters">
+                    <button class="city-btn active" data-city="all">全部</button>
+                    <button class="city-btn" data-city="guangzhou">广州</button>
+                    <button class="city-btn" data-city="foshan">佛山</button>
+                    <button class="city-btn" data-city="shenzhen">深圳</button>
+                </div>
+                <div class="transport-filters">
+                    <button class="transport-btn active" data-transport="all">
+                        <i class="fas fa-train"></i> 全部
+                    </button>
+                    <button class="transport-btn" data-transport="metro">
+                        <i class="fas fa-subway"></i> 地铁
+                    </button>
+                    <button class="transport-btn" data-transport="railway">
+                        <i class="fas fa-train"></i> 高铁
+                    </button>
+                </div>
+            </div>
+
+            <div id="map" class="map"></div>
+
+            <div class="map-legend">
+                <div class="legend-item">
+                    <span class="legend-color visited"></span>
+                    <span class="legend-text">已到访</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color unvisited"></span>
+                    <span class="legend-text">未到访</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-line metro"></span>
+                    <span class="legend-text">地铁线路</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-line railway"></span>
+                    <span class="legend-text">高铁线路</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // 站点数据
+        const stationData = {
+            visited: [
+                { 
+                    name: "广州南站", 
+                    position: [22.9875, 113.2699], 
+                    type: "railway", 
+                    city: "guangzhou",
+                    isMajor: true,
+                    description: "广州南站 - 广深港高铁始发站",
+                    visitDate: "2024-02-10",
+                    visitNote: "第一次从这里出发前往深圳，开启大湾区之旅"
+                },
+                { 
+                    name: "广州东站", 
+                    position: [23.1505, 113.3250], 
+                    type: "railway", 
+                    city: "guangzhou",
+                    isMajor: true,
+                    description: "广州东站 - 京广线、广深线交汇",
+                    visitDate: "2024-01-15",
+                    visitNote: "从这里乘坐城际列车前往深圳"
+                },
+                { 
+                    name: "深圳北站", 
+                    position: [22.6097, 114.0291], 
+                    type: "railway", 
+                    city: "shenzhen",
+                    isMajor: true,
+                    description: "深圳北站 - 广深港高铁重要站点",
+                    visitDate: "2024-02-10",
+                    visitNote: "抵达深圳北站，感受到了特区的繁华"
+                },
+                { 
+                    name: "庆盛站", 
+                    position: [22.8789, 113.4927], 
+                    type: "railway", 
+                    city: "guangzhou",
+                    isMajor: true,
+                    description: "庆盛站 - 广深港高铁南站至虎门站区间",
+                    visitDate: "2024-02-15",
+                    visitNote: "途经庆盛站，这里的建筑风格很有特色"
+                },
+                { 
+                    name: "福田站", 
+                    position: [22.5318, 114.0571], 
+                    type: "railway", 
+                    city: "shenzhen",
+                    isMajor: true,
+                    description: "福田站 - 深圳市中心的地下高铁站",
+                    visitDate: "2024-02-20",
+                    visitNote: "在福田站换乘地铁，地下空间设计令人印象深刻"
+                },
+                { 
+                    name: "香港西九龙站", 
+                    position: [22.3038, 114.1672], 
+                    type: "railway", 
+                    city: "hongkong",
+                    isMajor: true,
+                    description: "香港西九龙站 - 广深港高铁终点站",
+                    visitDate: "2024-02-25",
+                    visitNote: "终于到达香港，西九龙站的建筑设计非常现代化"
+                }
+            ],
+            unvisited: []
+        };
+
+        // 线路数据
+        const routeData = {
+            railway: [
+                // 广深港高铁主线
+                {
+                    cities: ["guangzhou", "shenzhen", "hongkong"],
+                    name: "广深港高铁",
+                    coordinates: [
+                        [22.9875, 113.2699], // 广州南站
+                        [22.8789, 113.4927], // 庆盛站
+                        [22.6097, 114.0291], // 深圳北站
+                        [22.5318, 114.0571], // 福田站
+                        [22.3038, 114.1672]  // 香港西九龙站
+                    ]
+                },
+                // 广深线
+                {
+                    cities: ["guangzhou", "shenzhen"],
+                    name: "广深线",
+                    coordinates: [
+                        [23.1505, 113.3250], // 广州东站
+                        [22.6097, 114.0291]  // 深圳北站
+                    ]
+                }
+            ]
+        };
+
+        // 初始化地图 - 调整中心点和缩放级别以更好地显示所有站点
+        const map = L.map('map').setView([22.6456, 113.7189], 9);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // 存储所有标记和线路的图层
+        let markers = [];
+        let routes = [];
+
+        // 自定义图标创建函数
+        function createCustomIcon(station, visited) {
+            if (station.isMajor) {
+                const stationColor = '#1E88E5';  // 使用深蓝色作为统一的高铁站颜色
+                
+                return L.divIcon({
+                    className: 'custom-icon',
+                    html: `<div class="major-station-marker" style="border-color: ${stationColor}; color: ${stationColor}">
+                            <i class="fas fa-train"></i>
+                          </div>`,
+                    iconSize: [32, 32],
+                    iconAnchor: [16, 16],
+                    popupAnchor: [0, -16]
+                });
+            }
+            return null;
+        }
+
+        // 格式化日期函数
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('zh-CN', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        // 添加站点标记
+        function addMarkers(stations, visited) {
+            stations.forEach(station => {
+                let marker;
+                if (station.isMajor) {
+                    marker = L.marker(station.position, {
+                        icon: createCustomIcon(station, visited)
+                    }).bindPopup(`<div class="station-popup">
+                        <h3>${station.name}</h3>
+                        <div class="station-info">
+                            <p class="description">${station.description}</p>
+                            <div class="visit-info">
+                                <div class="visit-row">
+                                    <div class="visit-date">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>${formatDate(station.visitDate)}</span>
+                                    </div>
+                                    <div class="visit-divider">|</div>
+                                    <div class="visit-note">
+                                        <i class="fas fa-comment"></i>
+                                        <span>${station.visitNote}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`);
+                } else {
+                    marker = L.circleMarker(station.position, {
+                        radius: 6,
+                        fillColor: visited ? '#4CAF50' : '#9E9E9E',
+                        color: '#FFFFFF',
+                        weight: 2,
+                        opacity: 1,
+                        fillOpacity: 1
+                    }).bindPopup(station.name);
+                }
+                
+                marker.station = station;
+                markers.push(marker);
+                marker.addTo(map);
+            });
+        }
+
+        // 添加线路
+        function addRoutes(routes, type) {
+            routes.forEach(route => {
+                const line = L.polyline(route.coordinates, {
+                    color: '#1E88E5',  // 使用相同的深蓝色作为线路颜色
+                    weight: 4,         // 增加线条宽度
+                    opacity: 0.8       // 稍微调整透明度
+                });
+                line.routeType = type;
+                line.cities = route.cities || [route.city];
+                routes.push(line);
+                line.addTo(map);
+            });
+        }
+
+        // 筛选显示
+        function filterMap(city, transport) {
+            markers.forEach(marker => {
+                const station = marker.station;
+                const showCity = city === 'all' || station.city === city;
+                const showTransport = transport === 'all' || station.type === transport;
+                
+                if (showCity && showTransport) {
+                    marker.addTo(map);
+                } else {
+                    marker.remove();
+                }
+            });
+
+            routes.forEach(route => {
+                const showCity = city === 'all' || route.cities.includes(city);
+                const showTransport = transport === 'all' || route.routeType === transport;
+                
+                if (showCity && showTransport) {
+                    route.addTo(map);
+                } else {
+                    route.remove();
+                }
+            });
+        }
+
+        // 添加按钮事件监听
+        document.querySelectorAll('.city-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.city-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                const city = e.target.dataset.city;
+                const transport = document.querySelector('.transport-btn.active').dataset.transport;
+                filterMap(city, transport);
+            });
+        });
+
+        document.querySelectorAll('.transport-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.transport-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                const transport = e.target.dataset.transport;
+                const city = document.querySelector('.city-btn.active').dataset.city;
+                filterMap(city, transport);
+            });
+        });
+
+        // 初始化地图元素
+        addMarkers(stationData.visited, true);
+        addMarkers(stationData.unvisited, false);
+        addRoutes(routeData.railway, 'railway');
+    </script>
+    <style>
+        .custom-icon {
+            text-align: center;
+        }
+        
+        .major-station-marker {
+            background: white;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+            border: 3px solid;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.95);  /* 稍微调整背景透明度 */
+        }
+
+        .major-station-marker:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.4);
+            background: white;  /* 悬停时完全不透明 */
+        }
+
+        .station-popup {
+            padding: 12px;
+            min-width: 300px;  /* 增加宽度以适应单行布局 */
+        }
+
+        .station-popup h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+            font-size: 1.2em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        .station-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .description {
+            margin: 0;
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+
+        .visit-info {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .visit-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .visit-date {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;  /* 防止日期换行 */
+        }
+
+        .visit-divider {
+            color: #ccc;
+            margin: 0 4px;
+        }
+
+        .visit-note {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #666;
+            flex: 1;
+            min-width: 0;  /* 允许内容在必要时截断 */
+        }
+
+        .visit-note span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;  /* 文本过长时显示省略号 */
+        }
+
+        .visit-date i, .visit-note i {
+            color: #1E88E5;
+            font-size: 0.9em;
+        }
+    </style>
+</body>
+</html> 

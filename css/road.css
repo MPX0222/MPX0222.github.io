@@ -1,0 +1,137 @@
+.map-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.map-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.map-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.map-header p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.map-controls {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.city-filters,
+.transport-filters {
+    display: flex;
+    gap: 1rem;
+}
+
+.city-btn,
+.transport-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    background: white;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.city-btn:hover,
+.transport-btn:hover {
+    border-color: #2196F3;
+    color: #2196F3;
+}
+
+.city-btn.active,
+.transport-btn.active {
+    background: #2196F3;
+    color: white;
+    border-color: #2196F3;
+}
+
+.map {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.map-legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.legend-color.visited {
+    background: #4CAF50;
+}
+
+.legend-color.unvisited {
+    background: #9E9E9E;
+}
+
+.legend-line {
+    width: 20px;
+    height: 3px;
+}
+
+.legend-line.metro {
+    background: #2196F3;
+}
+
+.legend-line.railway {
+    background: #FF5722;
+}
+
+.legend-text {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        padding: 1rem;
+    }
+
+    .map {
+        height: 400px;
+    }
+
+    .map-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .map-legend {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+} 
