@@ -66,6 +66,12 @@ class Navbar extends HTMLElement {
                     align-items: center;
                 }
 
+                /* 创建一个特殊的按钮组，减小这三个按钮之间的间距 */
+                .nav-right a#home-link,
+                .nav-right a#records-link,
+                .nav-right a.nav-contact {
+                    margin-left: -0.5rem;
+                }
                 .nav-right a {
                     text-decoration: none;
                     color: var(--text-color, #2d3436);
@@ -73,29 +79,47 @@ class Navbar extends HTMLElement {
                     font-size: 0.95rem;
                     transition: color 0.3s ease;
                 }
-
                 .nav-right a:hover {
                     color: var(--primary-color, #6c5ce7);
                 }
-
-                .nav-right a.active {
-                    color: var(--primary-color, #6c5ce7);
-                    position: relative;
+                /* 为 Home 和 Records 按钮添加特殊样式 */
+                .nav-right a#home-link,
+                .nav-right a#records-link {
+                    background-color: rgba(108, 92, 231, 0.1);
+                    padding: 0.5rem 1rem;
+                    border-radius: 6px;
+                    font-weight: 600;
                 }
-
-                .nav-right a.active::after {
-                    content: '';
-                    position: absolute;
-                    bottom: -4px;
-                    left: 0;
-                    width: 100%;
-                    height: 2px;
-                    background: var(--primary-color, #6c5ce7);
+                .nav-right a#home-link:hover,
+                .nav-right a#records-link:hover {
+                    background-color: rgba(108, 92, 231, 0.2);
                 }
-
+                .nav-right a#home-link.active,
+                .nav-right a#records-link.active {
+                    background-color: var(--primary-color, #6c5ce7);
+                    color: white;
+                }
+                .nav-right a#home-link.active::after,
+                .nav-right a#records-link.active::after {
+                    display: none;
+                }
                 .nav-contact {
                     padding: 0.5rem 1rem;
-                    background: var(--primary-color, #6c5ce7);
+                    background: var(--primary-color,rgb(92, 231, 212));
+                    color: white !important;
+                    border-radius: 8px;
+                }
+                .nav-contact svg {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 6px;
+                    vertical-align: middle;
+                    fill: currentColor;
+                }
+                
+                .nav-contact {
+                    padding: 0.5rem 1rem;
+                    background: var(--primary-color,rgb(92, 231, 212));
                     color: white !important;
                     border-radius: 8px;
                 }
@@ -135,9 +159,22 @@ class Navbar extends HTMLElement {
                         <span class="version">Version 3.2</span>
                     </div>
                     <div class="nav-right">
+                        <a href="#about">About</a>
+                        <a href="#news">News</a>
+                        <a href="#education">Education</a>
+                        <a href="#publications">Publications</a>
+                        <a href="#internship">Internship</a>
+                        <a href="#awards">Awards</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#services">Services</a>
                         <a href="../index.html" id="home-link">Home</a>
-                        <a href="../pages/records.html" id="records-link">Records</a>
-                        <a href="https://mpx0222.github.io/" class="nav-contact">Contact</a>
+                        <a href="../pages/records.html" id="records-link" class="nav-records">Records</a>
+                        <a href="https://mpx0222.github.io/" class="nav-contact">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            Mail
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -166,4 +203,4 @@ class Navbar extends HTMLElement {
 }
 
 // 注册自定义元素
-customElements.define('nav-bar', Navbar); 
+customElements.define('nav-bar', Navbar);
