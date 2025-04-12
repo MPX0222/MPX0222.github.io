@@ -149,7 +149,7 @@ h1, h2, h3, p, a {
 
 .profile-card {
     background: var(--card-bg);
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 1.75rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     text-align: center;
@@ -267,9 +267,9 @@ h1, h2, h3, p, a {
 
 .card {
     background: var(--card-bg);
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 6px var(--shadow-color);
+    box-shadow: 0 16px 16px var(--shadow-color);
     width: 100%;
     scroll-margin-top: 80px;
     opacity: 0;
@@ -1451,7 +1451,7 @@ html {
 /* CV 下载卡片样式 */
 .cv-card {
     background: var(--card-bg);
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 1.5rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     margin-top: 1.5rem;
@@ -1826,9 +1826,9 @@ blockquote {
 /* 访问统计地图样式 */
 .visitor-map {
     background: var(--card-bg);
-    border-radius: 20px;
-    padding: 0.7rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    padding: 0.5rem;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
     text-align: center;
     margin: 1rem 0;
     overflow: hidden;
