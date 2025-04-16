@@ -1,0 +1,116 @@
+{
+  "publications": [
+    {
+      "thumbnail": "images/sqlr1.png",
+      "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
+      "year": 2025,
+      "authors": [
+        "Peixian Ma",
+        "Xialie Zhuang", 
+        "Chengjin Xu",
+        "Xuhui Jiang",
+        "Ran Chen",
+        "Jian Guo"
+      ],
+      "venue": {
+        "name": "Arxiv",
+        "type": "Preprint (Under Review)"
+      },
+      "links": {
+        "pdf": "https://arxiv.org/pdf/2504.08600",
+        "code": "",
+        "cite": "https://arxiv.org/pdf/2504.08600",
+        "doi": "https://arxiv.org/pdf/2504.08600"
+      },
+      "stats": {
+        "citations": 0,
+        "stars": 0
+      }
+    },
+    {
+    "thumbnail": "images/rewriter.png",
+    "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
+    "year": 2024,
+    "authors": [
+        "Peixian Ma",
+        "Boyan Li", 
+        "Runzhi Jiang",
+        "Ju Fan",
+        "Nan Tang",
+        "Yuyu Luo"
+    ],
+    "venue": {
+        "name": "Arxiv",
+        "type": "Preprint (Under Review)"
+    },
+    "links": {
+        "pdf": "https://arxiv.org/pdf/2412.17068",
+        "code": "",
+        "cite": "https://arxiv.org/pdf/2412.17068",
+        "doi": "https://arxiv.org/pdf/2412.17068"
+    },
+    "stats": {
+        "citations": 1,
+        "stars": 0
+    }
+    },
+    {
+        "thumbnail": "images/survey.png",
+        "title": "A Survey of NL2SQL with Large Language Models: Where are we, and where are we going?",
+        "year": 2024,
+        "authors": [
+            "Xinyu Liu",
+            "Shuyu Shen", 
+            "Boyan Li",
+            "Peixian Ma",
+            "Runzhi Jiang", 
+            "Yuxin Zhang",
+            "Ju Fan",
+            "Guoliang Li",
+            "Nan Tang",
+            "Yuyu Luo"
+        ],
+        "venue": {
+            "name": "Arxiv",
+            "type": "Preprint (Under Review)"
+        },
+        "links": {
+            "pdf": "https://arxiv.org/pdf/2408.05109",
+            "code": "https://github.com/HKUSTDial/NL2SQL_Handbook",
+            "cite": "https://arxiv.org/pdf/2408.05109",
+            "doi": "https://arxiv.org/pdf/2408.05109"
+        },
+        "stats": {
+            "citations": 37,
+            "stars": 540
+        }
+    },
+    {
+        "thumbnail": "images/bls.jpg",
+        "title": "Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease",
+        "year": 2023,
+        "authors": [
+            "Peixian Ma",
+            "Jing Wang", 
+            "Zhiguo Zhou",
+            "C. L. Philip Chen",
+            "Junwei Duan"
+        ],
+        "venue": {
+            "name": "Frontiers in Neuroscience 2023",
+            "type": "Journal (JCR Q2, IF: 5.8)"
+        },
+        "links": {
+            "pdf": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false",
+            "code": "https://github.com/MPX0222/BroadLearningSystemTools-2.0",
+            "cite": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false",
+            "doi": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false"
+        },
+        "stats": {
+            "citations": 7,
+            "stars": 27
+        }
+    }
+  ]
+  
+}
