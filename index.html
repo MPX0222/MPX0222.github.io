@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="../js/components/Navbar.js"></script>
     <script src="js/components/PublicationList.js"></script>
+    <script src="js/components/InternshipList.js"></script>
+    <script src="js/components/NewsList.js"></script>
 </head>
 <body>
     <!-- 添加导航栏 -->
@@ -100,7 +102,7 @@
                         </div>
                     </div>
 
-                    <!-- News card (原 Research card) -->
+                    <!-- News card -->
                     <div id="news" class="card">
                         <div class="card-header" style="background: #74B9FF;">
                             <i class="fas fa-newspaper"></i>
@@ -108,69 +110,7 @@
                             <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <div class="card-content">
-                            <div class="news-list">
-                                <div class="news-item">
-                                    <div class="news-date">Apr 2025</div>
-                                    <div class="news-content">
-                                        <p>Long Research Paper: <a href="https://arxiv.org/pdf/2504.08600">
-                                            SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning</a> 
-                                            is available on Arxiv.</p>
-                                    </div>
-                                </div>
-                                <div class="news-item">
-                                    <div class="news-date">Jan 2025</div>
-                                    <div class="news-content">
-                                        <p>Receive Intern Program offer and start internship in International Digital Economy Academy (IDEA), Shenzhen.</p>
-                                    </div>
-                                </div>
-                                <div class="news-item">
-                                    <div class="news-date">Dec 2024</div>
-                                    <div class="news-content">
-                                        <p>Successfully pass the Mid-term Group Project Defense of the HKUST(GZ) Red Bird M.Phil Program.</p>
-                                        <p>Long Research Paper: <a href="https://arxiv.org/pdf/2412.17068">
-                                            A Plug-and-Play Natural Language Rewriter for Natural Language to SQL</a> 
-                                            is available on Arxiv.</p>
-                                    </div>
-                                </div>
-                                <div class="news-item">
-                                    <div class="news-date">Aug 2024</div>
-                                    <div class="news-content">
-                                        <p>The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: 
-                                            <a href="https://arxiv.org/pdf/2408.05109">
-                                            A Survey of NL2SQL with Large Language Models: Where are we, and where are we going</a> 
-                                            is available on Arxiv.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="news-item">
-                                    <div class="news-date">Jan 2024</div>
-                                    <div class="news-content">
-                                        <p>Successfully pass the Postgraduate Qualifying Assessment of the HKUST(GZ) Red Bird M.Phil Program.</p>
-                                    </div>
-                                </div>
-                                <div class="news-item">
-                                    <div class="news-date">Sep 2023</div>
-                                    <div class="news-content">
-                                        <p>Start Research Postgraduate Program in The Hong Kong University of Science and Technology (Guangzhou).</p>
-                                    </div>
-                                </div>
-                                <div class="news-item">
-                                    <div class="news-date">Jul 2023</div>
-                                    <div class="news-content">
-                                        <p>Receive Postgraduate Program offers from The Hong Kong University of Science and Technology (Guangzhou) and The Chinese University of Hong Kong (Shenzhen).</p>
-                                        <p>First Long Research Paper: 
-                                            <a href="https://www.frontiersin.org/articles/10.3389/fnins.2023.1137557/full">
-                                                Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease</a> 
-                                            has been accepted and published by Frontiers in Neuroscience.</p>
-                                    </div>
-                                </div>
-                                <div class="news-item">
-                                    <div class="news-date">May 2023</div>
-                                    <div class="news-content">
-                                        Successfully pass the Undergraduate Thesis Defense in Jinan University.
-                                    </div>
-                                </div>
-                            </div>
+                            <news-list></news-list>
                         </div>
                     </div>
 
@@ -254,52 +194,7 @@
                             <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <div class="card-content">
-                            <div class="internship-list">
-                                <div class="internship-item">
-                                    <div class="company-logo">
-                                        <img src="images/idea_logo.png" alt="Samsung Logo">
-                                    </div>
-                                    <div class="internship-info">
-                                        <h3 class="company-name">International Digital Economy Academy (IDEA)</h3>
-                                        <p class="position">Intern for Large Language Model Engineering, FinAI Lab, FinKG Group</p>
-                                        <div class="internship-meta">
-                                            <p class="internship-period">
-                                                <i class="far fa-calendar-alt"></i>
-                                                <span>2025.01 - 2025.06</span>
-                                            </p>
-                                            <p class="internship-location">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                                <span>Futian Bonded Area, Futian District, Shenzhen, China</span>
-                                            </p>
-                                            <p class="internship-location">
-                                                <span>Job Duties: Development of Financial Large Language Models, Model Post-training, Reinforcement Data Generation</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="internship-item">
-                                    <div class="company-logo">
-                                        <img src="images/jnu-logo.jpg" alt="Samsung Logo">
-                                    </div>
-                                    <div class="internship-info">
-                                        <h3 class="company-name">Jinan University Big Data Center</h3>
-                                        <p class="position">Intern for Data Mining and Analysis</p>
-                                        <div class="internship-meta">
-                                            <p class="internship-period">
-                                                <i class="far fa-calendar-alt"></i>
-                                                <span>2023.01 - 2023.06</span>
-                                            </p>
-                                            <p class="internship-location">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                                <span>Higher Education Mega Center, Panyu District, Guangzhou, China</span>
-                                            </p>
-                                            <p class="internship-location">
-                                                <span>Job Duties: Data Mining, Data Analysis, Data Visualization for News Analysis</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <internship-list></internship-list>
                         </div>
                     </div>
 

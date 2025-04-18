@@ -1,0 +1,20 @@
+{
+  "internships": [
+    {
+      "logo": "images/idea_logo.png",
+      "company": "International Digital Economy Academy (IDEA)",
+      "position": "Intern for Large Language Model Engineering, FinAI Lab, FinKG Group",
+      "period": "2025.01 - 2025.06",
+      "location": "Futian Bonded Area, Futian District, Shenzhen, China",
+      "duties": "Job Duties: Development of Financial Large Language Models, Model Post-training, Reinforcement Data Generation"
+    },
+    {
+      "logo": "images/jnu-logo.jpg",
+      "company": "Jinan University Big Data Center",
+      "position": "Intern for Data Mining and Analysis",
+      "period": "2023.01 - 2023.06",
+      "location": "Higher Education Mega Center, Panyu District, Guangzhou, China",
+      "duties": "Job Duties: Data Mining, Data Analysis, Data Visualization for News Analysis"
+    }
+  ]
+}

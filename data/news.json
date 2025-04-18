@@ -1,0 +1,96 @@
+{
+  "news": [
+    {
+      "date": "Apr 2025",
+      "content": [
+        {
+          "type": "paper",
+          "text": "Long Research Paper: ",
+          "link": "https://arxiv.org/pdf/2504.08600",
+          "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
+          "venue": "is available on Arxiv."
+        }
+      ]
+    },
+    {
+      "date": "Jan 2025",
+      "content": [
+        {
+          "type": "text",
+          "text": "Receive Intern Program offer and start internship in International Digital Economy Academy (IDEA), Shenzhen."
+        }
+      ]
+    },
+    {
+      "date": "Dec 2024",
+      "content": [
+        {
+          "type": "text",
+          "text": "Successfully pass the Mid-term Group Project Defense of the HKUST(GZ) Red Bird M.Phil Program."
+        },
+        {
+          "type": "paper",
+          "text": "Long Research Paper: ",
+          "link": "https://arxiv.org/pdf/2412.17068",
+          "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
+          "venue": "is available on Arxiv."
+        }
+      ]
+    },
+    {
+      "date": "Aug 2024",
+      "content": [
+        {
+          "type": "paper",
+          "text": "The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: ",
+          "link": "https://arxiv.org/pdf/2408.05109",
+          "title": "A Survey of NL2SQL with Large Language Models: Where are we, and where are we going",
+          "venue": "is available on Arxiv."
+        }
+      ]
+    },
+    {
+      "date": "Jan 2024",
+      "content": [
+        {
+          "type": "text",
+          "text": "Successfully pass the Postgraduate Qualifying Assessment of the HKUST(GZ) Red Bird M.Phil Program."
+        }
+      ]
+    },
+    {
+      "date": "Sep 2023",
+      "content": [
+        {
+          "type": "text",
+          "text": "Start Research Postgraduate Program in The Hong Kong University of Science and Technology (Guangzhou)."
+        }
+      ]
+    },
+    {
+      "date": "Jul 2023",
+      "content": [
+        {
+          "type": "text",
+          "text": "Receive Postgraduate Program offers from The Hong Kong University of Science and Technology (Guangzhou) and The Chinese University of Hong Kong (Shenzhen)."
+        },
+        {
+          "type": "paper",
+          "text": "First Long Research Paper: ",
+          "link": "https://www.frontiersin.org/articles/10.3389/fnins.2023.1137557/full",
+          "title": "Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease",
+          "venue": "has been accepted and published by Frontiers in Neuroscience."
+        }
+      ]
+    },
+    {
+      "date": "May 2023",
+      "content": [
+        {
+          "type": "text",
+          "text": "Successfully pass the Undergraduate Thesis Defense in Jinan University."
+        }
+      ]
+    }
+  ]
+}
