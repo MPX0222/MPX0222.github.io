@@ -14,7 +14,7 @@ class Navbar extends HTMLElement {
                 :host {
                     display: block;
                     width: 100%;
-                    font-family: var(--font-family, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+                    font-family: var(--font-family, 'Georama', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
                 }
 
                 .navbar {
