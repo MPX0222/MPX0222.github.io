@@ -1,0 +1,25 @@
+{
+    "projects": [
+        {
+            "name": "Sharp School: A Narrative Storytelling Game with Large Language Models",
+            "description": "Developed by HKUSTGZ RBM 2nd Cohort Group 44-3. An interactive text adventure game based on a time loop mechanism. Players must solve puzzles, engage in conversations, and save their fellow student within a limited time frame.",
+            "github_url": "https://github.com/MPX0222/StorytellingAgent",
+            "tech_tags": [
+                "Human-Computer Interaction",
+                "LLM-based Agent",
+                "Storytelling Game",
+                "Role-Playing"
+            ]
+        },
+        {
+            "name": "BroadLearningSystemTools-2.0",
+            "description": "A Python-based implementation of Broad Learning System (BLS) with visualization tools and model analysis features.",
+            "github_url": "https://github.com/MPX0222/BroadLearningSystemTools-2.0",
+            "tech_tags": [
+                "Python",
+                "Machine Learning",
+                "Scikit-learn"
+            ]
+        }
+    ]
+}

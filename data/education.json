@@ -1,0 +1,20 @@
+{
+    "education": [
+        {
+            "school": "The Hong Kong University of Science and Technology (Guangzhou)",
+            "degree": "Master of Philosophy (M.Phil.) in Data Science and Analytics",
+            "logo": "images/hkust-logo.png",
+            "period": "2023.09 - 2025.08 (Expected)",
+            "location": "Guangzhou Campus, Information Hub (INFH)",
+            "research": "Research Focus: AI4DB, Multi-agent System (MAS), Natural Language to SQL (NL2SQL)"
+        },
+        {
+            "school": "Jinan University",
+            "degree": "Bachelor of Engineering (B.Eng.) in Intelligence Science and Technology",
+            "logo": "images/jnu-logo.jpg",
+            "period": "2019.09 - 2023.06",
+            "location": "South Campus, School of Information Science and Engineering (IST)",
+            "research": "Research Focus: Optimization and Application of the Broad Learning System (BLS)"
+        }
+    ]
+}

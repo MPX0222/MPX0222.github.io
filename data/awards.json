@@ -1,0 +1,59 @@
+{
+    "awards": [
+        {
+            "year": 2024,
+            "items": [
+                {
+                    "name": "Red Bird Postgraduate Scholarship",
+                    "type": "scholarship",
+                    "organization": "The Hong Kong University of Science and Technology (Guangzhou)"
+                }
+            ]
+        },
+        {
+            "year": 2023,
+            "items": [
+                {
+                    "name": "Red Bird Postgraduate Scholarship",
+                    "type": "scholarship",
+                    "organization": "The Hong Kong University of Science and Technology (Guangzhou)"
+                },
+                {
+                    "name": "Distinguished Graduate",
+                    "type": "honor",
+                    "organization": "College of Information Science and Technology, Jinan University"
+                },
+                {
+                    "name": "Silver Award in \"Medicine +X\" Virtual Simliation Competition",
+                    "type": "competition",
+                    "organization": "Jinan University & Guangzhou Medical University"
+                }
+            ]
+        },
+        {
+            "year": 2022,
+            "items": [
+                {
+                    "name": "Second Class Scholarship for Excellent Student",
+                    "type": "scholarship",
+                    "organization": "Jinan University"
+                }
+            ]
+        },
+        {
+            "year": 2021,
+            "items": [
+                {
+                    "name": "Third Class Scholarship for Excellent Student",
+                    "type": "scholarship",
+                    "organization": "Jinan University"
+                },
+                {
+                    "name": "Honorable Mention for Mathematical Contest In Modeling",
+                    "type": "competition",
+                    "organization": "Jinan University"
+                }
+            ]
+        }
+    ]
+}

@@ -15,6 +15,10 @@
     <script src="js/components/PublicationList.js"></script>
     <script src="js/components/InternshipList.js"></script>
     <script src="js/components/NewsList.js"></script>
+    <script src="js/components/EducationList.js"></script>
+    <script src="js/components/AwardList.js"></script>
+    <script src="js/components/ProjectList.js"></script>
+    <script src="js/components/ServiceList.js"></script>
 </head>
 <body>
     <!-- 添加导航栏 -->
@@ -30,7 +34,7 @@
                         <img src="images/avatar.jpg" alt="Profile Photo">
                     </div>
                     <h1 class="profile-name">Peixian MA</h1>
-                    <p class="profile-title">M.Phil. Student, HKUST(GZ)<br>Intern, IDEA</p>
+                    <p class="profile-title">M.Phil. Student, HKUST(GZ)<br>Intern, IDEA Research</p>
                     <p class="profile-location"><i class="fas fa-envelope"></i> mpx0222@qq.com</p>
                     <p class="profile-location">
                         <i class="fas fa-map-marker-alt"></i>
@@ -122,55 +126,7 @@
                             <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <div class="card-content">
-                            <div class="education-list">
-                                <!-- Education Item -->
-                                <div class="education-item">
-                                    <div class="school-logo">
-                                        <img src="images/hkust-logo.png" alt="HKUST Logo">
-                                    </div>
-                                    <div class="education-info">
-                                        <h3 class="school-name">The Hong Kong University of Science and Technology (Guangzhou)</h3>
-                                        <p class="degree">Master of Philosophy (M.Phil.) in Data Science and Analytics</p>
-                                        <div class="education-meta">
-                                            <p class="education-period">
-                                                <i class="far fa-calendar-alt"></i>
-                                                <span>2023.09 - 2025.08 (Expected)</span>
-                                            </p>
-                                            <p class="education-period">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                                <span>Guangzhou Campus, Information Hub (INFH)</span>
-                                            </p>
-                                            <p class="education-period">
-                                                <span>Research Focus: AI4DB, Multi-agent System (MAS), Natural Language to SQL (NL2SQL)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Another Education Item -->
-                                <div class="education-item">
-                                    <div class="school-logo">
-                                        <img src="images/jnu-logo.jpg" alt="JNU Logo">
-                                    </div>
-                                    <div class="education-info">
-                                        <p class="school-name">Jinan University</p>
-                                        <h3 class="degree">Bachelor of Engineering (B.Eng.) in Intelligence Science and Technology</h3>
-                                        <div class="education-meta">
-                                            <p class="education-period">
-                                                <i class="far fa-calendar-alt"></i>
-                                                <span>2019.09 - 2023.06</span>
-                                            </p>
-                                            <p class="education-period">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                                <span>South Campus, School of Information Science and Engineering (IST)</span>
-                                            </p>
-                                            <p class="education-period">
-                                                <span>Research Focus: Optimization and Application of the Broad Learning System (BLS)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <education-list></education-list>
                         </div>
                     </div>
 
@@ -206,85 +162,7 @@
                             <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <div class="card-content">
-                            <div class="awards-list">
-                                <div class="award-year-group">
-                                    <div class="year-label">2024</div>
-                                    <div class="year-awards">
-                                        <div class="award-item">
-                                            <div class="award-info">
-                                                <div class="award-header">
-                                                    <h4 class="award-name">Red Bird Postgraduate Scholarship</h4>
-                                                    <span class="award-tag scholarship">Scholarship</span>
-                                                </div>
-                                                <p class="award-org">The Hong Kong University of Science and Technology (Guangzhou)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="award-year-group">
-                                    <div class="year-label">2023</div>
-                                    <div class="year-awards">
-                                        <div class="award-item">
-                                            <div class="award-info">
-                                                <div class="award-header">
-                                                    <h4 class="award-name">Red Bird Postgraduate Scholarship</h4>
-                                                    <span class="award-tag scholarship">Scholarship</span>
-                                                </div>
-                                                <p class="award-org">The Hong Kong University of Science and Technology (Guangzhou)</p>
-                                            </div>
-                                            <div class="award-info">
-                                                <div class="award-header">
-                                                    <h4 class="award-name">Distinguished Graduate</h4>
-                                                    <span class="award-tag honor">Honor</span>
-                                                </div>
-                                                <p class="award-org">College of Information Science and Technology, Jinan University</p>
-                                            </div>
-                                            <div class="award-info">
-                                                <div class="award-header">
-                                                    <h4 class="award-name">Silver Award in "Medicine +X" Virtual Simliation Competition</h4>
-                                                    <span class="award-tag competition">Competition</span>
-                                                </div>
-                                                <p class="award-org">Jinan University & Guangzhou Medical University</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="award-year-group">
-                                    <div class="year-label">2022</div>
-                                    <div class="year-awards">
-                                        <div class="award-item">
-                                            <div class="award-info">
-                                                <div class="award-header">
-                                                    <h4 class="award-name">Second Class Scholarship for Excellent Student</h4>
-                                                    <span class="award-tag scholarship">Scholarship</span>
-                                                </div>
-                                                <p class="award-org">Jinan University</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="award-year-group">
-                                    <div class="year-label">2021</div>
-                                    <div class="year-awards">
-                                        <div class="award-item">
-                                            <div class="award-info">
-                                                <div class="award-header">
-                                                    <h4 class="award-name">Third Class Scholarship for Excellent Student</h4>
-                                                    <span class="award-tag scholarship">Scholarship</span>
-                                                </div>
-                                                <p class="award-org">Jinan University</p>
-                                            </div>
-                                            <div class="award-info">
-                                                <div class="award-header">
-                                                    <h4 class="award-name">Honorable Mention for Mathematical Contest In Modeling</h4>
-                                                    <span class="award-tag competition">Competition</span>
-                                                </div>
-                                                <p class="award-org">Jinan University</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <award-list></award-list>
                         </div>
                     </div>
                     
@@ -296,65 +174,7 @@
                             <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <div class="card-content">
-                            <div class="projects-list">
-                                <!-- <div class="project-item">
-                                    <div class="project-header">
-                                        <h4 class="project-name">Friday Agent</h4>
-                                        <div class="project-links">
-                                            <a href="" class="project-link">
-                                                <i class="fab fa-github"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <p class="project-description">
-                                        A Plug-and-Play Customized AI Agent Assistant for the Full Scene of Personal Life
-                                    </p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Large Language Models</span>
-                                        <span class="tech-tag">AI Agent</span>
-                                        <span class="tech-tag">Personal Life</span>
-                                    </div>
-                                </div> -->
-
-                                <div class="project-item">
-                                    <div class="project-header">
-                                        <h4 class="project-name">Sharp School: A Narrative Storytelling Game with Large Language Models</h4>
-                                        <div class="project-links">
-                                            <a href="https://github.com/MPX0222/BroadLearningSystemTools-2.0" class="project-link">
-                                                <i class="fab fa-github"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <p class="project-description">
-                                        An interactive text adventure game based on a time loop mechanism. Players must solve puzzles, engage in conversations, and save their fellow student within a limited time frame.
-                                    </p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Human-Computer Interaction</span>
-                                        <span class="tech-tag">LLM-based Agent</span>
-                                        <span class="tech-tag">Storytelling Game</span>
-                                        <span class="tech-tag">Role-Playing</span>
-                                    </div>
-                                </div>
-
-                                <div class="project-item">
-                                    <div class="project-header">
-                                        <h4 class="project-name">BroadLearningSystemTools-2.0</h4>
-                                        <div class="project-links">
-                                            <a href="https://github.com/MPX0222/BroadLearningSystemTools-2.0" class="project-link">
-                                                <i class="fab fa-github"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <p class="project-description">
-                                        A Python-based implementation of Broad Learning System (BLS) with visualization tools and model analysis features.
-                                    </p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Python</span>
-                                        <span class="tech-tag">Machine Learning</span>
-                                        <span class="tech-tag">Scikit-learn</span>
-                                    </div>
-                                </div>
-                            </div>
+                            <project-list></project-list>
                         </div>
                     </div>
 
@@ -366,17 +186,7 @@
                             <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <div class="card-content">
-                            <div class="services-list">
-                                <div class="service-category">
-                                    <h3 class="category-title">Conference</h3>
-                                    <ul class="service-items">
-                                        <li>
-                                            <span class="service-tag reviewer">Volunteer</span>
-                                            Guangzhou, International Conference on Very Large Databases (VLDB 2024)
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <service-list></service-list>
                         </div>
                     </div>
 
