@@ -488,22 +488,39 @@ h1, h2, h3, p, a {
 }
 
 .publication-thumbnail {
-    flex: 0 0 260px;
-    height: 160px;
+    flex: 0 0 300px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.75rem;
     background: #fff;
-    border-radius: 8px;
+    border-radius: 0;
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
 }
 
 .publication-thumbnail img {
-    max-width: 95%;
-    max-height: 95%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    display: block;
+    object-position: center;  /* 确保图片居中显示 */
+    transition: transform 0.3s ease;  /* 添加平滑过渡效果 */
+}
+
+/* 添加悬停效果，让图片可以稍微放大查看细节
+.publication-thumbnail:hover img {
+    transform: scale(1.05);
+} */
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .publication-thumbnail {
+        width: 100%;
+        height: 140px;
+    }
 }
 
 .publication-info {
@@ -1947,4 +1964,4 @@ body.modal-open {
 
 .modal-content a:hover {
     color: #0984e3;
-} 
+}
