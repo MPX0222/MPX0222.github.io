@@ -105,27 +105,22 @@ class Navbar extends HTMLElement {
                 }
                 .nav-contact {
                     padding: 0.5rem 1rem;
-                    background: var(--primary-color,rgb(92, 231, 212));
+                    background: var(--primary-color, #6c5ce7);
                     color: white !important;
                     border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
                 }
                 .nav-contact svg {
                     width: 16px;
                     height: 16px;
-                    margin-right: 6px;
-                    vertical-align: middle;
                     fill: currentColor;
                 }
                 
-                .nav-contact {
-                    padding: 0.5rem 1rem;
-                    background: var(--primary-color,rgb(92, 231, 212));
-                    color: white !important;
-                    border-radius: 8px;
-                }
-
                 .nav-contact:hover {
                     opacity: 0.9;
+                    transform: translateY(-1px);
                 }
 
                 @media (max-width: 768px) {
@@ -156,20 +151,17 @@ class Navbar extends HTMLElement {
                 <div class="nav-content">
                     <div class="nav-left">
                         <a href="../index.html" class="nav-brand">Academic Profile</a>
-                        <span class="version">Version 3.2</span>
+                        <span class="version">Version 3.3</span>
                     </div>
                     <div class="nav-right">
-                        <a href="#about">About</a>
+                        <a href="#profile">Profile</a>
                         <a href="#news">News</a>
-                        <a href="#education">Education</a>
                         <a href="#publications">Publications</a>
-                        <a href="#internship">Internship</a>
                         <a href="#awards">Awards</a>
                         <a href="#projects">Projects</a>
-                        <a href="#services">Services</a>
                         <a href="../index.html" id="home-link">Home</a>
                         <a href="../pages/records.html" id="records-link" class="nav-records">Records</a>
-                        <a href="https://mpx0222.github.io/" class="nav-contact">
+                        <a href="mailto:mpx0222@qq.com" class="nav-contact">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                             </svg>

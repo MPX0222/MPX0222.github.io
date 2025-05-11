@@ -81,28 +81,50 @@
             <!-- Right content area -->
             <div class="content">
                 <div class="card-stack">
-                    <!-- About Me card -->
-                    <div id="about" class="card">
-                        <div class="card-header" style="background: #FF9F43;">
-                            <i class="fas fa-user"></i>
-                            <h2>About Me</h2>
-                            <i class="fas fa-ellipsis-h"></i>
+                    <!-- Profile card with tabs -->
+                    <div id="profile" class="card">
+                        <div class="card-header with-tabs" style="background: #FF9F43;">
+                            <div class="header-content">
+                                <div class="header-left">
+                                    <i class="fas fa-user"></i>
+                                    <h2>Profile</h2>
+                                </div>
+                                <div class="tabs">
+                                    <button class="tab-button active" data-tab="about">About Me</button>
+                                    <button class="tab-button" data-tab="education">Education</button>
+                                    <button class="tab-button" data-tab="internship">Internship</button>
+                                    <button class="tab-button" data-tab="service">Service</button>
+                                </div>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
                         </div>
                         <div class="card-content">
-                            <p> Hello! I am a M.Phil. student of <a href="https://www.hkust-gz.edu.cn/zh/">The Hong Kong University of Science and Technology Guangzhou (HKUSTGZ)</a>. 
-                                Now I am studying in <a href="https://www.hkust-gz.edu.cn/zh/academic/academic-programmes/master-of-philosophy-in-data-science-and-analytics-dsa">Data Science and Analytics (DSA)</a> 
-                                under the supervision of <a href="https://luoyuyu.vip">Prof. Yuyu Luo</a> and <a href="https://nantang.github.io/">Prof. Nan Tang</a>, 
-                                at the <a href="https://www.hkust-gz.edu.cn/zh/academics/?variant=zh-cn">Information Hub (INFH)</a>.
-                                <br><br>
-                                I have received the B.Eng. degree in Intelligence Science and Technology from <a href="">Jinan University (JNU)</a> in 2023. 
-                                During my undergraduate live, I started my research by working as the undergraduate research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University. 
-                                My undergraduate research direction is the optimization and application of the Broad Learning System (BLS). 
-                                Before my graduation, I received the offer from HKUST(GZ) and successflly enrolled in it in the Fall 2023.
-                                <br><br>
-                                Currently, I participate in <a href="https://github.com/HKUSTDial">The Hong Kong University of Science and Technology (Guangzhou) Data Intelligence and Analytics Lab @HKUST(GZ)-DIAL 香港科技大学（广州）-呆鹅实验室</a> 
-                                and work as an intern in the <a href="https://www.idea.edu.cn/">International Digital Economy Academy, Financial Artificial Intelligence Laboratory @IDEA-FinAI 粤港澳大湾区数字经济研究院-AI金融与深度学习研究中心</a>. 
-                                My research interest comprises Database Management (DBMS), Muiti-agent System (MAS), Natural Language to SQL (NL2SQL) and Open-Source BLS. </p>
-
+                            <div class="tab-content">
+                                <div id="about-tab" class="tab-pane active">
+                                    <p> Hello! I am a M.Phil. student of <a href="https://www.hkust-gz.edu.cn/zh/">The Hong Kong University of Science and Technology Guangzhou (HKUSTGZ)</a>. 
+                                        Now I am studying in <a href="https://www.hkust-gz.edu.cn/zh/academic/academic-programmes/master-of-philosophy-in-data-science-and-analytics-dsa">Data Science and Analytics (DSA)</a> 
+                                        under the supervision of <a href="https://luoyuyu.vip">Prof. Yuyu Luo</a> and <a href="https://nantang.github.io/">Prof. Nan Tang</a>, 
+                                        at the <a href="https://www.hkust-gz.edu.cn/zh/academics/?variant=zh-cn">Information Hub (INFH)</a>.
+                                        <br><br>
+                                        I have received the B.Eng. degree in Intelligence Science and Technology from <a href="">Jinan University (JNU)</a> in 2023. 
+                                        During my undergraduate live, I started my research by working as the undergraduate research assistant in the Data-driven Intelligent Systems Laboratory of Jinan University. 
+                                        My undergraduate research direction is the optimization and application of the Broad Learning System (BLS). 
+                                        Before my graduation, I received the offer from HKUST(GZ) and successflly enrolled in it in the Fall 2023.
+                                        <br><br>
+                                        Currently, I participate in <a href="https://github.com/HKUSTDial">The Hong Kong University of Science and Technology (Guangzhou) Data Intelligence and Analytics Lab @HKUST(GZ)-DIAL 香港科技大学（广州）-呆鹅实验室</a> 
+                                        and work as an intern in the <a href="https://www.idea.edu.cn/">International Digital Economy Academy, Financial Artificial Intelligence Laboratory @IDEA-FinAI 粤港澳大湾区数字经济研究院-AI金融与深度学习研究中心</a>. 
+                                        My research interest comprises Database Management (DBMS), Muiti-agent System (MAS), Natural Language to SQL (NL2SQL) and Open-Source BLS. </p>
+                                </div>
+                                <div id="education-tab" class="tab-pane">
+                                    <education-list></education-list>
+                                </div>
+                                <div id="internship-tab" class="tab-pane">
+                                    <internship-list></internship-list>
+                                </div>
+                                <div id="service-tab" class="tab-pane">
+                                    <service-list></service-list>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -118,18 +140,6 @@
                         </div>
                     </div>
 
-                    <!-- Education card -->
-                    <div id="education" class="card">
-                        <div class="card-header" style="background: #00B894;">
-                            <i class="fas fa-graduation-cap"></i>
-                            <h2>Education</h2>
-                            <i class="fas fa-ellipsis-h"></i>
-                        </div>
-                        <div class="card-content">
-                            <education-list></education-list>
-                        </div>
-                    </div>
-
                     <!-- Publications card -->
                     <div id="publications" class="card">
                         <div class="card-header" style="background: #FF6B6B;">
@@ -142,18 +152,6 @@
                         </div>
                     </div>
                     
-                    <!-- Internship card -->
-                    <div id="internship" class="card">
-                        <div class="card-header" style="background: #A55EEA;">
-                            <i class="fas fa-briefcase"></i>
-                            <h2>Internship</h2>
-                            <i class="fas fa-ellipsis-h"></i>
-                        </div>
-                        <div class="card-content">
-                            <internship-list></internship-list>
-                        </div>
-                    </div>
-
                     <!-- Awards card -->
                     <div id="awards" class="card">
                         <div class="card-header" style="background: #2ED573;">
@@ -177,153 +175,6 @@
                             <project-list></project-list>
                         </div>
                     </div>
-
-                    <!-- Services card -->
-                    <div id="services" class="card">
-                        <div class="card-header" style="background: #4834D4;">
-                            <i class="fas fa-hands-helping"></i>
-                            <h2>Services</h2>
-                            <i class="fas fa-ellipsis-h"></i>
-                        </div>
-                        <div class="card-content">
-                            <service-list></service-list>
-                        </div>
-                    </div>
-
-                    <!-- Football Career card -->
-                    <!-- <div class="card">
-                        <div class="card-header" style="background: #E1BEE7;">
-                            <i class="fas fa-futbol"></i>
-                            <h2>Football Career</h2>
-                            <i class="fas fa-ellipsis-h"></i>
-                        </div>
-                        <div class="card-content">
-                            <div class="football-stats">
-                                <div class="career-overview">
-                                    <div class="stat-box">
-                                        <span class="stat-value">53</span>
-                                        <span class="stat-label">Appearances</span>
-                                    </div>
-                                    <div class="stat-box">
-                                        <span class="stat-value">7</span>
-                                        <span class="stat-label">Goals</span>
-                                    </div>
-                                    <div class="stat-box">
-                                        <span class="stat-value">10</span>
-                                        <span class="stat-label">Assists</span>
-                                    </div>
-                                    <div class="stat-box">
-                                        <span class="stat-value">32</span>
-                                        <span class="stat-label">Wins</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="team-history">
-                                    <div class="team-season">
-                                        <div class="season-header">
-                                            <span class="season-year">2024-25</span>
-                                            <span class="team-name">(Alumni Team) College of Information Science of Technology, JiNan University</span>
-                                            <span class="competition-tag">College League</span>
-                                        </div>
-                                        <div class="season-stats">
-                                            <div class="stat-item">
-                                                <i class="fas fa-running"></i>
-                                                <span>1 Apps</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <i class="fas fa-futbol"></i>
-                                                <span>0 Goals</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <i class="fas fa-hands-helping"></i>
-                                                <span>2 Assists</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <i class="fas fa-trophy"></i>
-                                                <span>0W 1D 0L</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="team-season">
-                                        <div class="season-header">
-                                            <span class="season-year">2023-25</span>
-                                            <span class="team-name">The Hong Kong University of Science and Technology (Guangzhou)</span>
-                                            <span class="competition-tag">University League</span>
-                                        </div>
-                                        <div class="season-stats">
-                                            <div class="stat-item">
-                                                <i class="fas fa-running"></i>
-                                                <span>11 Apps</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <i class="fas fa-futbol"></i>
-                                                <span>1 Goals</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <i class="fas fa-hands-helping"></i>
-                                                <span>3 Assists</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <i class="fas fa-trophy"></i>
-                                                <span>8W 1D 2L</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="team-season">
-                                        <div class="season-header">
-                                            <span class="season-year">2019-23</span>
-                                            <span class="team-name">(Campus Team) College of Information Science of Technology, JiNan University</span>
-                                            <span class="competition-tag">College League</span>
-                                        </div>
-                                        <div class="season-stats">
-                                            <div class="stat-item">
-                                                <i class="fas fa-running"></i>
-                                                <span>33 Apps</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <i class="fas fa-futbol"></i>
-                                                <span>6 Goals</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <i class="fas fa-hands-helping"></i>
-                                                <span>4 Assists</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <i class="fas fa-trophy"></i>
-                                                <span>20W 3D 10L</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="team-season">
-                                        <div class="season-header">
-                                            <span class="season-year">2016-19</span>
-                                            <span class="team-name">Happy My Lover, ZhongYuan High School</span>
-                                            <span class="competition-tag">Campus League</span>
-                                        </div>
-                                        <div class="season-stats">
-                                            <div class="stat-item">
-                                                <i class="fas fa-running"></i>
-                                                <span>8 Apps</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <i class="fas fa-futbol"></i>
-                                                <span>0 Goals</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <i class="fas fa-hands-helping"></i>
-                                                <span>1 Assists</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <i class="fas fa-trophy"></i>
-                                                <span>4W 0D 4L</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -344,13 +195,11 @@
     </footer>
 
     <div class="section-nav">
-        <div class="nav-dot" data-section="about" data-tooltip="About"></div>
+        <div class="nav-dot" data-section="profile" data-tooltip="Profile"></div>
         <div class="nav-dot" data-section="news" data-tooltip="News"></div>
-        <div class="nav-dot" data-section="education" data-tooltip="Education"></div>
         <div class="nav-dot" data-section="publications" data-tooltip="Publications"></div>
-        <div class="nav-dot" data-section="internship" data-tooltip="Internship"></div>
+        <div class="nav-dot" data-section="awards" data-tooltip="Awards"></div>
         <div class="nav-dot" data-section="projects" data-tooltip="Projects"></div>
-        <div class="nav-dot" data-section="services" data-tooltip="Services"></div>
     </div>
 
     <!-- Modal structure -->
@@ -362,6 +211,35 @@
     </div>
 
     <script>
+    // Tab functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        function switchTab(tabId) {
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+                if(button.getAttribute('data-tab') === tabId) {
+                    button.classList.add('active');
+                }
+            });
+
+            tabPanes.forEach(pane => {
+                pane.classList.remove('active');
+                if(pane.id === tabId + '-tab') {
+                    pane.classList.add('active');
+                }
+            });
+        }
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                switchTab(tabId);
+            });
+        });
+    });
+
     // 获取所有部分和导航点
     const sections = document.querySelectorAll('.card');
     const navDots = document.querySelectorAll('.nav-dot');

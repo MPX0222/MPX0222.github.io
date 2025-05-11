@@ -6,7 +6,7 @@
       "year": 2025,
       "authors": [
         "Peixian Ma",
-        "Xialie Zhuang", 
+        "Xiaile Zhuang", 
         "Chengjin Xu",
         "Xuhui Jiang",
         "Ran Chen",
@@ -16,101 +16,112 @@
         "name": "Arxiv",
         "type": "Preprint (Under Review)"
       },
+      "bibtex": "@article{ma2024sqlr1,\n  title={SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning},\n  author={Ma, Peixian and Zhuang, Xiaile and Xu, Chengjin and Jiang, Xuhui and Chen, Ran and Guo, Jian},\n  journal={arXiv preprint arXiv:2504.08600},\n  year={2024}\n}",
       "links": {
         "pdf": "https://arxiv.org/pdf/2504.08600",
-        "code": "",
-        "cite": "https://arxiv.org/pdf/2504.08600",
-        "doi": "https://arxiv.org/pdf/2504.08600"
+        "code": "https://github.com/HKUST-DIAL/SQL-R1",
+        "cite": "https://arxiv.org/abs/2504.08600",
+        "github": {
+          "owner": "",
+          "repo": ""
+        }
       },
       "stats": {
-        "citations": 3,
-        "stars": 0
+        "citations": 4
       }
     },
     {
-    "thumbnail": "images/rewriter.png",
-    "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
-    "year": 2024,
-    "authors": [
+      "thumbnail": "images/rewriter.png",
+      "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
+      "year": 2024,
+      "authors": [
         "Peixian Ma",
         "Boyan Li", 
         "Runzhi Jiang",
         "Ju Fan",
         "Nan Tang",
         "Yuyu Luo"
-    ],
-    "venue": {
+      ],
+      "venue": {
         "name": "Arxiv",
         "type": "Preprint (Under Review)"
-    },
-    "links": {
+      },
+      "bibtex": "@article{ma2024rewriter,\n  title={A Plug-and-Play Natural Language Rewriter for Natural Language to SQL},\n  author={Ma, Peixian and Li, Boyan and Jiang, Runzhi and Fan, Ju and Tang, Nan and Luo, Yuyu},\n  journal={arXiv preprint arXiv:2412.17068},\n  year={2024}\n}",
+      "links": {
         "pdf": "https://arxiv.org/pdf/2412.17068",
-        "code": "",
-        "cite": "https://arxiv.org/pdf/2412.17068",
-        "doi": "https://arxiv.org/pdf/2412.17068"
-    },
-    "stats": {
-        "citations": 2,
-        "stars": 0
-    }
+        "code": "https://github.com/HKUST-DIAL/NL2SQL-Rewriter",
+        "cite": "https://arxiv.org/abs/2412.17068",
+        "github": {
+          "owner": "",
+          "repo": ""
+        }
+      },
+      "stats": {
+        "citations": 3
+      }
     },
     {
-        "thumbnail": "images/survey.png",
-        "title": "A Survey of NL2SQL with Large Language Models: Where are we, and where are we going?",
-        "year": 2024,
-        "authors": [
-            "Xinyu Liu",
-            "Shuyu Shen", 
-            "Boyan Li",
-            "Peixian Ma",
-            "Runzhi Jiang", 
-            "Yuxin Zhang",
-            "Ju Fan",
-            "Guoliang Li",
-            "Nan Tang",
-            "Yuyu Luo"
-        ],
-        "venue": {
-            "name": "Arxiv",
-            "type": "Preprint (Under Review)"
-        },
-        "links": {
-            "pdf": "https://arxiv.org/pdf/2408.05109",
-            "code": "https://github.com/HKUSTDial/NL2SQL_Handbook",
-            "cite": "https://arxiv.org/pdf/2408.05109",
-            "doi": "https://arxiv.org/pdf/2408.05109"
-        },
-        "stats": {
-            "citations": 48,
-            "stars": 600
+      "thumbnail": "images/survey.png",
+      "title": "A Survey of NL2SQL with Large Language Models: Where are we, and where are we going?",
+      "year": 2024,
+      "authors": [
+        "Xinyu Liu",
+        "Shuyu Shen", 
+        "Boyan Li",
+        "Peixian Ma",
+        "Runzhi Jiang", 
+        "Yuxin Zhang",
+        "Ju Fan",
+        "Guoliang Li",
+        "Nan Tang",
+        "Yuyu Luo"
+      ],
+      "venue": {
+        "name": "Arxiv",
+        "type": "Preprint (Under Review)"
+      },
+      "bibtex": "@article{liu2024survey,\n  title={A Survey of NL2SQL with Large Language Models: Where are we, and where are we going?},\n  author={Liu, Xinyu and Shen, Shuyu and Li, Boyan and Ma, Peixian and Jiang, Runzhi and Zhang, Yuxin and Fan, Ju and Li, Guoliang and Tang, Nan and Luo, Yuyu},\n  journal={arXiv preprint arXiv:2408.05109},\n  year={2024}\n}",
+      "links": {
+        "pdf": "https://arxiv.org/pdf/2408.05109",
+        "code": "https://github.com/HKUST-DIAL/NL2SQL-Survey",
+        "cite": "https://arxiv.org/abs/2408.05109",
+        "github": {
+          "owner": "HKUSTDial",
+          "repo": "NL2SQL_Handbook"
         }
+      },
+      "stats": {
+        "citations": 48
+      }
     },
     {
-        "thumbnail": "images/bls.jpg",
-        "title": "Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease",
-        "year": 2023,
-        "authors": [
-            "Peixian Ma",
-            "Jing Wang", 
-            "Zhiguo Zhou",
-            "C. L. Philip Chen",
-            "Junwei Duan"
-        ],
-        "venue": {
-            "name": "Frontiers in Neuroscience 2023",
-            "type": "Journal (JCR Q2, IF: 5.8)"
-        },
-        "links": {
-            "pdf": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false",
-            "code": "https://github.com/MPX0222/BroadLearningSystemTools-2.0",
-            "cite": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false",
-            "doi": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1137557/pdf?isPublishedV2=false"
-        },
-        "stats": {
-            "citations": 7,
-            "stars": 27
+      "thumbnail": "images/bls.jpg",
+      "title": "Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease",
+      "year": 2023,
+      "authors": [
+        "Peixian Ma",
+        "Jing Wang", 
+        "Zhiguo Zhou",
+        "C. L. Philip Chen",
+        "Junwei Duan"
+      ],
+      "venue": {
+        "name": "Frontiers in Neuroscience 2023",
+        "type": "Journal (JCR Q2, IF: 5.8)"
+      },
+      "bibtex": "@article{ma2023development,\n  title={Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease},\n  author={Ma, Peixian and Wang, Jing and Zhou, Zhiguo and Chen, CL Philip and Alzheimer's Disease Neuroimaging Initiative and Duan, Junwei},\n  journal={Frontiers in Neuroscience},\n  volume={17},\n  pages={1137557},\n  year={2023},\n  publisher={Frontiers Media SA}\n}",
+      "links": {
+        "pdf": "https://www.frontiersin.org/articles/10.3389/fnins.2023.1137557/pdf",
+        "code": "https://github.com/MPX0222/AD-BLS",
+        "cite": "https://doi.org/10.3389/fnins.2023.1137557",
+        "github": {
+          "owner": "MPX0222",
+          "repo": "BroadLearningSystem-APIs-2.0"
         }
+      },
+      "stats": {
+        "citations": 7
+      }
     }
   ]
-  
 }
