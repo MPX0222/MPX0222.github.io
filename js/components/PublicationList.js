@@ -71,30 +71,30 @@ class PublicationList extends HTMLElement {
         ${publications.map(pub => {
           const venueInfo = this.getVenueType(pub.venue.name);
           return `
-            <div class="publication-item">
-              <div class="publication-thumbnail">
+      <div class="publication-item">
+        <div class="publication-thumbnail">
                 <img src="${pub.thumbnail}" alt="${pub.title}">
-              </div>
-              <div class="publication-info">
-                <h3 class="publication-title">
-                  ${pub.title}
-                  <span class="publication-year">(${pub.year})</span>
-                </h3>
-                <p class="publication-authors">
+        </div>
+        <div class="publication-info">
+          <h3 class="publication-title">
+            ${pub.title}
+            <span class="publication-year">(${pub.year})</span>
+          </h3>
+          <p class="publication-authors">
                   ${pub.authors.map(author => 
                     author === "Peixian Ma" ? 
                     `<strong class="author">${author}</strong>` : 
                     author
                   ).join(', ')}
-                </p>
+          </p>
                 <div class="publication-venue">
                   <span class="venue-tag ${venueInfo.type} ${venueInfo.subtype}">
                     ${pub.venue.name}
                   </span>
                   <span class="status-tag">${pub.venue.type}</span>
                 </div>
-                <div class="publication-footer">
-                  <div class="publication-links">
+          <div class="publication-footer">
+            <div class="publication-links">
                     ${pub.links.pdf ? `
                       <a href="${pub.links.pdf}" class="pub-link" target="_blank" rel="noopener">
                         <i class="fas fa-file-pdf"></i>
@@ -111,11 +111,11 @@ class PublicationList extends HTMLElement {
                       <i class="fas fa-quote-right"></i>
                       <span>Cite</span>
                     </button>
-                  </div>
-                  <div class="publication-stats">
+            </div>
+            <div class="publication-stats">
                     <div class="stat-item">
-                      <i class="fas fa-quote-left"></i>
-                      <span>${pub.stats.citations} citations</span>
+                <i class="fas fa-quote-left"></i>
+                <span>${pub.stats.citations} citations</span>
                     </div>
                     ${pub.links.github && pub.links.github.owner && pub.links.github.repo ? `
                       <div class="stat-item github-stats">
@@ -123,10 +123,10 @@ class PublicationList extends HTMLElement {
                              alt="GitHub stars">
                       </div>
                     ` : ''}
-                  </div>
-                </div>
-              </div>
             </div>
+          </div>
+        </div>
+      </div>
           `;
         }).join('')}
       </div>

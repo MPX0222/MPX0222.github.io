@@ -15,17 +15,23 @@ class Navbar extends HTMLElement {
                     display: block;
                     width: 100%;
                     font-family: var(--font-family, 'Georama', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+                    --primary-color: #1e3799;
+                    --primary-light: #4a69bd;
+                    --primary-dark: #0c2461;
+                    --text-primary: #2f3542;
+                    --text-secondary: #57606f;
                 }
 
                 .navbar {
-                    background: rgba(255, 255, 255, 0.8);
+                    background: rgba(255, 255, 255, 0.95);
                     backdrop-filter: blur(10px);
-                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    border-bottom: 1px solid rgba(30, 55, 153, 0.08);
                     position: fixed;
                     top: 0;
                     left: 0;
                     right: 0;
                     z-index: 1000;
+                    box-shadow: 0 2px 10px rgba(30, 55, 153, 0.05);
                     opacity: 0;
                     animation: fadeInDown 0.3s ease-out forwards;
                 }
@@ -46,72 +52,100 @@ class Navbar extends HTMLElement {
                 }
 
                 .nav-brand {
-                    font-weight: 600;
-                    font-size: 1.25rem;
-                    color: var(--text-color, #2d3436);
+                    font-weight: 700;
+                    font-size: 1.3rem;
+                    color: var(--primary-color);
                     text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    transition: all 0.3s ease;
+                }
+
+                .nav-brand:hover {
+                    transform: translateY(-1px);
+                    opacity: 0.85;
                 }
 
                 .version {
-                    font-size: 0.8rem;
-                    font-weight: 400;
-                    color: #636e72;
-                    margin-bottom: -0.3rem;
+                    font-size: 0.75rem;
+                    font-weight: 500;
+                    color: var(--primary-light);
+                    padding: 0.15rem 0.5rem;
+                    background: rgba(74, 105, 189, 0.1);
+                    border-radius: 4px;
                     margin-left: 0.5rem;
                 }
 
                 .nav-right {
                     display: flex;
-                    gap: 2rem;
+                    gap: 1.5rem;
                     align-items: center;
                 }
 
-                /* 创建一个特殊的按钮组，减小这三个按钮之间的间距 */
-                .nav-right a#home-link,
-                .nav-right a#records-link,
-                .nav-right a.nav-contact {
-                    margin-left: -0.5rem;
+                .nav-section {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
                 }
+
+                .nav-section:not(:last-child) {
+                    padding-right: 1.5rem;
+                    border-right: 1px solid rgba(74, 105, 189, 0.15);
+                }
+
                 .nav-right a {
                     text-decoration: none;
-                    color: var(--text-color, #2d3436);
+                    color: var(--text-secondary);
                     font-weight: 500;
                     font-size: 0.95rem;
-                    transition: color 0.3s ease;
-                }
-                .nav-right a:hover {
-                    color: var(--primary-color, #6c5ce7);
-                }
-                /* 为 Home 和 Records 按钮添加特殊样式 */
-                .nav-right a#home-link,
-                .nav-right a#records-link {
-                    background-color: rgba(108, 92, 231, 0.1);
-                    padding: 0.5rem 1rem;
+                    padding: 0.5rem 0.8rem;
                     border-radius: 6px;
+                    transition: all 0.2s ease;
+                    white-space: nowrap;
+                }
+
+                .nav-right a:hover {
+                    color: var(--primary-color);
+                    background: rgba(30, 55, 153, 0.05);
+                }
+
+                .nav-right a.active {
+                    color: var(--primary-color);
+                    background: rgba(30, 55, 153, 0.08);
                     font-weight: 600;
                 }
+
+                /* 特殊按钮样式 */
+                .nav-right a#home-link,
+                .nav-right a#records-link {
+                    font-weight: 600;
+                    background: rgba(74, 105, 189, 0.1);
+                    color: var(--primary-color);
+                }
+
                 .nav-right a#home-link:hover,
                 .nav-right a#records-link:hover {
-                    background-color: rgba(108, 92, 231, 0.2);
+                    background: rgba(74, 105, 189, 0.15);
                 }
+
                 .nav-right a#home-link.active,
                 .nav-right a#records-link.active {
-                    background-color: var(--primary-color, #6c5ce7);
+                    background: var(--primary-color);
                     color: white;
                 }
-                .nav-right a#home-link.active::after,
-                .nav-right a#records-link.active::after {
-                    display: none;
-                }
+
                 .nav-contact {
-                    padding: 0.5rem 1rem;
-                    background: var(--primary-color, #6c5ce7);
+                    background: var(--primary-color) !important;
                     color: white !important;
-                    border-radius: 8px;
                     display: flex;
                     align-items: center;
                     gap: 0.5rem;
+                    padding: 0.5rem 1.2rem !important;
+                    font-weight: 600 !important;
+                    transition: all 0.3s ease !important;
                 }
+
                 .nav-contact svg {
                     width: 16px;
                     height: 16px;
@@ -119,8 +153,9 @@ class Navbar extends HTMLElement {
                 }
                 
                 .nav-contact:hover {
-                    opacity: 0.9;
-                    transform: translateY(-1px);
+                    transform: translateY(-1px) !important;
+                    box-shadow: 0 4px 12px rgba(30, 55, 153, 0.2) !important;
+                    background: var(--primary-dark) !important;
                 }
 
                 @media (max-width: 768px) {
@@ -150,23 +185,34 @@ class Navbar extends HTMLElement {
             <nav class="navbar">
                 <div class="nav-content">
                     <div class="nav-left">
-                        <a href="../index.html" class="nav-brand">Academic Profile</a>
-                        <span class="version">Version 3.3</span>
+                        <a href="../index.html" class="nav-brand">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L1 12H4V21H20V12H23L12 2Z" fill="currentColor"/>
+                            </svg>
+                            Academic Profile
+                            <span class="version">v3.3</span>
+                        </a>
                     </div>
                     <div class="nav-right">
-                        <a href="#profile">Profile</a>
-                        <a href="#news">News</a>
-                        <a href="#publications">Publications</a>
-                        <a href="#awards">Awards</a>
-                        <a href="#projects">Projects</a>
-                        <a href="../index.html" id="home-link">Home</a>
-                        <a href="../pages/records.html" id="records-link" class="nav-records">Records</a>
-                        <a href="mailto:mpx0222@qq.com" class="nav-contact">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                            Mail
-                        </a>
+                        <div class="nav-section">
+                            <a href="#profile">Profile</a>
+                            <a href="#news">News</a>
+                            <a href="#publications">Publications</a>
+                            <a href="#awards">Awards</a>
+                            <a href="#projects">Projects</a>
+                        </div>
+                        <div class="nav-section">
+                            <a href="../index.html" id="home-link">Home</a>
+                            <a href="../pages/records.html" id="records-link">Records</a>
+                        </div>
+                        <div class="nav-section">
+                            <a href="mailto:mpx0222@qq.com" class="nav-contact">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                                Mail
+                            </a>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -174,6 +220,7 @@ class Navbar extends HTMLElement {
 
         this.shadowRoot.innerHTML = styles + template;
         this.updateActiveLink();
+        this.setupScrollListener();
     }
 
     updateActiveLink() {
@@ -182,15 +229,44 @@ class Navbar extends HTMLElement {
         const recordsLink = this.shadowRoot.getElementById('records-link');
 
         // 移除所有active类
-        homeLink.classList.remove('active');
-        recordsLink.classList.remove('active');
+        homeLink?.classList.remove('active');
+        recordsLink?.classList.remove('active');
 
         // 根据当前路径设置active类
         if (currentPath.includes('records.html')) {
-            recordsLink.classList.add('active');
+            recordsLink?.classList.add('active');
         } else if (currentPath.includes('index.html') || currentPath === '/') {
-            homeLink.classList.add('active');
+            homeLink?.classList.add('active');
         }
+    }
+
+    setupScrollListener() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    this.updateSectionHighlight(id);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // 观察所有section
+        ['profile', 'news', 'publications', 'awards', 'projects'].forEach(id => {
+            const element = document.getElementById(id);
+            if (element) observer.observe(element);
+        });
+    }
+
+    updateSectionHighlight(activeId) {
+        const links = this.shadowRoot.querySelectorAll('.nav-right a[href^="#"]');
+        links.forEach(link => {
+            const href = link.getAttribute('href').substring(1);
+            if (href === activeId) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
     }
 }
 
