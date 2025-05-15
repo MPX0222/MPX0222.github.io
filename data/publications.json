@@ -83,7 +83,7 @@
       "bibtex": "@article{liu2024survey,\n  title={A Survey of NL2SQL with Large Language Models: Where are we, and where are we going?},\n  author={Liu, Xinyu and Shen, Shuyu and Li, Boyan and Ma, Peixian and Jiang, Runzhi and Zhang, Yuxin and Fan, Ju and Li, Guoliang and Tang, Nan and Luo, Yuyu},\n  journal={arXiv preprint arXiv:2408.05109},\n  year={2024}\n}",
       "links": {
         "pdf": "https://arxiv.org/pdf/2408.05109",
-        "code": "https://github.com/HKUST-DIAL/NL2SQL-Survey",
+        "code": "https://github.com/HKUSTDial/NL2SQL_Handbook",
         "cite": "https://arxiv.org/abs/2408.05109",
         "github": {
           "owner": "HKUSTDial",
@@ -112,7 +112,7 @@
       "bibtex": "@article{ma2023development,\n  title={Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease},\n  author={Ma, Peixian and Wang, Jing and Zhou, Zhiguo and Chen, CL Philip and Alzheimer's Disease Neuroimaging Initiative and Duan, Junwei},\n  journal={Frontiers in Neuroscience},\n  volume={17},\n  pages={1137557},\n  year={2023},\n  publisher={Frontiers Media SA}\n}",
       "links": {
         "pdf": "https://www.frontiersin.org/articles/10.3389/fnins.2023.1137557/pdf",
-        "code": "https://github.com/MPX0222/AD-BLS",
+        "code": "https://github.com/MPX0222/BroadLearningSystem-APIs-2.0",
         "cite": "https://doi.org/10.3389/fnins.2023.1137557",
         "github": {
           "owner": "MPX0222",
