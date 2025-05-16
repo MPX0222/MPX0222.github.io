@@ -13,14 +13,14 @@
         "Jian Guo"
       ],
       "venue": {
-        "name": "Arxiv",
+        "name": "arXiv",
         "type": "Preprint (Under Review)"
       },
       "bibtex": "@article{ma2024sqlr1,\n  title={SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning},\n  author={Ma, Peixian and Zhuang, Xiaile and Xu, Chengjin and Jiang, Xuhui and Chen, Ran and Guo, Jian},\n  journal={arXiv preprint arXiv:2504.08600},\n  year={2024}\n}",
       "links": {
-        "pdf": "https://arxiv.org/pdf/2504.08600",
+        "pdf": "https://arXiv.org/pdf/2504.08600",
         "code": "https://github.com/IDEA-FinAI/SQL-R1",
-        "cite": "https://arxiv.org/abs/2504.08600",
+        "cite": "https://arXiv.org/abs/2504.08600",
         "github": {
           "owner": "IDEA-FinAI",
           "repo": "SQL-R1"
@@ -43,14 +43,14 @@
         "Yuyu Luo"
       ],
       "venue": {
-        "name": "Arxiv",
+        "name": "arXiv",
         "type": "Preprint (Under Review)"
       },
       "bibtex": "@article{ma2024rewriter,\n  title={A Plug-and-Play Natural Language Rewriter for Natural Language to SQL},\n  author={Ma, Peixian and Li, Boyan and Jiang, Runzhi and Fan, Ju and Tang, Nan and Luo, Yuyu},\n  journal={arXiv preprint arXiv:2412.17068},\n  year={2024}\n}",
       "links": {
-        "pdf": "https://arxiv.org/pdf/2412.17068",
+        "pdf": "https://arXiv.org/pdf/2412.17068",
         "code": "https://github.com/HKUST-DIAL/NL2SQL-Rewriter",
-        "cite": "https://arxiv.org/abs/2412.17068",
+        "cite": "https://arXiv.org/abs/2412.17068",
         "github": {
           "owner": "",
           "repo": ""
@@ -77,14 +77,14 @@
         "Yuyu Luo"
       ],
       "venue": {
-        "name": "Arxiv",
+        "name": "arXiv",
         "type": "Preprint (Under Review)"
       },
       "bibtex": "@article{liu2024survey,\n  title={A Survey of NL2SQL with Large Language Models: Where are we, and where are we going?},\n  author={Liu, Xinyu and Shen, Shuyu and Li, Boyan and Ma, Peixian and Jiang, Runzhi and Zhang, Yuxin and Fan, Ju and Li, Guoliang and Tang, Nan and Luo, Yuyu},\n  journal={arXiv preprint arXiv:2408.05109},\n  year={2024}\n}",
       "links": {
-        "pdf": "https://arxiv.org/pdf/2408.05109",
+        "pdf": "https://arXiv.org/pdf/2408.05109",
         "code": "https://github.com/HKUSTDial/NL2SQL_Handbook",
-        "cite": "https://arxiv.org/abs/2408.05109",
+        "cite": "https://arXiv.org/abs/2408.05109",
         "github": {
           "owner": "HKUSTDial",
           "repo": "NL2SQL_Handbook"

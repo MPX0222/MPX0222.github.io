@@ -5,10 +5,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "Long Research Paper: ",
-          "link": "https://arxiv.org/pdf/2504.08600",
-          "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
-          "venue": "is available on Arxiv."
+          "text": "We release a new research about NL2SQL and reinforcement learning: ",
+          "link": "https://arXiv.org/pdf/2504.08600",
+          "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning.",
+          "venue": "The weights and code are available on GitHub in few weeks."
         }
       ]
     },
@@ -31,9 +31,9 @@
         {
           "type": "paper",
           "text": "Long Research Paper: ",
-          "link": "https://arxiv.org/pdf/2412.17068",
+          "link": "https://arXiv.org/pdf/2412.17068",
           "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
-          "venue": "is available on Arxiv."
+          "venue": "is available on arXiv."
         }
       ]
     },
@@ -43,9 +43,9 @@
         {
           "type": "paper",
           "text": "The Survey of HKUST(GZ)-DIAL NL2SQL Research Group: ",
-          "link": "https://arxiv.org/pdf/2408.05109",
+          "link": "https://arXiv.org/pdf/2408.05109",
           "title": "A Survey of NL2SQL with Large Language Models: Where are we, and where are we going",
-          "venue": "is available on Arxiv."
+          "venue": "is available on arXiv."
         }
       ]
     },

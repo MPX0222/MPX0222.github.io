@@ -3,7 +3,7 @@ class PublicationList extends HTMLElement {
     super();
     // 定义 venue 类型注册表
     this.venueRegistry = {
-      'Arxiv': { type: 'preprint', subtype: 'arxiv' },
+      'arXiv': { type: 'preprint', subtype: 'arXiv' },
       'NeurIPS': { type: 'conference', subtype: 'neurips' },
       'ICML': { type: 'conference', subtype: 'icml' },
       'ICLR': { type: 'conference', subtype: 'iclr' },
