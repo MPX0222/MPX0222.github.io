@@ -49,7 +49,7 @@
       "bibtex": "@article{ma2024rewriter,\n  title={A Plug-and-Play Natural Language Rewriter for Natural Language to SQL},\n  author={Ma, Peixian and Li, Boyan and Jiang, Runzhi and Fan, Ju and Tang, Nan and Luo, Yuyu},\n  journal={arXiv preprint arXiv:2412.17068},\n  year={2024}\n}",
       "links": {
         "pdf": "https://arXiv.org/pdf/2412.17068",
-        "code": "https://github.com/HKUST-DIAL/NL2SQL-Rewriter",
+        "code": "",
         "cite": "https://arXiv.org/abs/2412.17068",
         "github": {
           "owner": "",
@@ -91,7 +91,7 @@
         }
       },
       "stats": {
-        "citations": 48
+        "citations": 51
       }
     },
     {

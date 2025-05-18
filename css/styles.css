@@ -1793,43 +1793,35 @@ html {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.6rem;
-    background: #f8f9fa;
-    border-radius: 10px;
+    padding: 0.5rem;
     text-decoration: none;
     color: #2d3436;
     font-size: 0.9rem;
-    font-weight: 500;
-    transition: all 0.2s ease;
-    border: 1px solid transparent;
-}
-
-.cv-link i {
-    font-size: 1.1rem;
-    color: #e74c3c;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
 }
 
 .cv-link:hover {
-    background: #fff;
-    border-color: #e0e0e0;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    background-color: #f8f9fa;
+}
+
+.cv-link i {
+    color: #e74c3c;
+    font-size: 1.1rem;
 }
 
 /* 深色主题适配 */
 [data-theme="dark"] .cv-links {
-    border-top-color: var(--dark-border);
+    border-top-color: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="dark"] .cv-link {
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--dark-text);
+    color: #e0e0e0;
 }
 
 [data-theme="dark"] .cv-link:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--dark-border);
-} 
+    background-color: rgba(255, 255, 255, 0.05);
+}
 
 /* 格言部分样式优化 */
 .quote-footer {
@@ -2494,4 +2486,89 @@ body.modal-open {
     left: -9999px;
     opacity: 0;
     pointer-events: none;
+}
+
+/* 社交链接网格样式 */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    width: 100%;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #2d3436;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.social-link:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-1px);
+}
+
+.social-link i {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+/* 为不同的社交链接设置特定颜色 */
+.social-link.github i { color: #333; }
+.social-link.scholar i { color: #4285f4; }
+.social-link.linkedin i { color: #0077b5; }
+.social-link.huggingface .hf-icon { color: #FFD21E; }
+
+.social-link.github:hover { color: #333; }
+.social-link.scholar:hover { color: #4285f4; }
+.social-link.linkedin:hover { color: #0077b5; }
+.social-link.huggingface:hover { color: #FFD21E; }
+
+/* 调整SVG图标垂直对齐 */
+.hf-icon {
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+/* 响应式调整 */
+@media (max-width: 320px) {
+    .social-link {
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+
+    .social-link i {
+        font-size: 1rem;
+    }
+}
+
+/* 深色主题适配 */
+[data-theme="dark"] .links-grid {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .social-link {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .social-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* 移除旧的链接样式 */
+.links {
+    display: none;
+}
+
+.link-item {
+    display: none;
 }
