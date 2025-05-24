@@ -10,16 +10,6 @@
                 "Storytelling Game",
                 "Role-Playing"
             ]
-        },
-        {
-            "name": "BroadLearningSystemTools-2.0",
-            "description": "A Python-based implementation of Broad Learning System (BLS) with visualization tools and model analysis features.",
-            "github_url": "https://github.com/MPX0222/BroadLearningSystemTools-2.0",
-            "tech_tags": [
-                "Python",
-                "Machine Learning",
-                "Scikit-learn"
-            ]
         }
     ]
 }
