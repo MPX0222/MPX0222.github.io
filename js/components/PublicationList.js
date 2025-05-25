@@ -67,34 +67,247 @@ class PublicationList extends HTMLElement {
 
   render(publications) {
     this.innerHTML = `
+      <style>
+        .publications-list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          padding: 1rem;
+        }
+
+        .publication-item {
+          display: flex;
+          gap: 1rem;
+          padding: 0.75rem;
+          background: var(--card-bg);
+          border-radius: 8px;
+          align-items: flex-start;
+        }
+
+        .publication-thumbnail {
+          flex: 0 0 240px;
+          position: relative;
+          border-radius: 6px;
+          overflow: hidden;
+          background: #fff;
+        }
+
+        .publication-thumbnail::before {
+          content: "";
+          display: block;
+          padding-top: 66.67%;
+        }
+
+        .publication-thumbnail img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+          padding: 0.5rem;
+          background: #fff;
+        }
+
+        .publication-info {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+        }
+
+        .publication-title {
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #2d3436;
+          margin: 0;
+          line-height: 1.3;
+        }
+
+        .publication-year {
+          color: #636e72;
+          font-weight: normal;
+          font-size: 0.9rem;
+        }
+
+        .publication-authors {
+          font-size: 0.9rem;
+          color: #2d3436;
+          margin: 0;
+          line-height: 1.4;
+        }
+
+        .author {
+          color: #6c5ce7;
+        }
+
+        .publication-venue {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin: 0.25rem 0;
+          flex-wrap: wrap;
+        }
+
+        .venue-tag {
+          display: inline-flex;
+          align-items: center;
+          padding: 0.25rem 0.6rem;
+          border-radius: 4px;
+          font-size: 0.85rem;
+          font-weight: 500;
+          color: #fff;
+        }
+
+        .status-tag {
+          font-size: 0.85rem;
+          color: #666;
+          padding: 0 0 0 0.6rem;
+          font-weight: 400;
+          position: relative;
+        }
+
+        .status-tag::before {
+          content: "|";
+          position: absolute;
+          left: 0.2rem;
+          color: #ddd;
+        }
+
+        .publication-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 0.5rem;
+          gap: 0.75rem;
+        }
+
+        .publication-links {
+          display: flex;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+        }
+
+        .pub-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.3rem;
+          padding: 0.25rem 0.5rem;
+          font-size: 0.85rem;
+          text-decoration: none;
+          border-radius: 4px;
+          background: #f8f9fa;
+          color: #2d3436;
+        }
+
+        .pub-link i {
+          font-size: 0.9rem;
+        }
+
+        .pub-link i.fa-file-pdf { color: #ff6b6b; }
+        .pub-link i.fa-code { color: #6c5ce7; }
+        .pub-link i.fa-quote-right { color: #20bf6b; }
+
+        .publication-stats {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+        }
+
+        .stat-item {
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+          font-size: 0.85rem;
+          color: #636e72;
+          padding: 0.25rem 0.5rem;
+          border-radius: 4px;
+          background: #f8f9fa;
+        }
+
+        .stat-item i {
+          color: #6c5ce7;
+          font-size: 0.9rem;
+        }
+
+        .github-stats {
+          display: flex;
+          align-items: center;
+          padding: 0.15rem 0.3rem;
+          background: #f8f9fa;
+          border-radius: 4px;
+        }
+
+        .github-stats img {
+          height: 20px;
+          width: auto;
+        }
+
+        @media (max-width: 1200px) {
+          .publication-thumbnail {
+            flex: 0 0 200px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .publications-list {
+            padding: 0.75rem;
+            gap: 0.5rem;
+          }
+
+          .publication-item {
+            flex-direction: column;
+            padding: 0.75rem;
+            gap: 0.75rem;
+          }
+
+          .publication-thumbnail {
+            width: 100%;
+            flex: none;
+          }
+
+          .publication-footer {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+          }
+
+          .publication-links,
+          .publication-stats {
+            width: 100%;
+            flex-wrap: wrap;
+          }
+        }
+      </style>
       <div class="publications-list">
         ${publications.map(pub => {
           const venueInfo = this.getVenueType(pub.venue.name);
           return `
-      <div class="publication-item">
-        <div class="publication-thumbnail">
+            <div class="publication-item">
+              <div class="publication-thumbnail">
                 <img src="${pub.thumbnail}" alt="${pub.title}">
-        </div>
-        <div class="publication-info">
-          <h3 class="publication-title">
-            ${pub.title}
-            <span class="publication-year">(${pub.year})</span>
-          </h3>
-          <p class="publication-authors">
+              </div>
+              <div class="publication-info">
+                <h3 class="publication-title">
+                  ${pub.title}
+                  <span class="publication-year">(${pub.year})</span>
+                </h3>
+                <p class="publication-authors">
                   ${pub.authors.map(author => 
                     author === "Peixian Ma" ? 
                     `<strong class="author">${author}</strong>` : 
                     author
                   ).join(', ')}
-          </p>
+                </p>
                 <div class="publication-venue">
                   <span class="venue-tag ${venueInfo.type} ${venueInfo.subtype}">
                     ${pub.venue.name}
                   </span>
                   <span class="status-tag">${pub.venue.type}</span>
                 </div>
-          <div class="publication-footer">
-            <div class="publication-links">
+                <div class="publication-footer">
+                  <div class="publication-links">
                     ${pub.links.pdf ? `
                       <a href="${pub.links.pdf}" class="pub-link" target="_blank" rel="noopener">
                         <i class="fas fa-file-pdf"></i>
@@ -111,11 +324,11 @@ class PublicationList extends HTMLElement {
                       <i class="fas fa-quote-right"></i>
                       <span>Cite</span>
                     </button>
-            </div>
-            <div class="publication-stats">
+                  </div>
+                  <div class="publication-stats">
                     <div class="stat-item">
-                <i class="fas fa-quote-left"></i>
-                <span>${pub.stats.citations} citations</span>
+                      <i class="fas fa-quote-left"></i>
+                      <span>${pub.stats.citations} citations</span>
                     </div>
                     ${pub.links.github && pub.links.github.owner && pub.links.github.repo ? `
                       <div class="stat-item github-stats">
@@ -123,10 +336,10 @@ class PublicationList extends HTMLElement {
                              alt="GitHub stars">
                       </div>
                     ` : ''}
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
           `;
         }).join('')}
       </div>

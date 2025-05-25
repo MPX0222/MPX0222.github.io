@@ -54,12 +54,24 @@ class Navbar extends HTMLElement {
                 .nav-brand {
                     font-weight: 700;
                     font-size: 1.3rem;
-                    color: var(--primary-color);
+                    background: linear-gradient(135deg, #2d3436, #6c5ce7);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
                     text-decoration: none;
                     display: flex;
                     align-items: center;
                     gap: 0.5rem;
                     transition: all 0.3s ease;
+                }
+
+                .nav-brand svg {
+                    width: 24px;
+                    height: 24px;
+                    background: linear-gradient(135deg, #2d3436, #6c5ce7);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
 
                 .nav-brand:hover {
@@ -70,9 +82,11 @@ class Navbar extends HTMLElement {
                 .version {
                     font-size: 0.75rem;
                     font-weight: 500;
-                    color: var(--primary-light);
+                    background: linear-gradient(135deg, #2d3436, #6c5ce7);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
                     padding: 0.15rem 0.5rem;
-                    background: rgba(74, 105, 189, 0.1);
                     border-radius: 4px;
                     margin-left: 0.5rem;
                 }
@@ -120,23 +134,29 @@ class Navbar extends HTMLElement {
                 .nav-right a#home-link,
                 .nav-right a#records-link {
                     font-weight: 600;
-                    background: rgba(74, 105, 189, 0.1);
-                    color: var(--primary-color);
+                    background: linear-gradient(135deg, #2d3436, #6c5ce7);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    border: 1px solid #6c5ce7;
                 }
 
                 .nav-right a#home-link:hover,
                 .nav-right a#records-link:hover {
-                    background: rgba(74, 105, 189, 0.15);
+                    opacity: 0.9;
                 }
 
                 .nav-right a#home-link.active,
                 .nav-right a#records-link.active {
-                    background: var(--primary-color);
+                    background: linear-gradient(135deg, #2d3436, #6c5ce7);
+                    -webkit-background-clip: none;
+                    background-clip: none;
+                    -webkit-text-fill-color: white;
                     color: white;
                 }
 
                 .nav-contact {
-                    background: var(--primary-color) !important;
+                    background: linear-gradient(135deg, #2d3436, #6c5ce7) !important;
                     color: white !important;
                     display: flex;
                     align-items: center;
@@ -153,9 +173,8 @@ class Navbar extends HTMLElement {
                 }
                 
                 .nav-contact:hover {
+                    opacity: 0.9 !important;
                     transform: translateY(-1px) !important;
-                    box-shadow: 0 4px 12px rgba(30, 55, 153, 0.2) !important;
-                    background: var(--primary-dark) !important;
                 }
 
                 @media (max-width: 768px) {
@@ -190,7 +209,7 @@ class Navbar extends HTMLElement {
                                 <path d="M12 2L1 12H4V21H20V12H23L12 2Z" fill="currentColor"/>
                             </svg>
                             Academic Profile
-                            <span class="version">v3.3</span>
+                            <span class="version">v3.4</span>
                         </a>
                     </div>
                     <div class="nav-right">

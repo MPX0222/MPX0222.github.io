@@ -16,6 +16,9 @@ class AwardList extends HTMLElement {
     }
 
     render() {
+        const cardContent = document.createElement('div');
+        cardContent.className = 'card-content';
+
         const awardsList = document.createElement('div');
         awardsList.className = 'awards-list';
 
@@ -65,8 +68,9 @@ class AwardList extends HTMLElement {
             awardsList.appendChild(yearGroupDiv);
         });
 
+        cardContent.appendChild(awardsList);
         this.innerHTML = '';
-        this.appendChild(awardsList);
+        this.appendChild(cardContent);
     }
 }
 

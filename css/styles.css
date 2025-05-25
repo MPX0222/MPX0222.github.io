@@ -70,7 +70,10 @@ h1, h2, h3, p, a {
 .version {
     font-size: 0.8rem;
     font-weight: 400;
-    color: #636e72;
+    background: linear-gradient(135deg, #2d3436, #6c5ce7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
     margin-left: 0.5rem;
 }
@@ -124,9 +127,27 @@ h1, h2, h3, p, a {
     transform: translateX(2px);
 }
 
+.card-header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #2d3436, #6c5ce7);
+}
+
+.card-header i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    color: white;
+}
+
 .card-header h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
+    flex: 1;
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
 }
 
 .card-content {
@@ -136,11 +157,79 @@ h1, h2, h3, p, a {
 .nav-brand {
     font-weight: 600;
     font-size: 1.25rem;
+    text-decoration: none;
+    background: linear-gradient(135deg, #2d3436, #6c5ce7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-brand i {
+    font-size: 1.25rem;
+    background: linear-gradient(135deg, #2d3436, #6c5ce7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-right a {
+    text-decoration: none;
+    color: var(--text-color);
     font-weight: 500;
     font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+/* 修改右侧按钮样式 */
+.nav-contact {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #2d3436, #6c5ce7);
+    color: white !important;
+    border-radius: 8px;
+    transition: opacity 0.2s ease !important;
+}
+
+.nav-contact:hover {
+    opacity: 0.9;
+}
+
+.nav-records {
+    color: #6c5ce7 !important;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-left: 0.5rem;
+    border: 1px solid #6c5ce7;
+    background: linear-gradient(135deg, #2d3436, #6c5ce7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-records::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: linear-gradient(135deg, #2d3436, #6c5ce7) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.nav-records:hover {
+    background: white;
+    opacity: 0.9;
 }
 
 /* 更新列表样式 */
@@ -215,32 +304,66 @@ h1, h2, h3, p, a {
 
 .profile-card {
     background: var(--card-bg);
-    border-radius: 10px;
-    padding: 1.75rem;
+    border-radius: 15px;
+    padding: 1.5rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     text-align: center;
     margin-bottom: 1rem;
+    border: 1px solid rgba(108, 92, 231, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), rgba(129, 236, 236, 0.1));
+    border-radius: 15px 15px 100% 100%;
 }
 
 .profile-image {
     width: 120px;
     height: 120px;
-    margin: 0 auto 1.25rem;
-    overflow: hidden;
+    margin: 0.5rem auto 1.25rem;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-image::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(135deg, #6c5ce7, #81ecec);
     border-radius: 50%;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.profile-image::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: white;
+    border-radius: 50%;
+    z-index: -1;
 }
 
 .profile-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.profile-image:hover img {
-    transform: scale(1.05);
+    border-radius: 50%;
+    border: 3px solid white;
 }
 
 .profile-name {
@@ -248,12 +371,15 @@ h1, h2, h3, p, a {
     font-weight: 600;
     color: #2d3436;
     margin-bottom: 0.35rem;
-    line-height: 1.3;
+    background: linear-gradient(135deg, #2d3436, #6c5ce7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .profile-title {
-    font-size: 0.95rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 500;
     color: #636e72;
     margin-bottom: 0.75rem;
     line-height: 1.4;
@@ -266,12 +392,12 @@ h1, h2, h3, p, a {
     gap: 0.4rem;
     font-size: 0.9rem;
     color: #636e72;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 .profile-location i {
-    font-size: 0.9rem;
     color: #6c5ce7;
+    font-size: 0.9rem;
 }
 
 /* 个人链接样式 */
@@ -279,38 +405,70 @@ h1, h2, h3, p, a {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-top: 1rem;
-    align-items: center;
 }
 
 .link-item {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0.4rem;
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
     text-decoration: none;
-    color: #636e72;
+    color: #2d3436;
     font-size: 0.9rem;
-    transition: all 0.2s ease;
-    min-width: 140px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
 }
 
 .link-item i {
     width: 20px;
     margin-right: 0.5rem;
     font-size: 1rem;
+    transition: transform 0.2s ease;
 }
 
-/* 为不同的图标设置特色颜色 */
-.link-item i.fa-github { color: #333333; }
-.link-item i.fa-graduation-cap { color: #4285f4; }
-.link-item i.fa-linkedin { color: #0077b5; }
-.link-item i.fa-robot { color: #FFD21E; }
-.link-item i.fa-file { color: #e74c3c; }
-
 .link-item:hover {
-    color: #2d3436;
-    transform: translateX(2px);
+    background: white;
+}
+
+.link-item:hover i {
+    transform: scale(1.1);
+}
+
+/* 为不同的图标设置特色颜色和悬停效果 */
+.link-item i.fa-github { 
+    color: #333333;
+    background: linear-gradient(135deg, #333333, #666666);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.link-item i.fa-graduation-cap { 
+    color: #4285f4;
+    background: linear-gradient(135deg, #4285f4, #34a853);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.link-item i.fa-linkedin { 
+    color: #0077b5;
+    background: linear-gradient(135deg, #0077b5, #00a0dc);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.link-item i.fa-robot { 
+    color: #FFD21E;
+    background: linear-gradient(135deg, #FFD21E, #FF9F43);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.link-item i.fa-file { 
+    color: #e74c3c;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 /* 移除旧的网格布局相关样式 */
@@ -346,16 +504,7 @@ h1, h2, h3, p, a {
     animation: fadeInUp 0.4s ease-out forwards;
 }
 
-.card-header {
-    display: flex;
-    align-items: center;
-    padding: 1.5rem;
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-/* 添加右上角装饰图案 */
+/* 添加装饰图案 */
 .card-header::before {
     content: '';
     position: absolute;
@@ -396,20 +545,9 @@ h1, h2, h3, p, a {
     z-index: 1;
 }
 
-.card-header i {
-    font-size: 1.2rem;
-    margin-right: 1rem;
-}
-
-.card-header h2 {
-    flex: 1;
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-.card-header .fa-ellipsis-h {
-    margin-left: auto;
-    margin-right: 0;
+/* 移除旧的背景色样式 */
+.card-header[style*="background"] {
+    background: linear-gradient(135deg, #2d3436, #6c5ce7) !important;
 }
 
 .card-content {
@@ -2350,7 +2488,7 @@ body.modal-open {
 }
 
 .card-header .tab-button.active {
-    color: #FF9F43;
+    color: #6c5ce7;
     background: white;
 }
 
