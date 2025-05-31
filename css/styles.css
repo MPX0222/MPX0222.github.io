@@ -127,6 +127,13 @@ h1, h2, h3, p, a {
     transform: translateX(2px);
 }
 
+.link-item .emoji {
+    /* height: 1em; */
+    /* width: 1em; */
+    margin-right: 0.2em;
+    vertical-align: -0.1em;
+}
+
 .card-header {
     display: flex;
     align-items: center;
@@ -2685,4 +2692,15 @@ body.modal-open {
     left: -9999px;
     opacity: 0;
     pointer-events: none;
+}
+
+.card-content a {
+    text-decoration: none;
+    color: #6c5ce7;
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+
+.card-content a:hover {
+    color: #4834d4;
 }
