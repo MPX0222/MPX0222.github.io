@@ -2247,9 +2247,9 @@ blockquote {
 /* 访问统计地图样式 */
 .visitor-map {
     background: var(--card-bg);
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 0.5rem;
-    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 1rem 0;
     overflow: hidden;
