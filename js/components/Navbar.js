@@ -209,20 +209,20 @@ class Navbar extends HTMLElement {
                                 <path d="M12 2L1 12H4V21H20V12H23L12 2Z" fill="currentColor"/>
                             </svg>
                             Academic Profile
-                            <span class="version">v3.4</span>
+                            <span class="version">v3.5</span>
                         </a>
                     </div>
                     <div class="nav-right">
                         <div class="nav-section">
-                            <a href="#profile">Profile</a>
-                            <a href="#news">News</a>
-                            <a href="#publications">Publications</a>
-                            <a href="#awards">Awards</a>
-                            <a href="#projects">Projects</a>
+                            <a href="#profile" class="nav-link">Profile</a>
+                            <a href="#news" class="nav-link">News</a>
+                            <a href="#publications" class="nav-link">Publications</a>
+                            <a href="#awards" class="nav-link">Awards</a>
+                            <a href="#projects" class="nav-link">Projects</a>
                         </div>
                         <div class="nav-section">
                             <a href="../index.html" id="home-link">Home</a>
-                            <a href="../pages/records.html" id="records-link">Records</a>
+                            <a href="../pages/publications.html" class="nav-link" id="records-link">Detailed Publications</a>
                         </div>
                         <div class="nav-section">
                             <a href="mailto:mpx0222@qq.com" class="nav-contact">
@@ -252,7 +252,7 @@ class Navbar extends HTMLElement {
         recordsLink?.classList.remove('active');
 
         // 根据当前路径设置active类
-        if (currentPath.includes('records.html')) {
+        if (currentPath.includes('publications.html')) {
             recordsLink?.classList.add('active');
         } else if (currentPath.includes('index.html') || currentPath === '/') {
             homeLink?.classList.add('active');

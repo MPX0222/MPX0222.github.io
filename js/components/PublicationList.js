@@ -216,31 +216,48 @@ class PublicationList extends HTMLElement {
         }
 
         .stat-item {
-          display: flex;
+          display: inline-flex;
           align-items: center;
-          gap: 0.3rem;
-          font-size: 0.85rem;
-          color: #636e72;
-          padding: 0.25rem 0.5rem;
-          border-radius: 4px;
-          background: #f8f9fa;
+          gap: 0.4rem;
+          font-size: 0.8rem;
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+          color: #4a5568;
+          padding: 0.35rem 0.75rem;
+          border-radius: 20px;
+          background: #f7fafc;
+          border: 1px solid #e2e8f0;
+          transition: all 0.2s ease;
+          letter-spacing: -0.01em;
+          font-weight: 500;
+        }
+
+        .stat-item:hover {
+          background: #edf2f7;
+          transform: translateY(-1px);
         }
 
         .stat-item i {
-          color: #6c5ce7;
-          font-size: 0.9rem;
+          color: #4a5568;
+          font-size: 0.85rem;
         }
 
         .github-stats {
-          display: flex;
+          display: inline-flex;
           align-items: center;
-          padding: 0.15rem 0.3rem;
-          background: #f8f9fa;
-          border-radius: 4px;
+          padding: 0.35rem 0.75rem;
+          background: #f7fafc;
+          border: 1px solid #e2e8f0;
+          border-radius: 20px;
+          transition: all 0.2s ease;
+        }
+
+        .github-stats:hover {
+          background: #edf2f7;
+          transform: translateY(-1px);
         }
 
         .github-stats img {
-          height: 20px;
+          height: 18px;
           width: auto;
         }
 
@@ -311,7 +328,7 @@ class PublicationList extends HTMLElement {
                     ${pub.links.pdf ? `
                       <a href="${pub.links.pdf}" class="pub-link" target="_blank" rel="noopener">
                         <i class="fas fa-file-pdf"></i>
-                        <span>PDF</span>
+                        <span>Paper</span>
                       </a>
                     ` : ''}
                     ${pub.links.code ? `
@@ -322,7 +339,7 @@ class PublicationList extends HTMLElement {
                     ` : ''}
                     <button class="pub-link cite-button" data-bibtex="${pub.bibtex.replace(/"/g, '&quot;')}">
                       <i class="fas fa-quote-right"></i>
-                      <span>Cite</span>
+                      <span>Bibtex</span>
                     </button>
                   </div>
                   <div class="publication-stats">
