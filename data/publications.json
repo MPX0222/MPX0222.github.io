@@ -31,6 +31,35 @@
       }
     },
     {
+      "thumbnail": "images/SRLMs.png",
+      "title": "A Technical Study into Small Reasoning Language Models",
+      "year": 2025,
+      "authors": [
+        "Xiaile Zhuang", 
+        "Peixian Ma",
+        "Zhikai Jia",
+        "Zheng Cao",
+        "Shiwei Liu"
+      ],
+      "venue": {
+        "name": "arXiv",
+        "type": "Preprint"
+      },
+      "bibtex": "{}",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2506.13404",
+        "code": "",
+        "cite": "https://arxiv.org/abs/2506.13404",
+        "github": {
+          "owner": "",
+          "repo": ""
+        }
+      },
+      "stats": {
+        "citations": 0
+      }
+    },
+    {
       "thumbnail": "images/rewriter.png",
       "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
       "year": 2024,
