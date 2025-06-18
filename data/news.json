@@ -1,6 +1,18 @@
 {
   "news": [
     {
+      "date": "Jun 2025",
+      "content": [
+        {
+          "type": "paper",
+          "text": "We release a technical study about small reasoning language models: ",
+          "link": "https://arXiv.org/pdf/2506.13404",
+          "title": "A Technical Study into Small Reasoning Language Models.",
+          "venue": "is available on arXiv."
+        }
+      ]
+    },
+    {
       "date": "May 2025",
       "content": [
         {
