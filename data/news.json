@@ -5,9 +5,9 @@
       "content": [
         {
           "type": "paper",
-          "text": "We release a technical study about small reasoning language models: ",
+          "text": "We release a technical study about 0.5B reasoning language models: ",
           "link": "https://arXiv.org/pdf/2506.13404",
-          "title": "A Technical Study into Small Reasoning Language Models.",
+          "title": "A Technical Study into 0.5B Reasoning Language Models.",
           "venue": "is available on arXiv."
         }
       ]

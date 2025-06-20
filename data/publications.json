@@ -27,12 +27,12 @@
         }
       },
       "stats": {
-        "citations": 15
+        "citations": 18
       }
     },
     {
       "thumbnail": "images/SRLMs.png",
-      "title": "A Technical Study into Small Reasoning Language Models",
+      "title": "A Technical Study into 0.5B Reasoning Language Models",
       "year": 2025,
       "authors": [
         "Xiaile Zhuang", 
@@ -120,7 +120,7 @@
         }
       },
       "stats": {
-        "citations": 62
+        "citations": 66
       }
     },
     {
