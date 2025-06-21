@@ -2704,3 +2704,136 @@ body.modal-open {
 .card-content a:hover {
     color: #4834d4;
 }
+
+/* 社交图标矩阵样式 */
+.social-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem auto 0;
+    padding: 0;
+    justify-items: center;
+    max-width: 180px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon i, .social-icon iconify-icon {
+    transition: all 0.3s ease;
+}
+
+/* 为不同的社交平台设置品牌颜色 */
+.social-icon:nth-child(1) { /* GitHub */
+    color: #333333;
+}
+
+.social-icon:nth-child(2) { /* Google Scholar */
+    color: #4285f4;
+}
+
+.social-icon:nth-child(3) { /* LinkedIn */
+    color: #0077b5;
+}
+
+.social-icon:nth-child(4) { /* HuggingFace */
+    color: #FF9500;
+}
+
+.social-icon:nth-child(5) { /* Resume */
+    color: #e74c3c;
+}
+
+.social-icon:nth-child(6) { /* Email */
+    color: #636e72;
+}
+
+/* 悬停时的增强效果 */
+.social-icon:nth-child(1):hover { /* GitHub */
+    color: #000000;
+}
+
+.social-icon:nth-child(2):hover { /* Google Scholar */
+    color: #3367d6;
+}
+
+.social-icon:nth-child(3):hover { /* LinkedIn */
+    color: #005885;
+}
+
+.social-icon:nth-child(4):hover span { /* HuggingFace */
+    filter: brightness(1.3) saturate(1.2);
+}
+
+.social-icon:nth-child(5):hover { /* Resume */
+    color: #c0392b;
+}
+
+.social-icon:nth-child(6):hover { /* Email */
+    color: #2d3436;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon i, .social-icon iconify-icon {
+    transition: all 0.3s ease;
+}
+
+/* Iconify图标样式调整 */
+.social-icon iconify-icon {
+    font-size: 1.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 480px) {
+    .social-icons-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        max-width: 120px;
+    }
+    
+    .social-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.4rem;
+    }
+    
+    .social-icon iconify-icon {
+        font-size: 1.4rem;
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+}
+
+/* 移除旧的链接样式 */
+.links {
+    display: none;
+}
+
+.link-item {
+    display: none;
+}
+
+/* HuggingFace emoji 样式 */
+.social-icon span {
+    transition: filter 0.3s ease;
+}
