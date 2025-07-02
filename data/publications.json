@@ -27,7 +27,7 @@
         }
       },
       "stats": {
-        "citations": 18
+        "citations": 19
       }
     },
     {
@@ -120,11 +120,11 @@
         }
       },
       "stats": {
-        "citations": 66
+        "citations": 68
       }
     },
     {
-      "thumbnail": "images/bls.jpg",
+      "thumbnail": "images/bls.png",
       "title": "Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease",
       "year": 2023,
       "authors": [

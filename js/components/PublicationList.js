@@ -85,7 +85,7 @@ class PublicationList extends HTMLElement {
         }
 
         .publication-thumbnail {
-          flex: 0 0 240px;
+          flex: 0 0 320px;
           position: relative;
           border-radius: 6px;
           overflow: hidden;
@@ -104,8 +104,8 @@ class PublicationList extends HTMLElement {
           left: 0;
           width: 100%;
           height: 100%;
-          object-fit: contain;
-          object-position: center;
+          object-fit: cover;
+          object-position: top;
           padding: 0.5rem;
           background: #fff;
         }
@@ -263,7 +263,7 @@ class PublicationList extends HTMLElement {
 
         @media (max-width: 1200px) {
           .publication-thumbnail {
-            flex: 0 0 200px;
+            flex: 0 0 280px;
           }
         }
 
