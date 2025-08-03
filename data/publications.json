@@ -27,7 +27,7 @@
         }
       },
       "stats": {
-        "citations": 23
+        "citations": 25
       }
     },
     {
@@ -60,35 +60,33 @@
       }
     },
     {
-      "thumbnail": "images/rewriter.png",
-      "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
-      "year": 2024,
+      "thumbnail": "images/CL.png",
+      "title": "Augmenting Continual Learning of Diseases with LLM-Generated Visual Concepts",
+      "year": 2025,
       "authors": [
+        "Jiantao Tan", 
         "Peixian Ma",
-        "Boyan Li", 
-        "Runzhi Jiang",
-        "Ju Fan",
-        "Nan Tang",
-        "Yuyu Luo"
+        "Zhiming Dai",
+        "Ruixuan Wang"
       ],
       "venue": {
         "name": "arXiv",
         "type": "Preprint (Under Review)"
       },
-      "bibtex": "@article{ma2024rewriter,\n  title={A Plug-and-Play Natural Language Rewriter for Natural Language to SQL},\n  author={Ma, Peixian and Li, Boyan and Jiang, Runzhi and Fan, Ju and Tang, Nan and Luo, Yuyu},\n  journal={arXiv preprint arXiv:2412.17068},\n  year={2024}\n}",
+      "bibtex": "{}",
       "links": {
-        "pdf": "https://arXiv.org/pdf/2412.17068",
+        "pdf": "",
         "code": "",
-        "cite": "https://arXiv.org/abs/2412.17068",
+        "cite": "",
         "github": {
           "owner": "",
           "repo": ""
         }
       },
       "stats": {
-        "citations": 3
+        "citations": 1
       }
-    },
+    }, 
     {
       "thumbnail": "images/survey.png",
       "title": "A Survey of NL2SQL with Large Language Models: Where are we, and where are we going?",
@@ -121,6 +119,36 @@
       },
       "stats": {
         "citations": 82
+      }
+    },
+    {
+      "thumbnail": "images/rewriter.png",
+      "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
+      "year": 2024,
+      "authors": [
+        "Peixian Ma",
+        "Boyan Li", 
+        "Runzhi Jiang",
+        "Ju Fan",
+        "Nan Tang",
+        "Yuyu Luo"
+      ],
+      "venue": {
+        "name": "arXiv",
+        "type": "Preprint (Under Review)"
+      },
+      "bibtex": "@article{ma2024rewriter,\n  title={A Plug-and-Play Natural Language Rewriter for Natural Language to SQL},\n  author={Ma, Peixian and Li, Boyan and Jiang, Runzhi and Fan, Ju and Tang, Nan and Luo, Yuyu},\n  journal={arXiv preprint arXiv:2412.17068},\n  year={2024}\n}",
+      "links": {
+        "pdf": "https://arXiv.org/pdf/2412.17068",
+        "code": "",
+        "cite": "https://arXiv.org/abs/2412.17068",
+        "github": {
+          "owner": "",
+          "repo": ""
+        }
+      },
+      "stats": {
+        "citations": 3
       }
     },
     {
