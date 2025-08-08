@@ -75,16 +75,16 @@
       },
       "bibtex": "{}",
       "links": {
-        "pdf": "",
+        "pdf": "https://arxiv.org/pdf/2508.03094",
         "code": "",
-        "cite": "",
+        "cite": "https://arxiv.org/pdf/2508.03094",
         "github": {
           "owner": "",
           "repo": ""
         }
       },
       "stats": {
-        "citations": 1
+        "citations": 0
       }
     }, 
     {
@@ -118,7 +118,7 @@
         }
       },
       "stats": {
-        "citations": 82
+        "citations": 83
       }
     },
     {
