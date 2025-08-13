@@ -2837,3 +2837,178 @@ body.modal-open {
 .social-icon span {
     transition: filter 0.3s ease;
 }
+
+/* ========== 社交徽标优化样式（覆盖上述样式） ========== */
+
+/* 社交徽标区域：圆形品牌环 + 玻璃光泽 + 悬浮提示 + 动效 */
+.social-icons-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px !important;
+    padding: 0 !important;
+    margin: 16px auto 12px !important;
+    width: fit-content !important;
+    /* 去除容器边框与背景，保持极简 */
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    max-width: none !important;
+    justify-items: center !important;
+}
+
+.social-icon {
+    /* 通过变量注入品牌色，默认主色 */
+    --brand: #6c5ce7;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 48px !important;
+    height: 48px !important;
+    margin: 0 auto !important;
+    border-radius: 50% !important;
+    color: var(--brand) !important;
+    border: 2px solid transparent !important;
+    font-size: 1.25rem !important;
+    /* 内部采用品牌浅色调而非纯白，避免"白色小框"的观感 */
+    background:
+        radial-gradient(120% 120% at 30% 20%, color-mix(in srgb, var(--brand) 6%, #ffffff) 0%, color-mix(in srgb, var(--brand) 10%, #f6f7fb) 60%, color-mix(in srgb, var(--brand) 12%, #eef1f7) 100%) padding-box,
+        conic-gradient(var(--brand), var(--brand)) border-box !important; /* 品牌色外环 */
+    background-clip: padding-box, border-box !important;
+    text-decoration: none !important;
+    box-shadow:
+        0 6px 14px rgba(76, 78, 100, 0.10) !important;
+    transition: transform 180ms ease, box-shadow 220ms ease,
+                color 180ms ease, background-color 180ms ease,
+                filter 200ms ease !important;
+    will-change: transform !important;
+    outline: none !important;
+}
+
+/* 环形辉光 */
+.social-icon::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: -6px !important;
+    border-radius: inherit !important;
+    background: radial-gradient(60% 60% at 50% 0%, rgba(255,255,255,0.6), rgba(255,255,255,0) 70%),
+                radial-gradient(100% 100% at 50% 50%, color-mix(in srgb, var(--brand) 25%, transparent), transparent 70%) !important;
+    filter: blur(10px) !important;
+    opacity: 0 !important;
+    transition: opacity 220ms ease !important;
+    pointer-events: none !important;
+}
+
+/* 自定义文字提示，使用 title 内容 */
+.social-icon::after {
+    content: attr(title) !important;
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(2px) scale(0.98) !important;
+    padding: 4px 8px !important;
+    border-radius: 8px !important;
+    font-size: 12px !important;
+    line-height: 1 !important;
+    color: #2d3436 !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+    border: 1px solid rgba(0,0,0,0.06) !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 160ms ease, transform 160ms ease !important;
+    white-space: nowrap !important;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px) !important;
+    background:
+        radial-gradient(120% 120% at 30% 20%, rgba(255,255,255,0.2), rgba(255,255,255,0.15) 60%, rgba(255,255,255,0.1) 100%) padding-box,
+        conic-gradient(var(--brand), var(--brand)) border-box !important;
+    color: #ffffff !important;
+    filter: saturate(1.15) !important;
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.14),
+        0 4px 10px rgba(0, 0, 0, 0.06) !important;
+}
+
+.social-icon:hover::before { opacity: 1 !important; }
+.social-icon:hover::after { opacity: 1 !important; transform: translateX(-50%) translateY(0) scale(1) !important; }
+
+.social-icons-grid:hover .social-icon { filter: saturate(0.95) !important; }
+.social-icons-grid:hover .social-icon:hover { filter: saturate(1.15) !important; }
+
+.social-icon:active { transform: translateY(-2px) scale(0.98) !important; }
+
+.social-icon:focus-visible {
+    box-shadow:
+        0 0 0 3px rgba(108, 92, 231, 0.18),
+        0 6px 14px rgba(76, 78, 100, 0.08) !important;
+}
+
+.social-icon i,
+.social-icon span {
+    font-size: 1.25rem !important;
+    transition: transform 180ms ease !important;
+}
+
+.social-icon:hover i,
+.social-icon:hover span { transform: scale(1.06) !important; }
+
+/* 品牌色映射（基于 title 属性，无需改动 HTML） */
+.social-icon[title="GitHub"] { --brand: #181717 !important; }
+.social-icon[title="Google Scholar"] { --brand: #4285F4 !important; }
+.social-icon[title="LinkedIn"] { --brand: #0A66C2 !important; }
+.social-icon[title="HuggingFace"] { --brand: #FFB000 !important; }
+/* 简历和邮箱使用更合适的颜色 */
+.social-icon[title="Resume"] { --brand: #E67E22 !important; } /* 橙色 - 文档色 */
+.social-icon[title="Email"] { --brand: #636e72 !important; } /* 灰蓝色 - 更柔和的邮件色 */
+
+/* Hover 后统一保证图标为白色，兼容 FA 与 Emoji */
+.social-icon:hover i { color: #ffffff !important; }
+
+.social-icon iconify-icon {
+    font-size: 1.25rem !important;
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+    transition: transform 180ms ease !important;
+}
+
+.social-icon:hover iconify-icon { transform: scale(1.06) !important; }
+
+/* 减少动效偏好 */
+@media (prefers-reduced-motion: reduce) {
+    .social-icon, .social-icon i, .social-icon span, .social-icon iconify-icon { transition: none !important; }
+}
+
+/* 响应式调整覆盖 */
+@media (max-width: 480px) {
+    .social-icons-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        max-width: none !important;
+    }
+    
+    .social-icon {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 1.1rem !important;
+    }
+    
+    .social-icon i,
+    .social-icon span,
+    .social-icon iconify-icon {
+        font-size: 1.1rem !important;
+    }
+    
+    .social-icon iconify-icon {
+        width: 1.1rem !important;
+        height: 1.1rem !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .social-icons-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
