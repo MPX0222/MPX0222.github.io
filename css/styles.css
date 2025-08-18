@@ -90,6 +90,22 @@ h1, h2, h3, p, a {
     font-weight: 400;
     color: #636e72;
     margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.institution-logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    /* margin-right: 1px; */
+    margin-bottom: 3px;
+    vertical-align: middle;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.institution-logo:hover {
+    opacity: 1;
 }
 
 .profile-location {
