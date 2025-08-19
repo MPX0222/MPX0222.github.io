@@ -17,24 +17,27 @@ class EducationList extends HTMLElement {
     render(educationList) {
         const educationHTML = educationList.map(edu => `
             <div class="education-item">
-                <div class="school-logo">
-                    <img src="${edu.logo}" alt="${edu.school} Logo">
+                <div class="education-header">
+                    <div class="school-logo">
+                        <img src="${edu.logo}" alt="${edu.school} Logo">
+                    </div>
+                    <div class="education-title">
+                        <h3 class="school-name">${edu.school}</h3>
+                        <p class="degree">${edu.degree}</p>
+                    </div>
+                    <div class="education-period">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>${edu.period}</span>
+                    </div>
                 </div>
-                <div class="education-info">
-                    <h3 class="school-name">${edu.school}</h3>
-                    <p class="degree">${edu.degree}</p>
-                    <div class="education-meta">
-                        <p class="education-period">
-                            <i class="far fa-calendar-alt"></i>
-                            <span>${edu.period}</span>
-                        </p>
-                        <p class="education-period">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>${edu.location}</span>
-                        </p>
-                        <p class="education-period">
-                            <span>${edu.research}</span>
-                        </p>
+                <div class="education-details">
+                    <div class="education-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>${edu.location}</span>
+                    </div>
+                    <div class="research-focus">
+                        <i class="fas fa-microscope"></i>
+                        <span>${edu.research}</span>
                     </div>
                 </div>
             </div>
