@@ -56,7 +56,7 @@
         }
       },
       "stats": {
-        "citations": 1
+        "citations": 2
       }
     },
     {
@@ -89,7 +89,7 @@
     }, 
     {
       "thumbnail": "images/survey.png",
-      "title": "A Survey of NL2SQL with Large Language Models: Where are we, and where are we going?",
+      "title": "A Survey of Text-to-SQL in the Era of LLMs: Where are We, and Where are We Going?",
       "year": 2024,
       "authors": [
         "Xinyu Liu",
