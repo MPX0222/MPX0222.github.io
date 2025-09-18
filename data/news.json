@@ -1,14 +1,26 @@
 {
   "news": [
     {
+      "date": "Sep 2025",
+      "content": [
+        {
+          "type": "paper",
+          "text": "🔥 It is glad to notice that our long research paper: ",
+          "link": "https://arXiv.org/pdf/2504.08600",
+          "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
+          "venue": "has been accepted by NeurIPS 2025!"
+        }
+      ]
+    },
+    {
       "date": "Jul 2025",
       "content": [
         {
           "type": "paper",
-          "text": "🔥 It is glad to notice that survey paper of HKUST(GZ)-DIAL NL2SQL Research Group has been accepted by IEEE Transactions on Knowledge and Data Engineering Journal (TKDE 2025): ",
+          "text": "🔥 It is glad to notice that survey paper of HKUST(GZ)-DIAL NL2SQL Research Group: ",
           "link": "https://arxiv.org/pdf/2408.05109",
           "title": "A Survey of NL2SQL with Large Language Models: Where are we, and where are we going",
-          "venue": ". We have released the related resources (code, data, and paper) in August 2024."
+          "venue": "has been accepted by IEEE Transactions on Knowledge and Data Engineering Journal (TKDE 2025)! We have released the related resources (code, data, and paper) in August 2024."
         },
         {
           "type": "text",

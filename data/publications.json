@@ -2,7 +2,7 @@
   "publications": [
     {
       "thumbnail": "images/sqlr1.png",
-      "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
+      "title": "🔥 SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
       "year": 2025,
       "authors": [
         "Peixian Ma",
@@ -13,8 +13,8 @@
         "Jian Guo"
       ],
       "venue": {
-        "name": "arXiv",
-        "type": "Preprint (Under Review)"
+        "name": "NeurIPS 2025",
+        "type": "Conference (CCF-A)"
       },
       "bibtex": "@article{ma2024sqlr1,\n  title={SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning},\n  author={Ma, Peixian and Zhuang, Xiaile and Xu, Chengjin and Jiang, Xuhui and Chen, Ran and Guo, Jian},\n  journal={arXiv preprint arXiv:2504.08600},\n  year={2024}\n}",
       "links": {
@@ -89,7 +89,7 @@
     }, 
     {
       "thumbnail": "images/survey.png",
-      "title": "A Survey of Text-to-SQL in the Era of LLMs: Where are We, and Where are We Going?",
+      "title": "🔥 A Survey of Text-to-SQL in the Era of LLMs: Where are We, and Where are We Going?",
       "year": 2024,
       "authors": [
         "Xinyu Liu",
@@ -118,7 +118,7 @@
         }
       },
       "stats": {
-        "citations": 97
+        "citations": 100
       }
     },
     {
