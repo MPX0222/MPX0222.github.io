@@ -31,200 +31,137 @@ class DetailedPublicationList extends HTMLElement {
         this.render();
     }
 
-    getVenueType(venueName) {
-        const venueTypes = {
-            'arXiv': 'preprint',
-            'NeurIPS': 'conference',
-            'ICML': 'conference',
-            'ICLR': 'conference',
-            'Frontiers': 'journal',
-            'Nature': 'journal',
-            'Science': 'journal'
-        };
-
-        for (const [key, value] of Object.entries(venueTypes)) {
-            if (venueName.includes(key)) {
-                return value;
-            }
-        }
-        return 'preprint';
-    }
-
     render() {
         const styles = `
             <style>
-                .publication-grid {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                    gap: 2rem;
-                    margin-top: 2rem;
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
                 }
 
-                .publication-card {
+                .publications-list {
                     background: white;
-                    border-radius: 12px;
+                    border-radius: 8px;
                     overflow: hidden;
-                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                    transition: all 0.3s ease;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                    font-family: 'Georama', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
                 }
 
-                .publication-card:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+                .publication-item {
+                    padding: 1.2rem 1.5rem;
+                    border-bottom: 1px solid #f1f3f4;
                 }
 
-                .publication-image {
-                    width: 100%;
-                    height: 200px;
-                    object-fit: cover;
-                }
-
-                .publication-content {
-                    padding: 1.5rem;
+                .publication-item:last-child {
+                    border-bottom: none;
                 }
 
                 .publication-title {
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
                     font-weight: 600;
                     color: #2d3436;
-                    margin-bottom: 1rem;
                     line-height: 1.4;
+                    margin-bottom: 0.5rem;
+                    text-decoration: none;
+                    display: inline;
+                }
+
+                .publication-title:hover {
+                    color: #6c5ce7;
+                }
+
+                .pdf-link {
+                    color: #6c5ce7;
+                    text-decoration: none;
+                    font-weight: 600;
+                }
+
+                .pdf-link:hover {
+                    text-decoration: underline;
                 }
 
                 .publication-meta {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 0.5rem;
+                    font-size: 0.9rem;
+                    color: #636e72;
+                    line-height: 1.4;
+                }
+
+                .author-highlight {
+                    color: #6c5ce7;
+                    font-weight: 600;
+                }
+
+                .venue-info {
+                    color: #0984e3;
+                    font-weight: 500;
+                }
+
+                .empty-state {
+                    text-align: center;
+                    padding: 3rem 2rem;
+                    color: #636e72;
+                }
+
+                .empty-state i {
+                    font-size: 2rem;
+                    color: #ddd;
                     margin-bottom: 1rem;
                 }
 
-                .publication-year {
-                    color: #636e72;
-                    font-size: 0.9rem;
-                }
-
-                .publication-venue {
-                    display: inline-flex;
-                    align-items: center;
-                    padding: 0.25rem 0.6rem;
-                    border-radius: 4px;
-                    font-size: 0.85rem;
-                    font-weight: 500;
-                    color: white;
-                    background: linear-gradient(135deg, #2d3436, #6c5ce7);
-                }
-
-                .publication-stats {
-                    display: flex;
-                    align-items: center;
-                    gap: 1rem;
-                    margin-top: 1rem;
-                    padding-top: 1rem;
-                    border-top: 1px solid #eee;
-                }
-
-                .stat-item {
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                    color: #636e72;
-                    font-size: 0.9rem;
-                }
-
-                .stat-item i {
-                    color: #6c5ce7;
-                }
-
-                .publication-links {
-                    display: flex;
-                    gap: 0.5rem;
-                    margin-top: 1rem;
-                    flex-wrap: wrap;
-                }
-
-                .pub-link {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 0.3rem;
-                    padding: 0.5rem 1rem;
-                    font-size: 0.9rem;
-                    text-decoration: none;
-                    border-radius: 6px;
-                    background: #f8f9fa;
-                    color: #2d3436;
-                    transition: all 0.3s ease;
-                }
-
-                .pub-link:hover {
-                    background: #e9ecef;
-                }
-
-                .pub-link i {
-                    font-size: 1rem;
-                }
-
-                .author {
-                    color: #6c5ce7;
-                    font-weight: 500;
-                }
-
                 @media (max-width: 768px) {
-                    .publication-grid {
-                        grid-template-columns: 1fr;
+                    .publication-item {
+                        padding: 1rem;
+                    }
+
+                    .publication-title {
+                        font-size: 1rem;
+                    }
+
+                    .publication-meta {
+                        font-size: 0.85rem;
                     }
                 }
             </style>
         `;
 
-        const publicationsHTML = this.filteredPublications.map(pub => `
-            <div class="publication-card">
-                <img src="../${pub.thumbnail}" alt="${pub.title}" class="publication-image">
-                <div class="publication-content">
-                    <h3 class="publication-title">${pub.title}</h3>
-                    <div class="publication-meta">
-                        <div class="publication-year">${pub.year}</div>
-                        <div class="publication-venue">${pub.venue.name}</div>
-                        <div class="publication-authors">
-                            ${pub.authors.map(author => 
-                                author === "Peixian Ma" ? 
-                                `<span class="author">${author}</span>` : 
-                                author
-                            ).join(', ')}
-                        </div>
-                    </div>
-                    <div class="publication-stats">
-                        <div class="stat-item">
-                            <i class="fas fa-quote-right"></i>
-                            <span>${pub.stats.citations} Citations</span>
-                        </div>
-                    </div>
-                    <div class="publication-links">
-                        ${pub.links.pdf ? `
-                            <a href="${pub.links.pdf}" class="pub-link" target="_blank">
-                                <i class="fas fa-file-pdf"></i>
-                                PDF
-                            </a>
-                        ` : ''}
-                        ${pub.links.code ? `
-                            <a href="${pub.links.code}" class="pub-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                Code
-                            </a>
-                        ` : ''}
-                        ${pub.links.cite ? `
-                            <a href="${pub.links.cite}" class="pub-link" target="_blank">
-                                <i class="fas fa-quote-right"></i>
-                                Cite
-                            </a>
-                        ` : ''}
+        if (this.filteredPublications.length === 0) {
+            this.shadowRoot.innerHTML = `
+                ${styles}
+                <div class="publications-list">
+                    <div class="empty-state">
+                        <i class="fas fa-search"></i>
+                        <div>No publications found</div>
                     </div>
                 </div>
-            </div>
-        `).join('');
+            `;
+            return;
+        }
+
+        const publicationsHTML = this.filteredPublications.map(pub => {
+            const title = pub.links.pdf ? 
+                `<a href="${pub.links.pdf}" class="pdf-link" target="_blank">${pub.title}</a>` : 
+                pub.title;
+
+            const authors = pub.authors.map(author => 
+                author === "Peixian Ma" ? 
+                `<span class="author-highlight">${author}</span>` : 
+                author
+            ).join(', ');
+
+            return `
+                <div class="publication-item">
+                    <div class="publication-title">${title}</div>
+                    <div class="publication-meta">
+                        ${authors} • <span class="venue-info">${pub.venue.name}</span>
+                    </div>
+                </div>
+            `;
+        }).join('');
 
         this.shadowRoot.innerHTML = `
             ${styles}
-            <div class="publication-grid">
+            <div class="publications-list">
                 ${publicationsHTML}
             </div>
         `;
