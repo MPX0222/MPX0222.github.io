@@ -130,51 +130,106 @@ class Navbar extends HTMLElement {
                     font-weight: 600;
                 }
 
-                /* 特殊按钮样式 */
+                /* 现代化按钮样式 */
                 .nav-right a#home-link,
                 .nav-right a#records-link {
+                    position: relative;
                     font-weight: 600;
-                    background: linear-gradient(135deg, #2d3436, #6c5ce7);
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    border: 1px solid #6c5ce7;
+                    color: #6c5ce7;
+                    background: rgba(108, 92, 231, 0.08);
+                    border: 2px solid rgba(108, 92, 231, 0.2);
+                    border-radius: 12px;
+                    padding: 0.6rem 1.2rem !important;
+                    overflow: hidden;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    box-shadow: 0 2px 8px rgba(108, 92, 231, 0.1);
+                }
+
+                .nav-right a#home-link::before,
+                .nav-right a#records-link::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+                    transition: left 0.5s ease;
                 }
 
                 .nav-right a#home-link:hover,
                 .nav-right a#records-link:hover {
-                    opacity: 0.9;
+                    border-color: #6c5ce7;
+                    background: rgba(108, 92, 231, 0.12);
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.2);
+                }
+
+                .nav-right a#home-link:hover::before,
+                .nav-right a#records-link:hover::before {
+                    left: 100%;
                 }
 
                 .nav-right a#home-link.active,
                 .nav-right a#records-link.active {
                     background: linear-gradient(135deg, #2d3436, #6c5ce7);
-                    -webkit-background-clip: none;
-                    background-clip: none;
-                    -webkit-text-fill-color: white;
                     color: white;
+                    border-color: #6c5ce7;
+                    box-shadow: 0 4px 16px rgba(108, 92, 231, 0.3);
+                    transform: translateY(-1px);
                 }
 
                 .nav-contact {
+                    position: relative;
                     background: linear-gradient(135deg, #2d3436, #6c5ce7) !important;
                     color: white !important;
                     display: flex;
                     align-items: center;
-                    gap: 0.5rem;
-                    padding: 0.5rem 1.2rem !important;
+                    gap: 0.6rem;
+                    padding: 0.6rem 1.4rem !important;
                     font-weight: 600 !important;
-                    transition: all 0.3s ease !important;
+                    border-radius: 50px !important;
+                    border: none !important;
+                    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.2) !important;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+                    overflow: hidden;
+                }
+
+                .nav-contact::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+                    transition: left 0.5s ease;
                 }
 
                 .nav-contact svg {
-                    width: 16px;
-                    height: 16px;
+                    width: 18px;
+                    height: 18px;
                     fill: currentColor;
+                    transition: transform 0.3s ease;
                 }
                 
                 .nav-contact:hover {
-                    opacity: 0.9 !important;
+                    transform: translateY(-3px) !important;
+                    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.35) !important;
+                    background: linear-gradient(135deg, #3d4466, #7c6ce7) !important;
+                }
+
+                .nav-contact:hover::before {
+                    left: 100%;
+                }
+
+                .nav-contact:hover svg {
+                    transform: scale(1.1);
+                }
+
+                .nav-contact:active {
                     transform: translateY(-1px) !important;
+                    transition: all 0.1s ease !important;
                 }
 
                 @media (max-width: 768px) {
