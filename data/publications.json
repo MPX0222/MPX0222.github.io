@@ -27,7 +27,7 @@
         }
       },
       "stats": {
-        "citations": 32
+        "citations": 35
       }
     },
     {
@@ -43,7 +43,7 @@
       ],
       "venue": {
         "name": "arXiv",
-        "type": "Preprint (Under Review)"
+        "type": "Preprint (Technical Report)"
       },
       "bibtex": "{}",
       "links": {
@@ -70,8 +70,8 @@
         "Ruixuan Wang"
       ],
       "venue": {
-        "name": "arXiv",
-        "type": "Preprint (Under Review)"
+        "name": "BIBM 2025",
+        "type": "Conference (CCF-B)"
       },
       "bibtex": "{}",
       "links": {
@@ -118,7 +118,7 @@
         }
       },
       "stats": {
-        "citations": 104
+        "citations": 108
       }
     },
     {

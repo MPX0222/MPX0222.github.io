@@ -1,6 +1,18 @@
 {
   "news": [
     {
+      "date": "Oct 2025",
+      "content": [
+        {
+          "type": "paper",
+          "text": "🔥 It is glad to notice that our research paper: ",
+          "link": "https://arXiv.org/pdf/2508.03094",
+          "title": "Augmenting Continual Learning of Diseases with LLM-Generated Visual Concepts",
+          "venue": "has been accepted by 2025 IEEE International Conference on Bioinformatics and Biomedicine (BIBM 2025)!"
+        }
+      ]
+    },
+    {
       "date": "Sep 2025",
       "content": [
         {
@@ -8,7 +20,7 @@
           "text": "🔥 It is glad to notice that our long research paper: ",
           "link": "https://arXiv.org/pdf/2504.08600",
           "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
-          "venue": "has been accepted by NeurIPS 2025!"
+          "venue": "has been accepted by the Main Conference of The 39 Annual Conference on Neural Information Processing Systems (NeurIPS 2025)! The model weights and code are available on GitHub and HuggingFace."
         }
       ]
     },

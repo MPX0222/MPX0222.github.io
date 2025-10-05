@@ -8,7 +8,8 @@ class PublicationList extends HTMLElement {
       'ICML': { type: 'conference', subtype: 'icml' },
       'ICLR': { type: 'conference', subtype: 'iclr' },
       'TKDE': { type: 'journal', subtype: 'tkde' },
-      'Frontiers in Neuroscience': { type: 'conference', subtype: 'frontiers' },
+      'BIBM': { type: 'conference', subtype: 'neurips' },
+      'Frontiers in Neuroscience': { type: 'journal', subtype: 'frontiers' },
       'Nature': { type: 'journal', subtype: 'nature' },
       'Science': { type: 'journal', subtype: 'science' }
     };
