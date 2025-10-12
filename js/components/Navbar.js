@@ -260,9 +260,6 @@ class Navbar extends HTMLElement {
                 <div class="nav-content">
                     <div class="nav-left">
                         <a href="../index.html" class="nav-brand">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2L1 12H4V21H20V12H23L12 2Z" fill="currentColor"/>
-                            </svg>
                             Peixian Ma
                             <span class="version">v3.6</span>
                         </a>

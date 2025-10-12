@@ -339,7 +339,7 @@ button.pub-link {
 
 .container {
     display: flex;
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 2rem;
     gap: 2rem;
@@ -554,6 +554,7 @@ button.pub-link {
 
 /* Content area styles */
 .content {
+    margin-top: -15px;
     flex: 1;
     margin-left: 320px; /* sidebar宽度 + gap */
 }
