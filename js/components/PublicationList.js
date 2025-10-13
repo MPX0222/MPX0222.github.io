@@ -144,7 +144,7 @@ class PublicationList extends HTMLElement {
         }
 
         .author {
-          color: #2563eb;
+          color: #6366f1;
           font-weight: 600;
         }
 
@@ -162,7 +162,6 @@ class PublicationList extends HTMLElement {
           border-radius: 3px;
           font-size: 0.6875rem;
           font-weight: 600;
-          text-transform: uppercase;
           letter-spacing: 0.025em;
           font-family: var(--font-family);
         }
@@ -185,7 +184,7 @@ class PublicationList extends HTMLElement {
 
         .status-tag {
           font-size: 0.6875rem;
-          color: #6b7280;
+          color: #6366f1;
           padding: 0.1875rem 0.375rem;
           background-color: #f3f4f6;
           border-radius: 3px;

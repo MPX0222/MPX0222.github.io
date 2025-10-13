@@ -2730,7 +2730,7 @@ body.modal-open {
     border-radius: 3px;
     font-size: 0.75rem;
     font-weight: 600;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: 0.025em;
     line-height: 1;
     height: 1.75rem;

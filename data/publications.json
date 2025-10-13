@@ -66,6 +66,7 @@
       "authors": [
         "Jiantao Tan", 
         "Peixian Ma",
+        "Kanghao Chen",
         "Zhiming Dai",
         "Ruixuan Wang"
       ],
@@ -76,11 +77,11 @@
       "bibtex": "{}",
       "links": {
         "pdf": "https://arxiv.org/pdf/2508.03094",
-        "code": "",
+        "code": "https://github.com/MPX0222/VisualConcepts4CL",
         "cite": "https://arxiv.org/pdf/2508.03094",
         "github": {
-          "owner": "",
-          "repo": ""
+          "owner": "MPX0222",
+          "repo": "VisualConcepts4CL"
         }
       },
       "stats": {
