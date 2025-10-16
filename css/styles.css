@@ -2849,7 +2849,7 @@ body.modal-open {
 /* 社交图标矩阵样式 */
 .social-icons-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
     margin: 1.5rem auto 0;
     padding: 0;
@@ -2984,7 +2984,7 @@ body.modal-open {
 /* 社交徽标区域：圆形品牌环 + 玻璃光泽 + 悬浮提示 + 动效 */
 .social-icons-grid {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(4, 1fr) !important;
     gap: 14px !important;
     padding: 0 !important;
     margin: 16px auto 12px !important;
