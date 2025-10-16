@@ -45,7 +45,7 @@ class DetailedPublicationList extends HTMLElement {
                     border-radius: 8px;
                     overflow: hidden;
                     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-                    font-family: 'Georama', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                    font-family: 'Lora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
                 }
 
                 .publication-item {

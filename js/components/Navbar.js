@@ -14,7 +14,7 @@ class Navbar extends HTMLElement {
                 :host {
                     display: block;
                     width: 100%;
-                    font-family: var(--font-family, 'Georama', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+                    font-family: var(--font-family, 'Lora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
                     --primary-color: #1e3799;
                     --primary-light: #4a69bd;
                     --primary-dark: #0c2461;
@@ -261,7 +261,7 @@ class Navbar extends HTMLElement {
                     <div class="nav-left">
                         <a href="../index.html" class="nav-brand">
                             Peixian Ma
-                            <span class="version">v3.6</span>
+                            <span class="version">v3.7</span>
                         </a>
                     </div>
                     <div class="nav-right">

@@ -3,7 +3,7 @@
     --card-bg: #ffffff;
     --text-color: #2d3436;
     --shadow-color: rgba(0, 0, 0, 0.1);
-    --font-family: 'Georama', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-family: 'Lora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 * {
@@ -306,27 +306,27 @@ h1, h2, h3, p, a {
 
 /* 为不同类型的链接设置不同的颜色 */
 .pub-link i.fa-file-pdf {
-    color: #dc2626;
+    color: #6366f1;
 }
 
 .pub-link i.fa-code {
-    color: #7c3aed;
+    color: #6366f1;
 }
 
 .pub-link i.fa-quote-right {
-    color: #059669;
+    color: #6366f1;
 }
 
 .pub-link.pdf-link {
-    color: #dc2626;
+    color: #6366f1;
 }
 
 .pub-link.code-link {
-    color: #7c3aed;
+    color: #6366f1;
 }
 
 .pub-link.cite-link {
-    color: #059669;
+    color: #6366f1;
 }
 
 button.pub-link {
@@ -899,27 +899,27 @@ button.pub-link {
 
 /* 为不同类型的链接设置不同的颜色 */
 .pub-link i.fa-file-pdf {
-    color: #dc2626;
+    color: #6366f1;
 }
 
 .pub-link i.fa-code {
-    color: #7c3aed;
+    color: #6366f1;
 }
 
 .pub-link i.fa-quote-right {
-    color: #059669;
+    color: #6366f1;
 }
 
 .pub-link.pdf-link {
-    color: #dc2626;
+    color: #6366f1;
 }
 
 .pub-link.code-link {
-    color: #7c3aed;
+    color: #6366f1;
 }
 
 .pub-link.cite-link {
-    color: #059669;
+    color: #6366f1;
 }
 
 .publication-stats {
@@ -1183,27 +1183,27 @@ button.pub-link {
 
 /* 为不同类型的链接设置不同的颜色 */
 .pub-link i.fa-file-pdf {
-    color: #dc2626;
+    color: #6366f1;
 }
 
 .pub-link i.fa-code {
-    color: #7c3aed;
+    color: #6366f1;
 }
 
 .pub-link i.fa-quote-right {
-    color: #059669;
+    color: #6366f1;
 }
 
 .pub-link.pdf-link {
-    color: #dc2626;
+    color: #6366f1;
 }
 
 .pub-link.code-link {
-    color: #7c3aed;
+    color: #6366f1;
 }
 
 .pub-link.cite-link {
-    color: #059669;
+    color: #6366f1;
 }
 
 .publication-stats {

@@ -184,9 +184,9 @@ class PublicationList extends HTMLElement {
 
         .status-tag {
           font-size: 0.6875rem;
-          color: #6366f1;
+          color:rgb(126, 126, 126);
           padding: 0.1875rem 0.375rem;
-          background-color: #f3f4f6;
+          background-color:rgb(255, 255, 255);
           border-radius: 3px;
           font-weight: 500;
           font-family: var(--font-family);
@@ -403,19 +403,19 @@ class PublicationList extends HTMLElement {
                       ` : ''}
                       ${pub.links.code ? `
                         <a href="${pub.links.code}" class="pub-link code-link" target="_blank" rel="noopener">
-                          <i class="fas fa-code"></i>
+                          <i class="fab fa-github"></i>
                           <span>Code</span>
                         </a>
                       ` : ''}
                       <button class="pub-link cite-button cite-link" data-bibtex="${pub.bibtex.replace(/"/g, '&quot;')}" aria-label="Copy BibTeX citation">
-                        <i class="fas fa-quote-right"></i>
+                        <i class="fa-brands fa-google"></i>
                         <span>Bibtex</span>
                       </button>
                     </div>
                   </div>
                   <div class="publication-stats">
                     <div class="stat-item">
-                      <i class="fas fa-quote-left"></i>
+                      <i class="fa-solid fa-hashtag"></i>
                       <span>${pub.stats.citations} citations</span>
                     </div>
                     ${pub.links.github && pub.links.github.owner && pub.links.github.repo ? `
