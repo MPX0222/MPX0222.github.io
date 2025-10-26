@@ -1707,10 +1707,10 @@ button.pub-link {
 }
 
 /* 为不同类型的服务添加标签样式 */
-.service-tag.reviewer {
+/* .service-tag.reviewer {
     background: rgba(108, 92, 231, 0.1);
     color: #6c5ce7;
-}
+} */
 
 .service-tag.teaching {
     background: rgba(46, 204, 113, 0.1);

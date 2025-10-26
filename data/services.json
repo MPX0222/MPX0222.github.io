@@ -5,7 +5,11 @@
             "items": [
                 {
                     "tag": "Volunteer",
-                    "description": "Guangzhou, International Conference on Very Large Databases (VLDB 2024)"
+                    "description": "VLDB 2024"
+                },
+                {
+                    "tag": "Reviewer",
+                    "description": "NeurIPS 2025"
                 }
             ]
         }
