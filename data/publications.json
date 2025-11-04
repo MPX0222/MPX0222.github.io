@@ -27,36 +27,41 @@
         }
       },
       "stats": {
-        "citations": 39
+        "citations": 43
       }
     },
     {
-      "thumbnail": "images/SRLMs.png",
-      "title": "A Technical Study into 0.5B Reasoning Language Models",
+      "thumbnail": "images/survey.png",
+      "title": "A Survey of Text-to-SQL in the Era of LLMs: Where are We, and Where are We Going?",
       "year": 2025,
       "authors": [
-        "Xiaile Zhuang", 
+        "Xinyu Liu",
+        "Shuyu Shen", 
+        "Boyan Li",
         "Peixian Ma",
-        "Zhikai Jia",
-        "Zheng Cao",
-        "Shiwei Liu"
+        "Runzhi Jiang", 
+        "Yuxin Zhang",
+        "Ju Fan",
+        "Guoliang Li",
+        "Nan Tang",
+        "Yuyu Luo"
       ],
       "venue": {
-        "name": "arXiv",
-        "type": "Preprint (Technical Report)"
+        "name": "TKDE 2025",
+        "type": "Journal (CCF-A, IF: 8.9)"
       },
-      "bibtex": "{}",
+      "bibtex": "@article{liu2024survey,\n  title={A Survey of NL2SQL with Large Language Models: Where are we, and where are we going?},\n  author={Liu, Xinyu and Shen, Shuyu and Li, Boyan and Ma, Peixian and Jiang, Runzhi and Zhang, Yuxin and Fan, Ju and Li, Guoliang and Tang, Nan and Luo, Yuyu},\n  journal={arXiv preprint arXiv:2408.05109},\n  year={2024}\n}",
       "links": {
-        "pdf": "https://arxiv.org/abs/2506.13404",
-        "code": "",
-        "cite": "https://arxiv.org/abs/2506.13404",
+        "pdf": "https://arXiv.org/pdf/2408.05109",
+        "code": "https://github.com/HKUSTDial/NL2SQL_Handbook",
+        "cite": "https://arXiv.org/abs/2408.05109",
         "github": {
-          "owner": "",
-          "repo": ""
+          "owner": "HKUSTDial",
+          "repo": "NL2SQL_Handbook"
         }
       },
       "stats": {
-        "citations": 4
+        "citations": 136
       }
     },
     {
@@ -89,37 +94,32 @@
       }
     }, 
     {
-      "thumbnail": "images/survey.png",
-      "title": "A Survey of Text-to-SQL in the Era of LLMs: Where are We, and Where are We Going?",
-      "year": 2024,
+      "thumbnail": "images/SRLMs.png",
+      "title": "A Technical Study into 0.5B Reasoning Language Models",
+      "year": 2025,
       "authors": [
-        "Xinyu Liu",
-        "Shuyu Shen", 
-        "Boyan Li",
+        "Xiaile Zhuang", 
         "Peixian Ma",
-        "Runzhi Jiang", 
-        "Yuxin Zhang",
-        "Ju Fan",
-        "Guoliang Li",
-        "Nan Tang",
-        "Yuyu Luo"
+        "Zhikai Jia",
+        "Zheng Cao",
+        "Shiwei Liu"
       ],
       "venue": {
-        "name": "TKDE 2025",
-        "type": "Journal (CCF-A, IF: 8.9)"
+        "name": "arXiv",
+        "type": "Preprint (Technical Report)"
       },
-      "bibtex": "@article{liu2024survey,\n  title={A Survey of NL2SQL with Large Language Models: Where are we, and where are we going?},\n  author={Liu, Xinyu and Shen, Shuyu and Li, Boyan and Ma, Peixian and Jiang, Runzhi and Zhang, Yuxin and Fan, Ju and Li, Guoliang and Tang, Nan and Luo, Yuyu},\n  journal={arXiv preprint arXiv:2408.05109},\n  year={2024}\n}",
+      "bibtex": "{}",
       "links": {
-        "pdf": "https://arXiv.org/pdf/2408.05109",
-        "code": "https://github.com/HKUSTDial/NL2SQL_Handbook",
-        "cite": "https://arXiv.org/abs/2408.05109",
+        "pdf": "https://arxiv.org/abs/2506.13404",
+        "code": "",
+        "cite": "https://arxiv.org/abs/2506.13404",
         "github": {
-          "owner": "HKUSTDial",
-          "repo": "NL2SQL_Handbook"
+          "owner": "",
+          "repo": ""
         }
       },
       "stats": {
-        "citations": 124
+        "citations": 4
       }
     },
     {
