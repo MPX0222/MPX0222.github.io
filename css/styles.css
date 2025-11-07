@@ -1792,7 +1792,7 @@ html {
 }
 
 .company-logo img {
-    width: 100%;
+    width: 120%;
     height: auto;
     object-fit: contain;
     display: block;

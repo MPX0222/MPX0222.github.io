@@ -273,10 +273,6 @@ class Navbar extends HTMLElement {
                             <a href="#projects" class="nav-link">Projects</a>
                         </div>
                         <div class="nav-section">
-                            <a href="../index.html" id="home-link">Home</a>
-                            <a href="../pages/publications.html" class="nav-link" id="records-link">Detailed Publications</a>
-                        </div>
-                        <div class="nav-section">
                             <a href="mailto:mpx0222@qq.com" class="nav-contact">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>

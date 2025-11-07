@@ -20,7 +20,7 @@
           "text": "🔥 It is glad to notice that our long research paper: ",
           "link": "https://arXiv.org/pdf/2504.08600",
           "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
-          "venue": "has been accepted by the Main Conference of The 39 Annual Conference on Neural Information Processing Systems (NeurIPS 2025)! The model weights and code are available on GitHub and HuggingFace."
+          "venue": "has been accepted by poster of the main conference of The 39th Annual Conference on Neural Information Processing Systems (NeurIPS 2025)! We have fully released the model weights and code on GitHub and HuggingFace. "
         }
       ]
     },
