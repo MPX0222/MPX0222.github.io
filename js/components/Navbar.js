@@ -232,6 +232,20 @@ class Navbar extends HTMLElement {
                     transition: all 0.1s ease !important;
                 }
 
+                .nav-left .artistic-heading {
+                    font-size: 1.5rem;
+                    text-align: center;
+                    padding-left: 1rem;
+                    background: linear-gradient(120deg, #6c5ce7, #81ecec);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    text-transform: none;
+                    font-family: 'Dancing Script', cursive;
+                    position: relative;
+                }
+
+
                 @media (max-width: 768px) {
                     .nav-content {
                         padding: 0.75rem 1rem;
@@ -259,10 +273,7 @@ class Navbar extends HTMLElement {
             <nav class="navbar">
                 <div class="nav-content">
                     <div class="nav-left">
-                        <a href="../index.html" class="nav-brand">
-                            Peixian Ma
-                            <span class="version">v3.7</span>
-                        </a>
+                        <a class="artistic-heading">Toward a Broader Future</a>
                     </div>
                     <div class="nav-right">
                         <div class="nav-section">
