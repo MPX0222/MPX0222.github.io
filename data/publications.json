@@ -95,13 +95,13 @@
     }, 
     {
       "thumbnail": "images/SRLMs.png",
-      "title": "A Technical Study into 0.5B Reasoning Language Models",
+      "title": "Effective Learning for Small Reasoning Models: An Empirical Study on 0.5B Reasoning LLMs",
       "year": 2025,
       "authors": [
         "Xiaile Zhuang", 
         "Peixian Ma",
         "Zhikai Jia",
-        "Zheng Cao",
+        "Zane Cao",
         "Shiwei Liu"
       ],
       "venue": {

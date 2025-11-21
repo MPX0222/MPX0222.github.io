@@ -47,7 +47,7 @@
           "type": "paper",
           "text": "We release a technical study about 0.5B reasoning language models: ",
           "link": "https://arXiv.org/pdf/2506.13404",
-          "title": "A Technical Study into 0.5B Reasoning Language Models.",
+          "title": "Effective Learning for Small Reasoning Models: An Empirical Study on 0.5B Reasoning LLMs",
           "venue": "is available on arXiv."
         }
       ]
