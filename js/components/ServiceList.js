@@ -16,6 +16,26 @@ class ServiceList extends HTMLElement {
     }
 
     render(services) {
+        const isCompact = this.getAttribute('mode') === 'compact';
+
+        if (isCompact) {
+            this.innerHTML = `
+                <div class="services-list compact">
+                    ${services.map(category => `
+                        <div class="service-category-compact">
+                            ${category.items.map(item => `
+                                <div class="service-compact-item">
+                                    <span class="service-compact-tag ${item.tag.toLowerCase()}">${item.tag}</span>
+                                    <span class="service-description">${item.description}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            return;
+        }
+
         this.innerHTML = `
             <div class="services-list">
                 ${services.map(category => `

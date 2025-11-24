@@ -63,7 +63,7 @@
                         <a href="https://www.linkedin.com/in/MPX0222/" class="" title="">
                             <i class="fab fa-linkedin" style="font-size: 1.6rem;"></i>
                         </a>
-                        <a href="files/cv/CV2026_PeixianMA_EN.pdf" class="" title="">
+                        <a href="files/cv/CV2026_PeixianMa_EN.pdf" class="" title="">
                             <i class="fa-solid fa-pager" style="font-size: 1.6rem;"></i>
                         </a>
                     </div>
@@ -87,24 +87,11 @@
                 <div class="card-stack">
                     <!-- Profile card with tabs -->
                     <div id="profile" class="card">
-                        <div class="card-header with-tabs" style="background: linear-gradient(135deg, #2d3436, #6c5ce7);">
-                            <div class="header-content">
-                                <div class="header-left">
-                                    <i class="fas fa-user"></i>
-                                    <h2>Profile</h2>
-                                </div>
-                                <div class="tabs">
-                                    <button class="tab-button active" data-tab="about">About Me</button>
-                                    <button class="tab-button" data-tab="education">Education</button>
-                                    <button class="tab-button" data-tab="internship">Employment</button>
-                                    <button class="tab-button" data-tab="service">Service</button>
-                                </div>
-                                <i class="fas fa-ellipsis-h"></i>
-                            </div>
+                        <div class="card-header" style="background: linear-gradient(135deg, #2d3436, #6c5ce7);">
+                            <i class="fas fa-user"></i>
+                            <h2>Profile</h2>
                         </div>
                         <div class="card-content">
-                            <div class="tab-content">
-                                <div id="about-tab" class="tab-pane active">
                             <p>
                                 I received my M.Phil. degree in Data Science and Analytics (DSA) from <a href="https://www.hkust-gz.edu.cn/zh/">The Hong Kong University of Science and Technology (Guangzhou) ~ HKUST(GZ)</a>. 
                                 During this study period, I received guidance and supervision from <a href="https://luoyuyu.vip">Prof. Yuyu Luo</a> and <a href="https://nantang.github.io/">Prof. Nan Tang</a>.
@@ -133,16 +120,20 @@
                                 <i class="fas fa-cogs" style="font-size: 16px; color: #666666; margin-right: 8px;"></i>Reinforcement Learning. 
                             I am also seeking for opportunities of collaboration on these topics. Feel free to contact me if you are interested in these topics.
                             </p>
+
+                            <div class="compact-section" id="education">
+                                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                                <education-list mode="compact"></education-list>
                             </div>
-                                <div id="education-tab" class="tab-pane">
-                                    <education-list></education-list>
-                                </div>
-                                <div id="internship-tab" class="tab-pane">
-                                    <internship-list></internship-list>
-                                </div>
-                                <div id="service-tab" class="tab-pane">
-                                    <service-list></service-list>
-                                </div>
+
+                            <div class="compact-section" id="internship">
+                                <h3><i class="fas fa-briefcase"></i> Employment</h3>
+                                <internship-list mode="compact"></internship-list>
+                            </div>
+
+                            <div class="compact-section" id="service">
+                                <h3><i class="fas fa-hands-helping"></i> Service</h3>
+                                <service-list mode="compact"></service-list>
                             </div>
                         </div>
                     </div>
@@ -152,7 +143,6 @@
                         <div class="card-header" style="background: linear-gradient(135deg, #2d3436, #6c5ce7);">
                             <i class="fas fa-newspaper"></i>
                             <h2>News</h2>
-                            <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <div class="card-content">
                             <news-list></news-list>
@@ -164,7 +154,6 @@
                         <div class="card-header" style="background: linear-gradient(135deg, #2d3436, #6c5ce7);">
                             <i class="fas fa-book"></i>
                             <h2>Publications</h2>
-                            <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <div class="card-content">
                             <publication-list></publication-list>
@@ -176,7 +165,6 @@
                         <div class="card-header" style="background: #2ED573;">
                             <i class="fas fa-award"></i>
                             <h2>Awards</h2>
-                            <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <div class="card-content">
                             <award-list></award-list>
@@ -263,6 +251,7 @@
     const navDots = document.querySelectorAll('.nav-dot');
     
     // Modal functionality
+    /*
     const modalOverlay = document.getElementById('modal-overlay');
     const modalContent = document.querySelector('.modal-content');
     const modalClose = document.querySelector('.modal-close');
@@ -315,6 +304,7 @@
             closeModal();
         }
     });
+    */
 
     // 监听滚动事件
     window.addEventListener('scroll', () => {

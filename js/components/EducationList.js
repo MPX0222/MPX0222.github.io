@@ -15,6 +15,28 @@ class EducationList extends HTMLElement {
     }
 
     render(educationList) {
+        const isCompact = this.getAttribute('mode') === 'compact';
+        
+        if (isCompact) {
+            const educationHTML = educationList.map(edu => `
+                <div class="compact-list-item">
+                    <div class="compact-logo">
+                        <img src="${edu.logo}" alt="${edu.school} Logo">
+                    </div>
+                    <div class="compact-details">
+                        <div class="compact-header">
+                            <span class="compact-title">${edu.school}</span>
+                            <span class="compact-date">${edu.period}</span>
+                        </div>
+                        <div class="compact-subtitle">${edu.degree}</div>
+                        ${edu.research ? `<div class="compact-desc">${edu.research}</div>` : ''}
+                    </div>
+                </div>
+            `).join('');
+            this.innerHTML = `<div class="education-list compact">${educationHTML}</div>`;
+            return;
+        }
+
         const educationHTML = educationList.map(edu => `
             <div class="education-item">
                 <div class="education-header">

@@ -281,7 +281,6 @@ class Navbar extends HTMLElement {
                             <a href="#news" class="nav-link">News</a>
                             <a href="#publications" class="nav-link">Publications</a>
                             <a href="#awards" class="nav-link">Awards</a>
-                            <a href="#projects" class="nav-link">Projects</a>
                         </div>
                         <div class="nav-section">
                             <a href="mailto:mpx0222@qq.com" class="nav-contact">

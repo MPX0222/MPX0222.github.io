@@ -14,6 +14,28 @@ class InternshipList extends HTMLElement {
   }
 
   render(internships) {
+    const isCompact = this.getAttribute('mode') === 'compact';
+
+    if (isCompact) {
+        const internshipsHTML = internships.map(intern => `
+            <div class="compact-list-item">
+                <div class="compact-logo">
+                    <img src="${intern.logo}" alt="${intern.company} Logo">
+                </div>
+                <div class="compact-details">
+                    <div class="compact-header">
+                        <span class="compact-title">${intern.company}</span>
+                        <span class="compact-date">${intern.period}</span>
+                    </div>
+                    <div class="compact-subtitle">${intern.position}</div>
+                    ${intern.duties ? `<div class="compact-desc">${intern.duties}</div>` : ''}
+                </div>
+            </div>
+        `).join('');
+        this.innerHTML = `<div class="internship-list compact">${internshipsHTML}</div>`;
+        return;
+    }
+
     const internshipsHTML = internships.map(intern => `
       <div class="internship-item">
         <div class="internship-header">
