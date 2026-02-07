@@ -1,18 +1,34 @@
 {
   "internships": [
     {
+      "logo": "images/hkust-logo.png",
+      "company": "Paradoox AI",
+      "position": "Assistant Researcher",
+      "period": "Feb. 2026 - Present",
+      "location": "Dongcong Town, Nansha District, Guangzhou, China",
+      "duties": "Job Duties: Research on Natural Language Processing, Machine Learning, Computer Vision, Large Language Models, Reinforcement Learning"
+    },
+    {
+      "logo": "images/hkust-logo.png",
+      "company": "China Telecom",
+      "position": "Algorithm Engineer",
+      "period": "Jul. 2025 - Feb. 2026",
+      "location": "Zhujiang New Town, Tianhe District, Guangzhou, China",
+      "duties": "Job Duties: Natural Language Processing, Machine Learning, Computer Vision"
+    },
+    {
       "logo": "images/idea_logo.png",
-      "company": "IDEA Research, International Digital Economy Academy",
-      "position": "Intern for Large Language Model Engineering, FinAI Lab, FinKG Group",
-      "period": "Jan 2025 - Jun 2025",
+      "company": "International Digital Economy Academy (IDEA)",
+      "position": "Research Intern, FinAI Lab",
+      "period": "Jan. 2025 - Jun. 2025",
       "location": "Futian Bonded Area, Futian District, Shenzhen, China",
       "duties": "Job Duties: Development of Financial Large Language Models, Model Post-training, Reinforcement Data Generation"
     },
     {
       "logo": "images/jnu-logo.jpg",
       "company": "Jinan University Big Data Center",
-      "position": "Intern for Data Mining and Analysis",
-      "period": "Jan 2023 - Jun 2023",
+      "position": "Data Development Intern",
+      "period": "Jan. 2023 - Jun. 2023",
       "location": "Higher Education Mega Center, Panyu District, Guangzhou, China",
       "duties": "Job Duties: Data Mining, Data Analysis, Data Visualization for News Analysis"
     }

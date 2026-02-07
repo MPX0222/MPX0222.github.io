@@ -26,34 +26,36 @@ class NewsList extends HTMLElement {
         .news-list {
           display: flex;
           flex-direction: column;
-          gap: 0.5rem;
-          padding: 0.75rem 1.25rem 0.75rem 0.75rem;
+          gap: 0.75rem;
+          padding: 0 0.5rem;
+          max-height: 500px;
           overflow-y: auto;
-          scrollbar-width: none;
-          -ms-overflow-style: none;
+          overflow-x: hidden;
         }
 
-        /* 隐藏 Webkit 浏览器的默认滚动条 */
+        /* 自定义滚动条样式 - Webkit浏览器 (Chrome, Safari, Edge) */
         .news-list::-webkit-scrollbar {
           width: 6px;
-          background: transparent;
         }
 
-        /* 默认隐藏滚动条 */
+        .news-list::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 3px;
+        }
+
         .news-list::-webkit-scrollbar-thumb {
-          background: transparent;
-          border-radius: 6px;
-          transition: background-color 0.3s ease;
+          background: #6c5ce7;
+          border-radius: 3px;
         }
 
-        /* 鼠标悬停在容器上时显示滚动条 */
-        .news-list:hover::-webkit-scrollbar-thumb {
-          background: rgba(108, 92, 231, 0.2);
+        .news-list::-webkit-scrollbar-thumb:hover {
+          background: #5f4eeb;
         }
 
-        /* 鼠标悬停在滚动条上时的样式 */
-        .news-list:hover::-webkit-scrollbar-thumb:hover {
-          background: rgba(108, 92, 231, 0.4);
+        /* Firefox 滚动条样式 */
+        .news-list {
+          scrollbar-width: thin;
+          scrollbar-color: #6c5ce7 #f1f1f1;
         }
 
         .news-item:first-child {
@@ -62,17 +64,22 @@ class NewsList extends HTMLElement {
 
         .news-item {
           display: flex;
-          gap: 0.75rem;
-          padding: 0.5rem;
-          background: var(--card-bg);
-          border-radius: 6px;
+          gap: 1rem;
+          padding: 0.75rem 0;
+          background: transparent;
+          border-radius: 0;
           align-items: flex-start;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .news-item:last-child {
+          border-bottom: none;
         }
 
         .news-date {
-          flex: 0 0 70px;
+          flex: 0 0 85px;
           font-size: 0.9rem;
-          color: #2d3436;
+          color: #6c5ce7;
           font-weight: 500;
         }
 
@@ -103,7 +110,8 @@ class NewsList extends HTMLElement {
 
         @media (max-width: 768px) {
           .news-list {
-            padding: 0.5rem 1rem 0.5rem 0.5rem;
+            max-height: 400px;
+            padding: 0.25rem 0.5rem;
             gap: 0.35rem;
           }
 

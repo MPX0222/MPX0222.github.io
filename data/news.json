@@ -1,7 +1,28 @@
 {
   "news": [
     {
-      "date": "Oct 2025",
+      "date": "Feb. 2026",
+      "content": [
+        {
+          "type": "text",
+          "text": "📖 Join Paradoox AI as an assistant researcher. I will be responsible for the research and development of the AI for the financial industry. "
+        }
+      ]
+    },
+    {
+      "date": "Jan. 2026",
+      "content": [
+        { 
+          "type": "paper",
+          "text": "🔥 It is glad to notice that our research paper: ",
+          "link": "https://arXiv.org/pdf/2506.13404",
+          "title": "Effective Learning for Small Reasoning Models: An Empirical Study on 0.5B Reasoning LLMs",
+          "venue": "has been accepted by 2026 Conference on Principles and Practice of Language Modeling (CPAL 2026)!"
+        }
+      ]
+    },
+    {
+      "date": "Oct. 2025",
       "content": [
         {
           "type": "paper",
@@ -13,7 +34,7 @@
       ]
     },
     {
-      "date": "Sep 2025",
+      "date": "Sep. 2025",
       "content": [
         {
           "type": "paper",
@@ -25,7 +46,7 @@
       ]
     },
     {
-      "date": "Jul 2025",
+      "date": "Jul. 2025",
       "content": [
         {
           "type": "paper",
@@ -41,11 +62,11 @@
       ]
     },
     {
-      "date": "Jun 2025",
+      "date": "Jun. 2025",
       "content": [
         {
           "type": "paper",
-          "text": "We release a technical study about 0.5B reasoning language models: ",
+          "text": "🔥 We release a technical study about 0.5B reasoning language models: ",
           "link": "https://arXiv.org/pdf/2506.13404",
           "title": "Effective Learning for Small Reasoning Models: An Empirical Study on 0.5B Reasoning LLMs",
           "venue": "is available on arXiv."
@@ -53,7 +74,7 @@
       ]
     },
     {
-      "date": "May 2025",
+      "date": "May. 2025",
       "content": [
         {
           "type": "text",
@@ -62,7 +83,7 @@
       ]
     },
     {
-      "date": "Apr 2025",
+      "date": "Apr. 2025",
       "content": [
         {
           "type": "paper",
@@ -74,24 +95,24 @@
       ]
     },
     {
-      "date": "Jan 2025",
+      "date": "Jan. 2025",
       "content": [
         {
           "type": "text",
-          "text": "Receive Intern Program offer and start internship in International Digital Economy Academy (IDEA), Shenzhen."
+          "text": "📖 Receive Intern Program offer and start internship in International Digital Economy Academy (IDEA), Shenzhen."
         }
       ]
     },
     {
-      "date": "Dec 2024",
+      "date": "Dec. 2024",
       "content": [
         {
           "type": "text",
-          "text": "Successfully pass the Mid-term Group Project Defense of the HKUST(GZ) Red Bird M.Phil Program."
+          "text": "🎉 Successfully pass the Mid-term Group Project Defense of the HKUST(GZ) Red Bird M.Phil Program."
         },
         {
           "type": "paper",
-          "text": "Long Research Paper: ",
+          "text": "🔥 Long Research Paper: ",
           "link": "https://arXiv.org/pdf/2412.17068",
           "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
           "venue": "is available on arXiv."
@@ -99,16 +120,16 @@
       ]
     },
     {
-      "date": "Jan 2024",
+      "date": "Jan. 2024",
       "content": [
         {
           "type": "text",
-          "text": "Successfully pass the Postgraduate Qualifying Assessment of the HKUST(GZ) Red Bird M.Phil Program."
+          "text": "🎉 Successfully pass the Postgraduate Qualifying Assessment of the HKUST(GZ) Red Bird M.Phil Program."
         }
       ]
     },
     {
-      "date": "Sep 2023",
+      "date": "Sep. 2023",
       "content": [
         {
           "type": "text",
@@ -117,15 +138,15 @@
       ]
     },
     {
-      "date": "Jul 2023",
+      "date": "Jul. 2023",
       "content": [
         {
           "type": "text",
-          "text": "Receive Postgraduate Program offers from The Hong Kong University of Science and Technology (Guangzhou) and The Chinese University of Hong Kong (Shenzhen)."
+          "text": "📖 Receive Research Postgraduate Program offers of 2023-2024 Fall from The Hong Kong University of Science and Technology (Guangzhou) and The Chinese University of Hong Kong (Shenzhen)."
         },
         {
           "type": "paper",
-          "text": "First Long Research Paper: ",
+          "text": "🔥 First Long Research Paper: ",
           "link": "https://www.frontiersin.org/articles/10.3389/fnins.2023.1137557/full",
           "title": "Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease",
           "venue": "has been accepted and published by Frontiers in Neuroscience."
@@ -137,7 +158,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Successfully pass the Undergraduate Thesis Defense in Jinan University."
+          "text": "🎉 Successfully pass the Undergraduate Thesis Defense in Jinan University."
         }
       ]
     }

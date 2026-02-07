@@ -27,7 +27,7 @@
         }
       },
       "stats": {
-        "citations": 49
+        "citations": 61
       }
     },
     {
@@ -61,7 +61,7 @@
         }
       },
       "stats": {
-        "citations": 145
+        "citations": 174
       }
     },
     {
@@ -90,7 +90,7 @@
         }
       },
       "stats": {
-        "citations": 0
+        "citations": 1
       }
     }, 
     {
@@ -105,8 +105,8 @@
         "Shiwei Liu"
       ],
       "venue": {
-        "name": "arXiv",
-        "type": "Preprint (Under Review)"
+        "name": "CPAL 2026",
+        "type": "Conference (CCF-N)"
       },
       "bibtex": "{}",
       "links": {
@@ -119,7 +119,36 @@
         }
       },
       "stats": {
-        "citations": 4
+        "citations": 5
+      }
+    },
+    {
+      "thumbnail": "images/rcug.png",
+      "title": "Representation Calibration and Uncertainty Guidance for Class-Incremental Learning based on Vision Language Model",
+      "year": 2025,
+      "authors": [
+        "Jiantao Tan*",
+        "Peixian Ma*",
+        "Tong Yu",
+        "Wentao Zhang",
+        "Ruixuan Wang"
+      ],
+      "venue": {
+        "name": "arXiv",
+        "type": "Preprint (Under Review)"
+      },
+      "bibtex": "",
+      "links": {
+        "pdf": "https://arXiv.org/pdf/2512.09441",
+        "code": "",
+        "cite": "https://arXiv.org/abs/2512.09441",
+        "github": {
+          "owner": "",
+          "repo": ""
+        }
+      },
+      "stats": {
+        "citations": 0
       }
     },
     {
@@ -178,7 +207,7 @@
         }
       },
       "stats": {
-        "citations": 8
+        "citations": 9
       }
     }
   ]

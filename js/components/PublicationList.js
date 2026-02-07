@@ -9,6 +9,7 @@ class PublicationList extends HTMLElement {
       'ICLR': { type: 'conference', subtype: 'iclr' },
       'TKDE': { type: 'journal', subtype: 'tkde' },
       'BIBM': { type: 'conference', subtype: 'neurips' },
+      'CPAL': { type: 'conference', subtype: 'cpal' },
       'Frontiers in Neuroscience': { type: 'journal', subtype: 'frontiers' },
       'Nature': { type: 'journal', subtype: 'nature' },
       'Science': { type: 'journal', subtype: 'science' }
@@ -79,23 +80,30 @@ class PublicationList extends HTMLElement {
 
         .publication-item {
           display: flex;
-          gap: 1rem;
-          padding: 1rem;
-          background: #ffffff;
-          border-radius: 6px;
+          gap: 1.5rem;
+          padding: 1.5rem 0;
+          background: transparent;
+          border-radius: 0;
           align-items: flex-start;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .publication-item:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
         }
 
         .publication-thumbnail {
-          flex: 0 0 140px;
-          height: 90px;
-          border-radius: 4px;
+          flex: 0 0 180px;
+          height: 110px;
+          border-radius: 6px;
           overflow: hidden;
           background: #ffffff;
           display: flex;
           align-items: center;
           justify-content: center;
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .publication-thumbnail img {
@@ -278,18 +286,18 @@ class PublicationList extends HTMLElement {
 
         @media (max-width: 768px) {
           .publications-list {
-            gap: 0.375rem;
+            gap: 1.25rem;
           }
 
           .publication-item {
             flex-direction: column;
-            padding: 0.75rem;
-            gap: 0.5rem;
+            padding: 1.25rem 0;
+            gap: 0.75rem;
           }
 
           .publication-thumbnail {
             width: 100%;
-            height: 80px;
+            height: 100px;
             flex: none;
           }
 
@@ -323,11 +331,11 @@ class PublicationList extends HTMLElement {
 
         @media (max-width: 480px) {
           .publication-item {
-            padding: 0.625rem;
+            padding: 1rem 0;
           }
 
           .publication-thumbnail {
-            height: 70px;
+            height: 90px;
           }
 
           .publication-title {
@@ -380,7 +388,7 @@ class PublicationList extends HTMLElement {
                   </h3>
                   <p class="publication-authors">
                     ${pub.authors.map(author => 
-                      author === "Peixian Ma" ? 
+                      author === "Peixian Ma" || author === "Peixian Ma*" ? 
                       `<span class="author">${author}</span>` : 
                       author
                     ).join(', ')}
