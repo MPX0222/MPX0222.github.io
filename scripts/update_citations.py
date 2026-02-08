@@ -2,29 +2,52 @@
 """
 Update Google Scholar citation counts automatically.
 Uses the scholarly library to fetch data from Google Scholar profile.
+In CI (e.g. GitHub Actions), uses free proxies to avoid IP blocking by Google Scholar.
 """
 
 import json
+import os
 import re
 import sys
-from datetime import datetime
-import os
 
 try:
-    from scholarly import scholarly
+    from scholarly import scholarly, ProxyGenerator
 except ImportError:
     print("❌ Error: scholarly library not found.")
     print("   Please install it: pip install scholarly")
     sys.exit(1)
 
+try:
+    from scholarly._proxy_generator import MaxTriesExceededException
+except ImportError:
+    MaxTriesExceededException = Exception  # fallback if location changes
+
 # Your Google Scholar ID (can be overridden by environment variable)
 SCHOLAR_ID = os.environ.get('SCHOLAR_ID', '93URqlsAAAAJ')
+
+# Use proxy in CI (GitHub Actions / data center IPs are often blocked by Google Scholar)
+USE_PROXY = os.environ.get('GITHUB_ACTIONS') == 'true' or os.environ.get('SCHOLAR_USE_PROXY', '').lower() in ('1', 'true', 'yes')
+
+
+def _setup_proxy():
+    """Use free rotating proxies (for CI). Reference: BugMaker-Boyan/BugMaker-Boyan.github.io"""
+    pg = ProxyGenerator()
+    # timeout=2, wait_time=60: balance between speed and proxy list availability
+    ok = pg.FreeProxies(timeout=2, wait_time=60)
+    if ok:
+        scholarly.use_proxy(pg)
+        print("   Using free proxies (CI mode).")
+    return ok
 
 
 def fetch_scholar_data():
     """Fetch publications from Google Scholar using scholarly library"""
     print(f"📚 Fetching data from Google Scholar...")
     print(f"   Scholar ID: {SCHOLAR_ID}")
+
+    if USE_PROXY:
+        if not _setup_proxy():
+            print("   ⚠️ Free proxy setup failed, trying without proxy...")
 
     try:
         # Search for author by ID
@@ -39,7 +62,26 @@ def fetch_scholar_data():
 
         return author
 
+    except MaxTriesExceededException as e:
+        print(f"❌ Error (proxy max retries): {e}")
+        if not USE_PROXY:
+            print("   Tip: In CI, GITHUB_ACTIONS is set so proxy is used automatically.")
+        sys.exit(1)
     except Exception as e:
+        err_msg = str(e).lower()
+        # First attempt failed (often blocked in CI); retry with proxy if we didn't use it yet
+        if not USE_PROXY and ("cannot fetch" in err_msg or "blocked" in err_msg or "403" in err_msg or "429" in err_msg):
+            print("   Request failed (likely blocked). Retrying with free proxies...")
+            if _setup_proxy():
+                try:
+                    author = scholarly.search_author_id(SCHOLAR_ID)
+                    scholarly.fill(author, sections=['basics', 'indices', 'counts', 'publications'])
+                    print(f"✓ Found author: {author.get('name', 'Unknown')}")
+                    print(f"   Total citations: {author.get('citedby', 0)}")
+                    print(f"   Publications: {len(author.get('publications', []))}")
+                    return author
+                except Exception as e2:
+                    print(f"❌ Retry with proxy failed: {e2}")
         print(f"❌ Error fetching Google Scholar data: {e}")
         sys.exit(1)
 
