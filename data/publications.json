@@ -6,7 +6,7 @@
       "year": 2025,
       "authors": [
         "Peixian Ma",
-        "Xiaile Zhuang", 
+        "Xiaile Zhuang",
         "Chengjin Xu",
         "Xuhui Jiang",
         "Ran Chen",
@@ -27,7 +27,7 @@
         }
       },
       "stats": {
-        "citations": 61
+        "citations": 50
       }
     },
     {
@@ -36,10 +36,10 @@
       "year": 2025,
       "authors": [
         "Xinyu Liu",
-        "Shuyu Shen", 
+        "Shuyu Shen",
         "Boyan Li",
         "Peixian Ma",
-        "Runzhi Jiang", 
+        "Runzhi Jiang",
         "Yuxin Zhang",
         "Ju Fan",
         "Guoliang Li",
@@ -61,7 +61,7 @@
         }
       },
       "stats": {
-        "citations": 174
+        "citations": 179
       }
     },
     {
@@ -69,7 +69,7 @@
       "title": "Augmenting Continual Learning of Diseases with LLM-Generated Visual Concepts",
       "year": 2025,
       "authors": [
-        "Jiantao Tan", 
+        "Jiantao Tan",
         "Peixian Ma",
         "Kanghao Chen",
         "Zhiming Dai",
@@ -92,13 +92,13 @@
       "stats": {
         "citations": 1
       }
-    }, 
+    },
     {
       "thumbnail": "images/SRLMs.png",
       "title": "Effective Learning for Small Reasoning Models: An Empirical Study on 0.5B Reasoning LLMs",
       "year": 2025,
       "authors": [
-        "Xiaile Zhuang", 
+        "Xiaile Zhuang",
         "Peixian Ma",
         "Zhikai Jia",
         "Zane Cao",
@@ -119,7 +119,7 @@
         }
       },
       "stats": {
-        "citations": 5
+        "citations": 2
       }
     },
     {
@@ -157,7 +157,7 @@
       "year": 2024,
       "authors": [
         "Peixian Ma",
-        "Boyan Li", 
+        "Boyan Li",
         "Runzhi Jiang",
         "Ju Fan",
         "Nan Tang",
@@ -178,7 +178,7 @@
         }
       },
       "stats": {
-        "citations": 6
+        "citations": 5
       }
     },
     {
@@ -187,7 +187,7 @@
       "year": 2023,
       "authors": [
         "Peixian Ma",
-        "Jing Wang", 
+        "Jing Wang",
         "Zhiguo Zhou",
         "C. L. Philip Chen",
         "Junwei Duan"
@@ -207,7 +207,7 @@
         }
       },
       "stats": {
-        "citations": 9
+        "citations": 7
       }
     }
   ]
