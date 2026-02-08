@@ -31,13 +31,18 @@ USE_PROXY = os.environ.get('GITHUB_ACTIONS') == 'true' or os.environ.get('SCHOLA
 
 def _setup_proxy():
     """Use free rotating proxies (for CI). Reference: BugMaker-Boyan/BugMaker-Boyan.github.io"""
-    pg = ProxyGenerator()
-    # timeout=2, wait_time=60: balance between speed and proxy list availability
-    ok = pg.FreeProxies(timeout=2, wait_time=60)
-    if ok:
-        scholarly.use_proxy(pg)
-        print("   Using free proxies (CI mode).")
-    return ok
+    try:
+        pg = ProxyGenerator()
+        # timeout=2, wait_time=60: balance between speed and proxy list availability
+        ok = pg.FreeProxies(timeout=2, wait_time=60)
+        if ok:
+            scholarly.use_proxy(pg)
+            print("   Using free proxies (CI mode).")
+        return ok
+    except TypeError as e:
+        # 新版 httpx 不再支持 proxies= 参数，导致 scholarly 内部报错
+        print(f"   Proxy not available (httpx API change): {e}")
+        return False
 
 
 def fetch_scholar_data():

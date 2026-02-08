@@ -23,6 +23,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip install scholarly
+          # scholarly 的 ProxyGenerator 依赖 httpx 旧版 API (proxies=)，新版本已改为 proxy=，故固定兼容版本
+          pip install "httpx>=0.24,<0.28" --force-reinstall
 
       - name: Update citations
         env:
