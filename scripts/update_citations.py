@@ -16,9 +16,15 @@ from bs4 import BeautifulSoup
 SCHOLAR_ID = "93URqlsAAAAJ"
 SCHOLAR_URL = f"https://scholar.google.com/citations?user={SCHOLAR_ID}&hl=en&pagesize=100"
 
-# User agent to mimic browser
+# 更接近真实浏览器的请求头，降低被 Google 识别为爬虫的概率
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Referer': 'https://scholar.google.com/',
+    'Connection': 'keep-alive',
+    'Upgrade-Insecure-Requests': '1',
 }
 
 def fetch_scholar_data():
@@ -28,9 +34,24 @@ def fetch_scholar_data():
     session = requests.Session()
     session.headers.update(HEADERS)
 
+    last_error = None
+    for attempt in range(1, 4):  # 最多重试 3 次
+        try:
+            if attempt > 1:
+                wait_sec = 5 * attempt
+                print(f"   Retry {attempt}/3 in {wait_sec}s...")
+                time.sleep(wait_sec)
+            response = session.get(SCHOLAR_URL, timeout=15)
+            response.raise_for_status()
+            break
+        except requests.RequestException as e:
+            last_error = e
+            if attempt == 3:
+                print(f"❌ Error fetching Google Scholar data: {last_error}")
+                sys.exit(1)
+            continue
+
     try:
-        response = session.get(SCHOLAR_URL, timeout=10)
-        response.raise_for_status()
 
         # Parse HTML
         soup = BeautifulSoup(response.content, 'html.parser')

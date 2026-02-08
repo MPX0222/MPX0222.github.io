@@ -8,6 +8,8 @@ on:
 jobs:
   update-citations:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # 允许 GITHUB_TOKEN 推送 commit
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -38,11 +40,11 @@ jobs:
 
       - name: Commit and push changes
         if: steps.verify-changes.outputs.changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Actions"
           git add data/publications.json
           git commit -m "📊 Auto-update citation counts from Google Scholar [skip ci]"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:${GITHUB_REF#refs/heads/}
