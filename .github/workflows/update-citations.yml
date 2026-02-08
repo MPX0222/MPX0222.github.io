@@ -22,8 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4
-          pip install selenium webdriver-manager
+          pip install scholarly
 
       - name: Update citations
         env:
