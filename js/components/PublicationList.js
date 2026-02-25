@@ -12,7 +12,8 @@ class PublicationList extends HTMLElement {
       'CPAL': { type: 'conference', subtype: 'cpal' },
       'Frontiers in Neuroscience': { type: 'journal', subtype: 'frontiers' },
       'Nature': { type: 'journal', subtype: 'nature' },
-      'Science': { type: 'journal', subtype: 'science' }
+      'Science': { type: 'journal', subtype: 'science' },
+      'ICME': { type: 'conference', subtype: 'icme' }
     };
     
     // 创建提示框元素
