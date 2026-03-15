@@ -130,7 +130,7 @@ class Navbar extends HTMLElement {
                     font-weight: 600;
                 }
 
-                /* 现代化按钮样式 */
+                /* 特殊按钮样式 */
                 .nav-right a#home-link,
                 .nav-right a#records-link {
                     position: relative;
@@ -143,6 +143,9 @@ class Navbar extends HTMLElement {
                     overflow: hidden;
                     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                     box-shadow: 0 2px 8px rgba(108, 92, 231, 0.1);
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.5rem;
                 }
 
                 .nav-right a#home-link::before,
@@ -179,48 +182,69 @@ class Navbar extends HTMLElement {
                     transform: translateY(-1px);
                 }
 
+                /* All Publications 按钮 - 简洁优雅 */
+                .nav-right a.nav-publications-detail {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    padding: 0.55rem 1.1rem !important;
+                    color: #6c5ce7;
+                    font-weight: 600;
+                    background: rgba(108, 92, 231, 0.06);
+                    border-radius: 10px;
+                    transition: all 0.25s ease;
+                }
+
+                .nav-right a.nav-publications-detail i {
+                    font-size: 0.85rem;
+                    color: #6c5ce7;
+                }
+
+                .nav-right a.nav-publications-detail:hover {
+                    background: rgba(108, 92, 231, 0.12);
+                    color: #5b4cc4;
+                }
+
+                .nav-right a.nav-publications-detail:hover i {
+                    color: #5b4cc4;
+                }
+
+                .nav-right a.nav-publications-detail.active {
+                    background: rgba(108, 92, 231, 0.12);
+                    color: #5b4cc4;
+                }
+
+                .nav-right a.nav-publications-detail.active i {
+                    color: #5b4cc4;
+                }
+
+                /* Mail 按钮 */
                 .nav-contact {
                     position: relative;
-                    background: linear-gradient(135deg, #2d3436, #6c5ce7) !important;
+                    background: #6c5ce7 !important;
                     color: white !important;
                     display: flex;
                     align-items: center;
                     gap: 0.6rem;
                     padding: 0.6rem 1.4rem !important;
                     font-weight: 600 !important;
-                    border-radius: 50px !important;
+                    border-radius: 12px !important;
                     border: none !important;
-                    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.2) !important;
-                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-                    overflow: hidden;
-                }
-
-                .nav-contact::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: -100%;
-                    width: 100%;
-                    height: 100%;
-                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
-                    transition: left 0.5s ease;
+                    box-shadow: 0 2px 8px rgba(108, 92, 231, 0.15) !important;
+                    transition: all 0.2s ease !important;
                 }
 
                 .nav-contact svg {
                     width: 18px;
                     height: 18px;
                     fill: currentColor;
-                    transition: transform 0.3s ease;
-                }
-                
-                .nav-contact:hover {
-                    transform: translateY(-3px) !important;
-                    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.35) !important;
-                    background: linear-gradient(135deg, #3d4466, #7c6ce7) !important;
+                    transition: transform 0.2s ease;
                 }
 
-                .nav-contact:hover::before {
-                    left: 100%;
+                .nav-contact:hover {
+                    transform: translateY(-2px) !important;
+                    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.25) !important;
+                    background: #5b4cc4 !important;
                 }
 
                 .nav-contact:hover svg {
@@ -229,7 +253,6 @@ class Navbar extends HTMLElement {
 
                 .nav-contact:active {
                     transform: translateY(-1px) !important;
-                    transition: all 0.1s ease !important;
                 }
 
                 .nav-left .artistic-heading {
@@ -250,7 +273,7 @@ class Navbar extends HTMLElement {
                     .nav-content {
                         padding: 0.75rem 1rem;
                     }
-                    
+
                     .nav-right {
                         display: none;
                     }
@@ -273,14 +296,19 @@ class Navbar extends HTMLElement {
             <nav class="navbar">
                 <div class="nav-content">
                     <div class="nav-left">
-                        <a class="artistic-heading">Toward a Broader Future</a>
+                        <a href="../index.html" class="artistic-heading">Toward a Broader Future</a>
                     </div>
                     <div class="nav-right">
                         <div class="nav-section">
-                            <a href="#profile" class="nav-link">Profile</a>
-                            <a href="#news" class="nav-link">News</a>
-                            <a href="#publications" class="nav-link">Publications</a>
-                            <a href="#awards" class="nav-link">Awards</a>
+                            <a href="../index.html#profile" class="nav-link">Profile</a>
+                            <a href="../index.html#news" class="nav-link">News</a>
+                            <a href="../index.html#publications" class="nav-link">Publications</a>
+                            <a href="../index.html#awards" class="nav-link">Awards</a>
+                        </div>
+                        <div class="nav-section">
+                            <a href="pages/publications.html" class="nav-link nav-publications-detail">
+                                <i class="fas fa-book-open"></i> All Publications
+                            </a>
                         </div>
                         <div class="nav-section">
                             <a href="mailto:mpx0222@qq.com" class="nav-contact">
@@ -304,16 +332,18 @@ class Navbar extends HTMLElement {
         const currentPath = window.location.pathname;
         const homeLink = this.shadowRoot.getElementById('home-link');
         const recordsLink = this.shadowRoot.getElementById('records-link');
+        const publicationsDetailLink = this.shadowRoot.querySelector('.nav-publications-detail');
 
-        // 移除所有active类
-        homeLink?.classList.remove('active');
-        recordsLink?.classList.remove('active');
+        this.shadowRoot.querySelectorAll('.nav-right a').forEach(link => {
+            link.classList.remove('active');
+        });
 
-        // 根据当前路径设置active类
         if (currentPath.includes('publications.html')) {
-            recordsLink?.classList.add('active');
+            publicationsDetailLink?.classList.add('active');
         } else if (currentPath.includes('index.html') || currentPath === '/') {
             homeLink?.classList.add('active');
+        } else if (currentPath.includes('records.html')) {
+            recordsLink?.classList.add('active');
         }
     }
 
@@ -327,7 +357,6 @@ class Navbar extends HTMLElement {
             });
         }, { threshold: 0.5 });
 
-        // 观察所有section
         ['profile', 'news', 'publications', 'awards', 'projects'].forEach(id => {
             const element = document.getElementById(id);
             if (element) observer.observe(element);
@@ -347,5 +376,4 @@ class Navbar extends HTMLElement {
     }
 }
 
-// 注册自定义元素
 customElements.define('nav-bar', Navbar);
