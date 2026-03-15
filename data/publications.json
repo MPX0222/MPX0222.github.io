@@ -4,6 +4,8 @@
       "thumbnail": "images/sqlr1.png",
       "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
       "year": 2025,
+      "category": "AI for Database Application",
+      "showInHome": true,
       "authors": [
         "Peixian Ma",
         "Xiaile Zhuang",
@@ -34,6 +36,8 @@
       "thumbnail": "images/survey.png",
       "title": "A Survey of Text-to-SQL in the Era of LLMs: Where are We, and Where are We Going?",
       "year": 2025,
+      "category": "AI for Database Application",
+      "showInHome": true,
       "authors": [
         "Xinyu Liu",
         "Shuyu Shen",
@@ -68,6 +72,8 @@
       "thumbnail": "images/CL.png",
       "title": "Augmenting Continual Learning of Diseases with LLM-Generated Visual Concepts",
       "year": 2025,
+      "category": "Large Language Models",
+      "showInHome": true,
       "authors": [
         "Jiantao Tan",
         "Peixian Ma",
@@ -97,6 +103,8 @@
       "thumbnail": "images/SRLMs.png",
       "title": "Effective Learning for Small Reasoning Models: An Empirical Study on 0.5B Reasoning LLMs",
       "year": 2025,
+      "category": "Large Language Models",
+      "showInHome": true,
       "authors": [
         "Xiaile Zhuang",
         "Peixian Ma",
@@ -126,6 +134,8 @@
       "thumbnail": "images/rcug.png",
       "title": "Representation Calibration and Uncertainty Guidance for Class-Incremental Learning based on Vision Language Model",
       "year": 2025,
+      "category": "Large Language Models",
+      "showInHome": true,
       "authors": [
         "Jiantao Tan*",
         "Peixian Ma*",
@@ -155,6 +165,8 @@
       "thumbnail": "images/rewriter.png",
       "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
       "year": 2024,
+      "category": "AI for Database Application",
+      "showInHome": true,
       "authors": [
         "Peixian Ma",
         "Boyan Li",
@@ -185,6 +197,8 @@
       "thumbnail": "images/bls.png",
       "title": "Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease",
       "year": 2023,
+      "category": "Machine Learning",
+      "showInHome": true,
       "authors": [
         "Peixian Ma",
         "Jing Wang",

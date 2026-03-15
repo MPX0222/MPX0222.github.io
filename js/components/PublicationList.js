@@ -70,6 +70,9 @@ class PublicationList extends HTMLElement {
   }
 
   render(publications) {
+    // 过滤只显示 showInHome 为 true 的论文
+    const featuredPublications = publications.filter(pub => pub.showInHome !== false);
+
     this.innerHTML = `
       <style>
         .publications-list {
@@ -374,7 +377,7 @@ class PublicationList extends HTMLElement {
         }
       </style>
       <div class="publications-list">
-        ${publications.map(pub => {
+        ${featuredPublications.map(pub => {
           const venueInfo = this.getVenueType(pub.venue.name);
           return `
             <div class="publication-item">
