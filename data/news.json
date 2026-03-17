@@ -1,6 +1,18 @@
 {
   "news": [
     {
+      "date": "Mar. 2026",
+      "content": [
+        {
+          "type": "paper",
+          "text": "🔥 It is glad to notice that our research paper: ",
+          "link": "https://arXiv.org/pdf/2512.09441",
+          "title": "Representation Calibration and Uncertainty Guidance for Class-Incremental Learning based on Vision Language Model",
+          "venue": "has been accepted by 2026 IEEE International Conference on Multimedia and Expo (ICME 2026)! This year, ICME received 3,810 valid submissions and accepted 1,101 papers, for an acceptance rate of 28.89%."
+        }
+      ]
+    },
+    {
       "date": "Feb. 2026",
       "content": [
         {
@@ -41,7 +53,7 @@
           "text": "🔥 It is glad to notice that our long research paper: ",
           "link": "https://arXiv.org/pdf/2504.08600",
           "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
-          "venue": "has been accepted by poster of the main conference of The 39th Annual Conference on Neural Information Processing Systems (NeurIPS 2025)! We have fully released the model weights and code on GitHub and HuggingFace. "
+          "venue": "has been accepted by poster of the main conference of The 39th Annual Conference on Neural Information Processing Systems (NeurIPS 2025)! We have fully released the model weights and code on GitHub and HuggingFace. There were 21575 valid paper submissions to the NeurIPS Main Track this year, of which the program committee accepted 5290 (24.52%) papers in total"
         }
       ]
     },

@@ -100,6 +100,37 @@
       }
     },
     {
+      "thumbnail": "images/rcug.png",
+      "title": "Representation Calibration and Uncertainty Guidance for Class-Incremental Learning based on Vision Language Model",
+      "year": 2025,
+      "category": "Large Language Models",
+      "showInHome": true,
+      "authors": [
+        "Jiantao Tan*",
+        "Peixian Ma*",
+        "Tong Yu",
+        "Wentao Zhang",
+        "Ruixuan Wang"
+      ],
+      "venue": {
+        "name": "ICME 2026",
+        "type": "Conference (CCF-B)"
+      },
+      "bibtex": "",
+      "links": {
+        "pdf": "https://arXiv.org/pdf/2512.09441",
+        "code": "",
+        "cite": "https://arXiv.org/abs/2512.09441",
+        "github": {
+          "owner": "",
+          "repo": ""
+        }
+      },
+      "stats": {
+        "citations": 0
+      }
+    },
+    {
       "thumbnail": "images/SRLMs.png",
       "title": "Effective Learning for Small Reasoning Models: An Empirical Study on 0.5B Reasoning LLMs",
       "year": 2025,
@@ -128,37 +159,6 @@
       },
       "stats": {
         "citations": 3
-      }
-    },
-    {
-      "thumbnail": "images/rcug.png",
-      "title": "Representation Calibration and Uncertainty Guidance for Class-Incremental Learning based on Vision Language Model",
-      "year": 2025,
-      "category": "Large Language Models",
-      "showInHome": true,
-      "authors": [
-        "Jiantao Tan*",
-        "Peixian Ma*",
-        "Tong Yu",
-        "Wentao Zhang",
-        "Ruixuan Wang"
-      ],
-      "venue": {
-        "name": "arXiv",
-        "type": "Preprint (Under Review)"
-      },
-      "bibtex": "",
-      "links": {
-        "pdf": "https://arXiv.org/pdf/2512.09441",
-        "code": "",
-        "cite": "https://arXiv.org/abs/2512.09441",
-        "github": {
-          "owner": "",
-          "repo": ""
-        }
-      },
-      "stats": {
-        "citations": 0
       }
     },
     {

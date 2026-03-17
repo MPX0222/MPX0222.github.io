@@ -191,7 +191,7 @@ class Navbar extends HTMLElement {
                     color: #6c5ce7;
                     font-weight: 600;
                     background: rgba(108, 92, 231, 0.06);
-                    border-radius: 10px;
+                    border-radius: 6px;
                     transition: all 0.25s ease;
                 }
 
@@ -228,7 +228,7 @@ class Navbar extends HTMLElement {
                     gap: 0.6rem;
                     padding: 0.6rem 1.4rem !important;
                     font-weight: 600 !important;
-                    border-radius: 12px !important;
+                    border-radius: 6px !important;
                     border: none !important;
                     box-shadow: 0 2px 8px rgba(108, 92, 231, 0.15) !important;
                     transition: all 0.2s ease !important;
