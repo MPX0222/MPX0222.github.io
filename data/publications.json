@@ -177,7 +177,7 @@
       ],
       "venue": {
         "name": "arXiv",
-        "type": "Preprint (Under Review)"
+        "type": "Preprint (Submitted to AAAI 2025, Archived)"
       },
       "bibtex": "@article{ma2024rewriter,\n  title={A Plug-and-Play Natural Language Rewriter for Natural Language to SQL},\n  author={Ma, Peixian and Li, Boyan and Jiang, Runzhi and Fan, Ju and Tang, Nan and Luo, Yuyu},\n  journal={arXiv preprint arXiv:2412.17068},\n  year={2024}\n}",
       "links": {
