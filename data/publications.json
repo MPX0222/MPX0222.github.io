@@ -18,7 +18,7 @@
         "name": "NeurIPS 2025",
         "type": "Conference (CCF-A)"
       },
-      "bibtex": "@article{ma2024sqlr1,\n  title={SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning},\n  author={Ma, Peixian and Zhuang, Xiaile and Xu, Chengjin and Jiang, Xuhui and Chen, Ran and Guo, Jian},\n  journal={arXiv preprint arXiv:2504.08600},\n  year={2024}\n}",
+      "bibtex": "@inproceedings{ma2025sqlr1,\n  title={SQL-R1: Training natural language to sql reasoning model by reinforcement learning},\n  author={Ma, Peixian and Zhuang, Xiaile and Xu, Chengjin and Jiang, Xuhui and Chen, Ran and Guo, Jian},\n  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},\n  year={2025}\n}",
       "links": {
         "pdf": "https://arXiv.org/pdf/2504.08600",
         "code": "https://github.com/IDEA-FinAI/SQL-R1",
@@ -85,7 +85,7 @@
         "name": "BIBM 2025",
         "type": "Conference (CCF-B)"
       },
-      "bibtex": "{}",
+      "bibtex": "@inproceedings{tan2025augmenting,\n  title={Augmenting continual learning of diseases with llm-generated visual concepts},\n  author={Tan, Jiantao and Ma, Peixian and Dai, Zhiming and Chen, Kanghao and Wang, Ruixuan},\n  booktitle={2025 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},\n  pages={1831--1836},\n  year={2025},\n  organization={IEEE}\n}",
       "links": {
         "pdf": "https://arxiv.org/pdf/2508.03094",
         "code": "https://github.com/MPX0222/VisualConcepts4CL",
@@ -116,14 +116,14 @@
         "name": "ICME 2026",
         "type": "Conference (CCF-B)"
       },
-      "bibtex": "",
+      "bibtex": "@inproceedings{tan2025representation,\n  title={Representation calibration and uncertainty guidance for class-incremental learning based on vision language model},\n  author={Tan, Jiantao and Ma, Peixian and Yu, Tong and Zhang, Wentao and Wang, Ruixuan},\n  booktitle={2026 IEEE International Conference on Multimedia and Expo (ICME)},\n  pages={1--6},\n  year={2026},\n  organization={IEEE}\n}",
       "links": {
         "pdf": "https://arXiv.org/pdf/2512.09441",
-        "code": "",
+        "code": "https://github.com/MPX0222/RCUG",
         "cite": "https://arXiv.org/abs/2512.09441",
         "github": {
-          "owner": "",
-          "repo": ""
+          "owner": "MPX0222",
+          "repo": "RCUG"
         }
       },
       "stats": {
@@ -147,7 +147,7 @@
         "name": "CPAL 2026",
         "type": "Conference (CCF-N)"
       },
-      "bibtex": "{}",
+      "bibtex": "@article{zhuang2025effective,\n  title={Effective learning for small reasoning models: An empirical study on 0.5 b reasoning llms},\n  author={Zhuang, Xiaile and Ma, Peixian and Jia, Zhikai and Cao, Zane and Liu, Shiwei},\n  journal={arXiv preprint arXiv:2506.13404},\n  year={2025}\n}",
       "links": {
         "pdf": "https://arxiv.org/abs/2506.13404",
         "code": "",
