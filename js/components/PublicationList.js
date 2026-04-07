@@ -8,7 +8,7 @@ class PublicationList extends HTMLElement {
       'ICML': { type: 'conference', subtype: 'icml' },
       'ICLR': { type: 'conference', subtype: 'iclr' },
       'TKDE': { type: 'journal', subtype: 'tkde' },
-      'BIBM': { type: 'conference', subtype: 'neurips' },
+      'BIBM': { type: 'conference', subtype: 'bibm' },
       'CPAL': { type: 'conference', subtype: 'cpal' },
       'Frontiers in Neuroscience': { type: 'journal', subtype: 'frontiers' },
       'Nature': { type: 'journal', subtype: 'nature' },
@@ -56,6 +56,26 @@ class PublicationList extends HTMLElement {
       }
     }
     return { type: 'preprint', subtype: 'default' }; // 默认类型
+  }
+
+  /** 各会议 / 期刊的简约线性图标（非官方商标，仅作视觉识别） */
+  getVenueIconSvg(subtype) {
+    const stroke = 'stroke="currentColor"';
+    const icons = {
+      neurips: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="12" r="2.5"/><circle cx="17" cy="8" r="2.5"/><circle cx="17" cy="16" r="2.5"/><path d="M9.5 12h4.5M14.5 10l2.5-1.5M14.5 14l2.5 1.5"/></svg>`,
+      icml: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3L4 7l8 4 8-4-8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 17l8 4 8-4"/></svg>`,
+      iclr: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8M8 11h6"/></svg>`,
+      tkde: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/><path d="M4 19c0 1.66 3.58 3 8 3s8-1.34 8-3"/><path d="M4 5v14"/></svg>`,
+      bibm: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2 3 4 5 4 9s-2 6-4 9c-2-3-4-5-4-9s2-6 4-9z"/><path d="M12 3c-2 3-4 5-4 9s2 6 4 9c2-3 4-5 4-9s-2-6-4-9z"/></svg>`,
+      cpal: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>`,
+      frontiers: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12c2-4 5-6 9-6s7 2 9 6c-2 4-5 6-9 6s-7-2-9-6z"/><circle cx="12" cy="12" r="2"/></svg>`,
+      nature: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3C8 8 6 13 8 18c2-2 4-3 4-3s2 1 4 3c2-5 0-10-4-15z"/><path d="M12 10c-1 3-1 6 0 8"/></svg>`,
+      science: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="4"/><path d="M12 3v18"/></svg>`,
+      icme: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M7 5V3M17 5V3M10 19v2M14 19v2"/><circle cx="12" cy="12" r="3"/></svg>`,
+      arXiv: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>`,
+      default: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21V12h6v9"/></svg>`
+    };
+    return icons[subtype] || icons.default;
   }
 
   async connectedCallback() {
