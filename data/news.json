@@ -1,6 +1,18 @@
 {
   "news": [
     {
+      "date": "May. 2026",
+      "content": [
+        {
+          "type": "paper",
+          "text": "🔥 We are going to release a new research paper of NL2SQL evaluation: ",
+          "link": "https://arXiv.org/pdf/2605.01154",
+          "title": "Are Diffusion Language Models Good Database Analysts?",
+          "venue": ""
+        }
+      ]
+    },
+    {
       "date": "Mar. 2026",
       "content": [
         {
@@ -53,7 +65,7 @@
           "text": "🔥 It is glad to notice that our long research paper: ",
           "link": "https://arXiv.org/pdf/2504.08600",
           "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
-          "venue": "has been accepted by poster of the main conference of The 39th Annual Conference on Neural Information Processing Systems (NeurIPS 2025)! We have fully released the model weights and code on GitHub and HuggingFace. There were 21575 valid paper submissions to the NeurIPS Main Track this year, of which the program committee accepted 5290 (24.52%) papers in total"
+          "venue": "has been accepted by poster of the main conference of The 39th Annual Conference on Neural Information Processing Systems (NeurIPS 2025)! We have fully released the weights of SQL-R1 series models and related training codes on GitHub and HuggingFace. There were 21575 valid paper submissions to the NeurIPS Main Track this year, of which the program committee accepted 5290 (24.52%) papers in total. See you in San Diego!"
         }
       ]
     },
@@ -62,14 +74,14 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 It is glad to notice that survey paper of HKUST(GZ)-DIAL NL2SQL Research Group: ",
+          "text": "🔥 It is glad to notice that survey paper of HKUST(GZ)-DIAL Lab, NL2SQL Research Group: ",
           "link": "https://arxiv.org/pdf/2408.05109",
           "title": "A Survey of NL2SQL with Large Language Models: Where are we, and where are we going",
-          "venue": "has been accepted by IEEE Transactions on Knowledge and Data Engineering Journal (TKDE 2025)! We have released the related resources (code, data, and paper) in August 2024."
+          "venue": "has been accepted by IEEE Transactions on Knowledge and Data Engineering Journal (TKDE 2025)! We have released the NL2SQL Handbook in August 2024."
         },
         {
           "type": "text",
-          "text": "🎉 Successfully completed my research internship at International Digital Economy Academy (IDEA), Shenzhen. I would like to express my sincere gratitude to all the mentors and colleagues for their guidance and support."
+          "text": "🎉 Successfully completed my research internship at IDEA Research. I would like to express my sincere gratitude to all the mentors and colleagues for their guidance and support."
         }
       ]
     },
@@ -80,8 +92,8 @@
           "type": "paper",
           "text": "🔥 We release a technical study about 0.5B reasoning language models: ",
           "link": "https://arXiv.org/pdf/2506.13404",
-          "title": "Effective Learning for Small Reasoning Models: An Empirical Study on 0.5B Reasoning LLMs",
-          "venue": "is available on arXiv."
+          "title": "Effective Learning for Small Reasoning Models: An Empirical Study on 0.5B Reasoning LLMs.",
+          "venue": "PDF version is available on arXiv."
         }
       ]
     },
@@ -90,7 +102,7 @@
       "content": [
         {
           "type": "text",
-          "text": "🎉 Successfully pass the M.Phil. Thesis Defense in The Hong Kong University of Science and Technology (Guangzhou)."
+          "text": "🎉 Successfully pass the M.Phil. Thesis Defense in HKUST(GZ), thanks my supervisors Prof. Yuyu Luo and Prof. Nan Tang!"
         }
       ]
     },
@@ -99,10 +111,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 We release a new research about NL2SQL and reinforcement learning: ",
+          "text": "🔥 We release a brand new research about RL-based NL2SQL model: ",
           "link": "https://arXiv.org/pdf/2504.08600",
           "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning.",
-          "venue": "The weights and code are available on GitHub in few weeks."
+          "venue": "The relevant code and weights are updated simultaneously on Github and Huggingface."
         }
       ]
     },
@@ -111,7 +123,7 @@
       "content": [
         {
           "type": "text",
-          "text": "📖 Receive Intern Program offer and start internship in International Digital Economy Academy (IDEA), Shenzhen."
+          "text": "📖 Receive internship offer and start a new journey at International Digital Economy Academy (IDEA), Shenzhen."
         }
       ]
     },
@@ -120,14 +132,14 @@
       "content": [
         {
           "type": "text",
-          "text": "🎉 Successfully pass the Mid-term Group Project Defense of the HKUST(GZ) Red Bird M.Phil Program."
+          "text": "🎉 Successfully pass the Mid-Term Group Project Defense of the M.Phil. degree. Thanks AASG Group!"
         },
         {
           "type": "paper",
-          "text": "🔥 Long Research Paper: ",
+          "text": "🔥 First long research paper of my RPG life: ",
           "link": "https://arXiv.org/pdf/2412.17068",
           "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
-          "venue": "is available on arXiv."
+          "venue": "is released and available on arXiv."
         }
       ]
     },
@@ -136,7 +148,7 @@
       "content": [
         {
           "type": "text",
-          "text": "🎉 Successfully pass the Postgraduate Qualifying Assessment of the HKUST(GZ) Red Bird M.Phil Program."
+          "text": "🎉 Successfully pass the Postgraduate Qualifying Assessment (PQA) of M.Phil. degree."
         }
       ]
     },
@@ -145,7 +157,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Start Research Postgraduate Program in The Hong Kong University of Science and Technology (Guangzhou)."
+          "text": "Start my M.Phil. journey at HKUST(GZ)."
         }
       ]
     },
@@ -154,14 +166,14 @@
       "content": [
         {
           "type": "text",
-          "text": "📖 Receive Research Postgraduate Program offers of 2023-2024 Fall from The Hong Kong University of Science and Technology (Guangzhou) and The Chinese University of Hong Kong (Shenzhen)."
+          "text": "📖 Receive Research Postgraduate Program (RPG) offers of 2023-2024 Fall from HKUST(GZ) and CUHK(SZ)."
         },
         {
           "type": "paper",
-          "text": "🔥 First Long Research Paper: ",
+          "text": "🔥 Long research paper of my undergraduate life: ",
           "link": "https://www.frontiersin.org/articles/10.3389/fnins.2023.1137557/full",
           "title": "Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease",
-          "venue": "has been accepted and published by Frontiers in Neuroscience."
+          "venue": "has been accepted by Frontiers in Neuroscience (JCR Q2 Journal, IF: 5.8)."
         }
       ]
     },
