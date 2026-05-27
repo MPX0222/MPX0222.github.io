@@ -1,6 +1,38 @@
 {
   "publications": [
     {
+      "thumbnail": "images/sqld1.png",
+      "title": "Are Diffusion Language Models Good Database Analysts?",
+      "year": 2026,
+      "category": "AI for Database Application",
+      "showInHome": true,
+      "authors": [
+        "Peixian Ma",
+        "Xiaile Zhuang",
+        "Jiantao Tan",
+        "Changlun Li",
+        "Ruirui Chen",
+        "Chengwei Qin"
+      ],
+      "venue": {
+        "name": "arXiv",
+        "type": "Preprint (Under Review)"
+      },
+      "bibtex": "",
+      "links": {
+        "pdf": "",
+        "code": "",
+        "cite": "",
+        "github": {
+          "owner": "",
+          "repo": ""
+        }
+      },
+      "stats": {
+        "citations": 0
+      }
+    },
+    {
       "thumbnail": "images/sqlr1.png",
       "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
       "year": 2025,
@@ -166,7 +198,7 @@
       "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
       "year": 2024,
       "category": "AI for Database Application",
-      "showInHome": true,
+      "showInHome": false,
       "authors": [
         "Peixian Ma",
         "Boyan Li",

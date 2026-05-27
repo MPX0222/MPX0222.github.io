@@ -57,8 +57,9 @@ class DetailedPublicationList extends HTMLElement {
             });
             this.currentCategory = 'all';
         } else {
+            const normalizedFilter = filter.trim().toLowerCase();
             this.filteredPublications = this.publications.filter(pub =>
-                pub.category === filter
+                (pub.category || '').trim().toLowerCase() === normalizedFilter
             );
             this.currentCategory = filter;
         }
