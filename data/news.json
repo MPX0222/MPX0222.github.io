@@ -5,10 +5,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 We are going to release a new research paper of NL2SQL evaluation: ",
-          "link": "",
+          "text": "🔥 We release an empirical study about diffusion language models for database analysis: ",
+          "link": "https://arxiv.org/abs/2605.27791",
           "title": "Are Diffusion Language Models Good Database Analysts?",
-          "venue": ""
+          "venue": "Preprint version is available on arXiv."
         }
       ]
     },
@@ -111,7 +111,7 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 We release a brand new research about RL-based NL2SQL model: ",
+          "text": "🔥 We release a new research about RL-based NL2SQL model: ",
           "link": "https://arXiv.org/pdf/2504.08600",
           "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning.",
           "venue": "The relevant code and weights are updated simultaneously on Github and Huggingface."
