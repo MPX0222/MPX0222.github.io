@@ -1291,121 +1291,61 @@ button.pub-link {
     }
 } 
 
-/* Awards 样式更新 */
+/* Awards 样式优化 - 紧凑扁平化 */
 .awards-list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
 }
 
 .award-year-group {
     display: flex;
     gap: 1.5rem;
+    align-items: flex-start;
 }
 
 .year-label {
-    flex: 0 0 60px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #006064;
-    height: fit-content;
-    background: rgba(0, 96, 100, 0.15);
-    border-radius: 6px;
-    padding: 0.5rem;
-    text-align: center;
+    flex: 0 0 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #6c5ce7;
+    padding-top: 0.2rem;
 }
 
 .year-awards {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
 }
 
 .award-item {
-    padding: 0.25rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
 .award-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-    margin-bottom: 0.75rem;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    transition: none;
 }
 
-.award-info:last-child {
-    margin-bottom: 0;
+.award-info:hover {
+    transform: none;
+    background: transparent;
+    box-shadow: none;
 }
 
-.award-name {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #2d3436;
-    margin: 0;
-}
-
-.award-org {
-    font-size: 0.9rem;
-    color: #636e72;
-    margin: 0;
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .award-year-group {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .year-label {
-        flex: none;
-        width: fit-content;
-        font-size: 1rem;
-        padding: 0.4rem 0.75rem;
-    }
-
-    .award-item {
-        padding: 0.5rem;
-    }
-} 
-
-/* Awards 样式更新 */
 .award-header {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 0.75rem;
-    flex-wrap: wrap;
+    margin-bottom: 0.15rem;
 }
 
-.award-tag {
-    font-size: 0.75rem;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    font-weight: 500;
-}
-
-/* 不同类型的标签样式 */
-.award-tag.scholarship {
-    background: rgba(108, 92, 231, 0.1);
-    color: #6c5ce7;
-}
-
-.award-tag.competition {
-    background: rgba(46, 204, 113, 0.1);
-    color: #27ae60;
-}
-
-.award-tag.honor {
-    background: rgba(241, 196, 15, 0.1);
-    color: #f1c40f;
-}
-
-.award-tag.sports {
-    background: rgba(52, 152, 219, 0.1);
-    color: #2980b9;
-}
-
-/* 调整奖项名称样式 */
 .award-name {
     font-size: 1rem;
     font-weight: 600;
@@ -1414,10 +1354,62 @@ button.pub-link {
     line-height: 1.4;
 }
 
+.award-org {
+    font-size: 0.85rem;
+    color: #636e72;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.award-org::before {
+    content: '\f19c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 0.75rem;
+    color: #b2bec3;
+}
+
+.award-tag {
+    font-size: 0.75rem;
+    padding: 0 0 0 0.6rem;
+    border-radius: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: none;
+    color: #636e72;
+    border-left: 2px solid #ddd;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* 不同类型的标签颜色 (仅边框和文字) */
+.award-tag.scholarship { border-left-color: #6c5ce7; color: #6c5ce7; }
+.award-tag.competition { border-left-color: #27ae60; color: #27ae60; }
+.award-tag.honor { border-left-color: #d35400; color: #d35400; }
+.award-tag.sports { border-left-color: #2980b9; color: #2980b9; }
+
 /* 响应式调整 */
 @media (max-width: 768px) {
-    .award-header {
+    .award-year-group {
+        flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .year-label {
+        flex: none;
+        padding-top: 0;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        width: 100%;
+        padding-bottom: 0.25rem;
+    }
+
+    .award-header {
+        flex-wrap: wrap;
+        gap: 0.4rem;
     }
 } 
 
@@ -2161,11 +2153,12 @@ html {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* 格言部分样式优化 */
+/* 页脚部分样式优化 */
 .quote-footer {
     margin-top: 4rem;
-    padding: 2rem 0;
-    background: linear-gradient(to right, rgba(108, 92, 231, 0.05), rgba(108, 92, 231, 0.02));
+    padding: 3rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    background: #fafafa;
     text-align: center;
     opacity: 0;
     animation: fadeIn 0.4s ease-out 0.45s forwards;
@@ -2194,11 +2187,11 @@ blockquote {
 }
 
 .quote-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
-    color: #636e72;
-    line-height: 1.4;
-    font-style: italic;
+    color: #8395a7;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
 }
 
 .quote-author {
@@ -2209,7 +2202,8 @@ blockquote {
 
 /* 深色主题适配 */
 [data-theme="dark"] .quote-footer {
-    background: linear-gradient(to right, rgba(108, 92, 231, 0.08), rgba(108, 92, 231, 0.03));
+    background: #0f172a;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 [data-theme="dark"] .quote-text {
@@ -2218,6 +2212,43 @@ blockquote {
 
 [data-theme="dark"] .quote-author {
     color: #718096;
+}
+
+/* Awards 深色模式适配 - 紧凑版 */
+[data-theme="dark"] .year-label {
+    color: #a29bfe;
+}
+
+[data-theme="dark"] .award-name {
+    color: #f1f5f9;
+}
+
+[data-theme="dark"] .award-org {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .award-tag {
+    background: none;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .award-tag.scholarship { border-left-color: #a29bfe; color: #a29bfe; }
+[data-theme="dark"] .award-tag.competition { border-left-color: #55efc4; color: #55efc4; }
+[data-theme="dark"] .award-tag.honor { border-left-color: #fab1a0; color: #fab1a0; }
+[data-theme="dark"] .award-tag.sports { border-left-color: #74b9ff; color: #74b9ff; }
+
+/* Service 深色模式适配 */
+[data-theme="dark"] .service-compact-tag {
+    background: none;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .service-compact-tag.reviewer { border-left-color: #a29bfe; color: #a29bfe; }
+[data-theme="dark"] .service-compact-tag.volunteer { border-left-color: #55efc4; color: #55efc4; }
+[data-theme="dark"] .service-compact-tag.teaching { border-left-color: #fab1a0; color: #fab1a0; }
+
+[data-theme="dark"] .service-description {
+    color: #94a3b8;
 }
 
 /* 响应式调整 */
@@ -3101,27 +3132,37 @@ body.modal-open {
 /* Service specific adjustments */
 .service-compact-item {
     display: flex;
-    align-items: flex-start;
+    align-items: baseline;
     gap: 0.8rem;
-    padding: 0.25rem 0;
-    font-size: 0.9rem;
-    color: #636e72;
+    padding: 0.2rem 0;
 }
 
 .service-compact-tag {
     font-size: 0.75rem;
-    padding: 0.1rem 0.4rem;
-    border-radius: 4px;
-    background: rgba(108, 92, 231, 0.1);
-    color: #6c5ce7;
-    white-space: nowrap;
-    font-weight: 500;
-    min-width: 75px;
-    text-align: center;
+    padding: 0 0 0 0.6rem;
+    border-radius: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    min-width: 95px;
+    text-align: left;
+    background: none;
+    color: #636e72;
+    border-left: 2px solid #ddd;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
 }
 
+/* Service 标签配色 (仅边框和文字) */
+.service-compact-tag.reviewer { border-left-color: #6c5ce7; color: #6c5ce7; }
+.service-compact-tag.volunteer { border-left-color: #27ae60; color: #27ae60; }
+.service-compact-tag.teaching { border-left-color: #d35400; color: #d35400; }
+
 .service-description {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.85rem;
+    color: #636e72;
 }
 
 @media (max-width: 768px) {
