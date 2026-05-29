@@ -110,57 +110,54 @@ class DetailedPublicationList extends HTMLElement {
                 }
 
                 .publications-list {
-                    background: white;
-                    border-radius: 8px;
-                    overflow: hidden;
-                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-                    font-family: 'Lora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                    background: transparent;
+                    border-radius: 0;
+                    overflow: visible;
+                    box-shadow: none;
+                    font-family: var(--font-family, 'Lora', serif);
                 }
 
                 .category-section {
-                    margin-bottom: 2rem;
-                    background: white;
-                    border-radius: 8px;
-                    overflow: hidden;
-                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-                }
-
-                .category-section:last-child {
-                    margin-bottom: 0;
+                    margin-bottom: 4rem;
+                    background: transparent;
                 }
 
                 .category-header {
-                    background: linear-gradient(135deg, #2d3436, #6c5ce7);
-                    padding: 1rem 1.5rem;
+                    background: none;
+                    padding: 0;
+                    margin-bottom: 2rem;
                     display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 0.5rem;
+                    border-left: 4px solid #6c5ce7;
+                    padding-left: 1.5rem;
                 }
 
                 .category-title {
-                    font-family: 'Dancing Script', cursive;
-                    font-size: 1.5rem;
-                    color: white;
+                    font-family: var(--font-family);
+                    font-size: 1.8rem;
+                    color: #1a1a1a;
                     margin: 0;
-                    font-weight: 600;
+                    font-weight: 700;
+                    letter-spacing: -0.01em;
                 }
 
                 .category-count {
-                    background: rgba(255, 255, 255, 0.2);
-                    color: white;
-                    padding: 0.25rem 0.75rem;
-                    border-radius: 20px;
-                    font-size: 0.875rem;
-                    font-weight: 500;
-                }
-
-                .category-publications {
+                    background: none;
+                    color: #636e72;
                     padding: 0;
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    font-family: 'Inter', sans-serif;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
                 }
 
                 .publication-item {
-                    padding: 1.2rem 1.5rem;
-                    border-bottom: 1px solid #f1f3f4;
+                    padding: 2rem 0;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                    transition: all 0.3s ease;
                 }
 
                 .publication-item:last-child {
@@ -168,12 +165,14 @@ class DetailedPublicationList extends HTMLElement {
                 }
 
                 .publication-title {
-                    font-size: 1.1rem;
+                    font-size: 1.3rem;
                     font-weight: 600;
-                    color: #2d3436;
+                    color: #1a1a1a;
                     line-height: 1.4;
-                    margin-bottom: 0.5rem;
-                    display: inline;
+                    margin-bottom: 0.75rem;
+                    display: block;
+                    text-decoration: none;
+                    transition: color 0.2s ease;
                 }
 
                 .publication-title:hover {
@@ -181,123 +180,94 @@ class DetailedPublicationList extends HTMLElement {
                 }
 
                 .pdf-link {
-                    color: #6c5ce7;
+                    color: inherit;
                     text-decoration: none;
-                    font-weight: 600;
-                }
-
-                .pdf-link:hover {
-                    text-decoration: underline;
                 }
 
                 .publication-meta {
-                    font-size: 0.9rem;
-                    color: #636e72;
-                    line-height: 1.4;
-                    margin-bottom: 0.75rem;
+                    font-size: 1rem;
+                    color: #4a4a4a;
+                    line-height: 1.6;
+                    margin-bottom: 1rem;
                 }
 
                 .author-highlight {
                     color: #6c5ce7;
-                    font-weight: 600;
+                    font-weight: 700;
+                    text-decoration: underline;
+                    text-underline-offset: 4px;
+                    text-decoration-thickness: 2px;
+                    text-decoration-color: rgba(108, 92, 231, 0.3);
                 }
 
                 .publication-footer {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    gap: 1rem;
+                    gap: 1.5rem;
                     flex-wrap: wrap;
                 }
 
                 .publication-venue {
                     display: flex;
                     align-items: center;
-                    gap: 0.5rem;
+                    gap: 1rem;
                 }
 
                 .venue-tag {
-                    display: inline-flex;
-                    align-items: center;
-                    padding: 0;
-                    font-size: 0.8rem;
-                    font-weight: 600;
-                    letter-spacing: 0.02em;
-                    color: #475569;
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    color: #6c5ce7;
+                    border-left: 2px solid #6c5ce7;
+                    padding-left: 0.75rem;
+                    font-family: 'Inter', sans-serif;
                 }
 
+                .venue-tag.conference { border-left-color: #27ae60; color: #27ae60; }
+                .venue-tag.journal { border-left-color: #2563eb; color: #2563eb; }
+                .venue-tag.preprint { border-left-color: #dc2626; color: #dc2626; }
+
                 .venue-name {
-                    color: #64748b;
+                    color: #636e72;
                     font-weight: 500;
-                    font-size: 0.9rem;
+                    font-size: 0.95rem;
                 }
 
                 .citation-count {
                     display: flex;
                     align-items: center;
-                    gap: 0.35rem;
-                    font-size: 0.85rem;
-                    color: #64748b;
-                    font-weight: 500;
+                    gap: 0.5rem;
+                    font-size: 0.9rem;
+                    color: #636e72;
+                    font-weight: 600;
+                    font-family: 'Inter', sans-serif;
                 }
 
                 .citation-count i {
-                    font-size: 0.75rem;
+                    font-size: 0.8rem;
+                    color: #6c5ce7;
+                }
+
+                /* 深色模式适配 */
+                :host-context([data-theme="dark"]) .category-title,
+                :host-context([data-theme="dark"]) .publication-title {
+                    color: #f1f5f9;
+                }
+
+                :host-context([data-theme="dark"]) .publication-meta {
                     color: #94a3b8;
                 }
 
-                .empty-state {
-                    text-align: center;
-                    padding: 3rem 2rem;
-                    color: #636e72;
-                }
-
-                .empty-state i {
-                    font-size: 2rem;
-                    color: #ddd;
-                    margin-bottom: 1rem;
+                :host-context([data-theme="dark"]) .publication-item {
+                    border-bottom-color: rgba(255, 255, 255, 0.05);
                 }
 
                 @media (max-width: 768px) {
-                    .category-title {
-                        font-size: 1.25rem;
-                    }
-
-                    .category-header {
-                        padding: 0.75rem 1rem;
-                    }
-
-                    .category-count {
-                        font-size: 0.8rem;
-                        padding: 0.2rem 0.6rem;
-                    }
-
-                    .publication-item {
-                        padding: 1rem;
-                    }
-
-                    .publication-title {
-                        font-size: 1rem;
-                    }
-
-                    .publication-meta {
-                        font-size: 0.85rem;
-                    }
-
-                    .publication-footer {
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 0.5rem;
-                    }
-
-                    .venue-tag {
-                        font-size: 0.7rem;
-                        padding: 0.2rem 0.5rem;
-                    }
-
-                    .citation-count {
-                        font-size: 0.8rem;
-                    }
+                    .category-title { font-size: 1.5rem; }
+                    .publication-title { font-size: 1.15rem; }
+                    .publication-footer { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
                 }
             </style>
         `;

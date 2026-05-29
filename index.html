@@ -159,6 +159,10 @@
                         <div class="card-header" style="background: linear-gradient(135deg, #2d3436, #6c5ce7);">
                             <i class="fas fa-book"></i>
                             <h2>Selected Publications</h2>
+                            <a href="pages/publications.html" class="view-all-btn">
+                                <span>All Publications</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                         <div class="card-content">
                             <publication-list></publication-list>
@@ -230,7 +234,32 @@
         </div>
     </div>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <script>
+    // Back to Top functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+
     // Tab functionality
     document.addEventListener('DOMContentLoaded', function() {
         const tabButtons = document.querySelectorAll('.tab-button');

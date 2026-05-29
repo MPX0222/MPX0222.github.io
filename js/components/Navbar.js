@@ -221,16 +221,16 @@ class Navbar extends HTMLElement {
                 /* Mail 按钮 */
                 .nav-contact {
                     position: relative;
-                    background: #6c5ce7 !important;
-                    color: white !important;
+                    background: none !important;
+                    color: var(--text-secondary) !important;
                     display: flex;
                     align-items: center;
-                    gap: 0.6rem;
-                    padding: 0.6rem 1.4rem !important;
-                    font-weight: 600 !important;
+                    gap: 0.4rem;
+                    padding: 0.5rem 0.8rem !important;
+                    font-weight: 500 !important;
                     border-radius: 6px !important;
                     border: none !important;
-                    box-shadow: 0 2px 8px rgba(108, 92, 231, 0.15) !important;
+                    box-shadow: none !important;
                     transition: all 0.2s ease !important;
                 }
 
@@ -242,9 +242,9 @@ class Navbar extends HTMLElement {
                 }
 
                 .nav-contact:hover {
-                    transform: translateY(-2px) !important;
-                    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.25) !important;
-                    background: #5b4cc4 !important;
+                    color: #6c5ce7 !important;
+                    background: rgba(108, 92, 231, 0.05) !important;
+                    transform: translateY(-1px) !important;
                 }
 
                 .nav-contact:hover svg {
@@ -252,7 +252,7 @@ class Navbar extends HTMLElement {
                 }
 
                 .nav-contact:active {
-                    transform: translateY(-1px) !important;
+                    transform: translateY(0) !important;
                 }
 
                 .nav-left .artistic-heading {
@@ -304,11 +304,6 @@ class Navbar extends HTMLElement {
                             <a href="../index.html#news" class="nav-link">News</a>
                             <a href="../index.html#publications" class="nav-link">Publications</a>
                             <a href="../index.html#awards" class="nav-link">Awards</a>
-                        </div>
-                        <div class="nav-section">
-                            <a href="pages/publications.html" class="nav-link nav-publications-detail">
-                                <i class="fas fa-book-open"></i> All Publications
-                            </a>
                         </div>
                         <div class="nav-section">
                             <a href="mailto:mpx0222@qq.com" class="nav-contact">

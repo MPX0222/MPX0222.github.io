@@ -19,131 +19,164 @@
             max-width: 1100px;
             margin: 80px auto 0;
             padding: 2rem;
-            background-color: #f5f6fa;
+            background-color: transparent;
             min-height: calc(100vh - 80px);
         }
 
         .publications-header {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding: 1.5rem 0;
+            text-align: left;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: #636e72;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            transition: all 0.2s ease;
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .back-home:hover {
+            color: #6c5ce7;
+            transform: translateX(-5px);
+        }
+
+        .back-home i {
+            font-size: 0.8rem;
         }
 
         .publications-header h1 {
-            font-size: 2.2rem;
-            font-weight: 600;
-            color: #2d3436;
-            margin-bottom: 0.5rem;
-            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+            font-family: var(--font-family);
+            letter-spacing: -0.02em;
         }
 
         .publications-header p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: #636e72;
-            margin: 0 auto;
-            line-height: 1.5;
+            margin: 0;
+            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
         }
 
         .filter-section {
             display: flex;
+            flex-direction: column;
             gap: 1.5rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
+            margin-bottom: 3rem;
         }
 
         .filter-group {
-            flex: 1;
-            min-width: 280px;
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            background: none;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: none;
+            border: none;
         }
 
         .filter-group-title {
-            font-size: 0.85rem;
-            font-weight: 600;
+            font-size: 0.75rem;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.1em;
             color: #a4b0be;
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-        }
-
-        .filter-group-title i {
-            font-size: 0.9rem;
+            gap: 0.6rem;
+            font-family: 'Inter', sans-serif;
         }
 
         .filter-buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
 
         .filter-button {
-            padding: 0.5rem 1rem;
-            border: 1.5px solid #e9ecef;
-            border-radius: 8px;
-            background: white;
+            padding: 0.4rem 0;
+            border: none;
+            border-bottom: 2px solid transparent;
+            border-radius: 0;
+            background: none;
             color: #636e72;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.9rem;
             cursor: pointer;
-            font-family: var(--font-family);
+            font-family: 'Inter', sans-serif;
             transition: all 0.2s ease;
             display: inline-flex;
             align-items: center;
-            gap: 0.4rem;
+            gap: 0.5rem;
         }
 
         .filter-button:hover {
-            border-color: #6c5ce7;
-            background: rgba(108, 92, 231, 0.05);
-            transform: translateY(-1px);
-            box-shadow: 0 2px 8px rgba(108, 92, 231, 0.1);
+            color: #6c5ce7;
+            border-bottom-color: rgba(108, 92, 231, 0.2);
+            transform: none;
+            box-shadow: none;
+            background: none;
         }
 
         .filter-button.active {
-            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-            color: white;
-            border-color: #6c5ce7;
-            box-shadow: 0 4px 12px rgba(108, 92, 231, 0.25);
+            color: #6c5ce7;
+            border-bottom-color: #6c5ce7;
+            background: none;
+            box-shadow: none;
         }
 
         .filter-button.active:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 16px rgba(108, 92, 231, 0.35);
+            transform: none;
+            box-shadow: none;
         }
 
-        .filter-button i {
-            font-size: 0.85rem;
+        /* 深色模式适配 */
+        [data-theme="dark"] body {
+            background-color: #0f172a;
+        }
+
+        [data-theme="dark"] .publications-header h1 {
+            color: #f1f5f9;
+        }
+
+        [data-theme="dark"] .publications-header {
+            border-bottom-color: rgba(255, 255, 255, 0.05);
+        }
+
+        [data-theme="dark"] .filter-button {
+            color: #94a3b8;
+        }
+
+        [data-theme="dark"] .filter-button.active {
+            color: #a29bfe;
+            border-bottom-color: #a29bfe;
         }
 
         @media (max-width: 768px) {
             .publications-container {
-                padding: 1rem;
+                padding: 1.5rem;
                 margin-top: 60px;
             }
 
             .publications-header h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
             .filter-section {
-                gap: 1rem;
-            }
-
-            .filter-group {
-                min-width: 100%;
-                padding: 1.25rem;
-            }
-
-            .filter-button {
-                padding: 0.4rem 0.8rem;
-                font-size: 0.85rem;
+                gap: 2rem;
             }
         }
     </style>
@@ -153,6 +186,10 @@
 
     <div class="publications-container">
         <div class="publications-header">
+            <a href="../index.html" class="back-home">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
             <h1>Publications</h1>
             <p>A comprehensive list of my research publications</p>
         </div>
@@ -204,8 +241,30 @@
         <detailed-publication-list></detailed-publication-list>
     </div>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const backToTopBtn = document.getElementById('back-to-top');
+
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
             const filterButtons = document.querySelectorAll('.filter-button');
             const publicationList = document.querySelector('detailed-publication-list');
 

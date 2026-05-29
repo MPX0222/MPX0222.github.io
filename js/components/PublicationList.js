@@ -195,7 +195,7 @@ class PublicationList extends HTMLElement {
           font-size: 0.6875rem;
           font-weight: 600;
           letter-spacing: 0.025em;
-          font-family: var(--font-family);
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
         /* 简洁的venue颜色方案 */
@@ -221,7 +221,7 @@ class PublicationList extends HTMLElement {
           background-color:rgb(255, 255, 255);
           border-radius: 3px;
           font-weight: 500;
-          font-family: var(--font-family);
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
         .publication-footer {
@@ -452,7 +452,7 @@ class PublicationList extends HTMLElement {
                     </div>
                     ${pub.links.github && pub.links.github.owner && pub.links.github.repo ? `
                       <div class="stat-item github-stats">
-                        <img src="https://img.shields.io/github/stars/${pub.links.github.owner}/${pub.links.github.repo}?style=social" 
+                        <img src="https://img.shields.io/github/stars/${pub.links.github.owner}/${pub.links.github.repo}?style=flat&logo=github&logoColor=6c5ce7&label=&color=white"
                              alt="GitHub stars" loading="lazy">
                       </div>
                     ` : ''}
