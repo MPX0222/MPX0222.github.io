@@ -137,7 +137,7 @@ class DetailedPublicationList extends HTMLElement {
                 .category-title {
                     font-family: var(--font-family);
                     font-size: 1.8rem;
-                    color: #1a1a1a;
+                    color: var(--text-color);
                     margin: 0;
                     font-weight: 700;
                     letter-spacing: -0.01em;
@@ -145,7 +145,7 @@ class DetailedPublicationList extends HTMLElement {
 
                 .category-count {
                     background: none;
-                    color: #636e72;
+                    color: var(--text-secondary);
                     padding: 0;
                     font-size: 0.9rem;
                     font-weight: 500;
@@ -160,6 +160,10 @@ class DetailedPublicationList extends HTMLElement {
                     transition: all 0.3s ease;
                 }
 
+                :host-context([data-theme="dark"]) .publication-item {
+                    border-bottom-color: rgba(255, 255, 255, 0.05);
+                }
+
                 .publication-item:last-child {
                     border-bottom: none;
                 }
@@ -167,7 +171,7 @@ class DetailedPublicationList extends HTMLElement {
                 .publication-title {
                     font-size: 1.3rem;
                     font-weight: 600;
-                    color: #1a1a1a;
+                    color: var(--text-color);
                     line-height: 1.4;
                     margin-bottom: 0.75rem;
                     display: block;
@@ -175,8 +179,16 @@ class DetailedPublicationList extends HTMLElement {
                     transition: color 0.2s ease;
                 }
 
+                :host-context([data-theme="dark"]) .publication-title {
+                    color: #ffffff;
+                }
+
                 .publication-title:hover {
                     color: #6c5ce7;
+                }
+
+                :host-context([data-theme="dark"]) .publication-title:hover {
+                    color: #a29bfe;
                 }
 
                 .pdf-link {
@@ -186,9 +198,13 @@ class DetailedPublicationList extends HTMLElement {
 
                 .publication-meta {
                     font-size: 1rem;
-                    color: #4a4a4a;
+                    color: var(--text-color);
                     line-height: 1.6;
                     margin-bottom: 1rem;
+                }
+
+                :host-context([data-theme="dark"]) .publication-meta {
+                    color: #cbd5e1;
                 }
 
                 .author-highlight {
@@ -198,6 +214,11 @@ class DetailedPublicationList extends HTMLElement {
                     text-underline-offset: 4px;
                     text-decoration-thickness: 2px;
                     text-decoration-color: rgba(108, 92, 231, 0.3);
+                }
+
+                :host-context([data-theme="dark"]) .author-highlight {
+                    color: #a29bfe;
+                    text-decoration-color: rgba(162, 155, 254, 0.3);
                 }
 
                 .publication-footer {
@@ -225,14 +246,27 @@ class DetailedPublicationList extends HTMLElement {
                     font-family: 'Inter', sans-serif;
                 }
 
+                :host-context([data-theme="dark"]) .venue-tag {
+                    color: #a29bfe;
+                    border-left-color: #a29bfe;
+                }
+
                 .venue-tag.conference { border-left-color: #27ae60; color: #27ae60; }
                 .venue-tag.journal { border-left-color: #2563eb; color: #2563eb; }
                 .venue-tag.preprint { border-left-color: #dc2626; color: #dc2626; }
 
+                :host-context([data-theme="dark"]) .venue-tag.conference { border-left-color: #55efc4; color: #55efc4; }
+                :host-context([data-theme="dark"]) .venue-tag.journal { border-left-color: #74b9ff; color: #74b9ff; }
+                :host-context([data-theme="dark"]) .venue-tag.preprint { border-left-color: #fab1a0; color: #fab1a0; }
+
                 .venue-name {
-                    color: #636e72;
+                    color: var(--text-secondary);
                     font-weight: 500;
                     font-size: 0.95rem;
+                }
+
+                :host-context([data-theme="dark"]) .venue-name {
+                    color: #cbd5e1;
                 }
 
                 .citation-count {
@@ -240,9 +274,13 @@ class DetailedPublicationList extends HTMLElement {
                     align-items: center;
                     gap: 0.5rem;
                     font-size: 0.9rem;
-                    color: #636e72;
+                    color: var(--text-secondary);
                     font-weight: 600;
                     font-family: 'Inter', sans-serif;
+                }
+
+                :host-context([data-theme="dark"]) .citation-count {
+                    color: #cbd5e1;
                 }
 
                 .citation-count i {
@@ -250,18 +288,17 @@ class DetailedPublicationList extends HTMLElement {
                     color: #6c5ce7;
                 }
 
+                :host-context([data-theme="dark"]) .citation-count i {
+                    color: #a29bfe;
+                }
+
                 /* 深色模式适配 */
-                :host-context([data-theme="dark"]) .category-title,
-                :host-context([data-theme="dark"]) .publication-title {
-                    color: #f1f5f9;
+                :host-context([data-theme="dark"]) .category-title {
+                    color: #ffffff;
                 }
 
-                :host-context([data-theme="dark"]) .publication-meta {
+                :host-context([data-theme="dark"]) .category-count {
                     color: #94a3b8;
-                }
-
-                :host-context([data-theme="dark"]) .publication-item {
-                    border-bottom-color: rgba(255, 255, 255, 0.05);
                 }
 
                 @media (max-width: 768px) {

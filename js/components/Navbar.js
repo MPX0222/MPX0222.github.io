@@ -15,25 +15,32 @@ class Navbar extends HTMLElement {
                     display: block;
                     width: 100%;
                     font-family: var(--font-family, 'Lora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
-                    --primary-color: #1e3799;
-                    --primary-light: #4a69bd;
-                    --primary-dark: #0c2461;
-                    --text-primary: #2f3542;
-                    --text-secondary: #57606f;
+                    --nav-bg: rgba(255, 255, 255, 0.95);
+                    --nav-border: rgba(30, 55, 153, 0.08);
+                    --nav-text: #57606f;
+                    --nav-active: #6c5ce7;
+                }
+
+                :host-context([data-theme="dark"]) {
+                    --nav-bg: rgba(0, 0, 0, 0.95);
+                    --nav-border: rgba(255, 255, 255, 0.15);
+                    --nav-text: #cbd5e1;
+                    --nav-active: #a29bfe;
                 }
 
                 .navbar {
-                    background: rgba(255, 255, 255, 0.95);
+                    background: var(--nav-bg);
                     backdrop-filter: blur(10px);
-                    border-bottom: 1px solid rgba(30, 55, 153, 0.08);
+                    border-bottom: 1px solid var(--nav-border);
                     position: fixed;
                     top: 0;
                     left: 0;
                     right: 0;
                     z-index: 1000;
-                    box-shadow: 0 2px 10px rgba(30, 55, 153, 0.05);
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
                     opacity: 0;
                     animation: fadeInDown 0.3s ease-out forwards;
+                    transition: background 0.3s ease, border 0.3s ease;
                 }
 
                 .nav-content {
@@ -54,7 +61,7 @@ class Navbar extends HTMLElement {
                 .nav-brand {
                     font-weight: 700;
                     font-size: 1.3rem;
-                    background: linear-gradient(135deg, #2d3436, #6c5ce7);
+                    background: linear-gradient(135deg, var(--nav-text), var(--nav-active));
                     -webkit-background-clip: text;
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -65,10 +72,16 @@ class Navbar extends HTMLElement {
                     transition: all 0.3s ease;
                 }
 
+                :host-context([data-theme="dark"]) .nav-brand {
+                    background: linear-gradient(135deg, #f8fafc, var(--nav-active));
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                }
+
                 .nav-brand svg {
                     width: 24px;
                     height: 24px;
-                    background: linear-gradient(135deg, #2d3436, #6c5ce7);
+                    background: linear-gradient(135deg, var(--nav-text), var(--nav-active));
                     -webkit-background-clip: text;
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -82,7 +95,7 @@ class Navbar extends HTMLElement {
                 .version {
                     font-size: 0.75rem;
                     font-weight: 500;
-                    background: linear-gradient(135deg, #2d3436, #6c5ce7);
+                    background: linear-gradient(135deg, var(--nav-text), var(--nav-active));
                     -webkit-background-clip: text;
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -105,12 +118,12 @@ class Navbar extends HTMLElement {
 
                 .nav-section:not(:last-child) {
                     padding-right: 1.5rem;
-                    border-right: 1px solid rgba(74, 105, 189, 0.15);
+                    border-right: 1px solid var(--nav-border);
                 }
 
                 .nav-right a {
                     text-decoration: none;
-                    color: var(--text-secondary);
+                    color: var(--nav-text);
                     font-weight: 500;
                     font-size: 0.95rem;
                     padding: 0.5rem 0.8rem;
@@ -120,109 +133,21 @@ class Navbar extends HTMLElement {
                 }
 
                 .nav-right a:hover {
-                    color: var(--primary-color);
-                    background: rgba(30, 55, 153, 0.05);
+                    color: var(--nav-active);
+                    background: rgba(108, 92, 231, 0.05);
                 }
 
                 .nav-right a.active {
-                    color: var(--primary-color);
-                    background: rgba(30, 55, 153, 0.08);
-                    font-weight: 600;
-                }
-
-                /* 特殊按钮样式 */
-                .nav-right a#home-link,
-                .nav-right a#records-link {
-                    position: relative;
-                    font-weight: 600;
-                    color: #6c5ce7;
+                    color: var(--nav-active);
                     background: rgba(108, 92, 231, 0.08);
-                    border: 2px solid rgba(108, 92, 231, 0.2);
-                    border-radius: 12px;
-                    padding: 0.6rem 1.2rem !important;
-                    overflow: hidden;
-                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                    box-shadow: 0 2px 8px rgba(108, 92, 231, 0.1);
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                }
-
-                .nav-right a#home-link::before,
-                .nav-right a#records-link::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: -100%;
-                    width: 100%;
-                    height: 100%;
-                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-                    transition: left 0.5s ease;
-                }
-
-                .nav-right a#home-link:hover,
-                .nav-right a#records-link:hover {
-                    border-color: #6c5ce7;
-                    background: rgba(108, 92, 231, 0.12);
-                    transform: translateY(-2px);
-                    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.2);
-                }
-
-                .nav-right a#home-link:hover::before,
-                .nav-right a#records-link:hover::before {
-                    left: 100%;
-                }
-
-                .nav-right a#home-link.active,
-                .nav-right a#records-link.active {
-                    background: linear-gradient(135deg, #2d3436, #6c5ce7);
-                    color: white;
-                    border-color: #6c5ce7;
-                    box-shadow: 0 4px 16px rgba(108, 92, 231, 0.3);
-                    transform: translateY(-1px);
-                }
-
-                /* All Publications 按钮 - 简洁优雅 */
-                .nav-right a.nav-publications-detail {
-                    display: flex;
-                    align-items: center;
-                    gap: 0.4rem;
-                    padding: 0.55rem 1.1rem !important;
-                    color: #6c5ce7;
                     font-weight: 600;
-                    background: rgba(108, 92, 231, 0.06);
-                    border-radius: 6px;
-                    transition: all 0.25s ease;
-                }
-
-                .nav-right a.nav-publications-detail i {
-                    font-size: 0.85rem;
-                    color: #6c5ce7;
-                }
-
-                .nav-right a.nav-publications-detail:hover {
-                    background: rgba(108, 92, 231, 0.12);
-                    color: #5b4cc4;
-                }
-
-                .nav-right a.nav-publications-detail:hover i {
-                    color: #5b4cc4;
-                }
-
-                .nav-right a.nav-publications-detail.active {
-                    background: rgba(108, 92, 231, 0.12);
-                    color: #5b4cc4;
-                }
-
-                .nav-right a.nav-publications-detail.active i {
-                    color: #5b4cc4;
                 }
 
                 /* Mail 按钮 */
                 .nav-contact {
                     position: relative;
                     background: none !important;
-                    color: var(--text-secondary) !important;
+                    color: var(--nav-text) !important;
                     display: flex;
                     align-items: center;
                     gap: 0.4rem;
@@ -242,30 +167,51 @@ class Navbar extends HTMLElement {
                 }
 
                 .nav-contact:hover {
-                    color: #6c5ce7 !important;
+                    color: var(--nav-active) !important;
                     background: rgba(108, 92, 231, 0.05) !important;
                     transform: translateY(-1px) !important;
                 }
 
-                .nav-contact:hover svg {
-                    transform: scale(1.1);
+                .theme-toggle {
+                    background: none;
+                    border: none;
+                    color: var(--nav-text);
+                    cursor: pointer;
+                    padding: 0.5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    transition: all 0.2s ease;
                 }
 
-                .nav-contact:active {
-                    transform: translateY(0) !important;
+                .theme-toggle:hover {
+                    background: rgba(108, 92, 231, 0.1);
+                    color: var(--nav-active);
+                }
+
+                .theme-toggle svg {
+                    width: 20px;
+                    height: 20px;
+                    fill: currentColor;
                 }
 
                 .nav-left .artistic-heading {
                     font-size: 1.5rem;
                     text-align: center;
                     padding-left: 1rem;
-                    background: linear-gradient(120deg, #6c5ce7, #81ecec);
+                    background: linear-gradient(120deg, var(--nav-active), #81ecec);
                     -webkit-background-clip: text;
                     background-clip: text;
                     color: transparent;
                     text-transform: none;
                     font-family: 'Dancing Script', cursive;
                     position: relative;
+                    transition: background 0.3s ease;
+                }
+
+                :host-context([data-theme="dark"]) .nav-left .artistic-heading {
+                    background: linear-gradient(120deg, var(--nav-active), #a29bfe);
                 }
 
 
@@ -312,6 +258,14 @@ class Navbar extends HTMLElement {
                                 </svg>
                                 Mail
                             </a>
+                            <button class="theme-toggle" id="theme-toggle" title="Toggle Dark Mode">
+                                <svg class="sun-icon" viewBox="0 0 24 24" style="display: none;">
+                                    <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 000-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+                                </svg>
+                                <svg class="moon-icon" viewBox="0 0 24 24">
+                                    <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-3.03 0-5.5-2.47-5.5-5.5 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -321,6 +275,41 @@ class Navbar extends HTMLElement {
         this.shadowRoot.innerHTML = styles + template;
         this.updateActiveLink();
         this.setupScrollListener();
+        this.setupThemeToggle();
+    }
+
+    setupThemeToggle() {
+        const toggleBtn = this.shadowRoot.getElementById('theme-toggle');
+        const sunIcon = this.shadowRoot.querySelector('.sun-icon');
+        const moonIcon = this.shadowRoot.querySelector('.moon-icon');
+        
+        // Check for saved theme or system preference
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        const currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        this.setTheme(currentTheme);
+
+        toggleBtn.addEventListener('click', () => {
+            const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            this.setTheme(newTheme);
+        });
+    }
+
+    setTheme(theme) {
+        const sunIcon = this.shadowRoot.querySelector('.sun-icon');
+        const moonIcon = this.shadowRoot.querySelector('.moon-icon');
+
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+
+        if (theme === 'dark') {
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+        } else {
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'block';
+        }
     }
 
     updateActiveLink() {

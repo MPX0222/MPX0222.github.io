@@ -27,8 +27,9 @@
             text-align: left;
             margin-bottom: 3rem;
             padding: 2rem 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid var(--border-color);
             position: relative;
+            transition: border-color 0.3s ease;
         }
 
         .back-home {
@@ -36,7 +37,7 @@
             align-items: center;
             gap: 0.5rem;
             text-decoration: none;
-            color: #636e72;
+            color: var(--text-secondary);
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
@@ -47,7 +48,7 @@
         }
 
         .back-home:hover {
-            color: #6c5ce7;
+            color: var(--primary-color);
             transform: translateX(-5px);
         }
 
@@ -58,18 +59,20 @@
         .publications-header h1 {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #1a1a1a;
+            color: var(--text-color);
             margin-bottom: 0.75rem;
             font-family: var(--font-family);
             letter-spacing: -0.02em;
+            transition: color 0.3s ease;
         }
 
         .publications-header p {
             font-size: 1.1rem;
-            color: #636e72;
+            color: var(--text-secondary);
             margin: 0;
             line-height: 1.6;
             font-family: 'Inter', sans-serif;
+            transition: color 0.3s ease;
         }
 
         .filter-section {
@@ -92,12 +95,13 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: #a4b0be;
+            color: var(--text-secondary);
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
             gap: 0.6rem;
             font-family: 'Inter', sans-serif;
+            transition: color 0.3s ease;
         }
 
         .filter-buttons {
@@ -112,7 +116,7 @@
             border-bottom: 2px solid transparent;
             border-radius: 0;
             background: none;
-            color: #636e72;
+            color: var(--text-secondary);
             font-weight: 600;
             font-size: 0.9rem;
             cursor: pointer;
@@ -124,16 +128,16 @@
         }
 
         .filter-button:hover {
-            color: #6c5ce7;
-            border-bottom-color: rgba(108, 92, 231, 0.2);
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-light);
             transform: none;
             box-shadow: none;
             background: none;
         }
 
         .filter-button.active {
-            color: #6c5ce7;
-            border-bottom-color: #6c5ce7;
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
             background: none;
             box-shadow: none;
         }
@@ -141,28 +145,6 @@
         .filter-button.active:hover {
             transform: none;
             box-shadow: none;
-        }
-
-        /* 深色模式适配 */
-        [data-theme="dark"] body {
-            background-color: #0f172a;
-        }
-
-        [data-theme="dark"] .publications-header h1 {
-            color: #f1f5f9;
-        }
-
-        [data-theme="dark"] .publications-header {
-            border-bottom-color: rgba(255, 255, 255, 0.05);
-        }
-
-        [data-theme="dark"] .filter-button {
-            color: #94a3b8;
-        }
-
-        [data-theme="dark"] .filter-button.active {
-            color: #a29bfe;
-            border-bottom-color: #a29bfe;
         }
 
         @media (max-width: 768px) {

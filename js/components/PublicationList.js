@@ -82,14 +82,28 @@ class PublicationList extends HTMLElement {
     try {
       const response = await fetch('/data/publications.json');
       const data = await response.json();
-      this.render(data.publications);
+      this.publications = data.publications;
+      this.render(this.publications);
+      this.setupThemeObserver();
     } catch (error) {
       console.error('Error loading publications:', error);
       this.innerHTML = '<p>Error loading publications</p>';
     }
   }
 
+  setupThemeObserver() {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'data-theme') {
+          this.render(this.publications);
+        }
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+  }
+
   render(publications) {
+    if (!publications) return;
     // 过滤只显示 showInHome 为 true 的论文
     const featuredPublications = publications.filter(pub => pub.showInHome !== false);
 
@@ -109,7 +123,12 @@ class PublicationList extends HTMLElement {
           background: transparent;
           border-radius: 0;
           align-items: flex-start;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+          border-bottom: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
+          transition: border-color 0.3s ease;
+        }
+
+        :host-context([data-theme="dark"]) .publication-item {
+          border-bottom-color: rgba(255, 255, 255, 0.1);
         }
 
         .publication-item:last-child {
@@ -154,30 +173,49 @@ class PublicationList extends HTMLElement {
         .publication-title {
           font-size: 1.25rem;
           font-weight: 500;
-          color: #111827;
+          color: var(--text-color, #111827);
           margin: 0;
           line-height: 1.3;
           font-family: var(--font-family);
+          transition: color 0.3s ease;
+        }
+
+        :host-context([data-theme="dark"]) .publication-title {
+          color: #ffffff;
         }
 
         .publication-year {
-          color: #6b7280;
+          color: var(--text-secondary, #6b7280);
           font-weight: 500;
           font-size: 1rem;
           font-family: var(--font-family);
+          transition: color 0.3s ease;
+        }
+
+        :host-context([data-theme="dark"]) .publication-year {
+          color: #cbd5e1;
         }
 
         .publication-authors {
           font-size: 0.9rem;
-          color: #374151;
+          color: var(--text-color, #374151);
           margin: 0;
           line-height: 1.4;
           font-family: var(--font-family);
+          transition: color 0.3s ease;
+        }
+
+        :host-context([data-theme="dark"]) .publication-authors {
+          color: #cbd5e1;
         }
 
         .author {
           color: #6366f1;
           font-weight: 600;
+        }
+
+        :host-context([data-theme="dark"]) .author {
+          color: #c7c2ff;
         }
 
         .publication-venue {
@@ -198,20 +236,40 @@ class PublicationList extends HTMLElement {
           font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
+        :host-context([data-theme="dark"]) .venue-tag {
+          background-color: rgba(255, 255, 255, 0.08);
+          color: #cbd5e1;
+        }
+
         /* 简洁的venue颜色方案 */
         .venue-tag.preprint.arXiv { 
           background-color: #fef2f2;
           color: #dc2626;
         }
         
+        :host-context([data-theme="dark"]) .venue-tag.preprint.arXiv {
+          background-color: rgba(220, 38, 38, 0.1);
+          color: #fab1a0;
+        }
+
         .venue-tag.conference { 
           background-color: #f0fdf4;
           color: #16a34a;
+        }
+
+        :host-context([data-theme="dark"]) .venue-tag.conference {
+          background-color: rgba(22, 163, 74, 0.1);
+          color: #55efc4;
         }
         
         .venue-tag.journal { 
           background-color: #eff6ff;
           color: #2563eb;
+        }
+
+        :host-context([data-theme="dark"]) .venue-tag.journal {
+          background-color: rgba(37, 99, 235, 0.1);
+          color: #74b9ff;
         }
 
         .status-tag {
@@ -222,6 +280,11 @@ class PublicationList extends HTMLElement {
           border-radius: 3px;
           font-weight: 500;
           font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        :host-context([data-theme="dark"]) .status-tag {
+          background-color: rgba(255, 255, 255, 0.08);
+          color: #cbd5e1;
         }
 
         .publication-footer {
@@ -275,14 +338,22 @@ class PublicationList extends HTMLElement {
           align-items: center;
           gap: 0.25rem;
           font-size: 0.75rem;
-          color: #6b7280;
+          color: var(--text-secondary, #6b7280);
           font-weight: 500;
           font-family: var(--font-family);
+        }
+
+        :host-context([data-theme="dark"]) .stat-item {
+          color: #cbd5e1;
         }
 
         .stat-item i {
           color: #6366f1;
           font-size: 0.6875rem;
+        }
+
+        :host-context([data-theme="dark"]) .stat-item i {
+          color: #c7c2ff;
         }
 
         .github-stats {
@@ -399,6 +470,9 @@ class PublicationList extends HTMLElement {
       <div class="publications-list">
         ${featuredPublications.map(pub => {
           const venueInfo = this.getVenueType(pub.venue.name);
+          const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+          const logoColor = isDarkMode ? 'a29bfe' : '6c5ce7';
+          
           return `
             <div class="publication-item">
               <div class="publication-thumbnail">
@@ -452,7 +526,7 @@ class PublicationList extends HTMLElement {
                     </div>
                     ${pub.links.github && pub.links.github.owner && pub.links.github.repo ? `
                       <div class="stat-item github-stats">
-                        <img src="https://img.shields.io/github/stars/${pub.links.github.owner}/${pub.links.github.repo}?style=flat&logo=github&logoColor=6c5ce7&label=&color=white"
+                        <img src="https://img.shields.io/github/stars/${pub.links.github.owner}/${pub.links.github.repo}?style=flat&logo=github&logoColor=${logoColor}&label=&color=white"
                              alt="GitHub stars" loading="lazy">
                       </div>
                     ` : ''}

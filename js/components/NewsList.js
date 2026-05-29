@@ -39,23 +39,23 @@ class NewsList extends HTMLElement {
         }
 
         .news-list::-webkit-scrollbar-track {
-          background: #f1f1f1;
+          background: var(--bg-color);
           border-radius: 3px;
         }
 
         .news-list::-webkit-scrollbar-thumb {
-          background: #6c5ce7;
+          background: var(--primary-color);
           border-radius: 3px;
         }
 
         .news-list::-webkit-scrollbar-thumb:hover {
-          background: #5f4eeb;
+          background: var(--primary-light);
         }
 
         /* Firefox 滚动条样式 */
         .news-list {
           scrollbar-width: thin;
-          scrollbar-color: #6c5ce7 #f1f1f1;
+          scrollbar-color: var(--primary-color) var(--bg-color);
         }
 
         .news-item:first-child {
@@ -69,7 +69,8 @@ class NewsList extends HTMLElement {
           background: transparent;
           border-radius: 0;
           align-items: flex-start;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+          border-bottom: 1px solid var(--border-color);
+          transition: border-color 0.3s ease;
         }
 
         .news-item:last-child {
@@ -79,8 +80,9 @@ class NewsList extends HTMLElement {
         .news-date {
           flex: 0 0 85px;
           font-size: 0.9rem;
-          color: #6c5ce7;
+          color: var(--primary-color);
           font-weight: 500;
+          transition: color 0.3s ease;
         }
 
         .news-content {
@@ -93,19 +95,20 @@ class NewsList extends HTMLElement {
         .news-content p {
           margin: 0;
           font-size: 0.9rem;
-          color: #2d3436;
+          color: var(--text-color);
           line-height: 1.4;
+          transition: color 0.3s ease;
         }
 
         .news-link {
-          color: #6c5ce7;
+          color: var(--primary-color);
           text-decoration: none;
           font-weight: 500;
           transition: color 0.2s ease;
         }
 
         .news-link:hover {
-          color: #5f4eeb;
+          color: var(--primary-light);
         }
 
         @media (max-width: 768px) {
