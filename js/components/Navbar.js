@@ -15,32 +15,22 @@ class Navbar extends HTMLElement {
                     display: block;
                     width: 100%;
                     font-family: var(--font-family, 'Lora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
-                    --nav-bg: rgba(255, 255, 255, 0.95);
-                    --nav-border: rgba(30, 55, 153, 0.08);
-                    --nav-text: #57606f;
-                    --nav-active: #6c5ce7;
-                }
-
-                :host-context([data-theme="dark"]) {
-                    --nav-bg: rgba(0, 0, 0, 0.95);
-                    --nav-border: rgba(255, 255, 255, 0.15);
-                    --nav-text: #cbd5e1;
-                    --nav-active: #a29bfe;
                 }
 
                 .navbar {
                     background: var(--nav-bg);
-                    backdrop-filter: blur(10px);
+                    backdrop-filter: blur(12px);
+                    -webkit-backdrop-filter: blur(12px);
                     border-bottom: 1px solid var(--nav-border);
                     position: fixed;
                     top: 0;
                     left: 0;
                     right: 0;
                     z-index: 1000;
-                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+                    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
                     opacity: 0;
                     animation: fadeInDown 0.3s ease-out forwards;
-                    transition: background 0.3s ease, border 0.3s ease;
+                    transition: all 0.3s ease;
                 }
 
                 .nav-content {
@@ -70,12 +60,6 @@ class Navbar extends HTMLElement {
                     align-items: center;
                     gap: 0.5rem;
                     transition: all 0.3s ease;
-                }
-
-                :host-context([data-theme="dark"]) .nav-brand {
-                    background: linear-gradient(135deg, #f8fafc, var(--nav-active));
-                    -webkit-background-clip: text;
-                    background-clip: text;
                 }
 
                 .nav-brand svg {
@@ -200,7 +184,7 @@ class Navbar extends HTMLElement {
                     font-size: 1.5rem;
                     text-align: center;
                     padding-left: 1rem;
-                    background: linear-gradient(120deg, var(--nav-active), #81ecec);
+                    background: linear-gradient(120deg, var(--nav-text), var(--nav-active));
                     -webkit-background-clip: text;
                     background-clip: text;
                     color: transparent;
@@ -208,10 +192,6 @@ class Navbar extends HTMLElement {
                     font-family: 'Dancing Script', cursive;
                     position: relative;
                     transition: background 0.3s ease;
-                }
-
-                :host-context([data-theme="dark"]) .nav-left .artistic-heading {
-                    background: linear-gradient(120deg, var(--nav-active), #a29bfe);
                 }
 
 

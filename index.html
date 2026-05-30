@@ -27,6 +27,7 @@
     <script src="js/components/ProjectList.js"></script>
     <script src="js/components/ServiceList.js"></script>
 
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </head>
 <body>
     <!-- 添加导航栏 -->
@@ -180,12 +181,15 @@
                         </div>
                     </div>
 
-                    <!-- 访问统计地图 -->
-                    <div class="visitor-map-section">
-                        <div class="visitor-map">
-                            <a href="https://clustrmaps.com/site/1c4bq" title="Visit tracker">
-                                <img src="//clustrmaps.com/map_v2.png?t=tt&d=zcsuUHck7poK49_TBP84eF736WoqI784nfHkHiIbIgQ&cl=a8a8a8&w=600&co=ffffff&ct=000000&w=450&h=300" alt="Visitor Map" />
-                            </a>
+                    <!-- Visitor Stats -->
+                    <div class="visitor-stats-section">
+                        <div class="visitor-stats">
+                            <span id="busuanzi_container_site_uv" style="display:none">
+                                <i class="fas fa-users"></i> <span id="busuanzi_value_site_uv"></span> Visitors
+                            </span>
+                            <span id="busuanzi_container_site_pv" style="display:none; margin-left: 1.5rem;">
+                                <i class="fas fa-eye"></i> <span id="busuanzi_value_site_pv"></span> Views
+                            </span>
                         </div>
                     </div>
                     

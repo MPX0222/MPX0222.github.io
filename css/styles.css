@@ -8,6 +8,10 @@
     --border-color: rgba(0, 0, 0, 0.06);
     --shadow-color: rgba(0, 0, 0, 0.1);
     --font-family: 'Lora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --nav-border: rgba(0, 0, 0, 0.08);
+    --nav-text: #57606f;
+    --nav-active: #6c5ce7;
 }
 
 [data-theme="dark"] {
@@ -19,6 +23,11 @@
     --bg-color: #000000;
     --border-color: rgba(255, 255, 255, 0.15);
     --shadow-color: rgba(0, 0, 0, 0.6);
+    --spotlight-color: rgba(108, 92, 231, 0.25);
+    --nav-bg: #000000;
+    --nav-border: rgba(255, 255, 255, 0.15);
+    --nav-text: #cbd5e1;
+    --nav-active: #a29bfe;
 }
 
 * {
@@ -410,6 +419,8 @@ button.pub-link {
     margin-bottom: 0;
     border: none;
     box-shadow: none;
+    position: relative;
+    z-index: 1;
 }
 
 .profile-card::before {
@@ -732,6 +743,26 @@ button.pub-link {
 /* 主要内容区域样式 */
 .main-content {
     padding-top: 4rem; /* 为固定导航栏留出空间 */
+    position: relative;
+}
+
+/* 深色模式下的展示灯效果 */
+[data-theme="dark"] .main-content::before {
+    content: '';
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    right: 0;
+    height: 800px;
+    background: radial-gradient(
+        ellipse at 50% 0%,
+        var(--spotlight-color) 0%,
+        rgba(108, 92, 231, 0.1) 30%,
+        rgba(108, 92, 231, 0.02) 60%,
+        transparent 80%
+    );
+    pointer-events: none;
+    z-index: 0;
 }
 
 /* 添加响应式导航栏 */
@@ -2447,46 +2478,35 @@ blockquote {
     }
 } 
 
-/* 访问统计地图样式 - 在sidebar中 */
-.sidebar .visitor-map {
-    background: transparent;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
-    text-align: right;
-    margin: 0.5rem 0 0;
-    overflow: hidden;
-}
-
-/* 访问统计地图样式 - 在内容区 */
-.visitor-map-section {
+/* 访问统计样式 */
+.visitor-stats-section {
     text-align: center;
-    margin-top: 1rem;
-    padding: 1.5rem 0;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    transition: border-color 0.3s ease;
 }
 
-.visitor-map-section .visitor-map {
-    display: inline-block;
-    background: transparent;
-    padding: 0;
-    box-shadow: none;
+.visitor-stats {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    opacity: 0.6;
+    transition: all 0.3s ease;
 }
 
-.visitor-map a {
-    display: inline-block;
-    opacity: 0.65;
-    transition: opacity 0.3s ease;
+.visitor-stats i {
+    color: var(--text-secondary);
+    margin-right: 0.4rem;
+    font-size: 0.75rem;
 }
 
-.visitor-map a:hover {
-    opacity: 1;
-}
-
-.visitor-map img {
-    width: auto;
-    height: auto;
-    max-width: 450px;
-    border-radius: 4px;
+.visitor-stats span[id^="busuanzi_value"] {
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-right: 0.2rem;
 }
 
 /* 响应式调整 */
@@ -2528,6 +2548,7 @@ blockquote {
 
     .visitor-map img {
         max-width: 320px;
+        filter: none; /* 确保移动端也遵循全局滤镜规则 */
     }
 
     .sidebar {
