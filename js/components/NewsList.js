@@ -54,7 +54,7 @@ class NewsList extends HTMLElement {
           display: flex;
           flex-direction: column;
           gap: 0;
-          padding: 0.5rem 0;
+          padding: 0.5rem 1.5rem 0.5rem 0;
           max-height: 600px;
           overflow-y: auto;
           overflow-x: hidden;
@@ -73,13 +73,13 @@ class NewsList extends HTMLElement {
         .news-list::-webkit-scrollbar-thumb {
           background: var(--primary-color);
           border-radius: 10px;
-          opacity: 0.3;
+          opacity: 0.2;
         }
 
         .news-item {
           display: flex;
           gap: 1.2rem;
-          padding: 0.6rem 0;
+          padding: 0.4rem 0; /* 极致压缩上下间距 */
           background: transparent;
           position: relative;
           z-index: 1;
@@ -96,7 +96,7 @@ class NewsList extends HTMLElement {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          padding-top: 0.15rem;
+          padding-top: 0.12rem; /* 精准微调对齐第一行文字 */
         }
 
         .news-date {
@@ -106,7 +106,7 @@ class NewsList extends HTMLElement {
           font-family: 'Inter', sans-serif;
           letter-spacing: 0.01em;
           white-space: nowrap;
-          line-height: 1.4;
+          line-height: 1.5;
           transition: color 0.3s ease;
         }
 
@@ -118,20 +118,20 @@ class NewsList extends HTMLElement {
           flex: 1;
           display: flex;
           flex-direction: column;
-          gap: 0.4rem;
+          gap: 0.3rem;
         }
 
         .news-content-row {
           display: flex;
           gap: 0.6rem;
           align-items: flex-start;
-          line-height: 1.4;
+          line-height: 1.5;
         }
 
         .news-icon {
           font-size: 0.85rem;
           width: 18px;
-          height: 1.4em; /* Match line height */
+          height: 1.5em; /* 严格匹配行高，消除额外空间 */
           display: flex;
           align-items: center;
           justify-content: center;
@@ -147,14 +147,36 @@ class NewsList extends HTMLElement {
 
         .news-icon-dot {
           font-size: 0.4rem;
-          width: 20px;
-          height: 24px;
+          width: 18px;
+          height: 1.5em; /* 严格匹配行高 */
           display: flex;
           align-items: center;
           justify-content: center;
           color: var(--primary-color);
           opacity: 0.5;
-          background: transparent;
+        }
+
+        .news-text-wrapper {
+          font-size: 0.92rem;
+          color: var(--text-color);
+          line-height: 1.5;
+          transition: color 0.3s ease;
+        }
+
+        .news-icon.paper { color: #ff7675; }
+        .news-icon.success { color: #55efc4; }
+        .news-icon.info { color: #74b9ff; }
+        .news-icon.talk { color: #a29bfe; }
+
+        .news-icon-dot {
+          font-size: 0.45rem;
+          width: 20px;
+          height: 1.6em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--primary-color);
+          opacity: 0.5;
         }
 
         .news-text-wrapper {

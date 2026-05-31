@@ -1274,82 +1274,10 @@ button.pub-link {
     }
 } 
 
-/* News 样式 */
+/* News 样式 - 已迁移至 NewsList.js 统一管理 */
 .news-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-height: none;
-    overflow-y: visible;
-    padding: 0;
+    display: none;
 }
-
-/* 自定义滚动条样式 */
-.news-list::-webkit-scrollbar {
-    width: 6px;  /* 稍微减小宽度 */
-}
-
-.news-list::-webkit-scrollbar-track {
-    background: #f5f6fa;  /* 使用与页面背景相近的颜色 */
-    border-radius: 6px;
-}
-
-.news-list::-webkit-scrollbar-thumb {
-    background: #54A0FF;  /* 使用与News标题栏相同的蓝色 */
-    border-radius: 6px;
-    border: 1px solid transparent;  /* 减小边框 */
-    background-clip: content-box;
-    min-height: 40px;
-}
-
-.news-list::-webkit-scrollbar-thumb:hover {
-    background: #2E86DE;  /* 悬停时加深颜色 */
-    border: 1px solid transparent;
-    background-clip: content-box;
-}
-
-/* Firefox 滚动条样式 */
-.news-list {
-    scrollbar-width: thin;
-    scrollbar-color: #54A0FF #f5f6fa;
-}
-
-.news-item {
-    display: flex;
-    gap: 1.25rem;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.news-item:last-child {
-    border-bottom: none;
-}
-
-.news-date {
-    flex: 0 0 80px;
-    font-size: 0.9rem;
-    color: var(--primary-color);
-    font-weight: 500;
-}
-
-.news-content {
-    flex: 1;
-    font-size: 0.95rem;
-    color: var(--text-color);
-    line-height: 1.5;
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .news-item {
-        flex-direction: column;
-        gap: 0.25rem;
-    }
-
-    .news-date {
-        flex: none;
-    }
-} 
 
 /* Awards 样式优化 - 紧凑扁平化 */
 .awards-list {
