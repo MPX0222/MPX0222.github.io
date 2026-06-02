@@ -72,7 +72,7 @@ class PublicationList extends HTMLElement {
       nature: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3C8 8 6 13 8 18c2-2 4-3 4-3s2 1 4 3c2-5 0-10-4-15z"/><path d="M12 10c-1 3-1 6 0 8"/></svg>`,
       science: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="4"/><path d="M12 3v18"/></svg>`,
       icme: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M7 5V3M17 5V3M10 19v2M14 19v2"/><circle cx="12" cy="12" r="3"/></svg>`,
-      arXiv: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>`,
+      arXiv: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.4 12l4.3-4.3c0.4-0.4 0.4-1 0-1.4s-1-0.4-1.4 0L12 10.6 7.7 6.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l4.3 4.3-4.3 4.3c-0.4 0.4-0.4 1 0 1.4 0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3l4.3-4.3 4.3 4.3c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3c0.4-0.4 0.4-1 0-1.4L13.4 12z"/></svg>`,
       default: `<svg class="venue-badge__svg" viewBox="0 0 24 24" fill="none" ${stroke} stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21V12h6v9"/></svg>`
     };
     return icons[subtype] || icons.default;
@@ -503,7 +503,7 @@ class PublicationList extends HTMLElement {
                     <div class="publication-links">
                       ${pub.links.pdf ? `
                         <a href="${pub.links.pdf}" class="pub-link pdf-link" target="_blank" rel="noopener">
-                          <i class="fas fa-file-pdf"></i>
+                          <i class="ai ai-arxiv"></i>
                           <span>Paper</span>
                         </a>
                       ` : ''}
@@ -514,7 +514,7 @@ class PublicationList extends HTMLElement {
                         </a>
                       ` : ''}
                       <button class="pub-link cite-button cite-link" data-bibtex="${pub.bibtex.replace(/"/g, '&quot;')}" aria-label="Copy BibTeX citation">
-                        <i class="fa-brands fa-google"></i>
+                        <i class="ai ai-google-scholar"></i>
                         <span>Bibtex</span>
                       </button>
                     </div>

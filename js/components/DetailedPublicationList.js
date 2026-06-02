@@ -70,7 +70,7 @@ class DetailedPublicationList extends HTMLElement {
         return publications.map(pub => {
             const venueInfo = this.getVenueInfo(pub.venue.type);
             const title = pub.links.pdf ?
-                `<a href="${pub.links.pdf}" class="pdf-link" target="_blank">${pub.title}</a>` :
+                `<a href="${pub.links.pdf}" class="pdf-link" target="_blank"><i class="ai ai-arxiv" style="margin-right: 8px; font-size: 1.1em; vertical-align: middle;"></i>${pub.title}</a>` :
                 pub.title;
 
             const authors = pub.authors.map(author =>
@@ -102,6 +102,8 @@ class DetailedPublicationList extends HTMLElement {
 
     render() {
         const styles = `
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
             <style>
                 * {
                     margin: 0;

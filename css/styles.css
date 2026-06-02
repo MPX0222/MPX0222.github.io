@@ -88,6 +88,21 @@ h1, h2, h3, p, a {
     background: linear-gradient(90deg, transparent, #6c5ce7, transparent);
 }
 
+.research-highlight {
+    color: var(--text-color);
+    font-weight: 600;
+    background: linear-gradient(120deg, rgba(108, 92, 231, 0.1) 0%, rgba(108, 92, 231, 0.1) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.4em;
+    background-position: 0 88%;
+    padding: 0 2px;
+}
+
+[data-theme="dark"] .research-highlight {
+    background: linear-gradient(120deg, rgba(162, 155, 254, 0.2) 0%, rgba(162, 155, 254, 0.2) 100%);
+    background-size: 100% 0.4em;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -374,6 +389,8 @@ h1, h2, h3, p, a {
 
 /* 为不同类型的链接设置不同的颜色 */
 .pub-link i.fa-file-pdf,
+.pub-link i.ai-arxiv,
+.pub-link i.ai-google-scholar,
 .pub-link i.fa-code,
 .pub-link i.fa-quote-right,
 .pub-link.pdf-link,
@@ -932,6 +949,8 @@ button.pub-link {
 
 /* 为不同类型的链接设置不同的颜色 */
 .pub-link i.fa-file-pdf,
+.pub-link i.ai-arxiv,
+.pub-link i.ai-google-scholar,
 .pub-link i.fa-code,
 .pub-link i.fa-quote-right,
 .pub-link.pdf-link,
@@ -1213,6 +1232,8 @@ button.pub-link {
 
 /* 为不同类型的链接设置不同的颜色 */
 .pub-link i.fa-file-pdf,
+.pub-link i.ai-arxiv,
+.pub-link i.ai-google-scholar,
 .pub-link i.fa-code,
 .pub-link i.fa-quote-right,
 .pub-link.pdf-link,
@@ -2760,12 +2781,12 @@ body.modal-open {
 /* 社交图标矩阵样式 */
 .social-icons-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
     margin: 1.5rem auto 0;
     padding: 0;
     justify-items: center;
-    max-width: 180px;
+    max-width: 160px;
 }
 
 .social-icon {
@@ -2783,7 +2804,7 @@ body.modal-open {
     transition: all 0.3s ease;
 }
 
-/* 为不同的社交平台设置品牌颜色 */
+/* 为不同的社交平台设置 brand 颜色 */
 .social-icon:nth-child(1) { /* GitHub */
     color: #333333;
 }
@@ -2796,16 +2817,8 @@ body.modal-open {
     color: #0077b5;
 }
 
-.social-icon:nth-child(4) { /* HuggingFace */
-    color: #FF9500;
-}
-
-.social-icon:nth-child(5) { /* Resume */
+.social-icon:nth-child(4) { /* Resume */
     color: #e74c3c;
-}
-
-.social-icon:nth-child(6) { /* Email */
-    color: #636e72;
 }
 
 /* 悬停时的增强效果 */
@@ -2821,31 +2834,8 @@ body.modal-open {
     color: #005885;
 }
 
-.social-icon:nth-child(4):hover span { /* HuggingFace */
-    filter: brightness(1.3) saturate(1.2);
-}
-
-.social-icon:nth-child(5):hover { /* Resume */
+.social-icon:nth-child(4):hover { /* Resume */
     color: #c0392b;
-}
-
-.social-icon:nth-child(6):hover { /* Email */
-    color: #2d3436;
-}
-
-.social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    text-decoration: none;
-    font-size: 1.6rem;
-    transition: all 0.3s ease;
-}
-
-.social-icon i, .social-icon iconify-icon {
-    transition: all 0.3s ease;
 }
 
 /* Iconify图标样式调整 */
@@ -2989,6 +2979,7 @@ body.modal-open {
 .social-icon[data-title="GitHub"] { --brand: #24292e !important; }
 .social-icon[data-title="Google Scholar"] { --brand: #4285F4 !important; }
 .social-icon[data-title="LinkedIn"] { --brand: #0077b5 !important; }
+.social-icon[data-title="ORCID"] { --brand: #A6CE39 !important; }
 .social-icon[data-title="HuggingFace"] { --brand: #FFD21E !important; } /* 调整为稍微深一点的黄色以便阅读 */
 .social-icon[data-title="Resume"] { --brand: #e74c3c !important; }
 .social-icon[data-title="Email"] { --brand: #2d3436 !important; }
@@ -3001,6 +2992,23 @@ body.modal-open {
     width: auto !important;
     height: auto !important;
     line-height: 1 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Academicons 通常视觉上偏小，需要稍微调大一点以保持对齐 */
+.social-icon .ai {
+    font-size: 1.65rem !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: 1 !important;
+    vertical-align: middle;
+}
+
+/* ORCID 图标在 Academicons 中设计得比较满，不需要像 Google Scholar 那样补偿太多 */
+.social-icon .ai-orcid {
+    font-size: 1.5rem !important;
 }
 
 /* 响应式调整 */
@@ -3015,6 +3023,9 @@ body.modal-open {
     .social-icon span,
     .social-icon iconify-icon {
         font-size: 1.4rem !important;
+    }
+    .social-icon .ai {
+        font-size: 1.65rem !important;
     }
 }
 
