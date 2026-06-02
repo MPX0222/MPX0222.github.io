@@ -70,7 +70,7 @@ class DetailedPublicationList extends HTMLElement {
         return publications.map(pub => {
             const venueInfo = this.getVenueInfo(pub.venue.type);
             const title = pub.links.pdf ?
-                `<a href="${pub.links.pdf}" class="pdf-link" target="_blank"><i class="ai ai-arxiv" style="margin-right: 8px; font-size: 1.1em; vertical-align: middle;"></i>${pub.title}</a>` :
+                `<a href="${pub.links.pdf}" class="pdf-link" target="_blank">${pub.title}</a>` :
                 pub.title;
 
             const authors = pub.authors.map(author =>
@@ -91,7 +91,6 @@ class DetailedPublicationList extends HTMLElement {
                             <span class="venue-name">${pub.venue.name}</span>
                         </div>
                         <div class="citation-count">
-                            <i class="fas fa-quote-right"></i>
                             <span>${pub.stats.citations} citations</span>
                         </div>
                     </div>
@@ -127,43 +126,45 @@ class DetailedPublicationList extends HTMLElement {
                 .category-header {
                     background: none;
                     padding: 0;
-                    margin-bottom: 2rem;
+                    margin-bottom: 2.5rem;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    gap: 0.5rem;
-                    border-left: 4px solid #6c5ce7;
-                    padding-left: 1.5rem;
+                    gap: 0.4rem;
+                    /* 移除左侧边框，改用更简洁的排版 */
+                    border-left: none;
+                    padding-left: 0;
                 }
 
                 .category-title {
                     font-family: var(--font-family);
-                    font-size: 1.8rem;
+                    font-size: 2rem;
                     color: var(--text-color);
                     margin: 0;
                     font-weight: 700;
-                    letter-spacing: -0.01em;
+                    letter-spacing: -0.02em;
                 }
 
                 .category-count {
                     background: none;
                     color: var(--text-secondary);
                     padding: 0;
-                    font-size: 0.9rem;
-                    font-weight: 500;
+                    font-size: 0.85rem;
+                    font-weight: 600;
                     font-family: 'Inter', sans-serif;
                     text-transform: uppercase;
-                    letter-spacing: 0.05em;
+                    letter-spacing: 0.1em;
+                    opacity: 0.7;
                 }
 
                 .publication-item {
-                    padding: 2rem 0;
-                    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                    padding: 1.5rem 0;
+                    border-bottom: 1px solid var(--border-color);
                     transition: all 0.3s ease;
                 }
 
                 :host-context([data-theme="dark"]) .publication-item {
-                    border-bottom-color: rgba(255, 255, 255, 0.05);
+                    border-bottom-color: rgba(255, 255, 255, 0.1);
                 }
 
                 .publication-item:last-child {
@@ -171,11 +172,11 @@ class DetailedPublicationList extends HTMLElement {
                 }
 
                 .publication-title {
-                    font-size: 1.3rem;
+                    font-size: 1.2rem;
                     font-weight: 600;
                     color: var(--text-color);
                     line-height: 1.4;
-                    margin-bottom: 0.75rem;
+                    margin-bottom: 0.5rem;
                     display: block;
                     text-decoration: none;
                     transition: color 0.2s ease;
@@ -186,11 +187,7 @@ class DetailedPublicationList extends HTMLElement {
                 }
 
                 .publication-title:hover {
-                    color: #6c5ce7;
-                }
-
-                :host-context([data-theme="dark"]) .publication-title:hover {
-                    color: #a29bfe;
+                    color: var(--primary-color);
                 }
 
                 .pdf-link {
@@ -199,10 +196,10 @@ class DetailedPublicationList extends HTMLElement {
                 }
 
                 .publication-meta {
-                    font-size: 1rem;
-                    color: var(--text-color);
+                    font-size: 0.95rem;
+                    color: var(--text-secondary);
                     line-height: 1.6;
-                    margin-bottom: 1rem;
+                    margin-bottom: 0.75rem;
                 }
 
                 :host-context([data-theme="dark"]) .publication-meta {
@@ -210,17 +207,13 @@ class DetailedPublicationList extends HTMLElement {
                 }
 
                 .author-highlight {
-                    color: #6c5ce7;
-                    font-weight: 700;
-                    text-decoration: underline;
-                    text-underline-offset: 4px;
-                    text-decoration-thickness: 2px;
-                    text-decoration-color: rgba(108, 92, 231, 0.3);
+                    color: var(--primary-color);
+                    font-weight: 600;
+                    text-decoration: none; /* 移除下划线，改用颜色区分 */
                 }
 
                 :host-context([data-theme="dark"]) .author-highlight {
-                    color: #a29bfe;
-                    text-decoration-color: rgba(162, 155, 254, 0.3);
+                    color: var(--primary-light);
                 }
 
                 .publication-footer {
@@ -234,64 +227,48 @@ class DetailedPublicationList extends HTMLElement {
                 .publication-venue {
                     display: flex;
                     align-items: center;
-                    gap: 1rem;
+                    gap: 0.75rem;
                 }
 
                 .venue-tag {
-                    font-size: 0.75rem;
+                    font-size: 0.7rem;
                     font-weight: 700;
                     text-transform: uppercase;
                     letter-spacing: 0.05em;
-                    color: #6c5ce7;
-                    border-left: 2px solid #6c5ce7;
-                    padding-left: 0.75rem;
+                    padding: 0.2rem 0.5rem;
+                    border-radius: 4px;
                     font-family: 'Inter', sans-serif;
+                    background: rgba(108, 92, 231, 0.1);
+                    color: #6c5ce7;
                 }
 
                 :host-context([data-theme="dark"]) .venue-tag {
+                    background: rgba(162, 155, 254, 0.15);
                     color: #a29bfe;
-                    border-left-color: #a29bfe;
                 }
 
-                .venue-tag.conference { border-left-color: #27ae60; color: #27ae60; }
-                .venue-tag.journal { border-left-color: #2563eb; color: #2563eb; }
-                .venue-tag.preprint { border-left-color: #dc2626; color: #dc2626; }
+                .venue-tag.conference { background: rgba(39, 174, 96, 0.1); color: #27ae60; }
+                .venue-tag.journal { background: rgba(37, 99, 235, 0.1); color: #2563eb; }
+                .venue-tag.preprint { background: rgba(220, 38, 38, 0.1); color: #dc2626; }
 
-                :host-context([data-theme="dark"]) .venue-tag.conference { border-left-color: #55efc4; color: #55efc4; }
-                :host-context([data-theme="dark"]) .venue-tag.journal { border-left-color: #74b9ff; color: #74b9ff; }
-                :host-context([data-theme="dark"]) .venue-tag.preprint { border-left-color: #fab1a0; color: #fab1a0; }
+                :host-context([data-theme="dark"]) .venue-tag.conference { background: rgba(85, 239, 196, 0.15); color: #55efc4; }
+                :host-context([data-theme="dark"]) .venue-tag.journal { background: rgba(116, 185, 255, 0.15); color: #74b9ff; }
+                :host-context([data-theme="dark"]) .venue-tag.preprint { background: rgba(250, 177, 160, 0.15); color: #fab1a0; }
 
                 .venue-name {
                     color: var(--text-secondary);
-                    font-weight: 500;
-                    font-size: 0.95rem;
-                }
-
-                :host-context([data-theme="dark"]) .venue-name {
-                    color: #cbd5e1;
+                    font-weight: 600;
+                    font-size: 0.85rem;
+                    font-family: 'Inter', sans-serif;
+                    text-transform: none;
                 }
 
                 .citation-count {
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                    font-size: 0.9rem;
+                    font-size: 0.85rem;
                     color: var(--text-secondary);
-                    font-weight: 600;
+                    font-weight: 500;
                     font-family: 'Inter', sans-serif;
-                }
-
-                :host-context([data-theme="dark"]) .citation-count {
-                    color: #cbd5e1;
-                }
-
-                .citation-count i {
-                    font-size: 0.8rem;
-                    color: #6c5ce7;
-                }
-
-                :host-context([data-theme="dark"]) .citation-count i {
-                    color: #a29bfe;
+                    opacity: 0.8;
                 }
 
                 /* 深色模式适配 */

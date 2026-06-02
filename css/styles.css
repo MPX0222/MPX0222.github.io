@@ -2230,6 +2230,17 @@ blockquote {
     line-height: 1.6;
     letter-spacing: 0.03em;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.quote-text iconify-icon {
+    font-size: 1.1em;
+    color: var(--text-secondary);
+    opacity: 0.8;
 }
 
 .quote-author {
