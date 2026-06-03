@@ -20,6 +20,9 @@ class EducationList extends HTMLElement {
         if (isCompact) {
             const educationHTML = educationList.map(edu => `
                 <div class="compact-list-item">
+                    <div class="compact-logo">
+                        <img src="${edu.logo}" alt="${edu.school} Logo">
+                    </div>
                     <div class="compact-details">
                         <div class="compact-header">
                             <span class="compact-title">${edu.school}</span>

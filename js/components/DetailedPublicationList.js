@@ -231,25 +231,29 @@ class DetailedPublicationList extends HTMLElement {
                 }
 
                 .venue-tag {
-                    font-size: 0.7rem;
+                    font-size: 0.75rem;
                     font-weight: 700;
                     text-transform: uppercase;
                     letter-spacing: 0.05em;
-                    padding: 0.2rem 0.5rem;
-                    border-radius: 4px;
-                    font-family: 'Inter', sans-serif;
-                    background: rgba(108, 92, 231, 0.1);
                     color: #6c5ce7;
+                    border-left: 2px solid #6c5ce7;
+                    padding-left: 0.75rem;
+                    font-family: 'Inter', sans-serif;
+                    transition: all 0.3s ease;
                 }
 
+                .venue-tag.conference { border-left-color: #27ae60; color: #27ae60; }
+                .venue-tag.journal { border-left-color: #2563eb; color: #2563eb; }
+                .venue-tag.preprint { border-left-color: #dc2626; color: #dc2626; }
+
+                /* Dark Mode 适配 - 保持现状 */
                 :host-context([data-theme="dark"]) .venue-tag {
+                    border-left: none;
+                    padding: 0.2rem 0.5rem;
+                    border-radius: 4px;
                     background: rgba(162, 155, 254, 0.15);
                     color: #a29bfe;
                 }
-
-                .venue-tag.conference { background: rgba(39, 174, 96, 0.1); color: #27ae60; }
-                .venue-tag.journal { background: rgba(37, 99, 235, 0.1); color: #2563eb; }
-                .venue-tag.preprint { background: rgba(220, 38, 38, 0.1); color: #dc2626; }
 
                 :host-context([data-theme="dark"]) .venue-tag.conference { background: rgba(85, 239, 196, 0.15); color: #55efc4; }
                 :host-context([data-theme="dark"]) .venue-tag.journal { background: rgba(116, 185, 255, 0.15); color: #74b9ff; }

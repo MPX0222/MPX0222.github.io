@@ -19,6 +19,9 @@ class InternshipList extends HTMLElement {
     if (isCompact) {
         const internshipsHTML = internships.map(intern => `
             <div class="compact-list-item">
+                <div class="compact-logo">
+                    <img src="${intern.logo}" alt="${intern.company} Logo">
+                </div>
                 <div class="compact-details">
                     <div class="compact-header">
                         <span class="compact-title">${intern.company}</span>

@@ -88,19 +88,26 @@ h1, h2, h3, p, a {
     background: linear-gradient(90deg, transparent, #6c5ce7, transparent);
 }
 
-.research-highlight {
-    color: var(--text-color);
-    font-weight: 600;
-    background: linear-gradient(120deg, rgba(108, 92, 231, 0.1) 0%, rgba(108, 92, 231, 0.1) 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0.4em;
-    background-position: 0 88%;
-    padding: 0 2px;
+.research-units img {
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .research-units img {
+    background: #ffffff !important;
+    padding: 2px;
+    border-radius: 4px;
 }
 
 [data-theme="dark"] .research-highlight {
     background: linear-gradient(120deg, rgba(162, 155, 254, 0.2) 0%, rgba(162, 155, 254, 0.2) 100%);
     background-size: 100% 0.4em;
+}
+
+[data-theme="dark"] .research-units img {
+    background: #ffffff !important;
+    padding: 2px;
+    border-radius: 4px;
 }
 
 @keyframes fadeIn {
@@ -2202,7 +2209,7 @@ html {
 }
 
 .quote-container {
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
@@ -2241,6 +2248,14 @@ blockquote {
     font-size: 1.1em;
     color: var(--text-secondary);
     opacity: 0.8;
+}
+
+.last-updated {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.85em;
+    letter-spacing: 0.01em;
+    opacity: 0.7;
 }
 
 .quote-author {
@@ -3093,22 +3108,29 @@ body.modal-open {
 }
 
 .compact-logo {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--card-bg);
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    padding: 2px;
+    background: transparent;
+    border: none !important;
+    padding: 0 !important;
 }
 
 .compact-logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    border: none !important;
+    padding: 0 !important;
+}
+
+[data-theme="dark"] .compact-logo {
+    background: #ffffff !important;
+    border-radius: 4px;
+    padding: 2px !important;
 }
 
 .compact-details {
@@ -3134,11 +3156,15 @@ body.modal-open {
 }
 
 .compact-date {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     color: var(--text-secondary);
     white-space: nowrap;
     flex-shrink: 0;
     transition: color 0.3s ease;
+    font-family: 'Inter', sans-serif; /* 换成和 News 部分一致的 Inter 字体 */
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    opacity: 0.7;
 }
 
 .compact-subtitle {

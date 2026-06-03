@@ -234,57 +234,66 @@ class PublicationList extends HTMLElement {
           font-weight: 600;
           letter-spacing: 0.025em;
           font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          transition: all 0.3s ease;
         }
 
-        :host-context([data-theme="dark"]) .venue-tag {
-          background-color: rgba(255, 255, 255, 0.08);
-          color: #cbd5e1;
-        }
-
-        /* 简洁的venue颜色方案 */
+        /* 简洁的venue颜色方案 - Light Mode */
         .venue-tag.preprint.arXiv { 
           background-color: #fef2f2;
           color: #dc2626;
         }
         
-        :host-context([data-theme="dark"]) .venue-tag.preprint.arXiv {
-          background-color: rgba(220, 38, 38, 0.1);
-          color: #fab1a0;
-        }
-
         .venue-tag.conference { 
           background-color: #f0fdf4;
           color: #16a34a;
         }
 
-        :host-context([data-theme="dark"]) .venue-tag.conference {
-          background-color: rgba(22, 163, 74, 0.1);
-          color: #55efc4;
-        }
-        
         .venue-tag.journal { 
           background-color: #eff6ff;
           color: #2563eb;
         }
 
-        :host-context([data-theme="dark"]) .venue-tag.journal {
-          background-color: rgba(37, 99, 235, 0.1);
-          color: #74b9ff;
+        /* Dark Mode 适配 - 保持现状 */
+        [data-theme="dark"] .venue-tag {
+          padding: 0.2rem 0.5rem;
+          border-radius: 4px;
+          background-color: rgba(255, 255, 255, 0.05);
+          color: #94a3b8;
+        }
+
+        [data-theme="dark"] .venue-tag.preprint.arXiv {
+          background-color: rgba(239, 68, 68, 0.15);
+          color: #fca5a5;
+        }
+
+        [data-theme="dark"] .venue-tag.conference {
+          background-color: rgba(34, 197, 94, 0.15);
+          color: #86efac;
+        }
+
+        [data-theme="dark"] .venue-tag.journal {
+          background-color: rgba(59, 130, 246, 0.15);
+          color: #93c5fd;
         }
 
         .status-tag {
           font-size: 0.6875rem;
-          color:rgb(126, 126, 126);
+          color: rgb(126, 126, 126);
           padding: 0.1875rem 0.375rem;
-          background-color:rgb(255, 255, 255);
+          background-color: rgb(255, 255, 255);
           border-radius: 3px;
           font-weight: 500;
           font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          transition: all 0.3s ease;
         }
 
-        :host-context([data-theme="dark"]) .status-tag {
-          background-color: rgba(255, 255, 255, 0.08);
-          color: #cbd5e1;
+        /* Dark Mode 适配 - 保持现状 */
+        [data-theme="dark"] .status-tag {
+          padding: 0.2rem 0.5rem;
+          border-radius: 4px;
+          background-color: transparent;
+          color: #94a3b8;
+          border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .publication-footer {
