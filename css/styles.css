@@ -3059,7 +3059,7 @@ body.modal-open {
 .compact-sections-row {
     display: flex;
     gap: 2rem;
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     align-items: flex-start;
 }
 
@@ -3069,9 +3069,8 @@ body.modal-open {
     padding-top: 0;
 }
 
-/* Service 模块增加上边距 */
 #service.compact-section {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 .compact-section h3 {
