@@ -557,7 +557,11 @@ class PublicationList extends HTMLElement {
       <div class="publications-list">
         ${this.groupByYear(featuredPublications).map(group => `
           <section class="publication-year-group">
-            <div class="publication-year-label">${group.year}</div>
+            <div class="publication-year-header">
+              <span class="publication-year-label">${group.year}</span>
+              <span class="publication-year-accent" aria-hidden="true"></span>
+              <span class="publication-year-divider" aria-hidden="true"></span>
+            </div>
             <div class="publication-year-items">
               ${group.publications.map(pub => this.renderPublicationItem(pub)).join('')}
             </div>
