@@ -102,6 +102,84 @@ class PublicationList extends HTMLElement {
     observer.observe(document.documentElement, { attributes: true });
   }
 
+  groupByYear(publications) {
+    const groups = {};
+    publications.forEach(pub => {
+      const year = pub.year;
+      if (!groups[year]) groups[year] = [];
+      groups[year].push(pub);
+    });
+    return Object.keys(groups)
+      .sort((a, b) => Number(b) - Number(a))
+      .map(year => ({ year, publications: groups[year] }));
+  }
+
+  renderPublicationItem(pub) {
+    const venueInfo = this.getVenueType(pub.venue.name);
+    const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+    const logoColor = isDarkMode ? 'a29bfe' : '6c5ce7';
+
+    return `
+      <div class="publication-item">
+        <div class="publication-thumbnail">
+          <img src="${pub.thumbnail}" alt="${pub.title}" loading="lazy">
+        </div>
+        <div class="publication-info">
+          <div class="publication-header">
+            <h3 class="publication-title">${pub.title}</h3>
+            <p class="publication-authors">
+              ${pub.authors.map(author =>
+                author === "Peixian Ma" || author === "Peixian Ma*" ?
+                `<span class="author">${author}</span>` :
+                author
+              ).join(', ')}
+            </p>
+          </div>
+          <div class="publication-footer">
+            <div class="publication-left">
+              <div class="publication-venue">
+                <span class="venue-tag ${venueInfo.type} ${venueInfo.subtype}">
+                  ${pub.venue.name}
+                </span>
+                <span class="status-tag">${pub.venue.type}</span>
+              </div>
+              <div class="publication-links">
+                ${pub.links.pdf ? `
+                  <a href="${pub.links.pdf}" class="pub-link pdf-link" target="_blank" rel="noopener">
+                    <i class="ai ai-arxiv"></i>
+                    <span>Paper</span>
+                  </a>
+                ` : ''}
+                ${pub.links.code ? `
+                  <a href="${pub.links.code}" class="pub-link code-link" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                    <span>Code</span>
+                  </a>
+                ` : ''}
+                <button class="pub-link cite-button cite-link" data-bibtex="${pub.bibtex.replace(/"/g, '&quot;')}" aria-label="Copy BibTeX citation">
+                  <i class="ai ai-google-scholar"></i>
+                  <span>Bibtex</span>
+                </button>
+              </div>
+            </div>
+            <div class="publication-stats">
+              <div class="stat-item">
+                <i class="fa-solid fa-hashtag"></i>
+                <span>${pub.stats.citations} citations</span>
+              </div>
+              ${pub.links.github && pub.links.github.owner && pub.links.github.repo ? `
+                <div class="stat-item github-stats">
+                  <img src="https://img.shields.io/github/stars/${pub.links.github.owner}/${pub.links.github.repo}?style=flat&logo=github&logoColor=${logoColor}&label=&color=white"
+                       alt="GitHub stars" loading="lazy">
+                </div>
+              ` : ''}
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
   render(publications) {
     if (!publications) return;
     // 过滤只显示 showInHome 为 true 的论文
@@ -112,7 +190,7 @@ class PublicationList extends HTMLElement {
         .publications-list {
           display: flex;
           flex-direction: column;
-          gap: 0.5rem;
+          gap: 0;
           padding: 0;
         }
 
@@ -477,74 +555,14 @@ class PublicationList extends HTMLElement {
         }
       </style>
       <div class="publications-list">
-        ${featuredPublications.map(pub => {
-          const venueInfo = this.getVenueType(pub.venue.name);
-          const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
-          const logoColor = isDarkMode ? 'a29bfe' : '6c5ce7';
-          
-          return `
-            <div class="publication-item">
-              <div class="publication-thumbnail">
-                <img src="${pub.thumbnail}" alt="${pub.title}" loading="lazy">
-              </div>
-              <div class="publication-info">
-                <div class="publication-header">
-                  <h3 class="publication-title">
-                    ${pub.title}
-                    <span class="publication-year">(${pub.year})</span>
-                  </h3>
-                  <p class="publication-authors">
-                    ${pub.authors.map(author => 
-                      author === "Peixian Ma" || author === "Peixian Ma*" ? 
-                      `<span class="author">${author}</span>` : 
-                      author
-                    ).join(', ')}
-                  </p>
-                </div>
-                <div class="publication-footer">
-                  <div class="publication-left">
-                    <div class="publication-venue">
-                      <span class="venue-tag ${venueInfo.type} ${venueInfo.subtype}">
-                        ${pub.venue.name}
-                      </span>
-                      <span class="status-tag">${pub.venue.type}</span>
-                    </div>
-                    <div class="publication-links">
-                      ${pub.links.pdf ? `
-                        <a href="${pub.links.pdf}" class="pub-link pdf-link" target="_blank" rel="noopener">
-                          <i class="ai ai-arxiv"></i>
-                          <span>Paper</span>
-                        </a>
-                      ` : ''}
-                      ${pub.links.code ? `
-                        <a href="${pub.links.code}" class="pub-link code-link" target="_blank" rel="noopener">
-                          <i class="fab fa-github"></i>
-                          <span>Code</span>
-                        </a>
-                      ` : ''}
-                      <button class="pub-link cite-button cite-link" data-bibtex="${pub.bibtex.replace(/"/g, '&quot;')}" aria-label="Copy BibTeX citation">
-                        <i class="ai ai-google-scholar"></i>
-                        <span>Bibtex</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="publication-stats">
-                    <div class="stat-item">
-                      <i class="fa-solid fa-hashtag"></i>
-                      <span>${pub.stats.citations} citations</span>
-                    </div>
-                    ${pub.links.github && pub.links.github.owner && pub.links.github.repo ? `
-                      <div class="stat-item github-stats">
-                        <img src="https://img.shields.io/github/stars/${pub.links.github.owner}/${pub.links.github.repo}?style=flat&logo=github&logoColor=${logoColor}&label=&color=white"
-                             alt="GitHub stars" loading="lazy">
-                      </div>
-                    ` : ''}
-                  </div>
-                </div>
-              </div>
+        ${this.groupByYear(featuredPublications).map(group => `
+          <section class="publication-year-group">
+            <div class="publication-year-label">${group.year}</div>
+            <div class="publication-year-items">
+              ${group.publications.map(pub => this.renderPublicationItem(pub)).join('')}
             </div>
-          `;
-        }).join('')}
+          </section>
+        `).join('')}
       </div>
     `;
 
