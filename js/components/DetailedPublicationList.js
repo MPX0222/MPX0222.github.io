@@ -238,7 +238,7 @@ class DetailedPublicationList extends HTMLElement {
                     color: #6c5ce7;
                     border-left: 2px solid #6c5ce7;
                     padding-left: 0.75rem;
-                    font-family: 'Inter', sans-serif;
+                    font-family: var(--font-sansation, 'Sansation', sans-serif);
                     transition: all 0.3s ease;
                 }
 
@@ -263,7 +263,7 @@ class DetailedPublicationList extends HTMLElement {
                     color: var(--text-secondary);
                     font-weight: 600;
                     font-size: 0.85rem;
-                    font-family: 'Inter', sans-serif;
+                    font-family: var(--font-sansation, 'Sansation', sans-serif);
                     text-transform: none;
                 }
 
@@ -271,7 +271,7 @@ class DetailedPublicationList extends HTMLElement {
                     font-size: 0.85rem;
                     color: var(--text-secondary);
                     font-weight: 500;
-                    font-family: 'Inter', sans-serif;
+                    font-family: var(--font-sansation, 'Sansation', sans-serif);
                     opacity: 0.8;
                 }
 

@@ -2,14 +2,6 @@
     "education": [
         {
             "school": "The Hong Kong University of Science and Technology (Guangzhou)",
-            "degree": "Doctor of Philosophy (Ph.D.) in Artificial Intelligence",
-            "logo": "images/hkust-logo.png",
-            "period": "Start at Sep. 2026",
-            "location": "Guangzhou Campus, Information Hub (INFH)",
-            "research": "Research Focus: Natural Language Processing, Machine Learning, Computer Vision"
-        },
-        {
-            "school": "The Hong Kong University of Science and Technology (Guangzhou)",
             "degree": "Master of Philosophy (M.Phil.) in Data Science and Analytics",
             "logo": "images/hkust-logo.png",
             "period": "Sep. 2023 - Jul. 2025",

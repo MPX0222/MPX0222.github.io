@@ -308,10 +308,10 @@ class PublicationList extends HTMLElement {
           align-items: center;
           padding: 0.1875rem 0.375rem;
           border-radius: 3px;
-          font-size: 0.6875rem;
+          font-size: 0.8125rem;
           font-weight: 600;
           letter-spacing: 0.025em;
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          font-family: var(--font-sansation, 'Sansation', sans-serif);
           transition: all 0.3s ease;
         }
 
@@ -355,13 +355,13 @@ class PublicationList extends HTMLElement {
         }
 
         .status-tag {
-          font-size: 0.6875rem;
+          font-size: 0.8125rem;
           color: rgb(126, 126, 126);
           padding: 0.1875rem 0.375rem;
           background-color: rgb(255, 255, 255);
           border-radius: 3px;
           font-weight: 500;
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          font-family: var(--font-sansation, 'Sansation', sans-serif);
           transition: all 0.3s ease;
         }
 
@@ -388,6 +388,7 @@ class PublicationList extends HTMLElement {
           gap: 0.75rem;
           align-items: center;
           flex-wrap: wrap;
+          font-family: var(--font-sansation, 'Sansation', sans-serif);
         }
 
         .publication-venue {
@@ -403,6 +404,10 @@ class PublicationList extends HTMLElement {
           flex-wrap: wrap;
           align-items: center;
           margin: 0.5rem;
+        }
+
+        .publication-left .pub-link {
+          font-size: 0.8125rem;
         }
 
         button.pub-link {
@@ -427,7 +432,7 @@ class PublicationList extends HTMLElement {
           font-size: 0.75rem;
           color: var(--text-secondary, #6b7280);
           font-weight: 500;
-          font-family: var(--font-family);
+          font-family: var(--font-sansation, 'Sansation', sans-serif);
         }
 
         :host-context([data-theme="dark"]) .stat-item {
@@ -525,12 +530,12 @@ class PublicationList extends HTMLElement {
           }
 
           .venue-tag {
-            font-size: 0.625rem;
+            font-size: 0.75rem;
             padding: 0.125rem 0.25rem;
           }
 
           .pub-link, .stat-item {
-            font-size: 0.6875rem;
+            font-size: 0.75rem;
             padding: 0.1875rem 0.375rem;
           }
         }
@@ -557,11 +562,7 @@ class PublicationList extends HTMLElement {
       <div class="publications-list">
         ${this.groupByYear(featuredPublications).map(group => `
           <section class="publication-year-group">
-            <div class="publication-year-header">
-              <span class="publication-year-label">${group.year}</span>
-              <span class="publication-year-accent" aria-hidden="true"></span>
-              <span class="publication-year-divider" aria-hidden="true"></span>
-            </div>
+            <div class="publication-year-label">${group.year}</div>
             <div class="publication-year-items">
               ${group.publications.map(pub => this.renderPublicationItem(pub)).join('')}
             </div>

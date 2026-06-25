@@ -103,7 +103,7 @@ class NewsList extends HTMLElement {
           font-size: 0.8rem;
           color: var(--text-secondary);
           font-weight: 600;
-          font-family: 'Inter', sans-serif;
+          font-family: var(--font-sansation, 'Sansation', sans-serif);
           letter-spacing: 0.01em;
           white-space: nowrap;
           line-height: 1.5;
