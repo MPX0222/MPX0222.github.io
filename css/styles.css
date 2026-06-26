@@ -1398,6 +1398,7 @@ button.pub-link {
 }
 
 .award-tag {
+    font-family: var(--font-sansation);
     font-size: 0.75rem;
     padding: 0 0 0 0.6rem;
     border-radius: 0;
@@ -2257,7 +2258,7 @@ blockquote {
 }
 
 .last-updated {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sansation);
     font-weight: 500;
     font-size: 0.85em;
     letter-spacing: 0.01em;
