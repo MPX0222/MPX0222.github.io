@@ -2238,6 +2238,7 @@ blockquote {
 }
 
 .quote-text {
+    font-family: var(--font-sansation);
     font-size: 0.9rem;
     font-weight: 400;
     color: var(--text-secondary);
@@ -2472,7 +2473,7 @@ blockquote {
     display: inline-flex;
     align-items: center;
     gap: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sansation);
     font-size: 0.8rem;
     color: var(--text-secondary);
     opacity: 0.6;
