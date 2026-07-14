@@ -1,6 +1,25 @@
 {
   "news": [
     {
+      "date": "Jul. 2026",
+      "content": [
+        {
+          "type": "paper",
+          "text": "🔥 We release an research paper about Financial AI: ",
+          "link": "",
+          "title": "Can Agentic Trading Systems Pay for Their Own Intelligence?",
+          "venue": "Preprint version is available on arXiv."
+        },
+        {
+          "type": "paper",
+          "text": "🔥 We release the first demo paper of Paradoox AI: ",
+          "link": "",
+          "title": "Nextfund: A Unified Performance Tracking Platform for Agentic Portfolio Management",
+          "venue": "Preprint version is available on arXiv."
+        }
+      ]
+    },
+    {
       "date": "May. 2026",
       "content": [
         {
@@ -157,7 +176,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Start my M.Phil. journey at HKUST(GZ)."
+          "text": "📖 Start my M.Phil. journey at HKUST(GZ)."
         }
       ]
     },

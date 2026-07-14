@@ -4,8 +4,6 @@ class DetailedPublicationList extends HTMLElement {
         this.attachShadow({ mode: 'open' });
         this.publications = [];
         this.filteredPublications = [];
-        this.groupedView = true;
-        this.currentCategory = 'all';
     }
 
     async connectedCallback() {
@@ -21,18 +19,16 @@ class DetailedPublicationList extends HTMLElement {
         }
     }
 
-    groupPublicationsByCategory() {
-        const grouped = {};
-
-        this.filteredPublications.forEach(pub => {
-            const category = pub.category || 'Uncategorized';
-            if (!grouped[category]) {
-                grouped[category] = [];
-            }
-            grouped[category].push(pub);
+    groupByYear(publications) {
+        const groups = {};
+        publications.forEach(pub => {
+            const year = pub.year;
+            if (!groups[year]) groups[year] = [];
+            groups[year].push(pub);
         });
-
-        return grouped;
+        return Object.keys(groups)
+            .sort((a, b) => Number(b) - Number(a))
+            .map(year => ({ year, publications: groups[year] }));
     }
 
     getVenueInfo(venueType) {
@@ -46,22 +42,49 @@ class DetailedPublicationList extends HTMLElement {
         }
     }
 
+    getCategoryClass(category) {
+        const map = {
+            'ai for database': 'database',
+            'ai for finance': 'finance',
+            'large language models': 'llm',
+            'machine learning': 'ml'
+        };
+        return map[(category || '').trim().toLowerCase()] || 'default';
+    }
+
+    getFilterCount(filter) {
+        if (!this.publications || this.publications.length === 0) return 0;
+
+        if (filter === 'all') {
+            return this.publications.length;
+        }
+
+        if (['conference', 'journal', 'preprint'].includes(filter)) {
+            return this.publications.filter(pub => {
+                const venueType = pub.venue.type.toLowerCase();
+                return venueType.includes(filter.toLowerCase());
+            }).length;
+        }
+
+        const normalizedFilter = filter.trim().toLowerCase();
+        return this.publications.filter(pub =>
+            (pub.category || '').trim().toLowerCase() === normalizedFilter
+        ).length;
+    }
+
     filterPublications(filter) {
         if (filter === 'all') {
             this.filteredPublications = [...this.publications];
-            this.currentCategory = 'all';
         } else if (['conference', 'journal', 'preprint'].includes(filter)) {
             this.filteredPublications = this.publications.filter(pub => {
                 const venueType = pub.venue.type.toLowerCase();
                 return venueType.includes(filter.toLowerCase());
             });
-            this.currentCategory = 'all';
         } else {
             const normalizedFilter = filter.trim().toLowerCase();
             this.filteredPublications = this.publications.filter(pub =>
                 (pub.category || '').trim().toLowerCase() === normalizedFilter
             );
-            this.currentCategory = filter;
         }
         this.render();
     }
@@ -69,12 +92,13 @@ class DetailedPublicationList extends HTMLElement {
     renderPublicationItems(publications) {
         return publications.map(pub => {
             const venueInfo = this.getVenueInfo(pub.venue.type);
+            const categoryClass = this.getCategoryClass(pub.category);
             const title = pub.links.pdf ?
                 `<a href="${pub.links.pdf}" class="pdf-link" target="_blank">${pub.title}</a>` :
                 pub.title;
 
             const authors = pub.authors.map(author =>
-                author === "Peixian Ma" ?
+                author === "Peixian Ma" || author === "Peixian Ma*" ?
                 `<span class="author-highlight">${author}</span>` :
                 author
             ).join(', ');
@@ -87,8 +111,8 @@ class DetailedPublicationList extends HTMLElement {
                     </div>
                     <div class="publication-footer">
                         <div class="publication-venue">
-                            <span class="venue-tag ${venueInfo.class}">${venueInfo.label}</span>
-                            <span class="venue-name">${pub.venue.name}</span>
+                            <span class="venue-tag ${venueInfo.class}">${pub.venue.name}</span>
+                            ${pub.category ? `<span class="category-tag ${categoryClass}">${pub.category}</span>` : ''}
                         </div>
                         <div class="citation-count">
                             <span>${pub.stats.citations} citations</span>
@@ -116,59 +140,54 @@ class DetailedPublicationList extends HTMLElement {
                     overflow: visible;
                     box-shadow: none;
                     font-family: var(--font-family, 'Lora', serif);
-                }
-
-                .category-section {
-                    margin-bottom: 4rem;
-                    background: transparent;
-                }
-
-                .category-header {
-                    background: none;
-                    padding: 0;
-                    margin-bottom: 2.5rem;
                     display: flex;
                     flex-direction: column;
-                    align-items: flex-start;
-                    gap: 0.4rem;
-                    /* 移除左侧边框，改用更简洁的排版 */
-                    border-left: none;
-                    padding-left: 0;
+                    gap: 0;
                 }
 
-                .category-title {
-                    font-family: var(--font-family);
-                    font-size: 2rem;
-                    color: var(--text-color);
-                    margin: 0;
-                    font-weight: 700;
-                    letter-spacing: -0.02em;
+                .publication-year-group {
+                    margin-top: 2.5rem;
                 }
 
-                .category-count {
-                    background: none;
-                    color: var(--text-secondary);
-                    padding: 0;
-                    font-size: 0.85rem;
+                .publication-year-group:first-child {
+                    margin-top: 0;
+                }
+
+                .publication-year-label {
+                    display: inline-block;
+                    width: fit-content;
+                    font-family: var(--font-sansation, 'Sansation', sans-serif);
+                    font-size: 1.5rem;
                     font-weight: 600;
-                    font-family: 'Inter', sans-serif;
-                    text-transform: uppercase;
-                    letter-spacing: 0.1em;
-                    opacity: 0.7;
+                    letter-spacing: 0.01em;
+                    margin-bottom: 0.5rem;
+                    line-height: 1.3;
+                    color: var(--text-color);
+                    transition: color 0.3s ease;
+                }
+
+                :host-context([data-theme="dark"]) .publication-year-label {
+                    color: #ffffff;
+                }
+
+                .publication-year-items {
+                    display: flex;
+                    flex-direction: column;
                 }
 
                 .publication-item {
                     padding: 1.5rem 0;
                     border-bottom: 1px solid var(--border-color);
-                    transition: all 0.3s ease;
+                    transition: border-color 0.3s ease;
                 }
 
                 :host-context([data-theme="dark"]) .publication-item {
                     border-bottom-color: rgba(255, 255, 255, 0.1);
                 }
 
-                .publication-item:last-child {
+                .publication-year-group .publication-item:last-child {
                     border-bottom: none;
+                    padding-bottom: 0;
                 }
 
                 .publication-title {
@@ -186,7 +205,8 @@ class DetailedPublicationList extends HTMLElement {
                     color: #ffffff;
                 }
 
-                .publication-title:hover {
+                .publication-title:hover,
+                .pdf-link:hover {
                     color: var(--primary-color);
                 }
 
@@ -200,6 +220,8 @@ class DetailedPublicationList extends HTMLElement {
                     color: var(--text-secondary);
                     line-height: 1.6;
                     margin-bottom: 0.75rem;
+                    max-width: min(100%, 52rem);
+                    padding-right: 7rem;
                 }
 
                 :host-context([data-theme="dark"]) .publication-meta {
@@ -209,7 +231,7 @@ class DetailedPublicationList extends HTMLElement {
                 .author-highlight {
                     color: var(--primary-color);
                     font-weight: 600;
-                    text-decoration: none; /* 移除下划线，改用颜色区分 */
+                    text-decoration: none;
                 }
 
                 :host-context([data-theme="dark"]) .author-highlight {
@@ -227,18 +249,19 @@ class DetailedPublicationList extends HTMLElement {
                 .publication-venue {
                     display: flex;
                     align-items: center;
-                    gap: 0.75rem;
+                    gap: 0.65rem;
+                    flex-wrap: wrap;
                 }
 
                 .venue-tag {
-                    font-size: 0.75rem;
+                    font-size: 0.8125rem;
                     font-weight: 700;
-                    text-transform: uppercase;
-                    letter-spacing: 0.05em;
+                    letter-spacing: 0.02em;
                     color: #6c5ce7;
                     border-left: 2px solid #6c5ce7;
                     padding-left: 0.75rem;
                     font-family: var(--font-sansation, 'Sansation', sans-serif);
+                    text-transform: none;
                     transition: all 0.3s ease;
                 }
 
@@ -246,7 +269,6 @@ class DetailedPublicationList extends HTMLElement {
                 .venue-tag.journal { border-left-color: #2563eb; color: #2563eb; }
                 .venue-tag.preprint { border-left-color: #dc2626; color: #dc2626; }
 
-                /* Dark Mode 适配 - 保持现状 */
                 :host-context([data-theme="dark"]) .venue-tag {
                     border-left: none;
                     padding: 0.2rem 0.5rem;
@@ -259,13 +281,27 @@ class DetailedPublicationList extends HTMLElement {
                 :host-context([data-theme="dark"]) .venue-tag.journal { background: rgba(116, 185, 255, 0.15); color: #74b9ff; }
                 :host-context([data-theme="dark"]) .venue-tag.preprint { background: rgba(250, 177, 160, 0.15); color: #fab1a0; }
 
-                .venue-name {
-                    color: var(--text-secondary);
+                .category-tag {
+                    font-size: 0.75rem;
                     font-weight: 600;
-                    font-size: 0.85rem;
+                    letter-spacing: 0.02em;
                     font-family: var(--font-sansation, 'Sansation', sans-serif);
-                    text-transform: none;
+                    padding: 0.2rem 0.55rem;
+                    border-radius: 4px;
+                    background: rgba(108, 92, 231, 0.1);
+                    color: #6c5ce7;
+                    transition: all 0.3s ease;
                 }
+
+                .category-tag.database { background: rgba(108, 92, 231, 0.1); color: #6c5ce7; }
+                .category-tag.finance { background: rgba(39, 174, 96, 0.1); color: #27ae60; }
+                .category-tag.llm { background: rgba(211, 84, 0, 0.1); color: #d35400; }
+                .category-tag.ml { background: rgba(41, 128, 185, 0.1); color: #2980b9; }
+
+                :host-context([data-theme="dark"]) .category-tag.database { background: rgba(162, 155, 254, 0.15); color: #a29bfe; }
+                :host-context([data-theme="dark"]) .category-tag.finance { background: rgba(85, 239, 196, 0.15); color: #55efc4; }
+                :host-context([data-theme="dark"]) .category-tag.llm { background: rgba(250, 177, 160, 0.15); color: #fab1a0; }
+                :host-context([data-theme="dark"]) .category-tag.ml { background: rgba(116, 185, 255, 0.15); color: #74b9ff; }
 
                 .citation-count {
                     font-size: 0.85rem;
@@ -275,18 +311,23 @@ class DetailedPublicationList extends HTMLElement {
                     opacity: 0.8;
                 }
 
-                /* 深色模式适配 */
-                :host-context([data-theme="dark"]) .category-title {
-                    color: #ffffff;
+                .empty-state {
+                    text-align: center;
+                    padding: 3rem 1rem;
+                    color: var(--text-secondary);
+                    font-family: var(--font-sansation, 'Sansation', sans-serif);
                 }
 
-                :host-context([data-theme="dark"]) .category-count {
-                    color: #94a3b8;
+                .empty-state i {
+                    font-size: 1.5rem;
+                    margin-bottom: 0.75rem;
+                    opacity: 0.5;
                 }
 
                 @media (max-width: 768px) {
-                    .category-title { font-size: 1.5rem; }
+                    .publication-year-label { font-size: 1.35rem; }
                     .publication-title { font-size: 1.15rem; }
+                    .publication-meta { padding-right: 0; max-width: 100%; }
                     .publication-footer { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
                 }
             </style>
@@ -305,25 +346,16 @@ class DetailedPublicationList extends HTMLElement {
             return;
         }
 
-        if (this.groupedView && this.currentCategory === 'all') {
-            const groupedPubs = this.groupPublicationsByCategory();
-            const categoriesHTML = Object.entries(groupedPubs).map(([category, pubs]) => `
-                <div class="category-section">
-                    <div class="category-header">
-                        <h3 class="category-title">${category}</h3>
-                        <span class="category-count">${pubs.length} publications</span>
-                    </div>
-                    <div class="category-publications">
-                        ${this.renderPublicationItems(pubs)}
-                    </div>
+        const yearGroupsHTML = this.groupByYear(this.filteredPublications).map(group => `
+            <section class="publication-year-group">
+                <div class="publication-year-label">${group.year}</div>
+                <div class="publication-year-items">
+                    ${this.renderPublicationItems(group.publications)}
                 </div>
-            `).join('');
+            </section>
+        `).join('');
 
-            this.shadowRoot.innerHTML = `${styles}<div class="publications-list">${categoriesHTML}</div>`;
-        } else {
-            const publicationsHTML = this.renderPublicationItems(this.filteredPublications);
-            this.shadowRoot.innerHTML = `${styles}<div class="publications-list">${publicationsHTML}</div>`;
-        }
+        this.shadowRoot.innerHTML = `${styles}<div class="publications-list">${yearGroupsHTML}</div>`;
     }
 }
 

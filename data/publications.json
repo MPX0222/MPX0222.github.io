@@ -1,10 +1,80 @@
 {
   "publications": [
     {
+      "thumbnail": "images/nextfund.png",
+      "title": "NextFund: A Unified Performance Tracking Platform for Agentic Portfolio Management",
+      "year": 2026,
+      "category": "AI for Finance",
+      "showInHome": true,
+      "authors": [
+        "Changlun Li",
+        "Peixian Ma",
+        "Qiqi Duan",
+        "Zhenyu Lin",
+        "Peineng Wu"
+      ],
+      "venue": {
+        "name": "arXiv",
+        "type": "Preprint (Under Review)"
+      },
+      "bibtex": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2607.11141",
+        "code": "",
+        "cite": "https://arxiv.org/abs/2607.11141",
+        "github": {
+          "owner": "",
+          "repo": ""
+        }
+      },
+      "stats": {
+        "citations": 0
+      }
+    },
+    {
+      "thumbnail": "images/tradelens.png",
+      "title": "Can Agentic Trading Systems Pay for Their Own Intelligence?",
+      "year": 2026,
+      "category": "AI for Finance",
+      "showInHome": true,
+      "authors": [
+        "Qiqi Duan",
+        "Changlun Li",
+        "Chen Wang",
+        "Fan Zhang",
+        "Mengxiang Wang",
+        "Dayi Miao",
+        "Peixian Ma",
+        "Jiangpeng Yan",
+        "Liyuan Chen",
+        "Shuoling Liu",
+        "Preslav Nakov",
+        "Yuyu Luo",
+        "Nan Tang"
+      ],
+      "venue": {
+        "name": "arXiv",
+        "type": "Preprint (Under Review)"
+      },
+      "bibtex": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2607.10286",
+        "code": "",
+        "cite": "https://arxiv.org/abs/2607.10286",
+        "github": {
+          "owner": "",
+          "repo": ""
+        }
+      },
+      "stats": {
+        "citations": 0
+      }
+    },
+    {
       "thumbnail": "images/sqld1.png",
       "title": "Are Diffusion Language Models Good Database Analysts?",
       "year": 2026,
-      "category": "AI for Database Application",
+      "category": "AI for Database",
       "showInHome": true,
       "authors": [
         "Peixian Ma",
@@ -36,7 +106,7 @@
       "thumbnail": "images/sqlr1.png",
       "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
       "year": 2025,
-      "category": "AI for Database Application",
+      "category": "AI for Database",
       "showInHome": true,
       "authors": [
         "Peixian Ma",
@@ -68,7 +138,7 @@
       "thumbnail": "images/survey.png",
       "title": "A Survey of Text-to-SQL in the Era of LLMs: Where are We, and Where are We Going?",
       "year": 2025,
-      "category": "AI for Database Application",
+      "category": "AI for Database",
       "showInHome": true,
       "authors": [
         "Xinyu Liu",
@@ -197,7 +267,7 @@
       "thumbnail": "images/rewriter.png",
       "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
       "year": 2024,
-      "category": "AI for Database Application",
+      "category": "AI for Database",
       "showInHome": true,
       "authors": [
         "Peixian Ma",
