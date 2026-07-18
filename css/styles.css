@@ -89,6 +89,15 @@ h1, h2, h3, p, a {
     background: linear-gradient(90deg, transparent, #6c5ce7, transparent);
 }
 
+.research-units {
+    font-family: var(--font-sansation);
+}
+
+.research-units p,
+.research-units a {
+    font-family: var(--font-sansation);
+}
+
 .research-units img {
     background: transparent;
     transition: all 0.3s ease;
@@ -248,7 +257,7 @@ h1, h2, h3, p, a {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     transition: all 0.2s ease;
-    font-family: var(--font-family);
+    font-family: var(--font-sansation);
 }
 
 .view-all-btn:hover {
@@ -403,6 +412,7 @@ h1, h2, h3, p, a {
 .pub-link i.fa-quote-right,
 .pub-link.pdf-link,
 .pub-link.code-link,
+.pub-link.web-link,
 .pub-link.cite-link {
     color: var(--primary-color);
 }
@@ -963,6 +973,7 @@ button.pub-link {
 .pub-link i.fa-quote-right,
 .pub-link.pdf-link,
 .pub-link.code-link,
+.pub-link.web-link,
 .pub-link.cite-link {
     color: var(--primary-color);
 }
@@ -1247,6 +1258,7 @@ button.pub-link {
 .pub-link i.fa-quote-right,
 .pub-link.pdf-link,
 .pub-link.code-link,
+.pub-link.web-link,
 .pub-link.cite-link {
     color: var(--primary-color);
 }

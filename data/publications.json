@@ -21,6 +21,7 @@
       "links": {
         "pdf": "https://arxiv.org/abs/2607.11141",
         "code": "",
+        "web": "https://paradoox.cn/nextfund",
         "cite": "https://arxiv.org/abs/2607.11141",
         "github": {
           "owner": "",
@@ -60,6 +61,7 @@
       "links": {
         "pdf": "https://arxiv.org/abs/2607.10286",
         "code": "",
+        "web": "",
         "cite": "https://arxiv.org/abs/2607.10286",
         "github": {
           "owner": "",
@@ -92,6 +94,7 @@
       "links": {
         "pdf": "https://arxiv.org/abs/2605.27791",
         "code": "",
+        "web": "",
         "cite": "https://arxiv.org/abs/2605.27791",
         "github": {
           "owner": "",
@@ -124,6 +127,7 @@
       "links": {
         "pdf": "https://arXiv.org/pdf/2504.08600",
         "code": "https://github.com/IDEA-FinAI/SQL-R1",
+        "web": "https://dataarctech.github.io/SQL-R1/",
         "cite": "https://arXiv.org/abs/2504.08600",
         "github": {
           "owner": "IDEA-FinAI",
@@ -160,6 +164,7 @@
       "links": {
         "pdf": "https://arXiv.org/pdf/2408.05109",
         "code": "https://github.com/HKUSTDial/NL2SQL_Handbook",
+        "web": "",
         "cite": "https://arXiv.org/abs/2408.05109",
         "github": {
           "owner": "HKUSTDial",
@@ -191,6 +196,7 @@
       "links": {
         "pdf": "https://arxiv.org/pdf/2508.03094",
         "code": "https://github.com/MPX0222/VisualConcepts4CL",
+        "web": "",
         "cite": "https://arxiv.org/pdf/2508.03094",
         "github": {
           "owner": "MPX0222",
@@ -222,6 +228,7 @@
       "links": {
         "pdf": "https://arXiv.org/pdf/2512.09441",
         "code": "https://github.com/MPX0222/RCUG",
+        "web": "",
         "cite": "https://arXiv.org/abs/2512.09441",
         "github": {
           "owner": "MPX0222",
@@ -253,6 +260,7 @@
       "links": {
         "pdf": "https://arxiv.org/abs/2506.13404",
         "code": "",
+        "web": "",
         "cite": "https://arxiv.org/abs/2506.13404",
         "github": {
           "owner": "",
@@ -285,6 +293,7 @@
       "links": {
         "pdf": "https://arXiv.org/pdf/2412.17068",
         "code": "",
+        "web": "",
         "cite": "https://arXiv.org/abs/2412.17068",
         "github": {
           "owner": "",
@@ -316,6 +325,7 @@
       "links": {
         "pdf": "https://www.frontiersin.org/articles/10.3389/fnins.2023.1137557/pdf",
         "code": "https://github.com/MPX0222/BroadLearningSystem-APIs-2.0",
+        "web": "",
         "cite": "https://doi.org/10.3389/fnins.2023.1137557",
         "github": {
           "owner": "MPX0222",

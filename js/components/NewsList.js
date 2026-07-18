@@ -26,6 +26,14 @@ class NewsList extends HTMLElement {
       return text.replace(/[🔥🎉📖🎤]/g, '').trim();
     };
 
+    const parseDate = (dateStr) => {
+      const match = String(dateStr).trim().match(/^([A-Za-z]+)\.?\s+(\d{4})$/);
+      if (match) {
+        return { month: match[1], year: match[2] };
+      }
+      return { month: dateStr, year: '' };
+    };
+
     const renderContent = (content) => {
       const icon = getIcon(content.text);
       const text = cleanText(content.text);
@@ -92,26 +100,48 @@ class NewsList extends HTMLElement {
         }
 
         .news-date-wrapper {
-          flex: 0 0 75px;
+          flex: 0 0 52px;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          padding-top: 0.12rem; /* 精准微调对齐第一行文字 */
+          padding-top: 0.05rem;
         }
 
         .news-date {
-          font-size: 0.8rem;
-          color: var(--text-secondary);
-          font-weight: 600;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.05rem;
           font-family: var(--font-sansation, 'Sansation', sans-serif);
-          letter-spacing: 0.01em;
-          white-space: nowrap;
-          line-height: 1.5;
+          line-height: 1.15;
           transition: color 0.3s ease;
         }
 
-        .news-item:hover .news-date {
+        .news-date-month {
+          font-size: 1.15rem;
+          font-weight: 400;
+          color: var(--text-color);
+          letter-spacing: 0.02em;
+          line-height: 1.1;
+          transition: color 0.3s ease;
+        }
+
+        .news-date-year {
+          font-size: 0.72rem;
+          font-weight: 500;
+          color: var(--text-secondary);
+          letter-spacing: 0.04em;
+          opacity: 0.8;
+          transition: color 0.3s ease;
+        }
+
+        .news-item:hover .news-date-month {
           color: var(--primary-color);
+        }
+
+        .news-item:hover .news-date-year {
+          color: var(--primary-color);
+          opacity: 1;
         }
 
         .news-content {
@@ -210,9 +240,20 @@ class NewsList extends HTMLElement {
           .news-date-wrapper {
             flex: none;
             align-items: flex-start;
+            flex-direction: row;
           }
 
           .news-date {
+            flex-direction: row;
+            align-items: baseline;
+            gap: 0.35rem;
+          }
+
+          .news-date-month {
+            font-size: 1rem;
+          }
+
+          .news-date-year {
             font-size: 0.75rem;
           }
 
@@ -222,16 +263,21 @@ class NewsList extends HTMLElement {
         }
       </style>
       <div class="news-list">
-        ${news.map(item => `
+        ${news.map(item => {
+          const { month, year } = parseDate(item.date);
+          return `
           <div class="news-item">
             <div class="news-date-wrapper">
-              <div class="news-date">${item.date}</div>
+              <div class="news-date">
+                <span class="news-date-month">${month}</span>
+                ${year ? `<span class="news-date-year">${year}</span>` : ''}
+              </div>
             </div>
             <div class="news-content">
               ${item.content.map(content => renderContent(content)).join('')}
             </div>
           </div>
-        `).join('')}
+        `}).join('')}
       </div>
     `;
   }

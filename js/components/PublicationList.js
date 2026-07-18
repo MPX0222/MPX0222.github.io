@@ -156,7 +156,13 @@ class PublicationList extends HTMLElement {
                     <span>Code</span>
                   </a>
                 ` : ''}
-                <button class="pub-link cite-button cite-link" data-bibtex="${pub.bibtex.replace(/"/g, '&quot;')}" aria-label="Copy BibTeX citation">
+                ${pub.links.web ? `
+                  <a href="${pub.links.web}" class="pub-link web-link" target="_blank" rel="noopener">
+                    <i class="fas fa-globe"></i>
+                    <span>Website</span>
+                  </a>
+                ` : ''}
+                <button class="pub-link cite-button cite-link" data-bibtex="${(pub.bibtex || '').replace(/"/g, '&quot;')}" aria-label="Copy BibTeX citation">
                   <i class="ai ai-google-scholar"></i>
                   <span>Bibtex</span>
                 </button>
