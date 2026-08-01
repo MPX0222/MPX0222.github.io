@@ -36,10 +36,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 It is glad to notice that our research paper: ",
+          "text": "🔥 It is glad to notice that the collaborative research with SYSU: ",
           "link": "https://arXiv.org/pdf/2512.09441",
           "title": "Representation Calibration and Uncertainty Guidance for Class-Incremental Learning based on Vision Language Model",
-          "venue": "has been accepted by poster of the main conference of 2026 IEEE International Conference on Multimedia and Expo (ICME 2026)! This year, ICME received 3,810 valid submissions and accepted 1,101 papers, for an acceptance rate of 28.89%."
+          "venue": "has been accepted by poster of the main conference of 2026 IEEE International Conference on Multimedia and Expo (ICME 2026)!"
         }
       ]
     },
@@ -57,7 +57,7 @@
       "content": [
         { 
           "type": "paper",
-          "text": "🔥 It is glad to notice that our research paper: ",
+          "text": "🔥 It is glad to notice that the collaborative research with UCAS: ",
           "link": "https://arXiv.org/pdf/2506.13404",
           "title": "Effective Learning for Small Reasoning Models: An Empirical Study on 0.5B Reasoning LLMs",
           "venue": "has been accepted by poster of the main conference of 2026 Conference on Principles and Practice of Language Modeling (CPAL 2026)!"
@@ -69,7 +69,7 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 It is glad to notice that our research paper: ",
+          "text": "🔥 It is glad to notice that the collaborative research with SYSU: ",
           "link": "https://arXiv.org/pdf/2508.03094",
           "title": "Augmenting Continual Learning of Diseases with LLM-Generated Visual Concepts",
           "venue": "has been accepted by poster and oral presentation of the main conference of 2025 IEEE International Conference on Bioinformatics and Biomedicine (BIBM 2025)!"
@@ -81,10 +81,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 It is glad to notice that our long research paper: ",
+          "text": "🔥 It is glad to notice that the importance research: ",
           "link": "https://arXiv.org/pdf/2504.08600",
           "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
-          "venue": "has been accepted by poster of the main conference of The 39th Annual Conference on Neural Information Processing Systems (NeurIPS 2025)! We have fully released the weights of SQL-R1 series models and related training codes on GitHub and HuggingFace. There were 21575 valid paper submissions to the NeurIPS Main Track this year, of which the program committee accepted 5290 (24.52%) papers in total. See you in San Diego!"
+          "venue": "has been accepted by poster of the main conference of The 39th Annual Conference on Neural Information Processing Systems (NeurIPS 2025)! There were 21575 valid paper submissions to the NeurIPS Main Track this year, of which the program committee accepted 5290 (24.52%) papers in total. See you in San Diego!"
         }
       ]
     },
@@ -96,23 +96,11 @@
           "text": "🔥 It is glad to notice that survey paper of HKUST(GZ)-DIAL Lab, NL2SQL Research Group: ",
           "link": "https://arxiv.org/pdf/2408.05109",
           "title": "A Survey of NL2SQL with Large Language Models: Where are we, and where are we going",
-          "venue": "has been accepted by IEEE Transactions on Knowledge and Data Engineering Journal (TKDE 2025)! We have released the NL2SQL Handbook in August 2024."
+          "venue": "has been accepted by IEEE Transactions on Knowledge and Data Engineering Journal (TKDE 2025)!"
         },
         {
           "type": "text",
           "text": "🎉 Successfully completed my research internship at IDEA Research. I would like to express my sincere gratitude to all the mentors and colleagues for their guidance and support."
-        }
-      ]
-    },
-    {
-      "date": "Jun. 2025",
-      "content": [
-        {
-          "type": "paper",
-          "text": "🔥 We release a technical study about 0.5B reasoning language models: ",
-          "link": "https://arXiv.org/pdf/2506.13404",
-          "title": "Effective Learning for Small Reasoning Models: An Empirical Study on 0.5B Reasoning LLMs.",
-          "venue": "PDF version is available on arXiv."
         }
       ]
     },
@@ -130,7 +118,7 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 We release a new research about RL-based NL2SQL model: ",
+          "text": "🔥 We firstly release a new research about RL for Database: ",
           "link": "https://arXiv.org/pdf/2504.08600",
           "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning.",
           "venue": "The relevant code and weights are updated simultaneously on Github and Huggingface."
@@ -142,7 +130,7 @@
       "content": [
         {
           "type": "text",
-          "text": "📖 Receive internship offer and start a new journey at International Digital Economy Academy (IDEA), Shenzhen."
+          "text": "📖 Receive internship offer and start a new journey at International Digital Economy Academy (IDEA Research), Shenzhen."
         }
       ]
     },
@@ -192,7 +180,7 @@
           "text": "🔥 Long research paper of my undergraduate life: ",
           "link": "https://www.frontiersin.org/articles/10.3389/fnins.2023.1137557/full",
           "title": "Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease",
-          "venue": "has been accepted by Frontiers in Neuroscience (JCR Q2 Journal, IF: 5.8)."
+          "venue": "has been accepted by Frontiers in Neuroscience."
         }
       ]
     },

@@ -3126,6 +3126,7 @@ body.modal-open {
 }
 
 .compact-section h3 {
+    font-family: var(--font-family);
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
     display: flex;

@@ -89,6 +89,12 @@ class DetailedPublicationList extends HTMLElement {
         this.render();
     }
 
+    resolveThumbnail(path) {
+        if (!path) return '';
+        if (path.startsWith('http') || path.startsWith('/')) return path;
+        return `/${path}`;
+    }
+
     renderPublicationItems(publications) {
         return publications.map(pub => {
             const venueInfo = this.getVenueInfo(pub.venue.type);
@@ -103,19 +109,29 @@ class DetailedPublicationList extends HTMLElement {
                 author
             ).join(', ');
 
+            const thumbnailSrc = this.resolveThumbnail(pub.thumbnail);
+            const thumbnail = thumbnailSrc ? `
+                <div class="publication-thumbnail">
+                    <img src="${thumbnailSrc}" alt="" loading="lazy">
+                </div>
+            ` : '';
+
             return `
                 <div class="publication-item">
-                    <div class="publication-title">${title}</div>
-                    <div class="publication-meta">
-                        ${authors}
-                    </div>
-                    <div class="publication-footer">
-                        <div class="publication-venue">
-                            <span class="venue-tag ${venueInfo.class}">${pub.venue.name}</span>
-                            ${pub.category ? `<span class="category-tag ${categoryClass}">${pub.category}</span>` : ''}
+                    ${thumbnail}
+                    <div class="publication-body">
+                        <div class="publication-title">${title}</div>
+                        <div class="publication-meta">
+                            ${authors}
                         </div>
-                        <div class="citation-count">
-                            <span>${pub.stats.citations} citations</span>
+                        <div class="publication-footer">
+                            <div class="publication-venue">
+                                <span class="venue-tag ${venueInfo.class}">${pub.venue.name}</span>
+                                ${pub.category ? `<span class="category-tag ${categoryClass}">${pub.category}</span>` : ''}
+                            </div>
+                            <div class="citation-count">
+                                <span>${pub.stats.citations} citations</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -176,6 +192,9 @@ class DetailedPublicationList extends HTMLElement {
                 }
 
                 .publication-item {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 1.35rem;
                     padding: 1.5rem 0;
                     border-bottom: 1px solid var(--border-color);
                     transition: border-color 0.3s ease;
@@ -188,6 +207,43 @@ class DetailedPublicationList extends HTMLElement {
                 .publication-year-group .publication-item:last-child {
                     border-bottom: none;
                     padding-bottom: 0;
+                }
+
+                .publication-thumbnail {
+                    flex: 0 0 168px;
+                    width: 168px;
+                    height: 105px;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    background: #ffffff;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+                }
+
+                .publication-thumbnail img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top center;
+                    transition: transform 0.35s ease;
+                }
+
+                .publication-item:hover .publication-thumbnail img {
+                    transform: scale(1.03);
+                }
+
+                :host-context([data-theme="dark"]) .publication-thumbnail {
+                    background: #1e293b;
+                    border-color: rgba(255, 255, 255, 0.12);
+                    box-shadow: none;
+                }
+
+                .publication-body {
+                    flex: 1;
+                    min-width: 0;
+                    display: flex;
+                    flex-direction: column;
                 }
 
                 .publication-title {
@@ -326,6 +382,16 @@ class DetailedPublicationList extends HTMLElement {
 
                 @media (max-width: 768px) {
                     .publication-year-label { font-size: 1.35rem; }
+                    .publication-item {
+                        flex-direction: column;
+                        gap: 1rem;
+                    }
+                    .publication-thumbnail {
+                        width: 100%;
+                        flex: none;
+                        height: auto;
+                        aspect-ratio: 16 / 9;
+                    }
                     .publication-title { font-size: 1.15rem; }
                     .publication-meta { padding-right: 0; max-width: 100%; }
                     .publication-footer { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
