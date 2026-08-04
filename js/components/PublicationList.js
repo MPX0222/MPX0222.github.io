@@ -163,7 +163,7 @@ class PublicationList extends HTMLElement {
                   </a>
                 ` : ''}
                 <button class="pub-link cite-button cite-link" data-bibtex="${(pub.bibtex || '').replace(/"/g, '&quot;')}" aria-label="Copy BibTeX citation">
-                  <i class="ai ai-google-scholar"></i>
+                  <i class="fas fa-paperclip"></i>
                   <span>Bibtex</span>
                 </button>
               </div>

@@ -1,6 +1,16 @@
 {
     "awards": [
         {
+            "year": 2026,
+            "items": [
+                {
+                    "name": "TOP 20, Advanced FinTech Al Competition (AFAC 2026)",
+                    "type": "competition",
+                    "organization": "Paradoox AI Research"
+                }
+            ]
+        },
+        {
             "year": 2024,
             "items": [
                 {
@@ -19,13 +29,13 @@
                     "organization": "The Hong Kong University of Science and Technology (Guangzhou)"
                 },
                 {
-                    "name": "Distinguished Graduate",
+                    "name": "Outstanding Graduate",
                     "type": "honor",
                     "organization": "College of Information Science and Technology, Jinan University"
                 },
                 {
                     "name": "Silver Award, \"Medicine +X\" Virtual Simliation Competition",
-                    "type": "competition",
+                    "type": "",
                     "organization": "Jinan University & Guangzhou Medical University"
                 }
             ]
@@ -34,7 +44,7 @@
             "year": 2022,
             "items": [
                 {
-                    "name": "Second Class Scholarship for Excellent Student",
+                    "name": "Second-Class Excellent Student Scholarship",
                     "type": "scholarship",
                     "organization": "Jinan University"
                 }
@@ -44,7 +54,7 @@
             "year": 2021,
             "items": [
                 {
-                    "name": "Third Class Scholarship for Excellent Student",
+                    "name": "Third-Class Excellent Student Scholarship",
                     "type": "scholarship",
                     "organization": "Jinan University"
                 },

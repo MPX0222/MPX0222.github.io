@@ -26,6 +26,7 @@
     <script src="js/components/AwardList.js"></script>
     <script src="js/components/ProjectList.js"></script>
     <script src="js/components/ServiceList.js"></script>
+    <script src="js/components/ActivityList.js"></script>
 
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </head>
@@ -52,7 +53,7 @@
                             </span>
                         </div>
                         <div class="profile-title">
-                            <span class="profile-title-item profile-location">
+                            <span id="profile-email" class="profile-title-item profile-location profile-email">
                             Email: pma929[at]connect.hkust-gz.edu.cn / mpx0222[at]paradoox.ai
                             </span>
                         </div>
@@ -87,9 +88,9 @@
                         <div class="card-content">
                             <h3 style="padding-bottom: 10px;">Welcome to My Homepage!</h3>
                             <p> 
-                                I completed my M.Phil. degree in Data Science and Analytics (DSA), where I was guided by <a href="https://luoyuyu.vip">Prof. Yuyu Luo</a> and <a href="https://nantang.github.io/">Prof. Nan Tang</a>.
+                                I completed my M.Phil. degree in Data Science and Analytics (DSA), where I was advised by <a href="https://luoyuyu.vip">Prof. Yuyu Luo</a> and <a href="https://nantang.github.io/">Prof. Nan Tang</a>.
                                 And I graduated from <a href="https://www.jnu.edu.cn/">Jinan University (JNU)</a> with a B.Eng. degree in Intelligence Science and Technology in 2023. 
-                                In 2025, I interned at the <a href="https://www.idea.edu.cn/">International Digital Economy Academy</a>, where I had the privilege of learning from <a href="https://soledad921.github.io/chengjin_xu/">Dr. Chengjin Xu</a>.
+                                In 2025, I interned at the <a href="https://www.idea.edu.cn/">International Digital Economy Academy</a>, where I had the privilege of learning from <a href="https://soledad921.github.io/chengjin_xu/">Dr. Chengjin Xu</a> and <a href="https://idea.edu.cn/person/guojian/">Prof. Jian Guo</a>.
                                 I am honored to acknowledge and thank the organization I have joined during this two years:
                             </p>
                             <div class="research-units" style="text-align: center; margin: 20px 0;">
@@ -140,9 +141,15 @@
                                 </div>
                             </div>
 
-                            <div class="compact-section" id="service">
-                                <h3><i class="fas fa-hands-helping"></i> Service</h3>
-                                <service-list mode="compact"></service-list>
+                            <div class="compact-sections-row compact-sections-row--service-activities">
+                                <div class="compact-section" id="service">
+                                    <h3><i class="fas fa-hands-helping"></i> Service</h3>
+                                    <service-list mode="compact"></service-list>
+                                </div>
+                                <div class="compact-section" id="activities">
+                                    <h3><i class="fas fa-calendar-days"></i> Activities</h3>
+                                    <activity-list mode="compact"></activity-list>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -225,7 +232,7 @@
                 © 2026 Peixian Ma, Powered by Jekyll, <iconify-icon icon="simple-icons:anthropic" style="vertical-align: middle; font-size: 0.9em; margin-right: 2px;"></iconify-icon> Claude Code and <iconify-icon icon="simple-icons:cursor" style="vertical-align: middle; font-size: 0.9em; margin-right: 2px;"></iconify-icon> Cursor
             </p>
             <br>
-            <span class="last-updated">Last Updated: July 2026</span>
+            <span class="last-updated">Last Updated: August 2026</span>
         </div>
     </footer>
 
