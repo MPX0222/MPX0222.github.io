@@ -30,7 +30,8 @@
       },
       "stats": {
         "citations": 0
-      }
+      },
+      "doi": "10.48550/arXiv.2607.11141"
     },
     {
       "thumbnail": "images/tradelens.png",
@@ -70,7 +71,8 @@
       },
       "stats": {
         "citations": 0
-      }
+      },
+      "doi": "10.48550/arXiv.2607.10286"
     },
     {
       "thumbnail": "images/sqld1.png",
@@ -103,7 +105,8 @@
       },
       "stats": {
         "citations": 0
-      }
+      },
+      "doi": "10.48550/arXiv.2605.27791"
     },
     {
       "thumbnail": "images/sqlr1.png",
@@ -136,7 +139,8 @@
       },
       "stats": {
         "citations": 100
-      }
+      },
+      "doi": "https://doi.org/10.52202/085713-5805"
     },
     {
       "thumbnail": "images/survey.png",
@@ -173,7 +177,8 @@
       },
       "stats": {
         "citations": 172
-      }
+      },
+      "doi": "10.1109/tkde.2025.3592032"
     },
     {
       "thumbnail": "images/CL.png",
@@ -205,7 +210,8 @@
       },
       "stats": {
         "citations": 2
-      }
+      },
+      "doi": "10.48550/arXiv.2508.03094"
     },
     {
       "thumbnail": "images/rcug.png",
@@ -237,7 +243,8 @@
       },
       "stats": {
         "citations": 0
-      }
+      },
+      "doi": "10.48550/arXiv.2512.09441"
     },
     {
       "thumbnail": "images/SRLMs.png",
@@ -269,7 +276,8 @@
       },
       "stats": {
         "citations": 3
-      }
+      },
+      "doi": "10.48550/arXiv.2506.13404"
     },
     {
       "thumbnail": "images/rewriter.png",
@@ -302,7 +310,8 @@
       },
       "stats": {
         "citations": 10
-      }
+      },
+      "doi": "10.48550/arXiv.2412.17068"
     },
     {
       "thumbnail": "images/bls.png",
@@ -334,7 +343,8 @@
       },
       "stats": {
         "citations": 12
-      }
+      },
+      "doi": "10.3389/fnins.2023.1137557"
     }
   ]
 }

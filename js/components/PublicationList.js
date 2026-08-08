@@ -114,10 +114,17 @@ class PublicationList extends HTMLElement {
       .map(year => ({ year, publications: groups[year] }));
   }
 
+  resolveDoiUrl(doi) {
+    if (!doi) return '';
+    if (doi.startsWith('http')) return doi;
+    return `https://doi.org/${doi}`;
+  }
+
   renderPublicationItem(pub) {
     const venueInfo = this.getVenueType(pub.venue.name);
     const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
     const logoColor = isDarkMode ? 'a29bfe' : '6c5ce7';
+    const doiUrl = this.resolveDoiUrl(pub.doi);
 
     return `
       <div class="publication-item">
@@ -166,6 +173,12 @@ class PublicationList extends HTMLElement {
                   <i class="fas fa-paperclip"></i>
                   <span>Bibtex</span>
                 </button>
+                ${pub.doi ? `
+                  <a href="${doiUrl}" class="pub-link doi-link" target="_blank" rel="noopener" title="${pub.doi}">
+                    <i class="ai ai-doi"></i>
+                    <span>DOI</span>
+                  </a>
+                ` : ''}
               </div>
             </div>
             <div class="publication-stats">
@@ -395,13 +408,6 @@ class PublicationList extends HTMLElement {
           align-items: center;
           flex-wrap: wrap;
           font-family: var(--font-sansation, 'Sansation', sans-serif);
-        }
-
-        .publication-venue {
-          display: flex;
-          align-items: center;
-          gap: 0.375rem;
-          flex-wrap: wrap;
         }
 
         .publication-links {

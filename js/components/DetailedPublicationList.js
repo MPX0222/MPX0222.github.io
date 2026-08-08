@@ -116,6 +116,10 @@ class DetailedPublicationList extends HTMLElement {
                 </div>
             ` : '';
 
+            const doiUrl = pub.doi
+                ? (pub.doi.startsWith('http') ? pub.doi : `https://doi.org/${pub.doi}`)
+                : '';
+
             return `
                 <div class="publication-item">
                     ${thumbnail}
@@ -128,6 +132,12 @@ class DetailedPublicationList extends HTMLElement {
                             <div class="publication-venue">
                                 <span class="venue-tag ${venueInfo.class}">${pub.venue.name}</span>
                                 ${pub.category ? `<span class="category-tag ${categoryClass}">${pub.category}</span>` : ''}
+                                ${pub.doi ? `
+                                    <a href="${doiUrl}" class="doi-tag" target="_blank" rel="noopener" title="${pub.doi}">
+                                        <i class="ai ai-doi" aria-hidden="true"></i>
+                                        DOI
+                                    </a>
+                                ` : ''}
                             </div>
                             <div class="citation-count">
                                 <span>${pub.stats.citations} citations</span>
@@ -282,6 +292,37 @@ class DetailedPublicationList extends HTMLElement {
 
                 :host-context([data-theme="dark"]) .publication-meta {
                     color: #cbd5e1;
+                }
+
+                .doi-tag {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.3rem;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    letter-spacing: 0.02em;
+                    font-family: var(--font-sansation, 'Sansation', sans-serif);
+                    padding: 0.2rem 0.55rem;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    background: rgba(108, 92, 231, 0.1);
+                    color: #6c5ce7;
+                    transition: all 0.2s ease;
+                }
+
+                .doi-tag:hover {
+                    background: rgba(108, 92, 231, 0.18);
+                    color: #5b4cdb;
+                }
+
+                :host-context([data-theme="dark"]) .doi-tag {
+                    background: rgba(162, 155, 254, 0.15);
+                    color: #a29bfe;
+                }
+
+                :host-context([data-theme="dark"]) .doi-tag:hover {
+                    background: rgba(162, 155, 254, 0.25);
+                    color: #c7c2ff;
                 }
 
                 .author-highlight {
