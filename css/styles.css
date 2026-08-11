@@ -491,7 +491,7 @@ button.pub-link {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding-top: 0.5rem;
+    padding-top: 0;
 }
 
 .profile-name {
@@ -502,8 +502,9 @@ button.pub-link {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-top: -0.05em;
     margin-bottom: 0.5rem;
-    line-height: 1.2;
+    line-height: 1;
     letter-spacing: -0.01em;
     transition: background 0.3s ease;
 }
@@ -547,7 +548,8 @@ button.pub-link {
 .profile-email {
     position: relative;
     border-radius: 4px;
-    padding: 0.1rem 0.3rem;
+    padding: 0.1rem 0.3rem 0.1rem 0;
+    margin-left: 0;
     width: fit-content;
     overflow: hidden;
 }
