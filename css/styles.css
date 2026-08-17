@@ -573,31 +573,92 @@ button.pub-link {
     margin-bottom: 0;
 }
 
-.profile-location {
+.profile-vcard {
+    background: transparent;
+    padding: 0 0 0.7rem;
+    margin-bottom: 0.15rem;
+    width: fit-content;
+    max-width: 100%;
+    background-image: linear-gradient(to right, rgba(99, 110, 114, 0.45), transparent 90%);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: min(100%, 22rem) 1px;
+}
+
+[data-theme="dark"] .profile-vcard {
+    background-image: linear-gradient(to right, rgba(203, 213, 225, 0.4), transparent 90%);
+}
+
+.profile-vcard-byline {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.3rem 0.4rem;
+    font-family: var(--font-sansation);
+    font-size: 1.05rem;
+    line-height: 1.5;
     color: var(--text-secondary);
-    margin-bottom: 0;
-    font-family: 'Consolas', 'Monaco', monospace;
-    margin-top: 0.25rem;
-    transition: color 0.3s ease;
+}
+
+.profile-vcard-role {
+    font-family: var(--font-sansation);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    color: var(--text-color);
+}
+
+.profile-vcard-at {
+    font-weight: 400;
+    opacity: 0.65;
+}
+
+.profile-vcard-org {
+    font-weight: 400;
+}
+
+.profile-email {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.6rem;
+    row-gap: 0.1rem;
+    align-items: start;
+    margin-top: 0.45rem;
+    border-radius: 4px;
+    padding: 0.1rem 0.3rem 0.1rem 0;
+    width: fit-content;
+    overflow: hidden;
+    font-family: var(--font-sansation);
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+}
+
+.profile-email-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.profile-email-label i {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+}
+
+.profile-email-addresses {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+    line-height: 1.5;
 }
 
 .profile-location i {
     color: var(--primary-color);
     font-size: 0.85rem;
     transition: color 0.3s ease;
-}
-
-.profile-email {
-    position: relative;
-    border-radius: 4px;
-    padding: 0.1rem 0.3rem 0.1rem 0;
-    margin-left: 0;
-    width: fit-content;
-    overflow: hidden;
 }
 
 .profile-email::after {
@@ -2654,6 +2715,11 @@ blockquote {
         padding-top: 0;
     }
 
+    .profile-vcard {
+        margin: 0 auto;
+        text-align: left;
+    }
+
     .profile-name {
         font-size: 1.85rem;
     }
@@ -3062,10 +3128,13 @@ body.modal-open {
     display: flex !important;
     justify-content: flex-start !important;
     align-items: center !important;
-    gap: 0.6rem !important; /* 更加紧凑的间隔 */
+    gap: 0.35rem 0.85rem !important;
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
     margin: 0.5rem 0 0 !important;
     padding: 0 !important;
     width: 100% !important;
+    max-width: none !important;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
@@ -3075,15 +3144,18 @@ body.modal-open {
     /* 通过变量注入品牌色，默认主色 */
     --brand: #6c5ce7;
     position: relative !important;
-    display: flex !important;
+    display: inline-flex !important;
+    flex-direction: row !important;
+    flex: 0 0 auto !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
+    gap: 0.3rem !important;
 
     /* 取消圆圈背景和固定宽高 */
     width: auto !important;
     height: auto !important;
     margin: 0 !important;
-    padding: 0.3rem 0.4rem !important; /* 增加点击热区 */
+    padding: 0.2rem 0.15rem !important;
     border: none !important;
     border-radius: 0 !important;
     background: none !important;
@@ -3161,7 +3233,6 @@ body.modal-open {
 
 /* 针对 Iconify 和 FA 图标的尺寸统一 */
 .social-icon i,
-.social-icon span,
 .social-icon iconify-icon {
     font-size: 1.4rem !important;
     width: auto !important;
@@ -3170,6 +3241,17 @@ body.modal-open {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.social-icon-label {
+    font-family: var(--font-sansation) !important;
+    font-size: 0.95rem !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    width: auto !important;
+    height: auto !important;
 }
 
 /* Academicons 通常视觉上偏小，需要稍微调大一点以保持对齐 */
@@ -3189,18 +3271,22 @@ body.modal-open {
 /* 响应式调整 */
 @media (max-width: 480px) {
     .social-icons-grid {
-        gap: 1rem !important;
+        gap: 0.45rem !important;
+        flex-wrap: nowrap !important;
+        max-width: none !important;
     }
     .social-icon {
-        font-size: 1.4rem !important;
+        font-size: 1.2rem !important;
     }
     .social-icon i,
-    .social-icon span,
     .social-icon iconify-icon {
-        font-size: 1.4rem !important;
+        font-size: 1.2rem !important;
+    }
+    .social-icon-label {
+        font-size: 0.8rem !important;
     }
     .social-icon .ai {
-        font-size: 1.65rem !important;
+        font-size: 1.4rem !important;
     }
 }
 
@@ -3245,7 +3331,8 @@ body.modal-open {
 }
 
 .compact-section {
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
     border-top: none;
     padding-top: 0;
 }
@@ -3316,6 +3403,7 @@ body.modal-open {
 
 .compact-details {
     flex: 1;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -3334,6 +3422,41 @@ body.modal-open {
     color: var(--text-color);
     line-height: 1.3;
     transition: color 0.3s ease;
+}
+
+.education-list.compact .compact-list-item,
+.internship-list.compact .compact-list-item {
+    align-items: flex-start;
+}
+
+.education-list.compact .compact-title,
+.internship-list.compact .compact-title {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 70%;
+    width: auto;
+    white-space: normal;
+    overflow-wrap: break-word;
+    line-height: 1.3;
+    font-family: var(--font-sansation);
+    font-weight: 400;
+    font-size: 0.85rem;
+}
+
+.education-list.compact .compact-details,
+.internship-list.compact .compact-details {
+    gap: 0.12rem;
+}
+
+.education-list.compact .compact-header,
+.internship-list.compact .compact-header {
+    width: 100%;
+}
+
+.education-list.compact .compact-subtitle,
+.internship-list.compact .compact-subtitle {
+    min-width: 0;
+    font-family: var(--font-sansation);
 }
 
 .compact-date {
