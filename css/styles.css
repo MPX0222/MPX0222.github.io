@@ -574,19 +574,27 @@ button.pub-link {
 }
 
 .profile-vcard {
+    position: relative;
     background: transparent;
     padding: 0 0 0.7rem;
     margin-bottom: 0.15rem;
     width: fit-content;
     max-width: 100%;
-    background-image: linear-gradient(to right, rgba(99, 110, 114, 0.45), transparent 90%);
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    background-size: min(100%, 22rem) 1px;
 }
 
-[data-theme="dark"] .profile-vcard {
-    background-image: linear-gradient(to right, rgba(203, 213, 225, 0.4), transparent 90%);
+.profile-vcard::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: min(34rem, calc(100vw - 4rem));
+    background: linear-gradient(to right, rgba(99, 110, 114, 0.45), transparent 92%);
+    pointer-events: none;
+}
+
+[data-theme="dark"] .profile-vcard::after {
+    background: linear-gradient(to right, rgba(203, 213, 225, 0.4), transparent 92%);
 }
 
 .profile-vcard-byline {
@@ -653,6 +661,11 @@ button.pub-link {
     flex-direction: column;
     gap: 0.05rem;
     line-height: 1.5;
+    color: #8e989b;
+}
+
+[data-theme="dark"] .profile-email-addresses {
+    color: #94a3b8;
 }
 
 .profile-location i {

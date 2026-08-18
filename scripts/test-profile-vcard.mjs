@@ -18,7 +18,7 @@ check('no vcard corner borders', !/\.profile-vcard::before/.test(css) && !/--vca
 check('email is two address lines with bold label', /profile-email-label[\s\S]*Email/.test(html) && html.includes('pma929[at]connect.hkust-gz.edu.cn') && html.includes('mpx0222[at]paradoox.ai') && /\.profile-email-addresses\s*\{[^}]*flex-direction:\s*column/.test(css) && /\.profile-email-label\s*\{[^}]*font-weight:\s*700/.test(css));
 check('profile-email id kept for highlight', /id="profile-email"/.test(html));
 check('vcard background stays transparent', /\.profile-vcard\s*\{[^}]*background:\s*transparent/.test(css));
-check('gradient line sits between vcard and tags', /\.profile-vcard\s*\{[^}]*background-image:\s*linear-gradient\(to right/.test(css) && /\.profile-vcard\s*\{[^}]*background-size:[^}]*1px/.test(css));
+check('gradient line sits between vcard and tags', /\.profile-vcard::after/.test(css) && /min\(34rem/.test(css));
 check('byline and email fonts are mid-size', /\.profile-vcard-byline\s*\{[^}]*font-size:\s*1\.05rem/.test(css) && /\.profile-email\s*\{[^}]*font-size:\s*0\.98rem/.test(css));
 
 if (failed) {
