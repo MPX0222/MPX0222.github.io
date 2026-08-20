@@ -311,9 +311,30 @@ class Navbar extends HTMLElement {
             email.classList.remove('is-highlighted');
             void email.offsetWidth;
             email.classList.add('is-highlighted');
-            window.setTimeout(() => {
+
+            if (reduceMotion) {
+                window.setTimeout(() => {
+                    email.classList.remove('is-highlighted');
+                }, 600);
+                return;
+            }
+
+            const sheenTarget = email.querySelector('.profile-email-addresses > span');
+            const clearHighlight = (event) => {
+                if (event && event.animationName && event.animationName !== 'email-text-sheen') {
+                    return;
+                }
                 email.classList.remove('is-highlighted');
-            }, reduceMotion ? 600 : 1200);
+                if (sheenTarget) {
+                    sheenTarget.removeEventListener('animationend', clearHighlight);
+                }
+            };
+
+            if (sheenTarget) {
+                sheenTarget.addEventListener('animationend', clearHighlight);
+            } else {
+                window.setTimeout(clearHighlight, 1100);
+            }
         };
 
         window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });

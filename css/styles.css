@@ -675,75 +675,58 @@ button.pub-link {
 }
 
 .profile-email::after {
-    content: "";
-    position: absolute;
-    inset: -20% -35%;
-    pointer-events: none;
-    opacity: 0;
-    transform: translateX(-135%) skewX(-18deg);
-    background: linear-gradient(
-        90deg,
-        transparent 35%,
-        rgba(255, 255, 255, 0.88) 50%,
-        transparent 65%
+    display: none;
+}
+
+.profile-email.is-highlighted .profile-email-addresses > span {
+    background-image: linear-gradient(
+        105deg,
+        #8e989b 0%,
+        #8e989b 42%,
+        #f4f6f6 50%,
+        #8e989b 58%,
+        #8e989b 100%
+    );
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: email-text-sheen 1.05s ease-in-out forwards;
+}
+
+[data-theme="dark"] .profile-email.is-highlighted .profile-email-addresses > span {
+    background-image: linear-gradient(
+        105deg,
+        #94a3b8 0%,
+        #94a3b8 42%,
+        #ffffff 50%,
+        #94a3b8 58%,
+        #94a3b8 100%
     );
 }
 
-.profile-email.is-highlighted {
-    background-color: rgba(108, 92, 231, 0.08);
-}
-
-.profile-email.is-highlighted::after {
-    animation: email-sheen-light 1.15s ease-out;
-}
-
-[data-theme="dark"] .profile-email.is-highlighted {
-    background-color: rgba(199, 194, 255, 0.12);
-}
-
-[data-theme="dark"] .profile-email.is-highlighted::after {
-    animation-name: email-sheen-dark;
-}
-
-@keyframes email-sheen-light {
-    0% {
-        opacity: 0;
-        transform: translateX(-135%) skewX(-18deg);
+@keyframes email-text-sheen {
+    from {
+        background-position: 100% 0;
     }
-    18% {
-        opacity: 0.9;
-    }
-    82% {
-        opacity: 0.9;
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(135%) skewX(-18deg);
-    }
-}
-
-@keyframes email-sheen-dark {
-    0% {
-        opacity: 0;
-        transform: translateX(-135%) skewX(-18deg);
-    }
-    18%, 82% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(135%) skewX(-18deg);
+    to {
+        background-position: 0 0;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
     .profile-email.is-highlighted {
-        background-color: rgba(108, 92, 231, 0.13);
-        color: var(--primary-color);
+        background-color: transparent;
     }
 
-    .profile-email.is-highlighted::after {
+    .profile-email.is-highlighted .profile-email-addresses > span {
         animation: none;
+        background-image: none;
+        color: #b0b8ba;
+        -webkit-text-fill-color: unset;
     }
 }
 
