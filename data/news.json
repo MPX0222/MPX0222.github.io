@@ -1,15 +1,20 @@
 {
   "news": [
     {
-      "date": "Jul. 2026",
+      "date": "Aug. 2026",
       "content": [
         {
           "type": "paper",
-          "text": "🔥 We release an research paper about Financial AI: ",
-          "link": "",
+          "text": "🔥 It is glad to notice that",
+          "link": "https://arxiv.org/abs/2607.10286",
           "title": "Can Agentic Trading Systems Pay for Their Own Intelligence?",
-          "venue": "Preprint version is available on arXiv."
-        },
+          "venue": "has been accepted by Findings of Empirical Methods in Natural Language Processing (EMNLP 2026)."
+        }
+      ]
+    },
+    {
+      "date": "Jul. 2026",
+      "content": [
         {
           "type": "paper",
           "text": "🔥 We release the first demo paper of Paradoox AI Research: ",
