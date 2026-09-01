@@ -61,12 +61,12 @@
       "bibtex": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2607.10286",
-        "code": "",
-        "web": "",
+        "code": "https://github.com/ParadooxAI/TradeLens",
+        "web": "https://paradooxai.github.io/TradeLens/",
         "cite": "https://arxiv.org/abs/2607.10286",
         "github": {
-          "owner": "",
-          "repo": ""
+          "owner": "ParadooxAI",
+          "repo": "TradeLens"
         }
       },
       "stats": {
