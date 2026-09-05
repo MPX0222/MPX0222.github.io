@@ -123,8 +123,6 @@ class PublicationList extends HTMLElement {
 
   renderPublicationItem(pub) {
     const venueInfo = this.getVenueType(pub.venue.name);
-    const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
-    const logoColor = isDarkMode ? 'a29bfe' : '6c5ce7';
     const doiUrl = this.resolveDoiUrl(pub.doi);
 
     return `
@@ -188,10 +186,10 @@ class PublicationList extends HTMLElement {
                 <span>${pub.stats.citations} citations</span>
               </div>
               ${pub.links.github && pub.links.github.owner && pub.links.github.repo ? `
-                <div class="stat-item github-stats">
-                  <img src="https://img.shields.io/github/stars/${pub.links.github.owner}/${pub.links.github.repo}?style=flat&logo=github&logoColor=${logoColor}&label=&color=white"
+                <a class="stat-item github-stats" href="https://github.com/${pub.links.github.owner}/${pub.links.github.repo}" target="_blank" rel="noopener noreferrer" title="View repository on GitHub">
+                  <img src="https://img.shields.io/github/stars/${pub.links.github.owner}/${pub.links.github.repo}?style=social&label=Star"
                        alt="GitHub stars" loading="lazy">
-                </div>
+                </a>
               ` : ''}
             </div>
           </div>
@@ -434,7 +432,7 @@ class PublicationList extends HTMLElement {
         .publication-stats {
           display: flex;
           align-items: center;
-          gap: 1rem;
+          gap: 0.75rem;
           flex-wrap: wrap;
         }
 
@@ -464,11 +462,28 @@ class PublicationList extends HTMLElement {
         .github-stats {
           display: inline-flex;
           align-items: center;
+          text-decoration: none;
+          line-height: 1;
+          border-radius: 3px;
+          transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .github-stats:hover {
+          transform: translateY(-1px);
+          opacity: 0.9;
         }
 
         .github-stats img {
-          height: 14px;
+          height: 15px;
           width: auto;
+          display: block;
+          vertical-align: middle;
+          border-radius: 2.5px;
+        }
+
+        [data-theme="dark"] .github-stats img,
+        :host-context([data-theme="dark"]) .github-stats img {
+          filter: invert(0.88) hue-rotate(180deg) contrast(1.05);
         }
 
         /* 响应式设计 */
