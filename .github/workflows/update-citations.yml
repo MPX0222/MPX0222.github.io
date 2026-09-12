@@ -22,9 +22,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install scholarly
-          # scholarly 的 ProxyGenerator 依赖 httpx 旧版 API (proxies=)，新版本已改为 proxy=，故固定兼容版本
-          pip install "httpx>=0.24,<0.28" --force-reinstall
+          # scholarly 1.7.11 未锁定传递依赖：
+          # - bibtexparser 2.0 删除了 bibdatabase，from scholarly 会立刻 ModuleNotFoundError
+          # - httpx 0.28+ 把 proxies= 改成了 proxy=，ProxyGenerator 会 TypeError
+          pip install "scholarly==1.7.11" "bibtexparser>=1.4,<2" "httpx>=0.24,<0.28"
 
       - name: Update citations
         env:
