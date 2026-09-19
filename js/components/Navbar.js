@@ -222,7 +222,7 @@ class Navbar extends HTMLElement {
             <nav class="navbar">
                 <div class="nav-content">
                     <div class="nav-left">
-                        <a href="../index.html" class="artistic-heading">Toward a Broader Future</a>
+                        <a href="../index.html" class="artistic-heading">Toward a vaster future, through the twilight.</a>
                     </div>
                     <div class="nav-right">
                         <div class="nav-section">

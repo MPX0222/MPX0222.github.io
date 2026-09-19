@@ -262,6 +262,7 @@ h1, h2, h3, p, a {
 .card-header {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     padding: 0;
     margin-bottom: 1.25rem;
     color: var(--text-color);
@@ -278,8 +279,15 @@ h1, h2, h3, p, a {
     transition: color 0.3s ease;
 }
 
+.card-heading {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    min-width: 0;
+}
+
 .card-header h2 {
-    flex: 1;
+    flex: 0 0 auto;
     margin: 0;
     font-size: 1.4rem;
     color: var(--text-color);
@@ -291,7 +299,8 @@ h1, h2, h3, p, a {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    padding: 0 0 0 0.6rem;
+    margin-left: 0.85rem;
+    padding: 0 0 0 0.85rem;
     background: none;
     border: none;
     border-left: 2px solid var(--border-color);

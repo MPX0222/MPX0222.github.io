@@ -588,14 +588,10 @@ class PublicationList extends HTMLElement {
         }
       </style>
       <div class="publications-list">
-        ${this.groupByYear(featuredPublications).map(group => `
-          <section class="publication-year-group">
-            <div class="publication-year-label">${group.year}</div>
-            <div class="publication-year-items">
-              ${group.publications.map(pub => this.renderPublicationItem(pub)).join('')}
-            </div>
-          </section>
-        `).join('')}
+        ${this.groupByYear(featuredPublications)
+          .flatMap(group => group.publications)
+          .map(pub => this.renderPublicationItem(pub))
+          .join('')}
       </div>
     `;
 

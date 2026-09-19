@@ -284,7 +284,7 @@
       "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
       "year": 2024,
       "category": "AI for Database",
-      "showInHome": true,
+      "showInHome": false,
       "authors": [
         "Peixian Ma",
         "Boyan Li",
@@ -318,7 +318,7 @@
       "title": "Development and Validation of a Deep-broad Ensemble Model for Early Detection of Alzheimer's Disease",
       "year": 2023,
       "category": "Machine Learning",
-      "showInHome": true,
+      "showInHome": false,
       "authors": [
         "Peixian Ma",
         "Jing Wang",
