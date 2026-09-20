@@ -1,17 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Peixian Ma">
-  <defs>
-    <linearGradient id="bg" x1="3" y1="1" x2="29" y2="31" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2d3436"/>
-      <stop offset="50%" stop-color="#6c5ce7"/>
-      <stop offset="100%" stop-color="#a29bfe"/>
-    </linearGradient>
-  </defs>
-  <rect width="32" height="32" rx="8" fill="url(#bg)"/>
-  <rect x="1.2" y="1.2" width="29.6" height="29.6" rx="6.8" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-  <g fill="#ffffff">
-    <!-- P -->
-    <path d="M6.8 7.4h5.4c3 0 4.9 1.7 4.9 4.25 0 2.6-1.95 4.3-5 4.3H9.35V24.6H6.8V7.4zm2.55 2.2v3.95h2.6c1.4 0 2.2-.75 2.2-1.95s-.8-2-2.25-2H9.35z"/>
-    <!-- M -->
-    <path d="M17.3 24.6V7.4h2.75l2.65 8.95L25.35 7.4H28.1V24.6h-2.5V13.15l-2.8 9.4h-2.05l-2.8-9.4V24.6h-2.65z"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Peixian Ma — PM monogram</title>
+  <style>
+    .ink { fill: #30294f; }
+    .accent { fill: #9582db; }
+    @media (prefers-color-scheme: dark) {
+      .ink { fill: #e5dff7; }
+      .accent { fill: #b6a3ef; }
+    }
+  </style>
+  <!-- Elevated P and lowered M, with an interlocking lavender diagonal. -->
+  <path class="ink" fill-rule="evenodd" d="M8 10H48C73 10 85 20 85 37C85 54 71 64 47 64H34V86C34 94 38 97 45 98V102H8V98C16 97 20 94 20 86V26C20 18 16 15 8 14ZM34 17V57H46C62 57 69 50 69 37C69 24 62 17 46 17Z"/>
+  <path class="ink" d="M35 48H49L76 91L99 39H120V43C112 44 109 47 109 55V103C109 111 112 114 120 115V119H83V115C91 114 95 111 95 103V59L76 104H71L47 66V101C47 110 50 113 58 115V119H30V115C38 113 41 110 41 101V64C41 56 40 53 35 52Z"/>
+  <path class="accent" d="M35 31L76 91L71 101L45 60L35 54Z"/>
 </svg>
