@@ -4,6 +4,33 @@ class DetailedPublicationList extends HTMLElement {
         this.attachShadow({ mode: 'open' });
         this.publications = [];
         this.filteredPublications = [];
+        this.tooltip = document.createElement('div');
+        this.tooltip.className = 'copy-tooltip';
+        document.body.appendChild(this.tooltip);
+    }
+
+    showTooltip(text, x, y) {
+        this.tooltip.textContent = text;
+        this.tooltip.style.left = `${x}px`;
+        this.tooltip.style.top = `${y - 40}px`;
+        this.tooltip.classList.add('show');
+        setTimeout(() => {
+            this.tooltip.classList.remove('show');
+        }, 2000);
+    }
+
+    async copyToClipboard(text, button, event) {
+        try {
+            await navigator.clipboard.writeText(text);
+            button.classList.add('cite-success');
+            this.showTooltip('已复制引用到剪贴板！', event.clientX, event.clientY);
+            setTimeout(() => {
+                button.classList.remove('cite-success');
+            }, 2000);
+        } catch (err) {
+            console.error('复制失败:', err);
+            this.showTooltip('复制失败，请重试', event.clientX, event.clientY);
+        }
     }
 
     async connectedCallback() {
@@ -12,11 +39,34 @@ class DetailedPublicationList extends HTMLElement {
             const data = await response.json();
             this.publications = data.publications;
             this.filteredPublications = [...this.publications];
+            this.syncThemeFromDocument();
+            this.setupThemeObserver();
             this.render();
         } catch (error) {
             console.error('Error loading publications:', error);
             this.shadowRoot.innerHTML = '<p>Error loading publications</p>';
         }
+    }
+
+    syncThemeFromDocument() {
+        const theme = document.documentElement.getAttribute('data-theme');
+        if (theme) {
+            this.setAttribute('data-theme', theme);
+        } else {
+            this.removeAttribute('data-theme');
+        }
+        const list = this.shadowRoot?.querySelector('.publications-list');
+        if (list) {
+            list.classList.toggle('is-dark', theme === 'dark');
+        }
+    }
+
+    setupThemeObserver() {
+        this.themeObserver = new MutationObserver(() => this.syncThemeFromDocument());
+        this.themeObserver.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme']
+        });
     }
 
     groupByYear(publications) {
@@ -110,12 +160,17 @@ class DetailedPublicationList extends HTMLElement {
             ).join(', ');
 
             const thumbnailSrc = this.resolveThumbnail(pub.thumbnail);
+            const categoryBadge = pub.category
+                ? `<span class="category-tag ${categoryClass}">${pub.category}</span>`
+                : '';
             const thumbnail = thumbnailSrc ? `
                 <div class="publication-thumbnail">
                     <img src="${thumbnailSrc}" alt="" loading="lazy">
+                    ${categoryBadge}
                 </div>
             ` : '';
 
+            const showDoiBadge = false;
             const doiUrl = pub.doi
                 ? (pub.doi.startsWith('http') ? pub.doi : `https://doi.org/${pub.doi}`)
                 : '';
@@ -129,18 +184,52 @@ class DetailedPublicationList extends HTMLElement {
                             ${authors}
                         </div>
                         <div class="publication-footer">
-                            <div class="publication-venue">
-                                <span class="venue-tag ${venueInfo.class}">${pub.venue.name}</span>
-                                ${pub.category ? `<span class="category-tag ${categoryClass}">${pub.category}</span>` : ''}
-                                ${pub.doi ? `
-                                    <a href="${doiUrl}" class="doi-tag" target="_blank" rel="noopener" title="${pub.doi}">
-                                        <i class="ai ai-doi" aria-hidden="true"></i>
-                                        DOI
+                            <div class="publication-left">
+                                <div class="publication-venue">
+                                    <span class="venue-tag ${venueInfo.class}">${pub.venue.name}</span>
+                                    ${!thumbnailSrc ? categoryBadge : ''}
+                                </div>
+                                <div class="publication-links">
+                                    ${pub.links.pdf ? `
+                                        <a href="${pub.links.pdf}" class="pub-link pdf-link" target="_blank" rel="noopener">
+                                            <i class="ai ai-arxiv"></i>
+                                            <span>Paper</span>
+                                        </a>
+                                    ` : ''}
+                                    ${pub.links.code ? `
+                                        <a href="${pub.links.code}" class="pub-link code-link" target="_blank" rel="noopener">
+                                            <i class="fab fa-github"></i>
+                                            <span>Code</span>
+                                        </a>
+                                    ` : ''}
+                                    ${pub.links.web ? `
+                                        <a href="${pub.links.web}" class="pub-link web-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-globe"></i>
+                                            <span>Website</span>
+                                        </a>
+                                    ` : ''}
+                                    <button class="pub-link cite-button cite-link" data-bibtex="${(pub.bibtex || '').replace(/"/g, '&quot;')}" aria-label="Copy BibTeX citation">
+                                        <i class="fas fa-paperclip"></i>
+                                        <span>Bibtex</span>
+                                    </button>
+                                    ${showDoiBadge && pub.doi ? `
+                                        <a href="${doiUrl}" class="pub-link doi-link" target="_blank" rel="noopener" title="${pub.doi}">
+                                            <i class="ai ai-doi"></i>
+                                            <span>DOI</span>
+                                        </a>
+                                    ` : ''}
+                                </div>
+                            </div>
+                            <div class="publication-stats">
+                                <div class="citation-count">
+                                    <span>${pub.stats.citations} citations</span>
+                                </div>
+                                ${pub.links.github && pub.links.github.owner && pub.links.github.repo ? `
+                                    <a class="github-stats" href="https://github.com/${pub.links.github.owner}/${pub.links.github.repo}" target="_blank" rel="noopener noreferrer" title="View repository on GitHub">
+                                        <img src="https://img.shields.io/github/stars/${pub.links.github.owner}/${pub.links.github.repo}?style=social&label=Star"
+                                             alt="GitHub stars" loading="lazy">
                                     </a>
                                 ` : ''}
-                            </div>
-                            <div class="citation-count">
-                                <span>${pub.stats.citations} citations</span>
                             </div>
                         </div>
                     </div>
@@ -220,9 +309,11 @@ class DetailedPublicationList extends HTMLElement {
                 }
 
                 .publication-thumbnail {
-                    flex: 0 0 168px;
-                    width: 168px;
-                    height: 105px;
+                    position: relative;
+                    flex: 0 0 220px;
+                    width: 220px;
+                    height: auto;
+                    aspect-ratio: 2 / 1;
                     border-radius: 6px;
                     overflow: hidden;
                     background: #ffffff;
@@ -234,8 +325,9 @@ class DetailedPublicationList extends HTMLElement {
                     display: block;
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
-                    object-position: top center;
+                    object-fit: contain;
+                    object-position: center;
+                    padding: 3pt;
                     transition: transform 0.35s ease;
                 }
 
@@ -343,6 +435,14 @@ class DetailedPublicationList extends HTMLElement {
                     flex-wrap: wrap;
                 }
 
+                .publication-left {
+                    display: flex;
+                    gap: 0.75rem;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    font-family: var(--font-sansation, 'Sansation', sans-serif);
+                }
+
                 .publication-venue {
                     display: flex;
                     align-items: center;
@@ -350,55 +450,157 @@ class DetailedPublicationList extends HTMLElement {
                     flex-wrap: wrap;
                 }
 
-                .venue-tag {
+                .publication-links {
+                    display: flex;
+                    gap: 0.1rem;
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
+
+                .pub-link {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.25rem;
                     font-size: 0.8125rem;
-                    font-weight: 700;
-                    letter-spacing: 0.02em;
-                    color: #6c5ce7;
-                    border-left: 2px solid #6c5ce7;
-                    padding-left: 0.75rem;
+                    text-decoration: none;
+                    font-weight: 500;
+                    color: var(--primary-color, #6c5ce7);
+                    cursor: pointer;
+                    transition: color 0.2s ease;
+                    line-height: 1;
+                    padding: 0.25rem 0.5rem;
+                    height: 1.75rem;
+                    box-sizing: border-box;
+                    font-family: var(--font-sansation, 'Sansation', sans-serif);
+                    background: none;
+                    border: none;
+                    margin: 0;
+                }
+
+                .pub-link:hover {
+                    text-decoration: underline;
+                    color: var(--primary-color, #6c5ce7);
+                }
+
+                .pub-link.cite-success {
+                    color: #16a34a;
+                }
+
+                .publication-stats {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    flex-wrap: wrap;
+                }
+
+                .github-stats {
+                    display: inline-flex;
+                    align-items: center;
+                    text-decoration: none;
+                    line-height: 1;
+                    border-radius: 3px;
+                    transition: transform 0.2s ease, opacity 0.2s ease;
+                }
+
+                .github-stats:hover {
+                    transform: translateY(-1px);
+                    opacity: 0.9;
+                }
+
+                .github-stats img {
+                    height: 15px;
+                    width: auto;
+                    display: block;
+                    border-radius: 2.5px;
+                }
+
+                :host-context([data-theme="dark"]) .github-stats img {
+                    filter: invert(0.88) hue-rotate(180deg) contrast(1.05);
+                }
+
+                .venue-tag {
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 0.1875rem 0.375rem;
+                    border-radius: 3px;
+                    font-size: 0.8125rem;
+                    font-weight: 600;
+                    letter-spacing: 0.025em;
                     font-family: var(--font-sansation, 'Sansation', sans-serif);
                     text-transform: none;
                     transition: all 0.3s ease;
                 }
 
-                .venue-tag.conference { border-left-color: #27ae60; color: #27ae60; }
-                .venue-tag.journal { border-left-color: #2563eb; color: #2563eb; }
-                .venue-tag.preprint { border-left-color: #dc2626; color: #dc2626; }
+                .venue-tag.preprint {
+                    background-color: #fef2f2;
+                    color: #dc2626;
+                }
 
-                :host-context([data-theme="dark"]) .venue-tag {
-                    border-left: none;
+                .venue-tag.conference {
+                    background-color: #f0fdf4;
+                    color: #16a34a;
+                }
+
+                .venue-tag.journal {
+                    background-color: #eff6ff;
+                    color: #2563eb;
+                }
+
+                .publications-list.is-dark .venue-tag {
                     padding: 0.2rem 0.5rem;
                     border-radius: 4px;
-                    background: rgba(162, 155, 254, 0.15);
-                    color: #a29bfe;
+                    background-color: rgba(255, 255, 255, 0.05);
+                    color: #94a3b8;
                 }
 
-                :host-context([data-theme="dark"]) .venue-tag.conference { background: rgba(85, 239, 196, 0.15); color: #55efc4; }
-                :host-context([data-theme="dark"]) .venue-tag.journal { background: rgba(116, 185, 255, 0.15); color: #74b9ff; }
-                :host-context([data-theme="dark"]) .venue-tag.preprint { background: rgba(250, 177, 160, 0.15); color: #fab1a0; }
+                .publications-list.is-dark .venue-tag.preprint {
+                    background-color: rgba(239, 68, 68, 0.15);
+                    color: #fca5a5;
+                }
+
+                .publications-list.is-dark .venue-tag.conference {
+                    background-color: rgba(34, 197, 94, 0.15);
+                    color: #86efac;
+                }
+
+                .publications-list.is-dark .venue-tag.journal {
+                    background-color: rgba(59, 130, 246, 0.15);
+                    color: #93c5fd;
+                }
 
                 .category-tag {
-                    font-size: 0.75rem;
-                    font-weight: 600;
-                    letter-spacing: 0.02em;
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    z-index: 1;
+                    display: inline-flex;
+                    align-items: center;
+                    max-width: calc(100% - 8px);
+                    padding: 0.2rem 0.5rem 0.2rem 0.42rem;
+                    border-radius: 0 4px 4px 0;
+                    font-size: 0.625rem;
+                    font-weight: 700;
+                    letter-spacing: 0.03em;
+                    line-height: 1.2;
                     font-family: var(--font-sansation, 'Sansation', sans-serif);
-                    padding: 0.2rem 0.55rem;
-                    border-radius: 4px;
-                    background: rgba(108, 92, 231, 0.1);
-                    color: #6c5ce7;
-                    transition: all 0.3s ease;
+                    color: #ffffff;
+                    background: #6c5ce7;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+                    pointer-events: none;
                 }
 
-                .category-tag.database { background: rgba(108, 92, 231, 0.1); color: #6c5ce7; }
-                .category-tag.finance { background: rgba(39, 174, 96, 0.1); color: #27ae60; }
-                .category-tag.llm { background: rgba(211, 84, 0, 0.1); color: #d35400; }
-                .category-tag.ml { background: rgba(41, 128, 185, 0.1); color: #2980b9; }
+                .category-tag.database { background: #6c5ce7; color: #ffffff; }
+                .category-tag.finance { background: #16a34a; color: #ffffff; }
+                .category-tag.llm { background: #d35400; color: #ffffff; }
+                .category-tag.ml { background: #2980b9; color: #ffffff; }
 
-                :host-context([data-theme="dark"]) .category-tag.database { background: rgba(162, 155, 254, 0.15); color: #a29bfe; }
-                :host-context([data-theme="dark"]) .category-tag.finance { background: rgba(85, 239, 196, 0.15); color: #55efc4; }
-                :host-context([data-theme="dark"]) .category-tag.llm { background: rgba(250, 177, 160, 0.15); color: #fab1a0; }
-                :host-context([data-theme="dark"]) .category-tag.ml { background: rgba(116, 185, 255, 0.15); color: #74b9ff; }
+                :host-context([data-theme="dark"]) .category-tag.database { background: #6c5ce7; color: #ffffff; }
+                :host-context([data-theme="dark"]) .category-tag.finance { background: #16a34a; color: #ffffff; }
+                :host-context([data-theme="dark"]) .category-tag.llm { background: #d35400; color: #ffffff; }
+                :host-context([data-theme="dark"]) .category-tag.ml { background: #2980b9; color: #ffffff; }
 
                 .citation-count {
                     font-size: 0.85rem;
@@ -431,11 +633,12 @@ class DetailedPublicationList extends HTMLElement {
                         width: 100%;
                         flex: none;
                         height: auto;
-                        aspect-ratio: 16 / 9;
+                        aspect-ratio: 2 / 1;
                     }
                     .publication-title { font-size: 1.15rem; }
                     .publication-meta { padding-right: 0; max-width: 100%; }
                     .publication-footer { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+                    .publication-left { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
                 }
             </style>
         `;
@@ -450,6 +653,7 @@ class DetailedPublicationList extends HTMLElement {
                     </div>
                 </div>
             `;
+            this.syncThemeFromDocument();
             return;
         }
 
@@ -463,6 +667,39 @@ class DetailedPublicationList extends HTMLElement {
         `).join('');
 
         this.shadowRoot.innerHTML = `${styles}<div class="publications-list">${yearGroupsHTML}</div>`;
+        this.syncThemeFromDocument();
+        this.bindCiteButtons();
+    }
+
+    bindCiteButtons() {
+        if (!document.getElementById('detailed-copy-tooltip-style')) {
+            const tooltipStyle = document.createElement('style');
+            tooltipStyle.id = 'detailed-copy-tooltip-style';
+            tooltipStyle.textContent = `
+                .copy-tooltip {
+                    position: fixed;
+                    background-color: #111827;
+                    color: white;
+                    padding: 0.25rem 0.375rem;
+                    border-radius: 3px;
+                    font-size: 0.6875rem;
+                    font-weight: 500;
+                    pointer-events: none;
+                    opacity: 0;
+                    z-index: 9999;
+                    transition: opacity 0.2s ease;
+                }
+                .copy-tooltip.show { opacity: 1; }
+            `;
+            document.head.appendChild(tooltipStyle);
+        }
+
+        this.shadowRoot.querySelectorAll('.cite-button').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const bibtex = button.dataset.bibtex;
+                this.copyToClipboard(bibtex, button, event);
+            });
+        });
     }
 }
 

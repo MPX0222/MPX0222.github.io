@@ -123,6 +123,7 @@ class PublicationList extends HTMLElement {
 
   renderPublicationItem(pub) {
     const venueInfo = this.getVenueType(pub.venue.name);
+    const showDoiBadge = false;
     const doiUrl = this.resolveDoiUrl(pub.doi);
 
     return `
@@ -172,7 +173,7 @@ class PublicationList extends HTMLElement {
                   <i class="fas fa-paperclip"></i>
                   <span>Bibtex</span>
                 </button>
-                ${pub.doi ? `
+                ${showDoiBadge && pub.doi ? `
                   <a href="${doiUrl}" class="pub-link doi-link" target="_blank" rel="noopener" title="${pub.doi}">
                     <i class="ai ai-doi"></i>
                     <span>DOI</span>
@@ -233,23 +234,42 @@ class PublicationList extends HTMLElement {
         }
 
         .publication-thumbnail {
-          flex: 0 0 180px;
-          height: 110px;
+          flex: 0 0 220px;
+          width: 220px;
+          height: auto;
+          aspect-ratio: 2 / 1;
           border-radius: 6px;
           overflow: hidden;
           background: #ffffff;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
           border: 1px solid rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .publication-thumbnail::before {
+          content: none;
         }
 
         .publication-thumbnail img {
+          display: block;
+          position: static;
           width: 100%;
           height: 100%;
-          object-fit: cover;
-          object-position: top center;
+          object-fit: contain;
+          object-position: center;
+          padding: 3pt;
+          background: transparent;
+          transition: transform 0.35s ease;
+        }
+
+        .publication-item:hover .publication-thumbnail img {
+          transform: scale(1.03);
+        }
+
+        :host-context([data-theme="dark"]) .publication-thumbnail,
+        [data-theme="dark"] .publication-thumbnail {
+          background: #1e293b;
+          border-color: rgba(255, 255, 255, 0.12);
+          box-shadow: none;
         }
 
         .publication-info {
@@ -489,8 +509,10 @@ class PublicationList extends HTMLElement {
         /* 响应式设计 */
         @media (max-width: 1024px) {
           .publication-thumbnail {
-            flex: 0 0 120px;
-            height: 80px;
+            flex: 0 0 180px;
+            width: 180px;
+            height: auto;
+            aspect-ratio: 2 / 1;
           }
           
           .publication-item {
@@ -512,8 +534,9 @@ class PublicationList extends HTMLElement {
 
           .publication-thumbnail {
             width: 100%;
-            height: 100px;
+            height: auto;
             flex: none;
+            aspect-ratio: 2 / 1;
           }
 
           .publication-title {
@@ -550,7 +573,8 @@ class PublicationList extends HTMLElement {
           }
 
           .publication-thumbnail {
-            height: 90px;
+            height: auto;
+            aspect-ratio: 2 / 1;
           }
 
           .publication-title {
