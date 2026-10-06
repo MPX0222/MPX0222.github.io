@@ -1,0 +1,44 @@
+name: Update last updated date
+
+on:
+  push:
+    branches:
+      - main
+    # Citation updates only touch this file. Those commits must not move the footer month.
+    paths-ignore:
+      - 'data/publications.json'
+  workflow_dispatch:
+
+jobs:
+  update-last-updated:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update footer month
+        run: node scripts/update-last-updated.mjs
+
+      - name: Check for changes
+        id: verify-changes
+        run: |
+          if git diff --quiet index.html; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push changes
+        if: steps.verify-changes.outputs.changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Actions"
+          git add index.html
+          git commit -m "🗓️ Auto-update footer last-updated month [skip ci]"
+          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:${GITHUB_REF#refs/heads/}
