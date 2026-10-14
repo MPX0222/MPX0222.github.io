@@ -95,7 +95,7 @@
       "bibtex": "@misc{ma2026diffusionlanguagemodelsgood,\n  title={Are Diffusion Language Models Good Database Analysts?},\n  author={Peixian Ma and Xialie Zhuang and Jiantao Tan and Changlun Li and Ruirui Chen and Chengwei Qin},\n  year={2026},\n  eprint={2605.27791},\n  archivePrefix={arXiv},\n  primaryClass={cs.DB},\n  url={https://arxiv.org/abs/2605.27791},\n}",
       "links": {
         "pdf": "https://arxiv.org/abs/2605.27791",
-        "code": "",
+        "code": "https://anonymous.4open.science/r/SQL-D1-82DF",
         "web": "",
         "cite": "https://arxiv.org/abs/2605.27791",
         "github": {
