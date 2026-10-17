@@ -5,10 +5,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 ",
+          "text": "🔥 Long research paper of Paradoox AI Research: ",
           "link": "https://arxiv.org/abs/2607.10286",
           "title": "Can Agentic Trading Systems Pay for Their Own Intelligence?",
-          "venue": "was accepted by Findings of EMNLP 2026."
+          "venue": "was accepted by Findings of EMNLP 2026. We have fully released the code repository on Github."
         }
       ]
     },
@@ -17,7 +17,7 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 Demo paper ",
+          "text": "🔥 New Demo paper of Paradoox AI Research: ",
           "link": "",
           "title": "NextFund: A Unified Performance Tracking Platform for Agentic Portfolio Management",
           "venue": "is available on arXiv."
@@ -29,7 +29,7 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 Research paper ",
+          "text": "🔥 New Research paper collaborated with HKUST(GZ), UCAS and SYSU: ",
           "link": "https://arxiv.org/abs/2605.27791",
           "title": "Are Diffusion Language Models Good Database Analysts?",
           "venue": "is available on arXiv."
@@ -41,10 +41,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥",
+          "text": "🔥 Long research paper collaborated with SYSU: ",
           "link": "https://arXiv.org/pdf/2512.09441",
           "title": "Representation Calibration and Uncertainty Guidance for Class-Incremental Learning",
-          "venue": "was accepted by poster of ICME 2026."
+          "venue": "was accepted by poster of ICME 2026. We have fully released the code repository on Github."
         }
       ]
     },
@@ -62,7 +62,7 @@
       "content": [
         { 
           "type": "paper",
-          "text": "🔥",
+          "text": "🔥 Long research paper collaborated with UCAS: ",
           "link": "https://arXiv.org/pdf/2506.13404",
           "title": "Effective Learning for Small Reasoning Models: An Empirical Study on 0.5B Reasoning LLMs",
           "venue": "was accepted by poster of CPAL 2026."
@@ -74,10 +74,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥",
+          "text": "🔥 Long research paper collaborated with HKUST(GZ): ",
           "link": "https://arXiv.org/pdf/2508.03094",
           "title": "Augmenting Continual Learning of Diseases with LLM-Generated Visual Concepts",
-          "venue": "was accepted by poster and oral presentation of BIBM 2025."
+          "venue": "was accepted by poster and oral presentation of BIBM 2025. We have fully released the code repository on Github."
         }
       ]
     },
@@ -86,10 +86,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥",
+          "text": "🔥 Important long research paper in IDEA Research, collaborated with UCAS and DataArc teams: ",
           "link": "https://arXiv.org/pdf/2504.08600",
           "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
-          "venue": "was accepted by poster of NeurIPS 2025."
+          "venue": "was accepted by poster of NeurIPS 2025. We have fully released the code repository on Github, and the weights of SQL-R1 are available on Huggingface."
         }
       ]
     },
@@ -98,7 +98,7 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 The Survey paper of HKUST(GZ)-DIAL Lab, NL2SQL Research Group: ",
+          "text": "🔥 The long survey paper of HKUST(GZ)-DIAL Lab, NL2SQL Research Group: ",
           "link": "https://arxiv.org/pdf/2408.05109",
           "title": "A Survey of Text-to-SQL in the Era of LLMs: Where are We, and Where are We Going?",
           "venue": "was accepted by TKDE 2025."
