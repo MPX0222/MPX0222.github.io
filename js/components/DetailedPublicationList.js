@@ -184,11 +184,11 @@ class DetailedPublicationList extends HTMLElement {
                             ${authors}
                         </div>
                         <div class="publication-footer">
-                            <div class="publication-left">
-                                <div class="publication-venue">
-                                    <span class="venue-tag ${venueInfo.class}">${pub.venue.name}</span>
-                                    ${!thumbnailSrc ? categoryBadge : ''}
-                                </div>
+                            <div class="publication-venue">
+                                <span class="venue-tag ${venueInfo.class}">${pub.venue.name}</span>
+                                ${!thumbnailSrc ? categoryBadge : ''}
+                            </div>
+                            <div class="publication-actions">
                                 <div class="publication-links">
                                     ${pub.links.pdf ? `
                                         <a href="${pub.links.pdf}" class="pub-link pdf-link" target="_blank" rel="noopener">
@@ -208,6 +208,12 @@ class DetailedPublicationList extends HTMLElement {
                                             <span>Website</span>
                                         </a>
                                     ` : ''}
+                                    ${pub.links.huggingface ? `
+                                        <a href="${pub.links.huggingface}" class="pub-link hf-link" target="_blank" rel="noopener">
+                                            <iconify-icon icon="simple-icons:huggingface"></iconify-icon>
+                                            <span>${huggingfaceProjectName(pub.links.huggingface)}</span>
+                                        </a>
+                                    ` : ''}
                                     <button class="pub-link cite-button cite-link" data-bibtex="${(pub.bibtex || '').replace(/"/g, '&quot;')}" aria-label="Copy BibTeX citation">
                                         <i class="fas fa-paperclip"></i>
                                         <span>Bibtex</span>
@@ -219,8 +225,7 @@ class DetailedPublicationList extends HTMLElement {
                                         </a>
                                     ` : ''}
                                 </div>
-                            </div>
-                            <div class="publication-stats">
+                                <div class="publication-stats">
                                 <div class="citation-count">
                                     <span>${pub.stats.citations} citations</span>
                                 </div>
@@ -230,6 +235,7 @@ class DetailedPublicationList extends HTMLElement {
                                              alt="GitHub stars" loading="lazy">
                                     </a>
                                 ` : ''}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -429,17 +435,18 @@ class DetailedPublicationList extends HTMLElement {
 
                 .publication-footer {
                     display: flex;
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: 0;
+                }
+
+                .publication-actions {
+                    display: flex;
                     justify-content: space-between;
                     align-items: center;
                     gap: 1.5rem;
                     flex-wrap: wrap;
-                }
-
-                .publication-left {
-                    display: flex;
-                    gap: 0.75rem;
-                    align-items: center;
-                    flex-wrap: wrap;
+                    margin-top: 7.01px;
                     font-family: var(--font-sansation, 'Sansation', sans-serif);
                 }
 
@@ -475,6 +482,17 @@ class DetailedPublicationList extends HTMLElement {
                     background: none;
                     border: none;
                     margin: 0;
+                }
+
+                .publication-links > .pub-link:first-child {
+                    padding-left: 0;
+                }
+
+                .pub-link iconify-icon {
+                    display: inline-flex;
+                    width: 0.95em;
+                    height: 0.95em;
+                    color: inherit;
                 }
 
                 .pub-link:hover {
@@ -521,50 +539,45 @@ class DetailedPublicationList extends HTMLElement {
                 .venue-tag {
                     display: inline-flex;
                     align-items: center;
-                    padding: 0.1875rem 0.375rem;
-                    border-radius: 3px;
+                    padding: 0;
+                    border-radius: 0;
+                    background-color: transparent;
                     font-size: 0.8125rem;
                     font-weight: 600;
                     letter-spacing: 0.025em;
                     font-family: var(--font-sansation, 'Sansation', sans-serif);
                     text-transform: none;
-                    transition: all 0.3s ease;
+                    transition: color 0.3s ease;
                 }
 
                 .venue-tag.preprint {
-                    background-color: #fef2f2;
                     color: #dc2626;
                 }
 
                 .venue-tag.conference {
-                    background-color: #f0fdf4;
                     color: #16a34a;
                 }
 
                 .venue-tag.journal {
-                    background-color: #eff6ff;
                     color: #2563eb;
                 }
 
                 .publications-list.is-dark .venue-tag {
-                    padding: 0.2rem 0.5rem;
-                    border-radius: 4px;
-                    background-color: rgba(255, 255, 255, 0.05);
+                    padding: 0;
+                    border-radius: 0;
+                    background-color: transparent;
                     color: #94a3b8;
                 }
 
                 .publications-list.is-dark .venue-tag.preprint {
-                    background-color: rgba(239, 68, 68, 0.15);
                     color: #fca5a5;
                 }
 
                 .publications-list.is-dark .venue-tag.conference {
-                    background-color: rgba(34, 197, 94, 0.15);
                     color: #86efac;
                 }
 
                 .publications-list.is-dark .venue-tag.journal {
-                    background-color: rgba(59, 130, 246, 0.15);
                     color: #93c5fd;
                 }
 
@@ -637,8 +650,8 @@ class DetailedPublicationList extends HTMLElement {
                     }
                     .publication-title { font-size: 1.15rem; }
                     .publication-meta { padding-right: 0; max-width: 100%; }
-                    .publication-footer { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
-                    .publication-left { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+                    .publication-footer { align-items: stretch; gap: 0.75rem; }
+                    .publication-actions { flex-direction: column; align-items: flex-start; gap: 0.5rem; width: 100%; margin-top: 0; }
                 }
             </style>
         `;

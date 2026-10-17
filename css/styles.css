@@ -468,6 +468,7 @@ h1, h2, h3, p, a {
 .pub-link.pdf-link,
 .pub-link.code-link,
 .pub-link.web-link,
+.pub-link.hf-link,
 .pub-link.cite-link {
     color: var(--primary-color);
 }
@@ -1160,6 +1161,7 @@ button.pub-link {
 .pub-link.pdf-link,
 .pub-link.code-link,
 .pub-link.web-link,
+.pub-link.hf-link,
 .pub-link.cite-link {
     color: var(--primary-color);
 }
@@ -1461,6 +1463,7 @@ button.pub-link {
 .pub-link.pdf-link,
 .pub-link.code-link,
 .pub-link.web-link,
+.pub-link.hf-link,
 .pub-link.cite-link {
     color: var(--primary-color);
 }
@@ -2964,14 +2967,15 @@ body.modal-open {
 .venue-tag {
     display: inline-flex;
     align-items: center;
-    padding: 0.25rem 0.5rem;
-    border-radius: 3px;
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
     font-size: 0.8125rem;
     font-weight: 600;
     /* text-transform: uppercase; */
     letter-spacing: 0.025em;
     line-height: 1;
-    height: 1.75rem;
+    height: auto;
     box-sizing: border-box;
     font-family: var(--font-sansation);
 }
@@ -2979,13 +2983,11 @@ body.modal-open {
 /* Preprint 类型 */
 
 .venue-tag.preprint.arXiv {
-    background-color: #fef2f2;
     color: #dc2626;
 }
 
 /* Conference 类型 */
 .venue-tag.conference {
-    background-color: #f0fdf4;
     color: #16a34a;
 }
 
@@ -2993,7 +2995,6 @@ body.modal-open {
 
 /* Journal 类型 */
 .venue-tag.journal {
-    background-color: #eff6ff;
     color: #2563eb;
 }
 

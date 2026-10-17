@@ -18,12 +18,13 @@ class NewsList extends HTMLElement {
       if (text.includes('🔥')) return '<i class="fas fa-fire news-icon paper"></i>';
       if (text.includes('🎉')) return '<i class="fas fa-trophy news-icon success"></i>';
       if (text.includes('📖')) return '<i class="fas fa-book-open news-icon info"></i>';
+      if (text.includes('💼')) return '<i class="fas fa-briefcase news-icon work"></i>';
       if (text.includes('🎤')) return '<i class="fas fa-microphone news-icon talk"></i>';
       return '<i class="fas fa-circle news-icon-dot"></i>';
     };
 
     const cleanText = (text) => {
-      return text.replace(/[🔥🎉📖🎤]/g, '').trim();
+      return text.replace(/[🔥🎉📖💼🎤]/g, '').trim();
     };
 
     const parseDate = (dateStr) => {
@@ -174,6 +175,7 @@ class NewsList extends HTMLElement {
         .news-icon.success { color: #55efc4; }
         .news-icon.info { color: #74b9ff; }
         .news-icon.talk { color: #a29bfe; }
+        .news-icon.work { color: #0984e3; }
 
         .news-icon-dot {
           font-size: 0.4rem;
@@ -197,6 +199,7 @@ class NewsList extends HTMLElement {
         .news-icon.success { color: #55efc4; }
         .news-icon.info { color: #74b9ff; }
         .news-icon.talk { color: #a29bfe; }
+        .news-icon.work { color: #0984e3; }
 
         .news-icon-dot {
           font-size: 0.45rem;
@@ -216,17 +219,16 @@ class NewsList extends HTMLElement {
           transition: color 0.3s ease;
         }
 
-        .news-link {
+        a.news-link {
           color: var(--primary-color);
-          text-decoration: none;
+          text-decoration: underline;
+          text-underline-offset: 0.15em;
           font-weight: 600;
-          margin: 0 0.3rem;
-          border-bottom: 1px solid transparent;
-          transition: all 0.2s ease;
+          margin: 0;
+          transition: color 0.2s ease;
         }
 
-        .news-link:hover {
-          border-bottom-color: var(--primary-color);
+        a.news-link:hover {
           color: var(--primary-light);
         }
 

@@ -143,13 +143,13 @@ class PublicationList extends HTMLElement {
             </p>
           </div>
           <div class="publication-footer">
-            <div class="publication-left">
-              <div class="publication-venue">
-                <span class="venue-tag ${venueInfo.type} ${venueInfo.subtype}">
-                  ${pub.venue.name}
-                </span>
-                <span class="status-tag">${pub.venue.type}</span>
-              </div>
+            <div class="publication-venue">
+              <span class="venue-tag ${venueInfo.type} ${venueInfo.subtype}">
+                ${pub.venue.name}
+              </span>
+              <span class="status-tag">${pub.venue.type}</span>
+            </div>
+            <div class="publication-actions">
               <div class="publication-links">
                 ${pub.links.pdf ? `
                   <a href="${pub.links.pdf}" class="pub-link pdf-link" target="_blank" rel="noopener">
@@ -169,6 +169,12 @@ class PublicationList extends HTMLElement {
                     <span>Website</span>
                   </a>
                 ` : ''}
+                ${pub.links.huggingface ? `
+                  <a href="${pub.links.huggingface}" class="pub-link hf-link" target="_blank" rel="noopener">
+                    <iconify-icon icon="simple-icons:huggingface"></iconify-icon>
+                    <span>${huggingfaceProjectName(pub.links.huggingface)}</span>
+                  </a>
+                ` : ''}
                 <button class="pub-link cite-button cite-link" data-bibtex="${(pub.bibtex || '').replace(/"/g, '&quot;')}" aria-label="Copy BibTeX citation">
                   <i class="fas fa-paperclip"></i>
                   <span>Bibtex</span>
@@ -180,8 +186,7 @@ class PublicationList extends HTMLElement {
                   </a>
                 ` : ''}
               </div>
-            </div>
-            <div class="publication-stats">
+              <div class="publication-stats">
               <div class="stat-item">
                 <i class="fa-solid fa-hashtag"></i>
                 <span>${pub.stats.citations} citations</span>
@@ -192,6 +197,7 @@ class PublicationList extends HTMLElement {
                        alt="GitHub stars" loading="lazy">
                 </a>
               ` : ''}
+              </div>
             </div>
           </div>
         </div>
@@ -339,56 +345,51 @@ class PublicationList extends HTMLElement {
           align-items: center;
           gap: 0.375rem;
           flex-wrap: wrap;
+          margin: 0;
         }
 
         .venue-tag {
           display: inline-flex;
           align-items: center;
-          padding: 0.1875rem 0.375rem;
-          border-radius: 3px;
+          padding: 0;
+          border-radius: 0;
+          background-color: transparent;
           font-size: 0.8125rem;
           font-weight: 600;
           letter-spacing: 0.025em;
           font-family: var(--font-sansation, 'Sansation', sans-serif);
-          transition: all 0.3s ease;
+          transition: color 0.3s ease;
         }
 
-        /* 简洁的venue颜色方案 - Light Mode */
-        .venue-tag.preprint.arXiv { 
-          background-color: #fef2f2;
+        /* 发表地点只保留文字颜色 */
+        .venue-tag.preprint.arXiv {
           color: #dc2626;
         }
         
-        .venue-tag.conference { 
-          background-color: #f0fdf4;
+        .venue-tag.conference {
           color: #16a34a;
         }
 
-        .venue-tag.journal { 
-          background-color: #eff6ff;
+        .venue-tag.journal {
           color: #2563eb;
         }
 
-        /* Dark Mode 适配 - 保持现状 */
         [data-theme="dark"] .venue-tag {
-          padding: 0.2rem 0.5rem;
-          border-radius: 4px;
-          background-color: rgba(255, 255, 255, 0.05);
+          padding: 0;
+          border-radius: 0;
+          background-color: transparent;
           color: #94a3b8;
         }
 
         [data-theme="dark"] .venue-tag.preprint.arXiv {
-          background-color: rgba(239, 68, 68, 0.15);
           color: #fca5a5;
         }
 
         [data-theme="dark"] .venue-tag.conference {
-          background-color: rgba(34, 197, 94, 0.15);
           color: #86efac;
         }
 
         [data-theme="dark"] .venue-tag.journal {
-          background-color: rgba(59, 130, 246, 0.15);
           color: #93c5fd;
         }
 
@@ -414,18 +415,19 @@ class PublicationList extends HTMLElement {
 
         .publication-footer {
           display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+          margin-top: -0.5rem;
+        }
+
+        .publication-actions {
+          display: flex;
           justify-content: space-between;
           align-items: center;
           gap: 1rem;
           flex-wrap: wrap;
-          margin-top: -0.5rem;
-        }
-
-        .publication-left {
-          display: flex;
-          gap: 0.75rem;
-          align-items: center;
-          flex-wrap: wrap;
+          margin-top: -5.34px;
           font-family: var(--font-sansation, 'Sansation', sans-serif);
         }
 
@@ -434,11 +436,22 @@ class PublicationList extends HTMLElement {
           gap: 0.1rem;
           flex-wrap: wrap;
           align-items: center;
-          margin: 0.5rem;
+          margin: 0;
         }
 
-        .publication-left .pub-link {
+        .publication-actions .pub-link {
           font-size: 0.8125rem;
+        }
+
+        .publication-links > .pub-link:first-child {
+          padding-left: 0;
+        }
+
+        .pub-link iconify-icon {
+          display: inline-flex;
+          width: 0.95em;
+          height: 0.95em;
+          color: inherit;
         }
 
         button.pub-link {
@@ -548,20 +561,20 @@ class PublicationList extends HTMLElement {
           }
 
           .publication-footer {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0.375rem;
+            align-items: stretch;
+            gap: 0.5rem;
             margin-top: 0;
           }
 
-          .publication-left {
+          .publication-actions {
             flex-direction: column;
             align-items: flex-start;
             gap: 0.5rem;
             width: 100%;
+            margin-top: 0;
           }
 
-          .publication-left,
+          .publication-actions,
           .publication-stats {
             width: 100%;
           }
@@ -583,7 +596,7 @@ class PublicationList extends HTMLElement {
 
           .venue-tag {
             font-size: 0.75rem;
-            padding: 0.125rem 0.25rem;
+            padding: 0;
           }
 
           .pub-link, .stat-item {

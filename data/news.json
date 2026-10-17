@@ -5,10 +5,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 It is glad to notice that",
+          "text": "🔥",
           "link": "https://arxiv.org/abs/2607.10286",
-          "title": "Can Agentic Trading Systems Pay for Their Own Intelligence?",
-          "venue": "has been accepted by Findings of Empirical Methods in Natural Language Processing (EMNLP 2026)."
+          "title": "TradeLens",
+          "venue": "was accepted by Findings of EMNLP 2026."
         }
       ]
     },
@@ -19,7 +19,7 @@
           "type": "paper",
           "text": "🔥 We release the first demo paper of Paradoox AI Research: ",
           "link": "",
-          "title": "Nextfund: A Unified Performance Tracking Platform for Agentic Portfolio Management",
+          "title": "NextFund: A Unified Performance Tracking Platform for Agentic Portfolio Management",
           "venue": "Preprint version is available on arXiv."
         }
       ]
@@ -41,10 +41,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 It is glad to notice that the collaborative research with SYSU: ",
+          "text": "🔥",
           "link": "https://arXiv.org/pdf/2512.09441",
-          "title": "Representation Calibration and Uncertainty Guidance for Class-Incremental Learning based on Vision Language Model",
-          "venue": "has been accepted by poster of the main conference of 2026 IEEE International Conference on Multimedia and Expo (ICME 2026)!"
+          "title": "RCUG",
+          "venue": "was accepted by poster of ICME 2026."
         }
       ]
     },
@@ -53,7 +53,7 @@
       "content": [
         {
           "type": "text",
-          "text": "📖 Join Paradoox AI Research as a researcher. I will be responsible for the research and development of the AI for the financial industry. "
+          "text": "💼 Joined Paradoox AI Research as a researcher."
         }
       ]
     },
@@ -62,10 +62,10 @@
       "content": [
         { 
           "type": "paper",
-          "text": "🔥 It is glad to notice that the collaborative research with UCAS: ",
+          "text": "🔥",
           "link": "https://arXiv.org/pdf/2506.13404",
-          "title": "Effective Learning for Small Reasoning Models: An Empirical Study on 0.5B Reasoning LLMs",
-          "venue": "has been accepted by poster of the main conference of 2026 Conference on Principles and Practice of Language Modeling (CPAL 2026)!"
+          "title": "Effective Learning for Small Reasoning Models",
+          "venue": "was accepted by poster of CPAL 2026."
         }
       ]
     },
@@ -74,10 +74,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 It is glad to notice that the collaborative research with SYSU: ",
+          "text": "🔥",
           "link": "https://arXiv.org/pdf/2508.03094",
-          "title": "Augmenting Continual Learning of Diseases with LLM-Generated Visual Concepts",
-          "venue": "has been accepted by poster and oral presentation of the main conference of 2025 IEEE International Conference on Bioinformatics and Biomedicine (BIBM 2025)!"
+          "title": "VisualConcepts4CL",
+          "venue": "was accepted by poster and oral presentation of BIBM 2025."
         }
       ]
     },
@@ -86,10 +86,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 It is glad to notice that the importance research: ",
+          "text": "🔥",
           "link": "https://arXiv.org/pdf/2504.08600",
-          "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
-          "venue": "has been accepted by poster of the main conference of The 39th Annual Conference on Neural Information Processing Systems (NeurIPS 2025)! There were 21575 valid paper submissions to the NeurIPS Main Track this year, of which the program committee accepted 5290 (24.52%) papers in total. See you in San Diego!"
+          "title": "SQL-R1",
+          "venue": "was accepted by poster of NeurIPS 2025."
         }
       ]
     },
@@ -98,10 +98,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 It is glad to notice that survey paper of HKUST(GZ)-DIAL Lab, NL2SQL Research Group: ",
+          "text": "🔥 The Survey paper of HKUST(GZ)-DIAL Lab, NL2SQL Research Group: ",
           "link": "https://arxiv.org/pdf/2408.05109",
-          "title": "A Survey of NL2SQL with Large Language Models: Where are we, and where are we going",
-          "venue": "has been accepted by IEEE Transactions on Knowledge and Data Engineering Journal (TKDE 2025)!"
+          "title": "A Survey of Text-to-SQL in the Era of LLMs: Where are We, and Where are We Going?",
+          "venue": "was accepted by TKDE 2025."
         },
         {
           "type": "text",
@@ -123,9 +123,9 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 We firstly release a new research about RL for Database: ",
+          "text": "🔥 We firstly release a new research about RL for NL2SQL: ",
           "link": "https://arXiv.org/pdf/2504.08600",
-          "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning.",
+          "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
           "venue": "The relevant code and weights are updated simultaneously on Github and Huggingface."
         }
       ]
@@ -135,7 +135,7 @@
       "content": [
         {
           "type": "text",
-          "text": "📖 Receive internship offer and start a new journey at International Digital Economy Academy (IDEA Research), Shenzhen."
+          "text": "💼 Receive internship offer and start a new journey at International Digital Economy Academy (IDEA Research), Shenzhen."
         }
       ]
     },
@@ -148,7 +148,7 @@
         },
         {
           "type": "paper",
-          "text": "🔥 First long research paper of my RPG life: ",
+          "text": "🔥 We release a new research about Natural Language to SQL: ",
           "link": "https://arXiv.org/pdf/2412.17068",
           "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
           "venue": "is released and available on arXiv."
