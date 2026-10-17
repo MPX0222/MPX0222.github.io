@@ -32,8 +32,9 @@ check('emoji prefix does not leave a leading space', cleanText('🔥 We release 
 check('briefcase news uses a work icon', source.includes("text.includes('💼')") && source.includes('fa-briefcase') && source.includes('/[🔥🎉📖💼🎤]/'));
 
 const news = JSON.parse(readFileSync(join(root, 'data/news.json'), 'utf8')).news.flatMap((item) => item.content);
-const demoPaper = news.find((item) => item.text.startsWith('🔥 Demo paper'));
-check('demo paper keeps its trailing space', demoPaper.text.endsWith(' ') && cleanText(demoPaper.text) === 'Demo paper ');
+const demoPaper = news.find((item) => item.title && item.title.startsWith('NextFund'));
+const demoText = demoPaper ? cleanText(demoPaper.text) : '';
+check('demo paper keeps its trailing space', Boolean(demoPaper) && demoPaper.text.endsWith(' ') && demoText.endsWith(' ') && !demoText.startsWith(' '));
 check('paradoox role uses a briefcase', news.some((item) => item.text.startsWith('💼 Joined Paradoox')));
 check('idea internship uses a briefcase', news.some((item) => item.text.startsWith('💼 Receive internship offer')));
 check('study milestones keep the book icon', news.some((item) => item.text.startsWith('📖 Start my M.Phil. journey')) && news.some((item) => item.text.startsWith('📖 Receive Research Postgraduate')));
