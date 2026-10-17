@@ -17,7 +17,7 @@ const linkMarkers = [
   ['Paper', 'ai ai-arxiv', 'pdf-link'],
   ['Code', 'fab fa-github', 'code-link'],
   ['Website', 'fas fa-globe', 'web-link'],
-  ['Bibtex', 'fas fa-paperclip', 'cite-button'],
+  ['Cite', 'fas fa-paperclip', 'cite-button'],
 ];
 
 for (const [label, icon, cls] of linkMarkers) {

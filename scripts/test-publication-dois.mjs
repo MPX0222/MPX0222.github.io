@@ -16,7 +16,7 @@ const itemSlice = home.slice(itemStart, itemStart + 4000);
 const venuePos = itemSlice.indexOf('publication-venue');
 const linksPos = itemSlice.indexOf('publication-links');
 const footerPos = itemSlice.indexOf('publication-footer');
-const bibtexPos = itemSlice.indexOf('<span>Bibtex</span>');
+const bibtexPos = itemSlice.indexOf('<span>Cite</span>');
 
 assert(pubs.every((p) => p.doi), 'every publication needs a doi');
 assert(footerPos >= 0 && venuePos > footerPos, 'venue should be inside footer again');
@@ -26,7 +26,7 @@ assert(/\.publication-links > \.pub-link:first-child\s*\{[^}]*padding-left:\s*0/
 assert(/\.publication-links > \.pub-link:first-child\s*\{[^}]*padding-left:\s*0/.test(detailed), 'detailed first link should align with the venue');
 assert(/\.publication-footer\s*\{[^}]*flex-direction:\s*column/.test(home), 'homepage footer should stack the link row under the venue');
 assert(/\.publication-footer\s*\{[^}]*flex-direction:\s*column/.test(detailed), 'detailed footer should stack the link row under the venue');
-assert(bibtexPos >= 0, 'Bibtex link should remain');
+assert(bibtexPos >= 0, 'Cite link should remain');
 assert(!home.includes('publication-doi'), 'should not use large DOI block');
 assert(/const showDoiBadge = false/.test(home), 'home list should hide DOI badge');
 assert(/const showDoiBadge = false/.test(detailed), 'detailed list should hide DOI badge');

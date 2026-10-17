@@ -216,7 +216,7 @@ class DetailedPublicationList extends HTMLElement {
                                     ` : ''}
                                     <button class="pub-link cite-button cite-link" data-bibtex="${(pub.bibtex || '').replace(/"/g, '&quot;')}" aria-label="Copy BibTeX citation">
                                         <i class="fas fa-paperclip"></i>
-                                        <span>Bibtex</span>
+                                        <span>Cite</span>
                                     </button>
                                     ${showDoiBadge && pub.doi ? `
                                         <a href="${doiUrl}" class="pub-link doi-link" target="_blank" rel="noopener" title="${pub.doi}">
