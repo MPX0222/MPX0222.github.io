@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  page-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run page checks
+        run: |
+          set -uo pipefail
+          shopt -s nullglob
+          scripts=(scripts/test-*.mjs)
+          if [ ${#scripts[@]} -eq 0 ]; then
+            echo "No page check scripts found"
+            exit 1
+          fi
+          failed=0
+          for script in "${scripts[@]}"; do
+            echo "::group::$script"
+            if node "$script"; then
+              echo "OK $script"
+            else
+              echo "FAILED $script"
+              failed=$((failed + 1))
+            fi
+            echo "::endgroup::"
+          done
+          echo "Failed scripts: $failed / ${#scripts[@]}"
+          if [ "$failed" -ne 0 ]; then
+            exit 1
+          fi

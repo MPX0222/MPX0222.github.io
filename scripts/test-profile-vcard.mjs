@@ -12,10 +12,10 @@ function check(name, cond) {
   if (!cond) failed += 1;
 }
 
-check('role and org are on one byline with @', /profile-vcard-role">Researcher[\s\S]*profile-vcard-at[\s\S]*@[\s\S]*profile-vcard-org">Paradoox AI Research/.test(html));
+check('role and org are on one byline with a pipe', /profile-vcard-role">Researcher<\/span>\s*<span class="profile-vcard-at" aria-hidden="true">\|<\/span>\s*<span class="profile-vcard-org">Paradoox AI Research<\/span>/.test(html));
 check('role is not forced uppercase', /\.profile-vcard-role\s*\{[^}]*text-transform:\s*none/.test(css));
 check('no vcard corner borders', !/\.profile-vcard::before/.test(css) && !/--vcard-line/.test(css));
-check('email is two address lines with bold label', /profile-email-label[\s\S]*Email/.test(html) && html.includes('pma929[at]connect.hkust-gz.edu.cn') && html.includes('mpx0222[at]paradoox.ai') && /\.profile-email-addresses\s*\{[^}]*flex-direction:\s*column/.test(css) && /\.profile-email-label\s*\{[^}]*font-weight:\s*700/.test(css));
+check('email is two address lines with bold label', /profile-email-label[\s\S]*Email/.test(html) && html.includes('pma929@connect.hkust-gz.edu.cn') && html.includes('mpx0222@paradoox.ai') && /\.profile-email-addresses\s*\{[^}]*flex-direction:\s*column/.test(css) && /\.profile-email-label\s*\{[^}]*font-weight:\s*700/.test(css));
 check('profile-email id kept for highlight', /id="profile-email"/.test(html));
 check('vcard background stays transparent', /\.profile-vcard\s*\{[^}]*background:\s*transparent/.test(css));
 check('gradient line sits between vcard and tags', /\.profile-vcard::after/.test(css) && /min\(34rem/.test(css));

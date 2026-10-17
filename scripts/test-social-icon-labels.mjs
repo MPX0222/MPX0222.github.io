@@ -12,7 +12,7 @@ function check(name, cond) {
   if (!cond) failed += 1;
 }
 
-const labels = ['GitHub', 'Google Scholar', 'LinkedIn', 'CV'];
+const labels = ['GitHub', 'Google Scholar', 'LinkedIn', 'Resume'];
 labels.forEach((label) => {
   check(`label ${label}`, html.includes(`class="social-icon-label">${label}</span>`));
 });
