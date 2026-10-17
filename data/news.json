@@ -5,9 +5,9 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥",
+          "text": "🔥 ",
           "link": "https://arxiv.org/abs/2607.10286",
-          "title": "TradeLens",
+          "title": "Can Agentic Trading Systems Pay for Their Own Intelligence?",
           "venue": "was accepted by Findings of EMNLP 2026."
         }
       ]
@@ -17,10 +17,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 We release the first demo paper of Paradoox AI Research: ",
+          "text": "🔥 Demo paper ",
           "link": "",
           "title": "NextFund: A Unified Performance Tracking Platform for Agentic Portfolio Management",
-          "venue": "Preprint version is available on arXiv."
+          "venue": "is available on arXiv."
         }
       ]
     },
@@ -29,10 +29,10 @@
       "content": [
         {
           "type": "paper",
-          "text": "🔥 We release an empirical study about diffusion language models for database analysis: ",
+          "text": "🔥 Research paper ",
           "link": "https://arxiv.org/abs/2605.27791",
           "title": "Are Diffusion Language Models Good Database Analysts?",
-          "venue": "Preprint version is available on arXiv."
+          "venue": "is available on arXiv."
         }
       ]
     },
@@ -43,7 +43,7 @@
           "type": "paper",
           "text": "🔥",
           "link": "https://arXiv.org/pdf/2512.09441",
-          "title": "RCUG",
+          "title": "Representation Calibration and Uncertainty Guidance for Class-Incremental Learning",
           "venue": "was accepted by poster of ICME 2026."
         }
       ]
@@ -64,7 +64,7 @@
           "type": "paper",
           "text": "🔥",
           "link": "https://arXiv.org/pdf/2506.13404",
-          "title": "Effective Learning for Small Reasoning Models",
+          "title": "Effective Learning for Small Reasoning Models: An Empirical Study on 0.5B Reasoning LLMs",
           "venue": "was accepted by poster of CPAL 2026."
         }
       ]
@@ -76,7 +76,7 @@
           "type": "paper",
           "text": "🔥",
           "link": "https://arXiv.org/pdf/2508.03094",
-          "title": "VisualConcepts4CL",
+          "title": "Augmenting Continual Learning of Diseases with LLM-Generated Visual Concepts",
           "venue": "was accepted by poster and oral presentation of BIBM 2025."
         }
       ]
@@ -88,7 +88,7 @@
           "type": "paper",
           "text": "🔥",
           "link": "https://arXiv.org/pdf/2504.08600",
-          "title": "SQL-R1",
+          "title": "SQL-R1: Training Natural Language to SQL Reasoning Model By Reinforcement Learning",
           "venue": "was accepted by poster of NeurIPS 2025."
         }
       ]
@@ -148,10 +148,10 @@
         },
         {
           "type": "paper",
-          "text": "🔥 We release a new research about Natural Language to SQL: ",
+          "text": "🔥 Research paper ",
           "link": "https://arXiv.org/pdf/2412.17068",
           "title": "A Plug-and-Play Natural Language Rewriter for Natural Language to SQL",
-          "venue": "is released and available on arXiv."
+          "venue": "is available on arXiv."
         }
       ]
     },

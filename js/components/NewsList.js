@@ -1,13 +1,19 @@
 class NewsList extends HTMLElement {
   constructor() {
     super();
+    this.news = [];
+    this.expanded = false;
+    this.animating = false;
+    this.previewCount = 8;
   }
 
   async connectedCallback() {
     try {
       const response = await fetch('/data/news.json');
       const data = await response.json();
-      this.render(data.news);
+      this.news = data.news || [];
+      this.expanded = false;
+      this.render(this.news);
     } catch (error) {
       console.error('Error loading news:', error);
     }
@@ -24,7 +30,7 @@ class NewsList extends HTMLElement {
     };
 
     const cleanText = (text) => {
-      return text.replace(/[🔥🎉📖💼🎤]/g, '').trim();
+      return text.replace(/[🔥🎉📖💼🎤]/g, '').replace(/^\s+/, '');
     };
 
     const parseDate = (dateStr) => {
@@ -57,32 +63,92 @@ class NewsList extends HTMLElement {
       `;
     };
 
+    const recentNews = news.slice(0, this.previewCount);
+    const earlierNews = news.slice(this.previewCount);
+    const canToggle = earlierNews.length > 0;
+    const showEarlier = this.expanded && canToggle;
+
+    const renderItem = (item) => {
+      const { month, year } = parseDate(item.date);
+      return `
+          <div class="news-item">
+            <div class="news-date-wrapper">
+              <div class="news-date">
+                <span class="news-date-month">${month}</span>
+                ${year ? `<span class="news-date-year">${year}</span>` : ''}
+              </div>
+            </div>
+            <div class="news-content">
+              ${item.content.map(content => renderContent(content)).join('')}
+            </div>
+          </div>
+        `;
+    };
+
     this.innerHTML = `
       <style>
         .news-list {
           display: flex;
           flex-direction: column;
           gap: 0;
-          padding: 0.5rem 1.5rem 0.5rem 0;
-          max-height: 600px;
-          overflow-y: auto;
-          overflow-x: hidden;
-          position: relative;
+          padding: 0.15rem 0 0;
         }
 
-        /* 自定义滚动条样式 */
-        .news-list::-webkit-scrollbar {
-          width: 4px;
+        .news-more {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.4rem;
+          width: 100%;
+          margin: 0.15rem 0 0;
+          padding: 0.7rem 0 0.15rem;
+          background: none;
+          border: none;
+          border-top: 1px solid var(--border-color);
+          color: var(--text-secondary);
+          font-family: var(--font-sansation, 'Sansation', sans-serif);
+          font-size: 0.75rem;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: color 0.2s ease;
         }
 
-        .news-list::-webkit-scrollbar-track {
-          background: transparent;
+        .news-more:hover {
+          color: var(--primary-color);
         }
 
-        .news-list::-webkit-scrollbar-thumb {
-          background: var(--primary-color);
-          border-radius: 10px;
-          opacity: 0.2;
+        .news-more i {
+          font-size: 0.7rem;
+        }
+
+        .news-earlier {
+          display: grid;
+          grid-template-rows: 0fr;
+          transition: grid-template-rows 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .news-earlier.is-open {
+          grid-template-rows: 1fr;
+        }
+
+        .news-earlier-clip {
+          min-height: 0;
+          overflow: hidden;
+          clip-path: inset(0 100% 0 0);
+          transition: clip-path 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .news-earlier.is-open .news-earlier-clip {
+          clip-path: inset(0 0 0 0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .news-earlier,
+          .news-earlier-clip {
+            transition: none;
+          }
         }
 
         .news-item {
@@ -223,7 +289,7 @@ class NewsList extends HTMLElement {
           color: var(--primary-color);
           text-decoration: underline;
           text-underline-offset: 0.15em;
-          font-weight: 600;
+          font-weight: 400;
           margin: 0;
           transition: color 0.2s ease;
         }
@@ -265,23 +331,79 @@ class NewsList extends HTMLElement {
         }
       </style>
       <div class="news-list">
-        ${news.map(item => {
-          const { month, year } = parseDate(item.date);
-          return `
-          <div class="news-item">
-            <div class="news-date-wrapper">
-              <div class="news-date">
-                <span class="news-date-month">${month}</span>
-                ${year ? `<span class="news-date-year">${year}</span>` : ''}
-              </div>
-            </div>
-            <div class="news-content">
-              ${item.content.map(content => renderContent(content)).join('')}
+        ${recentNews.map(item => renderItem(item)).join('')}
+        ${showEarlier ? `
+          <div class="news-earlier">
+            <div class="news-earlier-clip">
+              ${earlierNews.map(item => renderItem(item)).join('')}
             </div>
           </div>
-        `}).join('')}
+        ` : ''}
       </div>
+      ${canToggle ? `
+        <button type="button" class="news-more" aria-expanded="${this.expanded ? 'true' : 'false'}">
+          <span>${this.expanded ? 'Show recent' : 'Earlier news'}</span>
+          <i class="fas fa-chevron-${this.expanded ? 'up' : 'down'}" aria-hidden="true"></i>
+        </button>
+      ` : ''}
     `;
+
+    this.querySelector('.news-more')?.addEventListener('click', () => {
+      if (this.animating) return;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!this.expanded) {
+        this.animating = true;
+        this.expanded = true;
+        this.render(this.news);
+        const earlier = this.querySelector('.news-earlier');
+        if (!earlier || reduceMotion) {
+          earlier?.classList.add('is-open');
+          this.animating = false;
+          return;
+        }
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            earlier.classList.add('is-open');
+            this.finishDrawer(earlier, () => {
+              this.animating = false;
+            });
+          });
+        });
+        return;
+      }
+
+      const earlier = this.querySelector('.news-earlier');
+      if (!earlier || reduceMotion) {
+        this.collapseNews();
+        return;
+      }
+      this.animating = true;
+      earlier.classList.remove('is-open');
+      this.finishDrawer(earlier, () => this.collapseNews());
+    });
+  }
+
+  finishDrawer(earlier, done) {
+    const clip = earlier.querySelector('.news-earlier-clip');
+    let settled = false;
+    const finish = (event) => {
+      if (event && event.propertyName !== 'clip-path') return;
+      if (settled) return;
+      settled = true;
+      clearTimeout(timer);
+      clip?.removeEventListener('transitionend', finish);
+      done();
+    };
+    const timer = setTimeout(() => finish(), 700);
+    clip?.addEventListener('transitionend', finish);
+  }
+
+  collapseNews() {
+    this.animating = false;
+    this.expanded = false;
+    this.render(this.news);
+    this.closest('#news')?.scrollIntoView({ block: 'start', behavior: 'smooth' });
   }
 }
 
