@@ -1,6 +1,45 @@
 {
   "publications": [
     {
+      "thumbnail": "images/decisionv1.png",
+      "title": "DecisionPivot: A Diagnostic Benchmark for Decision Models in LLM Systems",
+      "year": 2026,
+      "category": "Large Language Models",
+      "showInHome": false,
+      "authors": [
+        "Xialie Zhuang",
+        "Mingcong Lei",
+        "Zunhai Su",
+        "Ri Liu",
+        "Jianjin Li",
+        "Peixian Ma",
+        "Jia Pan",
+        "Ngai Wong",
+        "Guanhua Chen",
+        "Chuan-Wei Kuo"
+      ],
+      "venue": {
+        "name": "arXiv",
+        "type": "Preprint (Under Review)"
+      },
+      "bibtex": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2610.28522",
+        "code": "https://github.com/StartLuxLabs/DecisionPivot",
+        "web": "",
+        "huggingface": "https://huggingface.co/datasets/startlux-models/DecisionPivot",
+        "cite": "https://arxiv.org/abs/2610.28522",
+        "github": {
+          "owner": "",
+          "repo": ""
+        }
+      },
+      "stats": {
+        "citations": 0
+      },
+      "doi": "10.48550/arXiv.2610.28522"
+    },
+    {
       "thumbnail": "images/nextfund.png",
       "title": "NextFund: A Unified Performance Tracking Platform for Agentic Portfolio Management",
       "year": 2026,
