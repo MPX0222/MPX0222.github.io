@@ -30,8 +30,8 @@
         "huggingface": "https://huggingface.co/datasets/startlux-models/DecisionPivot",
         "cite": "https://arxiv.org/abs/2610.28522",
         "github": {
-          "owner": "",
-          "repo": ""
+          "owner": "StartLuxLabs",
+          "repo": "DecisionPivot"
         }
       },
       "stats": {
