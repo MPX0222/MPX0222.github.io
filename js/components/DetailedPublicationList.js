@@ -226,8 +226,10 @@ class DetailedPublicationList extends HTMLElement {
                                     ` : ''}
                                 </div>
                                 <div class="publication-stats">
-                                <div class="citation-count">
-                                    <span>${pub.stats.citations} citations</span>
+                                ${huggingfaceDownloadStat(pub)}
+                                <div class="citation-count" aria-label="${Number(pub.stats.citations).toLocaleString('en-US')} citations">
+                                    <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                                    <span>${Number(pub.stats.citations).toLocaleString('en-US')}</span>
                                 </div>
                                 ${pub.links.github && pub.links.github.owner && pub.links.github.repo ? `
                                     <a class="github-stats" href="https://github.com/${pub.links.github.owner}/${pub.links.github.repo}" target="_blank" rel="noopener noreferrer" title="View repository on GitHub">
@@ -615,12 +617,25 @@ class DetailedPublicationList extends HTMLElement {
                 :host-context([data-theme="dark"]) .category-tag.llm { background: #d35400; color: #ffffff; }
                 :host-context([data-theme="dark"]) .category-tag.ml { background: #2980b9; color: #ffffff; }
 
-                .citation-count {
+                .citation-count,
+                .hf-downloads {
                     font-size: 0.85rem;
                     color: var(--text-secondary);
                     font-weight: 500;
                     font-family: var(--font-sansation, 'Sansation', sans-serif);
                     opacity: 0.8;
+                }
+
+                .hf-downloads,
+                .citation-count {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.3rem;
+                }
+
+                .hf-downloads i,
+                .citation-count i {
+                    font-size: 0.75rem;
                 }
 
                 .empty-state {

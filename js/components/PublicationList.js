@@ -187,9 +187,10 @@ class PublicationList extends HTMLElement {
                 ` : ''}
               </div>
               <div class="publication-stats">
-              <div class="stat-item">
-                <i class="fa-solid fa-hashtag"></i>
-                <span>${pub.stats.citations} citations</span>
+              ${huggingfaceDownloadStat(pub)}
+              <div class="citation-count" aria-label="${Number(pub.stats.citations).toLocaleString('en-US')} citations">
+                <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                <span>${Number(pub.stats.citations).toLocaleString('en-US')}</span>
               </div>
               ${pub.links.github && pub.links.github.owner && pub.links.github.repo ? `
                 <a class="stat-item github-stats" href="https://github.com/${pub.links.github.owner}/${pub.links.github.repo}" target="_blank" rel="noopener noreferrer" title="View repository on GitHub">
@@ -469,7 +470,9 @@ class PublicationList extends HTMLElement {
           flex-wrap: wrap;
         }
 
-        .stat-item {
+        .stat-item,
+        .hf-downloads,
+        .citation-count {
           display: inline-flex;
           align-items: center;
           gap: 0.25rem;
@@ -479,16 +482,26 @@ class PublicationList extends HTMLElement {
           font-family: var(--font-sansation, 'Sansation', sans-serif);
         }
 
-        :host-context([data-theme="dark"]) .stat-item {
+        :host-context([data-theme="dark"]) .stat-item,
+        :host-context([data-theme="dark"]) .hf-downloads,
+        :host-context([data-theme="dark"]) .citation-count,
+        [data-theme="dark"] .hf-downloads,
+        [data-theme="dark"] .citation-count {
           color: #cbd5e1;
         }
 
-        .stat-item i {
+        .stat-item i,
+        .hf-downloads i,
+        .citation-count i {
           color: #6366f1;
           font-size: 0.6875rem;
         }
 
-        :host-context([data-theme="dark"]) .stat-item i {
+        :host-context([data-theme="dark"]) .stat-item i,
+        :host-context([data-theme="dark"]) .hf-downloads i,
+        :host-context([data-theme="dark"]) .citation-count i,
+        [data-theme="dark"] .hf-downloads i,
+        [data-theme="dark"] .citation-count i {
           color: #c7c2ff;
         }
 
