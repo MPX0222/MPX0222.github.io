@@ -33,6 +33,18 @@ class NewsList extends HTMLElement {
       return text.replace(/[🔥🎉📖💼🎤]/g, '').replace(/^\s+/, '');
     };
 
+    const newsImage = (item) => {
+      if (!item || typeof item.image !== 'string') return '';
+      return item.image.trim();
+    };
+
+    const escapeAttr = (value) => {
+      return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;');
+    };
+
     const parseDate = (dateStr) => {
       const match = String(dateStr).trim().match(/^([A-Za-z]+)\.?\s+(\d{4})$/);
       if (match) {
@@ -41,24 +53,22 @@ class NewsList extends HTMLElement {
       return { month: dateStr, year: '' };
     };
 
-    const renderContent = (content) => {
+    const renderContent = (content, item, index) => {
       const icon = getIcon(content.text);
       const text = cleanText(content.text);
-      
-      if (content.type === 'paper') {
-        return `
-          <div class="news-content-row">
-            ${icon}
-            <div class="news-text-wrapper">
-              ${text}<a href="${content.link}" class="news-link">${content.title}</a> ${content.venue}
-            </div>
-          </div>
-        `;
-      }
+      const imageSrc = newsImage(content) || (index === 0 && !item.content.some((entry) => newsImage(entry)) ? newsImage(item) : '');
+      const imageAlt = content.title || item.date;
+      const imageHtml = imageSrc
+        ? `<div class="news-thumb"><img src="${escapeAttr(imageSrc)}" alt="${escapeAttr(imageAlt)}" loading="lazy"></div>`
+        : '';
+      const body = content.type === 'paper'
+        ? `${text}<a href="${content.link}" class="news-link">${content.title}</a> ${content.venue}`
+        : text;
       return `
         <div class="news-content-row">
           ${icon}
-          <div class="news-text-wrapper">${text}</div>
+          <div class="news-text-wrapper">${body}</div>
+          ${imageHtml}
         </div>
       `;
     };
@@ -78,8 +88,10 @@ class NewsList extends HTMLElement {
                 ${year ? `<span class="news-date-year">${year}</span>` : ''}
               </div>
             </div>
-            <div class="news-content">
-              ${item.content.map(content => renderContent(content)).join('')}
+            <div class="news-main">
+              <div class="news-content">
+                ${item.content.map((content, index) => renderContent(content, item, index)).join('')}
+              </div>
             </div>
           </div>
         `;
@@ -152,7 +164,10 @@ class NewsList extends HTMLElement {
         }
 
         .news-item {
+          --news-text-size: 0.95rem;
+          --news-text-leading: 1.6;
           display: flex;
+          align-items: flex-start;
           gap: 1.2rem;
           padding: 0.4rem 0; /* 极致压缩上下间距 */
           background: transparent;
@@ -211,11 +226,49 @@ class NewsList extends HTMLElement {
           opacity: 1;
         }
 
+        .news-main {
+          flex: 1;
+          min-width: 0;
+          display: flex;
+          align-items: stretch;
+          gap: 0.75rem;
+        }
+
         .news-content {
           flex: 1;
+          min-width: 0;
           display: flex;
           flex-direction: column;
           gap: 0.3rem;
+        }
+
+        .news-thumb {
+          flex: 0 0 auto;
+          align-self: stretch;
+          position: relative;
+          max-width: 42%;
+          min-height: 0;
+        }
+
+        .news-thumb img {
+          position: absolute;
+          inset: 0;
+          display: block;
+          box-sizing: border-box;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+          padding: 3px;
+          border-radius: 4px;
+          border: none;
+          background: #ffffff;
+        }
+
+        :host-context([data-theme="dark"]) .news-thumb img,
+        [data-theme="dark"] .news-thumb img {
+          background: #1e293b;
+          border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .news-content-row {
@@ -223,6 +276,11 @@ class NewsList extends HTMLElement {
           gap: 0.6rem;
           align-items: flex-start;
           line-height: 1.5;
+        }
+
+        .news-content-row > .news-text-wrapper {
+          flex: 1;
+          min-width: 0;
         }
 
         .news-icon {
@@ -279,9 +337,9 @@ class NewsList extends HTMLElement {
         }
 
         .news-text-wrapper {
-          font-size: 0.95rem;
+          font-size: var(--news-text-size);
           color: var(--text-color);
-          line-height: 1.6;
+          line-height: var(--news-text-leading);
           transition: color 0.3s ease;
         }
 
@@ -328,6 +386,10 @@ class NewsList extends HTMLElement {
           .news-content-row {
             gap: 0.75rem;
           }
+
+          .news-main {
+            width: 100%;
+          }
         }
       </style>
       <div class="news-list">
@@ -347,6 +409,8 @@ class NewsList extends HTMLElement {
         </button>
       ` : ''}
     `;
+
+    this.bindNewsImages();
 
     this.querySelector('.news-more')?.addEventListener('click', () => {
       if (this.animating) return;
@@ -382,6 +446,60 @@ class NewsList extends HTMLElement {
       earlier.classList.remove('is-open');
       this.finishDrawer(earlier, () => this.collapseNews());
     });
+  }
+
+  bindNewsImages() {
+    const fit = () => this.fitNewsImages();
+    fit();
+    this.querySelectorAll('.news-thumb img').forEach((img) => {
+      if (!img.complete) img.addEventListener('load', fit, { once: true });
+    });
+    if (!this.newsResize) {
+      this.newsResize = new ResizeObserver(() => this.fitNewsImages());
+    }
+    this.newsResize.disconnect();
+    const list = this.querySelector('.news-list');
+    if (list) this.newsResize.observe(list);
+  }
+
+  fitNewsImages() {
+    if (this.fittingImages) return;
+    this.fittingImages = true;
+    try {
+      const thumbs = [...this.querySelectorAll('.news-thumb')];
+      for (let pass = 0; pass < 4; pass += 1) {
+        let changed = false;
+        const widths = thumbs.map((thumb) => {
+          const img = thumb.querySelector('img');
+          const row = thumb.closest('.news-content-row');
+          const text = row?.querySelector('.news-text-wrapper');
+          const scope = row?.closest('.news-main') || row;
+          if (!img || !text || !scope) return '0px';
+          const height = text.getBoundingClientRect().height;
+          const style = getComputedStyle(img);
+          const padX = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+          const padY = parseFloat(style.paddingTop) + parseFloat(style.paddingBottom);
+          const borderX = parseFloat(style.borderLeftWidth) + parseFloat(style.borderRightWidth);
+          const borderY = parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
+          const innerHeight = Math.max(height - padY - borderY, 0);
+          const ratio = img.naturalWidth > 0 && img.naturalHeight > 0
+            ? img.naturalWidth / img.naturalHeight
+            : 2;
+          const maxWidth = scope.getBoundingClientRect().width * 0.42;
+          const width = Math.min(innerHeight * ratio + padX + borderX, Math.max(maxWidth, 0));
+          return `${Math.round(width * 100) / 100}px`;
+        });
+        thumbs.forEach((thumb, index) => {
+          if (thumb.style.width !== widths[index]) {
+            thumb.style.width = widths[index];
+            changed = true;
+          }
+        });
+        if (!changed) break;
+      }
+    } finally {
+      this.fittingImages = false;
+    }
   }
 
   finishDrawer(earlier, done) {
