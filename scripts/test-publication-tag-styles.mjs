@@ -41,6 +41,8 @@ check('detailed category is not rendered beside the venue tag', !/venue-tag[\s\S
 check('homepage dark conference venue keeps muted green text without a fill', /\[data-theme="dark"\] \.venue-tag\.conference\s*\{[^}]*color:\s*#86efac/.test(home) && !/\[data-theme="dark"\] \.venue-tag\.conference\s*\{[^}]*background-color/.test(home));
 check('detailed dark conference venue keeps muted green text without a fill', /\.publications-list\.is-dark \.venue-tag\.conference\s*\{[^}]*color:\s*#86efac/.test(detailed) && !/\.publications-list\.is-dark \.venue-tag\.conference\s*\{[^}]*background-color/.test(detailed));
 check('detailed applies is-dark after render', detailed.includes('classList.toggle(\'is-dark\'') && detailed.includes('this.syncThemeFromDocument()'));
+check('detailed page shows venue.type next to the venue name', detailedMarkup.includes('class="status-tag">${pub.venue.type}'));
+check('detailed status tag is styled in the component', /\.status-tag\s*\{[^}]*background-color:\s*#f3f4f6/.test(detailed) && /\.publications-list\.is-dark \.status-tag[\s\S]{0,180}color:\s*#94a3b8/.test(detailed));
 
 if (failed) {
   console.log(`FAILED: ${failed}`);

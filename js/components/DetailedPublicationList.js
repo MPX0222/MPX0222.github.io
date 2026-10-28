@@ -186,6 +186,7 @@ class DetailedPublicationList extends HTMLElement {
                         <div class="publication-footer">
                             <div class="publication-venue">
                                 <span class="venue-tag ${venueInfo.class}">${pub.venue.name}</span>
+                                ${pub.venue.type ? `<span class="status-tag">${pub.venue.type}</span>` : ''}
                                 ${!thumbnailSrc ? categoryBadge : ''}
                             </div>
                             <div class="publication-actions">
@@ -581,6 +582,28 @@ class DetailedPublicationList extends HTMLElement {
 
                 .publications-list.is-dark .venue-tag.journal {
                     color: #93c5fd;
+                }
+
+                .status-tag {
+                    display: inline-flex;
+                    align-items: center;
+                    height: 1.75rem;
+                    box-sizing: border-box;
+                    padding: 0.25rem 0.5rem;
+                    border-radius: 3px;
+                    background-color: #f3f4f6;
+                    color: #6b7280;
+                    font-size: 0.8125rem;
+                    font-weight: 500;
+                    line-height: 1;
+                    font-family: var(--font-sansation, 'Sansation', sans-serif);
+                }
+
+                .publications-list.is-dark .status-tag,
+                :host-context([data-theme="dark"]) .status-tag {
+                    background-color: transparent;
+                    color: #94a3b8;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
                 }
 
                 .category-tag {
