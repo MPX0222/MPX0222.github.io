@@ -408,6 +408,77 @@
             targetSection.scrollIntoView({ behavior: 'smooth' });
         });
     });
+
+    // 不蒜子统计：自动缓存最新值 + 超时缓存兜底与后台自动重试
+    (() => {
+        const keys = ['busuanzi_site_uv', 'busuanzi_site_pv'];
+        const cacheKey = 'busuanzi_cache_v1';
+        let liveUpdated = false;
+
+        const saveCache = () => {
+            const uv = document.getElementById('busuanzi_site_uv')?.innerText?.trim();
+            const pv = document.getElementById('busuanzi_site_pv')?.innerText?.trim();
+            if (uv && pv) {
+                try {
+                    localStorage.setItem(cacheKey, JSON.stringify({ busuanzi_site_uv: uv, busuanzi_site_pv: pv }));
+                } catch {}
+            }
+        };
+
+        const fill = (data, isLive = false) => {
+            if (!data) return false;
+            let wrote = false;
+            keys.forEach((k) => {
+                const el = document.getElementById(k);
+                if (el && data[k] != null && String(data[k]).trim() !== '') {
+                    el.innerText = String(data[k]);
+                    wrote = true;
+                }
+            });
+            if (wrote && isLive) {
+                liveUpdated = true;
+                saveCache();
+            }
+            return wrote;
+        };
+
+        // 监听官方脚本写入，第一时间刷新本地缓存
+        const uvEl = document.getElementById('busuanzi_site_uv');
+        if (uvEl && typeof MutationObserver !== 'undefined') {
+            const observer = new MutationObserver(() => {
+                if (uvEl.innerText.trim()) {
+                    liveUpdated = true;
+                    saveCache();
+                    observer.disconnect();
+                }
+            });
+            observer.observe(uvEl, { childList: true, characterData: true, subtree: true });
+        }
+
+        setTimeout(async () => {
+            if (liveUpdated || document.getElementById('busuanzi_site_uv')?.innerText?.trim()) {
+                saveCache();
+                return;
+            }
+            try {
+                fill(JSON.parse(localStorage.getItem(cacheKey)), false);
+            } catch {}
+
+            for (const delay of [0, 4000, 8000]) {
+                if (delay) await new Promise((r) => setTimeout(r, delay));
+                if (liveUpdated) break;
+                try {
+                    const res = await fetch('https://cdn.busuanzi.cc/api.php', {
+                        method: 'POST',
+                        body: JSON.stringify({ url: location.href, referrer: document.referrer })
+                    });
+                    if (!res.ok) continue;
+                    const data = await res.json();
+                    if (fill(data, true)) break;
+                } catch {}
+            }
+        }, 4000);
+    })();
     </script>
 </body>
 </html>

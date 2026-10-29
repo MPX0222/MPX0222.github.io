@@ -1,6 +1,7 @@
 import { readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import vm from 'node:vm';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const html = readFileSync(join(root, 'index.html'), 'utf8');
@@ -33,6 +34,77 @@ check(
   css.includes('.visitor-stats span[id^="busuanzi_site_"]') &&
     css.includes('.visitor-stats > span:has(> span:empty)')
 );
+
+const fallbackMatch = html.match(/\/\/ 不蒜子统计：[\s\S]*?\(\(\) => \{[\s\S]*?\}\)\(\);/);
+check('includes busuanzi cache + auto-retry fallback block', Boolean(fallbackMatch));
+
+if (fallbackMatch) {
+  // Scenario 1: Initial load times out -> shows cached value first -> retry succeeds and updates DOM + cache
+  const elements = {
+    busuanzi_site_uv: { innerText: '' },
+    busuanzi_site_pv: { innerText: '' },
+  };
+  const storage = new Map([
+    ['busuanzi_cache_v1', JSON.stringify({ busuanzi_site_uv: '10', busuanzi_site_pv: '25' })],
+  ]);
+  const scheduled = [];
+  let fetchCalls = 0;
+
+  const ctx = {
+    document: {
+      getElementById: (id) => elements[id] || null,
+      referrer: '',
+    },
+    location: { href: 'https://mpx0222.github.io/' },
+    localStorage: {
+      getItem: (k) => (storage.has(k) ? storage.get(k) : null),
+      setItem: (k, v) => storage.set(k, String(v)),
+    },
+    setTimeout: (fn) => {
+      scheduled.push(fn);
+      return scheduled.length;
+    },
+    fetch: async () => {
+      fetchCalls += 1;
+      if (fetchCalls === 1) {
+        return { ok: false, status: 524 };
+      }
+      return {
+        ok: true,
+        status: 200,
+        json: async () => ({ busuanzi_site_uv: 42, busuanzi_site_pv: 108 }),
+      };
+    },
+  };
+
+  vm.createContext(ctx);
+  vm.runInContext(fallbackMatch[0], ctx);
+
+  // Trigger the 4000ms fallback check
+  const mainTimer = scheduled.shift();
+  const promise = mainTimer();
+  check(
+    'populates cached values immediately when initial request timed out',
+    elements.busuanzi_site_uv.innerText === '10' && elements.busuanzi_site_pv.innerText === '25'
+  );
+
+  // Flush retry delay timer
+  await new Promise((r) => setImmediate(r));
+  while (scheduled.length) {
+    scheduled.shift()();
+    await new Promise((r) => setImmediate(r));
+  }
+  await promise;
+
+  check(
+    'retries in background and updates DOM when retry succeeds',
+    fetchCalls === 2 && elements.busuanzi_site_uv.innerText === '42' && elements.busuanzi_site_pv.innerText === '108'
+  );
+  check(
+    'persists latest live values into localStorage',
+    JSON.parse(storage.get('busuanzi_cache_v1')).busuanzi_site_pv === '108'
+  );
+}
 
 if (failed) {
   console.log(`FAILED: ${failed}`);
