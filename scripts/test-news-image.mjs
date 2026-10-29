@@ -1,5 +1,5 @@
 import { createServer } from 'http';
-import { spawn } from 'child_process';
+import { spawn, spawnSync } from 'child_process';
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { extname, join, dirname } from 'path';
 import { tmpdir } from 'os';
@@ -110,6 +110,29 @@ const layoutExpression = `(() => {
   });
 })()`;
 
+function resolveChromeBinary() {
+  const candidates = [
+    process.env.CHROME_PATH,
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+    '/usr/bin/google-chrome',
+    '/usr/bin/google-chrome-stable',
+    '/usr/bin/chromium',
+    '/usr/bin/chromium-browser',
+    'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+    'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
+  ].filter(Boolean);
+  for (const candidate of candidates) {
+    if (existsSync(candidate)) return candidate;
+  }
+  for (const bin of ['google-chrome', 'google-chrome-stable', 'chromium', 'chromium-browser', 'chrome']) {
+    const probe = spawnSync(process.platform === 'win32' ? 'where' : 'which', [bin], { encoding: 'utf8' });
+    if (probe.status === 0 && probe.stdout.trim()) {
+      return probe.stdout.trim().split(/\r?\n/)[0];
+    }
+  }
+  throw new Error('Chrome binary not found');
+}
+
 async function measureLayout() {
   const types = {
     '.html': 'text/html; charset=utf-8',
@@ -150,8 +173,11 @@ async function measureLayout() {
   const debugPort = 20000 + Math.floor(Math.random() * 20000);
   const profile = join(tmpdir(), `news-image-chrome-${Date.now()}`);
   mkdirSync(profile, { recursive: true });
-  const chrome = spawn('C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', [
+  const chrome = spawn(resolveChromeBinary(), [
     '--headless=new',
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--disable-dev-shm-usage',
     '--disable-gpu',
     '--no-first-run',
     '--window-size=1200,1000',
@@ -275,7 +301,15 @@ async function measureLayout() {
     return { desktop: desktop.result.value, mobile: mobile.result.value };
   } finally {
     server.close();
-    spawn('taskkill', ['/PID', String(chrome.pid), '/T', '/F'], { stdio: 'ignore' });
+    if (process.platform === 'win32') {
+      spawn('taskkill', ['/PID', String(chrome.pid), '/T', '/F'], { stdio: 'ignore' });
+    } else {
+      try {
+        chrome.kill('SIGKILL');
+      } catch {
+        // Ignore if already exited.
+      }
+    }
   }
 }
 

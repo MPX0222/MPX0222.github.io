@@ -2756,10 +2756,14 @@ blockquote {
     font-size: 0.75rem;
 }
 
-.visitor-stats span[id^="busuanzi_value"] {
+.visitor-stats span[id^="busuanzi_site_"] {
     font-weight: 500;
     color: var(--text-secondary);
     margin-right: 0.2rem;
+}
+
+.visitor-stats > span:has(> span:empty) {
+    display: none;
 }
 
 /* 响应式调整 */
