@@ -35,7 +35,7 @@
         }
       },
       "stats": {
-        "citations": 0,
+        "citations": 1,
         "huggingface": {
           "downloads": 1499,
           "repos": [
