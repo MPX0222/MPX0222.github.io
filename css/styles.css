@@ -503,9 +503,10 @@ button.pub-link {
 
 .profile-card {
     background: transparent;
-    display: flex;
-    gap: 2.5rem;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    column-gap: 2.5rem;
+    align-items: stretch;
     padding: 0;
     margin-bottom: 0;
     border: none;
@@ -520,10 +521,11 @@ button.pub-link {
 
 .profile-image {
     width: 180px;
-    height: 212px;
+    height: 100%;
+    min-height: 0;
     margin: 0;
     position: relative;
-    flex-shrink: 0;
+    align-self: stretch;
 }
 
 .profile-image::before {
@@ -535,9 +537,12 @@ button.pub-link {
 }
 
 .profile-image img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center center;
     border-radius: 2px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -637,11 +642,6 @@ button.pub-link {
 
 .profile-email {
     position: relative;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 0.6rem;
-    row-gap: 0.1rem;
-    align-items: start;
     margin-top: 0.45rem;
     border-radius: 4px;
     padding: 0.1rem 0.3rem 0.1rem 0;
@@ -655,23 +655,41 @@ button.pub-link {
 .profile-email-label {
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
-    font-weight: 700;
     color: var(--text-secondary);
-    line-height: 1.5;
+    line-height: 1;
 }
 
 .profile-email-label i {
-    font-size: 0.9em;
+    font-size: 0.92em;
     color: var(--text-secondary);
 }
 
 .profile-email-addresses {
-    display: flex;
-    flex-direction: column;
-    gap: 0.05rem;
+    display: grid;
+    grid-template-columns: auto auto auto 1fr;
+    column-gap: 0.45rem;
+    row-gap: 0.05rem;
+    align-items: center;
     line-height: 1.5;
     color: #8e989b;
+}
+
+.profile-email-line {
+    display: contents;
+}
+
+.profile-email-use {
+    font-size: 0.98rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.profile-email-at {
+    font-weight: 400;
+    opacity: 0.45;
+    color: var(--text-secondary);
 }
 
 [data-theme="dark"] .profile-email-addresses {
@@ -2731,41 +2749,6 @@ blockquote {
     }
 } 
 
-/* 访问统计样式 */
-.visitor-stats-section {
-    text-align: center;
-    margin-top: 2rem;
-    padding: 1rem 0;
-    transition: border-color 0.3s ease;
-}
-
-.visitor-stats {
-    display: inline-flex;
-    align-items: center;
-    gap: 0;
-    font-family: var(--font-sansation);
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    opacity: 0.6;
-    transition: all 0.3s ease;
-}
-
-.visitor-stats i {
-    color: var(--text-secondary);
-    margin-right: 0.4rem;
-    font-size: 0.75rem;
-}
-
-.visitor-stats span[id^="busuanzi_site_"] {
-    font-weight: 500;
-    color: var(--text-secondary);
-    margin-right: 0.2rem;
-}
-
-.visitor-stats > span:has(> span:empty) {
-    display: none;
-}
-
 /* 响应式调整 */
 @media (max-width: 768px) {
     .profile-card {
@@ -2779,6 +2762,11 @@ blockquote {
         margin: 0 auto;
         width: 160px;
         height: 188px;
+    }
+
+    .profile-image img {
+        position: static;
+        height: 100%;
     }
 
     .profile-info {

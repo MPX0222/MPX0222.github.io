@@ -298,7 +298,7 @@
       "title": "Representation Calibration and Uncertainty Guidance for Class-Incremental Learning based on Vision Language Model",
       "year": 2025,
       "category": "Large Language Models",
-      "showInHome": true,
+      "showInHome": false,
       "authors": [
         "Jiantao Tan*",
         "Peixian Ma*",
@@ -332,7 +332,7 @@
       "title": "Effective Learning for Small Reasoning Models: An Empirical Study on 0.5B Reasoning LLMs",
       "year": 2025,
       "category": "Large Language Models",
-      "showInHome": true,
+      "showInHome": false,
       "authors": [
         "Xiaile Zhuang",
         "Peixian Ma",

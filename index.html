@@ -29,8 +29,6 @@
     <script src="js/components/ProjectList.js"></script>
     <script src="js/components/ServiceList.js"></script>
     <script src="js/components/ActivityList.js"></script>
-
-    <script src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
 </head>
 <body>
     <!-- 添加导航栏 -->
@@ -59,10 +57,19 @@
                                 <span class="profile-vcard-org">HKUST(GZ), Data Science and Analytics</span>
                             </div>
                             <div id="profile-email" class="profile-email">
-                                <span class="profile-email-label"><i class="far fa-envelope" aria-hidden="true"></i> Email</span>
                                 <span class="profile-email-addresses">
-                                    <span>pma929@connect.hkust-gz.edu.cn</span>
-                                    <span>mpx0222@paradoox.ai</span>
+                                    <span class="profile-email-line">
+                                        <span class="profile-email-label" aria-label="Academic email"><i class="far fa-envelope" aria-hidden="true"></i></span>
+                                        <span class="profile-email-use">For Academic</span>
+                                        <span class="profile-email-at" aria-hidden="true">|</span>
+                                        <span>pma929@connect.hkust-gz.edu.cn</span>
+                                    </span>
+                                    <span class="profile-email-line">
+                                        <span class="profile-email-label" aria-label="Business email"><i class="far fa-envelope" aria-hidden="true"></i></span>
+                                        <span class="profile-email-use">For Business</span>
+                                        <span class="profile-email-at" aria-hidden="true">|</span>
+                                        <span>mpx0222@paradoox.ai</span>
+                                    </span>
                                 </span>
                             </div>
                         </div>
@@ -104,7 +111,7 @@
                                 I'm now a researcher at Paradoox AI Research.
                                 I have completed my M.Phil. degree in Data Science and Analytics at The Hong Kong University of Science and Technology (Guangzhou), where I was advised by Prof. Yuyu Luo and Prof. Nan Tang.
                                 Prior to that, I graduated from Jinan University with a B.Eng. degree in Intelligence Science and Technology in 2023. 
-                                In 2025, I interned at the International Digital Economy Academy, under the supervision of Dr. Chengjin Xu and Prof. Jian Guo.
+                                In 2025, I interned at the FinAI group of International Digital Economy Academy, under the supervision of Dr. Chengjin Xu and Prof. Jian Guo.
                             </p>
                             <div class="research-units">
                                 <a class="research-unit" href="https://github.com/HKUSTDial">
@@ -112,14 +119,14 @@
                                         <path d="M4 12 L12 4 M7 4 H12 V9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     <img src="images/dial.jpg" alt="DIAL Lab">
-                                    <span>HKUST(GZ)-DIAL | 呆鹅实验室</span>
+                                    <span>DIAL@HKUST(GZ) | 呆鹅实验室</span>
                                 </a>
                                 <a class="research-unit" href="https://github.com/IDEA-FinAI">
                                     <svg class="research-unit-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
                                         <path d="M4 12 L12 4 M7 4 H12 V9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     <img src="images/idea_logo.png" alt="IDEA Research">
-                                    <span>IDEA Research | 粤港澳大湾区数字经济研究院</span>
+                                    <span>FinAI@IDEA Research | 粤港澳大湾区数字经济研究院</span>
                                 </a>
                                 <a class="research-unit" href="https://paradoox.cn/">
                                     <svg class="research-unit-arrow" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
@@ -204,18 +211,6 @@
                         </div>
                     </div>
 
-                    <!-- Visitor Stats -->
-                    <div class="visitor-stats-section">
-                        <div class="visitor-stats">
-                            <span id="busuanzi_container_site_uv">
-                                <i class="fas fa-users"></i> <span id="busuanzi_site_uv"></span> Visitors
-                            </span>
-                            <span id="busuanzi_container_site_pv" style="margin-left: 1.5rem;">
-                                <i class="fas fa-eye"></i> <span id="busuanzi_site_pv"></span> Views
-                            </span>
-                        </div>
-                    </div>
-                    
                     <!-- Projects card -->
                     <!-- <div id="projects" class="card">
                         <div class="card-header" style="background: #FFA502;">
@@ -245,7 +240,7 @@
                 © 2026 Peixian Ma, Powered by Jekyll Theme, <span class="footer-tool"><iconify-icon icon="simple-icons:anthropic"></iconify-icon> Claude Code</span>, <span class="footer-tool"><iconify-icon icon="simple-icons:cursor"></iconify-icon> Cursor</span> and <span class="footer-tool"><iconify-icon icon="simple-icons:openai"></iconify-icon> Codex</span>
             </span>
             <span class="footer-dot" aria-hidden="true">•</span>
-            <span class="last-updated">Last Updated: October 2026</span>
+            <span class="last-updated">Last Updated: November 2026</span>
         </div>
     </footer>
 
@@ -408,77 +403,6 @@
             targetSection.scrollIntoView({ behavior: 'smooth' });
         });
     });
-
-    // 不蒜子统计：自动缓存最新值 + 超时缓存兜底与后台自动重试
-    (() => {
-        const keys = ['busuanzi_site_uv', 'busuanzi_site_pv'];
-        const cacheKey = 'busuanzi_cache_v1';
-        let liveUpdated = false;
-
-        const saveCache = () => {
-            const uv = document.getElementById('busuanzi_site_uv')?.innerText?.trim();
-            const pv = document.getElementById('busuanzi_site_pv')?.innerText?.trim();
-            if (uv && pv) {
-                try {
-                    localStorage.setItem(cacheKey, JSON.stringify({ busuanzi_site_uv: uv, busuanzi_site_pv: pv }));
-                } catch {}
-            }
-        };
-
-        const fill = (data, isLive = false) => {
-            if (!data) return false;
-            let wrote = false;
-            keys.forEach((k) => {
-                const el = document.getElementById(k);
-                if (el && data[k] != null && String(data[k]).trim() !== '') {
-                    el.innerText = String(data[k]);
-                    wrote = true;
-                }
-            });
-            if (wrote && isLive) {
-                liveUpdated = true;
-                saveCache();
-            }
-            return wrote;
-        };
-
-        // 监听官方脚本写入，第一时间刷新本地缓存
-        const uvEl = document.getElementById('busuanzi_site_uv');
-        if (uvEl && typeof MutationObserver !== 'undefined') {
-            const observer = new MutationObserver(() => {
-                if (uvEl.innerText.trim()) {
-                    liveUpdated = true;
-                    saveCache();
-                    observer.disconnect();
-                }
-            });
-            observer.observe(uvEl, { childList: true, characterData: true, subtree: true });
-        }
-
-        setTimeout(async () => {
-            if (liveUpdated || document.getElementById('busuanzi_site_uv')?.innerText?.trim()) {
-                saveCache();
-                return;
-            }
-            try {
-                fill(JSON.parse(localStorage.getItem(cacheKey)), false);
-            } catch {}
-
-            for (const delay of [0, 4000, 8000]) {
-                if (delay) await new Promise((r) => setTimeout(r, delay));
-                if (liveUpdated) break;
-                try {
-                    const res = await fetch('https://cdn.busuanzi.cc/api.php', {
-                        method: 'POST',
-                        body: JSON.stringify({ url: location.href, referrer: document.referrer })
-                    });
-                    if (!res.ok) continue;
-                    const data = await res.json();
-                    if (fill(data, true)) break;
-                } catch {}
-            }
-        }, 4000);
-    })();
     </script>
 </body>
 </html>
