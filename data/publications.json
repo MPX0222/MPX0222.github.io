@@ -37,12 +37,12 @@
       "stats": {
         "citations": 1,
         "huggingface": {
-          "downloads": 2218,
+          "downloads": 2291,
           "repos": [
             {
               "id": "startlux-models/DecisionPivot",
               "type": "dataset",
-              "downloads": 2218
+              "downloads": 2291
             }
           ]
         }
@@ -193,27 +193,27 @@
       "stats": {
         "citations": 122,
         "huggingface": {
-          "downloads": 9962,
+          "downloads": 10011,
           "repos": [
             {
               "id": "MPX0222forHF/SQL-R1-14B",
               "type": "model",
-              "downloads": 955
+              "downloads": 957
             },
             {
               "id": "MPX0222forHF/SQL-R1-3B",
               "type": "model",
-              "downloads": 2830
+              "downloads": 2831
             },
             {
               "id": "MPX0222forHF/SQL-R1-7B",
               "type": "model",
-              "downloads": 2561
+              "downloads": 2563
             },
             {
               "id": "MPX0222forHF/SynSQL-Complex-5K",
               "type": "dataset",
-              "downloads": 3616
+              "downloads": 3660
             }
           ]
         }
