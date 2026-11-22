@@ -504,8 +504,8 @@ button.pub-link {
 .profile-card {
     background: transparent;
     display: grid;
-    grid-template-columns: 180px minmax(0, 1fr);
-    column-gap: 2.5rem;
+    grid-template-columns: minmax(0, 1fr) 188px;
+    column-gap: 3rem;
     align-items: stretch;
     padding: 0;
     margin-bottom: 0;
@@ -520,7 +520,10 @@ button.pub-link {
 }
 
 .profile-image {
-    width: 180px;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    width: 188px;
     height: 100%;
     min-height: 0;
     margin: 0;
@@ -543,30 +546,33 @@ button.pub-link {
     height: 100%;
     object-fit: cover;
     object-position: center center;
-    border-radius: 2px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    box-shadow: 0 12px 30px -8px var(--shadow-color), 0 3px 8px rgba(0, 0, 0, 0.06);
 }
 
 .profile-info {
+    grid-column: 1;
+    grid-row: 1;
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    justify-content: space-between;
+    gap: 0.4rem;
     padding-top: 0;
 }
 
 .profile-name {
     font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
+    font-size: 2.48rem;
     font-weight: 600;
     background: linear-gradient(to right, var(--text-color), var(--primary-color), var(--primary-light));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: -0.05em;
-    margin-bottom: 0.5rem;
-    line-height: 1;
-    letter-spacing: -0.01em;
+    margin-top: -0.06em;
+    margin-bottom: 0.35rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
     transition: background 0.3s ease;
 }
 
@@ -589,62 +595,65 @@ button.pub-link {
 }
 
 .profile-vcard {
+    --vcard-key-col: 9.2rem;
+    --vcard-sep-col: 0rem;
     position: relative;
     background: transparent;
-    padding: 0 0 0.7rem;
-    margin-bottom: 0.15rem;
+    padding: 0.15rem 0 0.35rem;
+    margin-bottom: 0.1rem;
     width: fit-content;
     max-width: 100%;
 }
 
 .profile-vcard::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 1px;
-    width: min(34rem, calc(100vw - 4rem));
-    background: linear-gradient(to right, rgba(99, 110, 114, 0.45), transparent 92%);
-    pointer-events: none;
+    display: none;
 }
 
 [data-theme="dark"] .profile-vcard::after {
-    background: linear-gradient(to right, rgba(203, 213, 225, 0.4), transparent 92%);
+    display: none;
 }
 
 .profile-vcard-byline {
-    display: flex;
+    display: grid;
+    grid-template-columns: var(--vcard-key-col) var(--vcard-sep-col) minmax(0, 1fr);
     align-items: baseline;
-    flex-wrap: wrap;
-    gap: 0.3rem 0.4rem;
+    column-gap: 0;
     font-family: var(--font-sansation);
     font-size: 1.05rem;
-    line-height: 1.5;
+    line-height: 1.62;
     color: var(--text-secondary);
 }
 
 .profile-vcard-role {
     font-family: var(--font-sansation);
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    font-weight: 700;
+    letter-spacing: 0.01em;
     text-transform: none;
     color: var(--text-color);
 }
 
 .profile-vcard-at {
-    font-weight: 400;
-    opacity: 0.65;
+    font-family: var(--font-sansation);
+    font-size: 0;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    user-select: none;
 }
 
 .profile-vcard-org {
+    font-family: var(--font-sansation);
     font-weight: 400;
+    font-size: 1.02rem;
+    letter-spacing: 0.005em;
+    color: var(--text-secondary);
 }
 
 .profile-email {
     position: relative;
-    margin-top: 0.45rem;
+    margin-top: 0.6rem;
     border-radius: 4px;
-    padding: 0.1rem 0.3rem 0.1rem 0;
+    padding: 0.15rem 0.3rem 0.1rem 0;
     width: fit-content;
     overflow: hidden;
     font-family: var(--font-sansation);
@@ -657,20 +666,21 @@ button.pub-link {
     align-items: center;
     color: var(--text-secondary);
     line-height: 1;
+    opacity: 0.72;
 }
 
 .profile-email-label i {
-    font-size: 0.92em;
+    font-size: 0.82rem;
     color: var(--text-secondary);
 }
 
 .profile-email-addresses {
     display: grid;
-    grid-template-columns: auto auto auto 1fr;
-    column-gap: 0.45rem;
-    row-gap: 0.05rem;
+    grid-template-columns: 1.2rem calc(var(--vcard-key-col) - 1.2rem) var(--vcard-sep-col) 1fr;
+    column-gap: 0;
+    row-gap: 0.2rem;
     align-items: center;
-    line-height: 1.5;
+    line-height: 1.55;
     color: #8e989b;
 }
 
@@ -679,17 +689,28 @@ button.pub-link {
 }
 
 .profile-email-use {
-    font-size: 0.98rem;
+    font-family: var(--font-sansation);
+    font-size: 0.74rem;
     font-weight: 600;
-    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
     color: var(--text-secondary);
     white-space: nowrap;
 }
 
 .profile-email-at {
-    font-weight: 400;
-    opacity: 0.45;
-    color: var(--text-secondary);
+    font-family: var(--font-sansation);
+    font-size: 0;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    user-select: none;
+}
+
+.profile-email-addresses > .profile-email-line > span:last-child {
+    font-family: var(--font-sansation);
+    font-size: 0.93rem;
+    letter-spacing: 0.005em;
 }
 
 [data-theme="dark"] .profile-email-addresses {
@@ -2752,6 +2773,7 @@ blockquote {
 /* 响应式调整 */
 @media (max-width: 768px) {
     .profile-card {
+        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
@@ -2776,8 +2798,15 @@ blockquote {
     }
 
     .profile-vcard {
+        --vcard-key-col: 8.2rem;
+        --vcard-sep-col: 0rem;
         margin: 0 auto;
         text-align: left;
+    }
+
+    .profile-vcard::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .profile-name {
@@ -3186,10 +3215,10 @@ body.modal-open {
     display: flex !important;
     justify-content: flex-start !important;
     align-items: center !important;
-    gap: 0.35rem 0.85rem !important;
+    gap: 0.4rem 1.45rem !important;
     flex-wrap: nowrap !important;
     flex-direction: row !important;
-    margin: 0.5rem 0 0 !important;
+    margin: 0.4rem 0 0 !important;
     padding: 0 !important;
     width: 100% !important;
     max-width: none !important;
@@ -3207,20 +3236,20 @@ body.modal-open {
     flex: 0 0 auto !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    gap: 0.3rem !important;
+    gap: 0.38rem !important;
 
     /* 取消圆圈背景和固定宽高 */
     width: auto !important;
     height: auto !important;
     margin: 0 !important;
-    padding: 0.2rem 0.15rem !important;
+    padding: 0.2rem 0.1rem !important;
     border: none !important;
     border-radius: 0 !important;
     background: none !important;
     box-shadow: none !important;
 
-    /* 图标样式：加大，默认深灰 */
-    font-size: 1.4rem !important;
+    /* 图标样式：现代比例，默认深灰 */
+    font-size: 1.22rem !important;
     color: #636e72 !important; /* 学术深灰 */
     text-decoration: none !important;
 
@@ -3292,7 +3321,7 @@ body.modal-open {
 /* 针对 Iconify 和 FA 图标的尺寸统一 */
 .social-icon i,
 .social-icon iconify-icon {
-    font-size: 1.4rem !important;
+    font-size: 1.22rem !important;
     width: auto !important;
     height: auto !important;
     line-height: 1 !important;
@@ -3303,10 +3332,10 @@ body.modal-open {
 
 .social-icon-label {
     font-family: var(--font-sansation) !important;
-    font-size: 0.95rem !important;
+    font-size: 0.92rem !important;
     font-weight: 400 !important;
     line-height: 1.4 !important;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.015em;
     white-space: nowrap;
     width: auto !important;
     height: auto !important;
@@ -3314,7 +3343,7 @@ body.modal-open {
 
 /* Academicons 通常视觉上偏小，需要稍微调大一点以保持对齐 */
 .social-icon .ai {
-    font-size: 1.65rem !important;
+    font-size: 1.42rem !important;
     width: auto !important;
     height: auto !important;
     line-height: 1 !important;
@@ -3323,7 +3352,7 @@ body.modal-open {
 
 /* ORCID 图标在 Academicons 中设计得比较满，不需要像 Google Scholar 那样补偿太多 */
 .social-icon .ai-orcid {
-    font-size: 1.5rem !important;
+    font-size: 1.28rem !important;
 }
 
 /* 响应式调整 */

@@ -12,11 +12,15 @@ function check(name, cond) {
   if (!cond) failed += 1;
 }
 
-const labels = ['GitHub', 'Google Scholar', 'LinkedIn', 'Resume'];
+const labels = ['GitHub', 'Google Scholar', 'LinkedIn', 'ORCID', 'Resume'];
 labels.forEach((label) => {
   check(`label ${label}`, html.includes(`class="social-icon-label">${label}</span>`));
 });
-check('exactly 4 social labels', (html.match(/class="social-icon-label"/g) || []).length === 4);
+check('exactly 5 social labels', (html.match(/class="social-icon-label"/g) || []).length === 5);
+check(
+  'ORCID link sits before Resume with expected URL',
+  /href="https:\/\/orcid\.org\/0009-0009-7766-743X"\s+class="social-icon"\s+data-title="ORCID"[\s\S]*?<i class="ai ai-orcid"><\/i>[\s\S]*?<span class="social-icon-label">ORCID<\/span>[\s\S]*?data-title="Resume"/.test(html)
+);
 check(
   'label uses Sansation like research-unit',
   /\.social-icon-label\s*\{[^}]*font-family:\s*var\(--font-sansation\)/.test(css)

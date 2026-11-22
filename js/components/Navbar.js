@@ -232,7 +232,7 @@ class Navbar extends HTMLElement {
                             <a href="../index.html#awards" class="nav-link">Awards</a>
                         </div>
                         <div class="nav-section">
-                            <a href="../index.html?highlight=email" class="nav-contact">
+                            <a href="../index.html" class="nav-contact">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                                 </svg>
@@ -279,71 +279,25 @@ class Navbar extends HTMLElement {
 
     setupMailAction() {
         const mailLink = this.shadowRoot.querySelector('.nav-contact');
+        if (!mailLink) {
+            return;
+        }
 
         mailLink.addEventListener('click', (event) => {
-            const email = document.getElementById('profile-email');
+            const isHomePage = Boolean(document.getElementById('profile-email'))
+                || window.location.pathname.endsWith('/index.html')
+                || window.location.pathname === '/';
 
-            if (!email) {
+            if (!isHomePage) {
                 return;
             }
 
             event.preventDefault();
-            this.focusEmail(email);
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-
-        if (new URLSearchParams(window.location.search).get('highlight') === 'email') {
-            const focusEmailFromQuery = () => {
-                const email = document.getElementById('profile-email');
-                if (email) this.focusEmail(email);
-            };
-
-            if (document.readyState === 'loading') {
-                window.addEventListener('DOMContentLoaded', focusEmailFromQuery, { once: true });
-            } else {
-                focusEmailFromQuery();
-            }
-        }
-    }
-
-    focusEmail(email) {
-        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const highlight = () => {
-            email.classList.remove('is-highlighted');
-            void email.offsetWidth;
-            email.classList.add('is-highlighted');
-
-            if (reduceMotion) {
-                window.setTimeout(() => {
-                    email.classList.remove('is-highlighted');
-                }, 600);
-                return;
-            }
-
-            const sheenTarget = email.querySelector('.profile-email-addresses > span');
-            const clearHighlight = (event) => {
-                if (event && event.animationName && event.animationName !== 'email-text-sheen') {
-                    return;
-                }
-                email.classList.remove('is-highlighted');
-                if (sheenTarget) {
-                    sheenTarget.removeEventListener('animationend', clearHighlight);
-                }
-            };
-
-            if (sheenTarget) {
-                sheenTarget.addEventListener('animationend', clearHighlight);
-            } else {
-                window.setTimeout(clearHighlight, 1100);
-            }
-        };
-
-        window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
-
-        if (reduceMotion || window.scrollY === 0) {
-            highlight();
-        } else {
-            window.setTimeout(highlight, 450);
-        }
     }
 
     setTheme(theme) {
