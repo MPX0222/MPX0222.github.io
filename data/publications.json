@@ -35,7 +35,7 @@
         }
       },
       "stats": {
-        "citations": 1,
+        "citations": 2,
         "huggingface": {
           "downloads": 2337,
           "repos": [
@@ -255,7 +255,7 @@
         }
       },
       "stats": {
-        "citations": 251
+        "citations": 252
       },
       "doi": "10.1109/tkde.2025.3592032"
     },
