@@ -188,6 +188,7 @@ class DetailedPublicationList extends HTMLElement {
                                 <span class="venue-tag ${venueInfo.class}">${pub.venue.name}</span>
                                 ${pub.venue.type ? `<span class="status-tag">${pub.venue.type}</span>` : ''}
                                 ${!thumbnailSrc ? categoryBadge : ''}
+                                ${renderPublicationHighlights(pub)}
                             </div>
                             <div class="publication-actions">
                                 <div class="publication-links">
@@ -692,6 +693,7 @@ class DetailedPublicationList extends HTMLElement {
                     .publication-actions { flex-direction: column; align-items: flex-start; gap: 0.5rem; width: 100%; margin-top: 0; }
                 }
             </style>
+            ${HIGHLIGHT_STYLES}
         `;
 
         if (this.filteredPublications.length === 0) {

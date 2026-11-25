@@ -125,6 +125,7 @@ class PublicationList extends HTMLElement {
     const venueInfo = this.getVenueType(pub.venue.name);
     const showDoiBadge = false;
     const doiUrl = this.resolveDoiUrl(pub.doi);
+    const highlightsHtml = renderPublicationHighlights(pub);
 
     return `
       <div class="publication-item">
@@ -148,6 +149,7 @@ class PublicationList extends HTMLElement {
                 ${pub.venue.name}
               </span>
               <span class="status-tag">${pub.venue.type}</span>
+              ${highlightsHtml}
             </div>
             <div class="publication-actions">
               <div class="publication-links">
@@ -637,6 +639,7 @@ class PublicationList extends HTMLElement {
           opacity: 1;
         }
       </style>
+      ${HIGHLIGHT_STYLES}
       <div class="publications-list">
         ${this.groupByYear(featuredPublications)
           .flatMap(group => group.publications)

@@ -5,7 +5,7 @@
       "title": "DecisionPivot: A Diagnostic Benchmark for Decision Models in LLM Systems",
       "year": 2026,
       "category": "Large Language Models",
-      "showInHome": false,
+      "showInHome": true,
       "authors": [
         "Xialie Zhuang",
         "Mingcong Lei",
@@ -54,7 +54,7 @@
       "title": "NextFund: A Unified Performance Tracking Platform for Agentic Portfolio Management",
       "year": 2026,
       "category": "AI for Finance",
-      "showInHome": true,
+      "showInHome": false,
       "authors": [
         "Changlun Li",
         "Peixian Ma",
@@ -218,6 +218,14 @@
           ]
         }
       },
+      "highlights": [
+        {
+          "platform": "alphaxiv",
+          "text": "#3 in Databases · Apr. 2025",
+          "url": "https://www.alphaxiv.org/abs/2504.08600",
+          "date": "2025-04"
+        }
+      ],
       "doi": "https://doi.org/10.52202/085713-5805"
     },
     {
