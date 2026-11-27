@@ -193,7 +193,7 @@
       "stats": {
         "citations": 123,
         "huggingface": {
-          "downloads": 10760,
+          "downloads": 10765,
           "repos": [
             {
               "id": "MPX0222forHF/SQL-R1-14B",
@@ -203,12 +203,12 @@
             {
               "id": "MPX0222forHF/SQL-R1-3B",
               "type": "model",
-              "downloads": 2835
+              "downloads": 2836
             },
             {
               "id": "MPX0222forHF/SQL-R1-7B",
               "type": "model",
-              "downloads": 2576
+              "downloads": 2580
             },
             {
               "id": "MPX0222forHF/SynSQL-Complex-5K",
