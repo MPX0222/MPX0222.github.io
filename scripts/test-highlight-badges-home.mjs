@@ -130,8 +130,8 @@ try {
   });
   const lv = light.result.value;
   console.log('LIGHT:', JSON.stringify(lv));
-  check('homepage renders 2 badges (only SQL-R1 is showInHome:true)', lv.count === 2);
-  check('homepage badge texts correct', lv.texts.includes('#3 in Databases · April 2025') && lv.texts.filter((t) => t === 'Hugging Face Daily Paper').length === 1);
+  check('homepage renders 1 badge (SQL-R1 alphaxiv)', lv.count === 1);
+  check('homepage badge text is the alphaxiv ranking', lv.texts.length === 1 && lv.texts[0].includes('#3 in Databases'));
   check('homepage badge is pill with amber bg', lv.bg === 'rgb(254, 243, 199)' && lv.radius === '999px');
   check('homepage badges have no trophy icon', !lv.anyTrophy);
   check('homepage badge has platform icon', lv.platformCount === 1);

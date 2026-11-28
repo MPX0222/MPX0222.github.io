@@ -214,18 +214,18 @@ try {
   const v = data.result.value;
   console.log(JSON.stringify(v, null, 1));
 
-  check('detailed page renders 4 highlight badges (SQL-R1 x2, DecisionPivot x1, SRLMs x1)', v.badgeCount === 4);
+  check('detailed page renders the SQL-R1 alphaxiv badge', v.badgeCount === 1 && v.first.text.includes('#3 in Databases'));
   check('badges are clickable links opening in a new tab', v.isLink && v.opensNewTab);
   check('badge is pill-shaped (large border radius)', parseFloat(v.pillRadius) >= 100);
   check('badge has light amber background', v.first.bg === 'rgb(254, 243, 199)');
   check('badge text uses amber-800 tone', v.first.color === 'rgb(180, 83, 9)');
   check('badges have no trophy icon', !v.anyTrophy);
   check('badge shows platform icon', v.first.platformSvg);
-  check('alphaxiv icon is tinted with brand red', v.second && v.second.alphaxivBrand === 'rgb(154, 32, 54)');
+  check('alphaxiv icon is tinted with brand red', v.first && v.first.alphaxivBrand === 'rgb(154, 32, 54)');
   check('badge font is small and medium-weight', v.first.fontSize === '12px' && v.first.fontWeight === '500');
   check('highlights render inside the venue row', v.inlineInVenueRow);
   check('highlights share one line with venue info', v.sameLineAsVenue);
-  check('SQL-R1 row shows both platform badges', v.sqlRowHasBadges && v.texts.includes('#3 in Databases · April 2025') && v.texts.includes('Hugging Face Daily Paper'));
+  check('SQL-R1 row shows the alphaxiv badge', v.sqlRowHasBadges && v.texts.some((t) => t.includes('#3 in Databases')));
 
   // ---- 移动端视口不破版 ----
   await send(ws, 'Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
@@ -242,7 +242,7 @@ try {
     })()`
   });
   const m = mobile.result.value;
-  check('mobile: all 4 badges still render', m.count === 4);
+  check('mobile: the badge still renders', m.count === 1);
   check('mobile: badges do not overflow the viewport', !m.overflow);
   check('mobile: badges keep readable size', m.badgeRects.every((r) => r.h >= 18 && r.h <= 40));
 

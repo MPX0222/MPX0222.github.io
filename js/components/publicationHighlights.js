@@ -66,7 +66,9 @@ function renderPublicationHighlights(pub) {
   return `<span class="publication-highlights">${badges.join('')}</span>`;
 }
 
-/** 徽章样式：自带 <style> 包裹，作为独立元素同时注入首页与 pub 页两个组件。 */
+/** 徽章样式：自带 <style> 包裹，作为独立元素同时注入首页与 pub 页两个组件。
+ *  选择器统一挂在 .publication-highlights 作用域下（特异性 0,2,0），
+ *  以便在首页 light DOM 中稳定压过 .card-content a 的链接配色（0,1,1）。 */
 const HIGHLIGHT_STYLES = `
         <style>
         .publication-highlights {
@@ -77,7 +79,7 @@ const HIGHLIGHT_STYLES = `
           margin: 0;
         }
 
-        .highlight-badge {
+        .publication-highlights .highlight-badge {
           display: inline-flex;
           align-items: center;
           gap: 0.3rem;
@@ -94,43 +96,44 @@ const HIGHLIGHT_STYLES = `
           transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
         }
 
-        .highlight-badge:hover {
+        .publication-highlights .highlight-badge:hover {
           background-color: #fde68a;
           color: #92400e;
           transform: translateY(-1px);
         }
 
-        .highlight-badge .highlight-badge__platform {
+        .publication-highlights .highlight-badge .highlight-badge__platform {
           display: inline-flex;
           align-items: center;
         }
 
-        .highlight-badge .highlight-badge__platform-svg {
+        .publication-highlights .highlight-badge .highlight-badge__platform-svg {
           width: 0.875rem;
           height: 0.875rem;
           flex: none;
         }
 
-        .highlight-badge--alphaxiv .highlight-badge__platform-svg {
+        .publication-highlights .highlight-badge--alphaxiv .highlight-badge__platform-svg,
+        .publication-highlights .highlight-badge--alphaxiv[style] .highlight-badge__platform-svg {
           color: #9A2036;
         }
 
-        :host-context([data-theme="dark"]) .highlight-badge {
+        :host-context([data-theme="dark"]) .publication-highlights .highlight-badge {
           background-color: rgba(251, 191, 36, 0.14);
           color: #fcd34d;
         }
 
-        :host-context([data-theme="dark"]) .highlight-badge:hover {
+        :host-context([data-theme="dark"]) .publication-highlights .highlight-badge:hover {
           background-color: rgba(251, 191, 36, 0.24);
           color: #fde68a;
         }
 
-        [data-theme="dark"] .highlight-badge {
+        [data-theme="dark"] .publication-highlights .highlight-badge {
           background-color: rgba(251, 191, 36, 0.14);
           color: #fcd34d;
         }
 
-        [data-theme="dark"] .highlight-badge:hover {
+        [data-theme="dark"] .publication-highlights .highlight-badge:hover {
           background-color: rgba(251, 191, 36, 0.24);
           color: #fde68a;
         }

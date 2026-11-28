@@ -30,10 +30,98 @@
         .publications-header {
             text-align: left;
             margin-bottom: 3rem;
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 0 0;
             position: relative;
             transition: border-color 0.3s ease;
+        }
+
+        .publication-search {
+            position: relative;
+            display: flex;
+            align-items: center;
+            max-width: 30rem;
+            margin-top: 1.25rem;
+        }
+
+        .publication-search-icon {
+            position: absolute;
+            left: 0.8rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            pointer-events: none;
+            transition: color 0.2s ease;
+        }
+
+        .publication-search-input {
+            width: 100%;
+            padding: 0.6rem 2.2rem 0.6rem 2.35rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--card-bg);
+            color: var(--text-color);
+            font-size: 0.9rem;
+            font-family: var(--font-family);
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .publication-search-input::-webkit-search-cancel-button {
+            display: none;
+            -webkit-appearance: none;
+        }
+
+        .publication-search-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.12);
+        }
+
+        .publication-search-input:focus ~ .publication-search-icon {
+            color: var(--primary-color);
+        }
+
+        .publication-search-input::placeholder {
+            color: var(--text-secondary);
+            opacity: 0.75;
+        }
+
+        .publication-search-clear {
+            position: absolute;
+            right: 0.55rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.15rem;
+            border: none;
+            background: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .publication-search-clear:hover {
+            color: var(--primary-color);
+        }
+
+        .publication-search-empty {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin: 0.75rem 0 0;
+            font-family: 'Inter', sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        [data-theme="dark"] .publication-search-input {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.12);
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .publication-search-input:focus {
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 3px rgba(162, 155, 254, 0.16);
         }
 
         .back-home {
@@ -217,7 +305,16 @@
                 Back to Home
             </a>
             <h1>Publications</h1>
-            <p>A comprehensive list of my research publications</p>
+            <div class="publication-search">
+                <i class="fas fa-search publication-search-icon" aria-hidden="true"></i>
+                <input type="search" id="publication-search-input" class="publication-search-input"
+                       placeholder="Search by title, author, venue, or year..."
+                       aria-label="Search publications" autocomplete="off" spellcheck="false">
+                <button type="button" id="publication-search-clear" class="publication-search-clear" aria-label="Clear search" hidden>
+                    <i class="fas fa-times-circle" aria-hidden="true"></i>
+                </button>
+            </div>
+            <p class="publication-search-empty" id="publication-search-empty" hidden>No publications match your search.</p>
         </div>
 
         <div class="filter-section">
@@ -330,6 +427,59 @@
                     const filter = button.dataset.filter;
                     publicationList.filterPublications(filter);
                     updateActiveButtonCount(button);
+                });
+            });
+
+            // ---- 搜索框：与过滤按钮联动，支持清空与空结果提示 ----
+            const searchInput = document.getElementById('publication-search-input');
+            const searchClear = document.getElementById('publication-search-clear');
+            const searchEmpty = document.getElementById('publication-search-empty');
+            const activeFilterButton = () => document.querySelector('.filter-button.active');
+
+            function syncSearchUi(matchCount, hasQuery) {
+                if (searchClear) searchClear.hidden = !hasQuery;
+                if (searchEmpty) searchEmpty.hidden = !(hasQuery && matchCount === 0);
+                const activeButton = activeFilterButton();
+                if (activeButton && typeof publicationList.getFilterCount === 'function') {
+                    updateActiveButtonCount(activeButton);
+                }
+            }
+
+            if (searchInput) {
+                let debounceTimer = null;
+                searchInput.addEventListener('input', () => {
+                    clearTimeout(debounceTimer);
+                    const value = searchInput.value;
+                    debounceTimer = setTimeout(() => {
+                        const count = publicationList.searchPublications(value);
+                        syncSearchUi(count, value.trim().length > 0);
+                    }, 150);
+                });
+                searchInput.addEventListener('search', () => {
+                    clearTimeout(debounceTimer);
+                    const count = publicationList.searchPublications(searchInput.value);
+                    syncSearchUi(count, searchInput.value.trim().length > 0);
+                });
+            }
+
+            if (searchClear) {
+                searchClear.addEventListener('click', () => {
+                    if (searchInput) {
+                        searchInput.value = '';
+                        searchInput.focus();
+                    }
+                    const count = publicationList.searchPublications('');
+                    syncSearchUi(count, false);
+                });
+            }
+
+            // 过滤按钮切换后刷新空结果提示（搜索词保留）
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    if (searchEmpty && searchInput) {
+                        const hasQuery = searchInput.value.trim().length > 0;
+                        searchEmpty.hidden = !(hasQuery && publicationList.filteredPublications.length === 0);
+                    }
                 });
             });
         });

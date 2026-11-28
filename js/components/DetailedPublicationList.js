@@ -4,6 +4,8 @@ class DetailedPublicationList extends HTMLElement {
         this.attachShadow({ mode: 'open' });
         this.publications = [];
         this.filteredPublications = [];
+        this.activeFilter = 'all';
+        this.searchQuery = '';
         this.tooltip = document.createElement('div');
         this.tooltip.className = 'copy-tooltip';
         document.body.appendChild(this.tooltip);
@@ -103,40 +105,57 @@ class DetailedPublicationList extends HTMLElement {
     }
 
     getFilterCount(filter) {
-        if (!this.publications || this.publications.length === 0) return 0;
-
-        if (filter === 'all') {
-            return this.publications.length;
-        }
-
-        if (['conference', 'journal', 'preprint'].includes(filter)) {
-            return this.publications.filter(pub => {
-                const venueType = pub.venue.type.toLowerCase();
-                return venueType.includes(filter.toLowerCase());
-            }).length;
-        }
-
-        const normalizedFilter = filter.trim().toLowerCase();
-        return this.publications.filter(pub =>
-            (pub.category || '').trim().toLowerCase() === normalizedFilter
-        ).length;
+        return this.getFilteredSet(filter, this.searchQuery || '').length;
     }
 
-    filterPublications(filter) {
-        if (filter === 'all') {
-            this.filteredPublications = [...this.publications];
+    /** 搜索匹配：标题、作者、venue、年份、类别任一命中即通过（大小写不敏感）。 */
+    matchesSearch(pub, query) {
+        if (!query) return true;
+        const haystack = [
+            pub.title,
+            (pub.authors || []).join(' '),
+            pub.venue && pub.venue.name,
+            pub.venue && pub.venue.type,
+            pub.year,
+            pub.category
+        ].filter(Boolean).join(' ').toLowerCase();
+        return haystack.includes(query);
+    }
+
+    /** 组合「类型/领域过滤 + 搜索词」得到最终集合。 */
+    getFilteredSet(filter, query) {
+        const base = this.publications || [];
+        let subset;
+        if (!filter || filter === 'all') {
+            subset = [...base];
         } else if (['conference', 'journal', 'preprint'].includes(filter)) {
-            this.filteredPublications = this.publications.filter(pub => {
-                const venueType = pub.venue.type.toLowerCase();
+            subset = base.filter(pub => {
+                const venueType = (pub.venue.type || '').toLowerCase();
                 return venueType.includes(filter.toLowerCase());
             });
         } else {
             const normalizedFilter = filter.trim().toLowerCase();
-            this.filteredPublications = this.publications.filter(pub =>
+            subset = base.filter(pub =>
                 (pub.category || '').trim().toLowerCase() === normalizedFilter
             );
         }
+        const q = (query || '').trim().toLowerCase();
+        if (!q) return subset;
+        return subset.filter(pub => this.matchesSearch(pub, q));
+    }
+
+    filterPublications(filter) {
+        this.activeFilter = filter;
+        this.filteredPublications = this.getFilteredSet(filter, this.searchQuery || '');
         this.render();
+    }
+
+    /** 搜索入口：记录搜索词并按当前激活的过滤按钮重新计算集合。 */
+    searchPublications(query) {
+        this.searchQuery = (query || '').trim().toLowerCase();
+        this.filteredPublications = this.getFilteredSet(this.activeFilter || 'all', this.searchQuery);
+        this.render();
+        return this.filteredPublications.length;
     }
 
     resolveThumbnail(path) {
@@ -362,8 +381,8 @@ class DetailedPublicationList extends HTMLElement {
                     font-size: 1.2rem;
                     font-weight: 600;
                     color: var(--text-color);
-                    line-height: 1.4;
-                    margin-bottom: 0.5rem;
+                    line-height: 1.3;
+                    margin-bottom: 0.25rem;
                     display: block;
                     text-decoration: none;
                     transition: color 0.2s ease;
@@ -386,8 +405,8 @@ class DetailedPublicationList extends HTMLElement {
                 .publication-meta {
                     font-size: 0.95rem;
                     color: var(--text-secondary);
-                    line-height: 1.6;
-                    margin-bottom: 0.75rem;
+                    line-height: 1.4;
+                    margin-bottom: 0;
                     max-width: min(100%, 52rem);
                     padding-right: 7rem;
                 }
@@ -442,6 +461,7 @@ class DetailedPublicationList extends HTMLElement {
                     flex-direction: column;
                     align-items: stretch;
                     gap: 0;
+                    margin-top: 0;
                 }
 
                 .publication-actions {
@@ -450,7 +470,7 @@ class DetailedPublicationList extends HTMLElement {
                     align-items: center;
                     gap: 1.5rem;
                     flex-wrap: wrap;
-                    margin-top: 7.01px;
+                    margin-top: -5.34px;
                     font-family: var(--font-sansation, 'Sansation', sans-serif);
                 }
 
@@ -592,7 +612,7 @@ class DetailedPublicationList extends HTMLElement {
                     box-sizing: border-box;
                     padding: 0.25rem 0.5rem;
                     border-radius: 3px;
-                    background-color: #f3f4f6;
+                    background-color: transparent;
                     color: #6b7280;
                     font-size: 0.8125rem;
                     font-weight: 500;
